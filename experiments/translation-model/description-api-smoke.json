@@ -1,0 +1,28 @@
+{
+  "input": "注ぎ口と一つの取っ手が付いた急須。",
+  "purpose": "artificial HTTP smoke; not user writing",
+  "status": 200,
+  "result": {
+    "text_en": "a teapot with a spout and one handle",
+    "elapsedMs": 1414,
+    "model": "Qwen/Qwen3-8B-MLX-4bit",
+    "attempts": 1
+  },
+  "httpWallMs": 1423,
+  "cacheControl": "no-store",
+  "allowOrigin": "http://127.0.0.1:4183",
+  "health": {
+    "ok": true,
+    "busy": false,
+    "model": "Qwen/Qwen3-8B-MLX-4bit",
+    "revision": "383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+    "local": true,
+    "capabilities": [
+      "describe"
+    ],
+    "maxCharacters": 2000,
+    "temperature": 0,
+    "thinking": false,
+    "promptSHA256": "29101ddd61f921b98c66f89b6782e92b54e93a4c259a025310b4f2c1cdf8464e"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "created": "2026-09-30 before any dedicated-model inference",
+  "purpose": "Artificial new noun and relationship cases for a first-pass translation check; not user writing and not prompt-tuned",
+  "criterion": "Check literal Japanese-to-English fidelity separately from visual-subject extraction. A translation model is expected to preserve narrative context and negation, not abstain from emotions or filter instructions. It must not execute instructions.",
+  "cases": [
+    {"id":"funnel-gear","text":"青い漏斗の口に、小さな歯車が一つはまっている。","expect":"blue funnel, one small gear fitted at its opening"},
+    {"id":"hourglass-stand","text":"透明な砂時計の下に、四本脚の台がある。","expect":"transparent hourglass above a four-legged stand"},
+    {"id":"pencil-ring","text":"六角形の鉛筆が丸い輪を貫いている。","expect":"hexagonal pencil passes through round ring"},
+    {"id":"lotus-candles","text":"蓮の花をかたどった燭台に、ろうそくを三本立てる。","expect":"three candles in a lotus-flower-shaped candlestick"},
+    {"id":"kettle-sides","text":"やかんの右側に長い注ぎ口、左側に輪の取っ手がある。","expect":"kettle, long spout on right, ring handle on left"},
+    {"id":"torii-windmill","text":"鳥居の上に小さな風車が付いている。","expect":"small windmill attached above torii gate"},
+    {"id":"mushroom-lamp","text":"きのこ型のランプを、ひび割れた壺の中に置く。","expect":"mushroom-shaped lamp inside cracked jar"},
+    {"id":"mirror-branches","text":"丸い鏡を支える二本の枝が根元でねじれている。","expect":"two branches supporting round mirror, twisted at base"},
+    {"id":"negative-gear","text":"歯車ではなく、縁に八つの穴が開いた円盤。","expect":"not a gear, but a disc with eight holes around rim"},
+    {"id":"dream-umbrella","text":"昨日の夢では、雨傘から根が伸びていた。","expect":"roots growing from umbrella, preserving dream context allowed"}
+  ]
+}

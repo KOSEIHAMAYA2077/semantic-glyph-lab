@@ -1,0 +1,217 @@
+{
+  "date": "2026-09-30",
+  "packages": [
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "source": "https://pypi.org/project/Jinja2/3.1.6/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.3",
+      "source": "https://pypi.org/project/MarkupSafe/3.0.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "source": "https://pypi.org/project/PyYAML/6.0.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "source": "https://pypi.org/project/Pygments/2.21.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "source": "https://pypi.org/project/annotated-doc/0.0.5/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "source": "https://pypi.org/project/anyio/4.15.1/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "source": "https://pypi.org/project/certifi/2026.7.22/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "source": "https://pypi.org/project/click/8.5.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "filelock",
+      "version": "4.0.7",
+      "source": "https://pypi.org/project/filelock/4.0.7/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "source": "https://pypi.org/project/fsspec/2026.9.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "source": "https://pypi.org/project/h11/0.16.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.6.0",
+      "source": "https://pypi.org/project/hf-xet/1.6.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "source": "https://pypi.org/project/httpcore/1.0.9/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "source": "https://pypi.org/project/httpx/0.28.1/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "1.33.0",
+      "source": "https://pypi.org/project/huggingface_hub/1.33.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "source": "https://pypi.org/project/idna/3.20/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "source": "https://pypi.org/project/markdown-it-py/4.2.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "source": "https://pypi.org/project/mdurl/0.1.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "mlx",
+      "version": "0.32.3",
+      "source": "https://pypi.org/project/mlx/0.32.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "mlx-lm",
+      "version": "0.31.3",
+      "source": "https://pypi.org/project/mlx-lm/0.31.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "mlx-metal",
+      "version": "0.32.3",
+      "source": "https://pypi.org/project/mlx-metal/0.32.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3",
+      "source": "https://pypi.org/project/numpy/2.5.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "source": "https://pypi.org/project/packaging/26.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "pip",
+      "version": "26.2.1",
+      "source": "https://pypi.org/project/pip/26.2.1/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "source": "https://pypi.org/project/protobuf/7.36.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "source": "https://pypi.org/project/regex/2026.9.29/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "source": "https://pypi.org/project/rich/15.0.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "source": "https://pypi.org/project/safetensors/0.8.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.2",
+      "source": "https://pypi.org/project/sentencepiece/0.2.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4",
+      "source": "https://pypi.org/project/shellingham/1.5.4/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.2",
+      "source": "https://pypi.org/project/tokenizers/0.23.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "source": "https://pypi.org/project/tqdm/4.70.1/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "transformers",
+      "version": "5.17.0",
+      "source": "https://pypi.org/project/transformers/5.17.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "typer",
+      "version": "0.27.2",
+      "source": "https://pypi.org/project/typer/0.27.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "source": "https://pypi.org/project/typing_extensions/4.16.0/",
+      "reportedVulnerabilities": []
+    }
+  ],
+  "method": "PyPI release metadata; no reported vulnerability is not a guarantee of absence",
+  "runnerSHA256": "49bf02d5e0fa0897c82293c7484954c9bd1704a301cd59afeb39d3165af59f1b"
+}

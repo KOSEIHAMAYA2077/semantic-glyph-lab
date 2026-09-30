@@ -15,6 +15,8 @@ SERVICES = [
     ('meaning', 4184, 'semantics-venv', 'server/app.py'),
     ('composition', 4185, 'composition-venv', 'server/composition.py'),
     ('generation', 4186, 'shap-e-venv', 'server/generation.py'),
+    ('description', 4188, 'translation-model-qwen8-venv', 'server/description.py'),
+    ('image-pipeline', 4187, 'text-image-venv', 'server/image_pipeline.py'),
 ]
 
 def probe(port, path='/health'):
@@ -33,6 +35,8 @@ def verified_service(name, data):
         obj=json.loads(data)
         if name=='meaning': return 'semanticReady' in obj and obj.get('model')=='sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2' and obj.get('storesInput') is False
         if name=='composition': return obj.get('model') in ('Qwen/Qwen3-4B-Instruct-2507','Qwen/Qwen3-4B-MLX-4bit')
+        if name=='description': return obj.get('model')=='Qwen/Qwen3-8B-MLX-4bit' and obj.get('capabilities')==['describe'] and obj.get('local') is True
+        if name=='image-pipeline': return obj.get('pipeline')=='SDXL Turbo -> U2NETP -> TripoSR' and obj.get('storesInput') is False and obj.get('storesOutput') is False and obj.get('ready') is True
         return obj.get('model')=='openai/shap-e:text300M' and obj.get('local') is True
     except (ValueError, TypeError):
         return False

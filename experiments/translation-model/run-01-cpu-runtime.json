@@ -1,0 +1,17 @@
+{
+  "loadMs": 2172,
+  "tensorCount": 259,
+  "parameters": 75749376,
+  "device": "cpu",
+  "weightsOnly": true,
+  "strictStateDict": true,
+  "sharedAliasRestored": true,
+  "model": "Helsinki-NLP/opus-mt-ja-en",
+  "numBeams": 6,
+  "maxNewTokens": 128,
+  "doSample": false,
+  "threads": 4,
+  "regressionPlanSHA256": "9aba6be5564eeae33bf60a8b986348bea900c3219688f5178b877c07593e8b05",
+  "freshPlanSHA256": "3488aa11ce7f182bf22028a43abb4b53299ce37280665bb8dadc5580bd828470",
+  "maxRSSBytesDarwin": 1634992128
+}

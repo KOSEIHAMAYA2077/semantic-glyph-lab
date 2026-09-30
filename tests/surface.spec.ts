@@ -1,6 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
 import { mkdirSync } from 'node:fs';
-const capture = 'experiments/surface-01/screens';
+const capture = `.local/browser-tests/${Date.now()}-${process.pid}`;
 mkdirSync(capture, { recursive:true });
 const inspect = (page:Page) => page.evaluate(()=> (window as any).__SEMANTIC_GLYPH__.inspect());
 const start = async(page:Page) => { await page.goto('/'); await page.waitForFunction(()=>Boolean((window as any).__SEMANTIC_GLYPH__)); };
@@ -150,7 +150,7 @@ test('画像から復元した馬を同じ文字表面で表示する',async({pa
   await page.locator('#compare-open').click(); await page.locator('#generated').selectOption('/reconstructed/mps128-y-up/triposr-horse-y-up.glb');
   await page.locator('#load-generated').click();await expect.poll(async()=> (await inspect(page)).loaded).toContain('triposr-horse');
   await page.evaluate(()=>(window as any).__SEMANTIC_GLYPH__.step(10));
-  await page.screenshot({path:'experiments/surface-02/triposr-horse.png'});
+  await page.screenshot({path:`${capture}/triposr-horse.png`});
 });
 
 test('文字帳が大きくなっても新しい色がGPUへ届く',async({page})=>{
@@ -175,7 +175,7 @@ test('面を歩く文字: 流れと停止、属性、複数体と描画切替',a
   expect((await page.locator('canvas').screenshot()).equals(paused)).toBe(true);
   await feed(page,'四角く、ねじれた');expect((await inspect(page)).spec.squareness).toBe(1);
   await feed(page,'球体を4個');expect((await inspect(page)).spec.count).toBe(4);
-  await page.screenshot({path:'experiments/surface-02/advection-four-spheres.png'});
+  await page.screenshot({path:`${capture}/advection-four-spheres.png`});
   await page.locator('#compare-open').click();await page.locator('#render-mode').selectOption('texture');await page.locator('#close-panel').click();
   expect((await inspect(page)).gpuError).toBe(0);expect(errors).toEqual([]);
 });
@@ -189,7 +189,7 @@ test('ボタンのEnterは全体ショートカットに奪われない',async({
 test('日本語の説明を英語へ渡し、元の日本語を表面に残す',async({page})=>{
   const {readFile}=await import('node:fs/promises');const glb=await readFile('public/generated/shap-e-vase-outer-shell-v1.glb');
   let descriptionRequest='',generationRequest='';await start(page);
-  await page.route('**/compose-api/describe',async route=>{descriptionRequest=route.request().postDataJSON().text;await route.fulfill({contentType:'application/json',body:JSON.stringify({text_en:'a blue vase'})});});
+  await page.route('**/description-api/describe',async route=>{descriptionRequest=route.request().postDataJSON().text;await route.fulfill({contentType:'application/json',body:JSON.stringify({text_en:'a blue vase'})});});
   await page.route('**/generate-api/generate',async route=>{generationRequest=route.request().postDataJSON().text;await route.fulfill({contentType:'model/gltf-binary',body:glb});});
   await page.locator('#compare-open').click();await page.locator('#method').selectOption('generate-ja');await page.locator('#close-panel').click();await feed(page,'青い花瓶');
   const state=await inspect(page);expect(descriptionRequest).toBe('青い花瓶');expect(generationRequest).toBe('a blue vase');expect(state.letters.slice(1).map((l:any)=>l.text).join('')).toBe('青い花瓶');expect(state.loaded).toMatch(/^blob:/);expect(state.letters.at(-1).auto).toBe(false);
@@ -197,7 +197,7 @@ test('日本語の説明を英語へ渡し、元の日本語を表面に残す',
 
 test('説明を特定できない場合は生成せず原文を残す',async({page})=>{
   let generated=false;await start(page);
-  await page.route('**/compose-api/describe',route=>route.fulfill({status:422,contentType:'application/json',body:'{"error":"No concrete object"}'}));
+  await page.route('**/description-api/describe',route=>route.fulfill({status:422,contentType:'application/json',body:'{"error":"No concrete object"}'}));
   await page.route('**/generate-api/generate',route=>{generated=true;return route.abort();});
   await page.locator('#compare-open').click();await page.locator('#method').selectOption('generate-ja');await page.locator('#close-panel').click();
   await page.locator('#input-open').click();await page.locator('#text').fill('それでいい');await page.locator('#text').press('Enter');
@@ -209,5 +209,69 @@ test('文章から画像を経て作った花瓶にも文字を流す',async({pa
   await page.locator('#generated').selectOption('/text-image-models/mesh128-first/twisted-vase-y-up.glb');await page.locator('#load-generated').click();
   await expect.poll(async()=> (await inspect(page)).loaded).toContain('twisted-vase-y-up');
   await page.evaluate(()=>(window as any).__SEMANTIC_GLYPH__.step(10));
-  await page.screenshot({path:'experiments/surface-02/text-image-twisted-vase.png'});expect((await inspect(page)).gpuError).toBe(0);
+  await page.screenshot({path:`${capture}/text-image-twisted-vase.png`});expect((await inspect(page)).gpuError).toBe(0);
+});
+
+for(const mode of ['texture','advection']) test(`形の揺らぎ: ${mode}で流れを止めても形が動き、一時停止で止まる`,async({page})=>{
+  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+  await start(page);await rules(page);await feed(page,'白い花瓶に文字を重ねる');
+  await page.evaluate(()=>(window as any).__SEMANTIC_GLYPH__.step(10));
+  await page.locator('#compare-open').click();await page.locator('#rotation').uncheck();
+  await page.locator('#flow').fill('0');await page.locator('#render-mode').selectOption(mode);await page.locator('#body-motion').fill('1');await page.locator('#close-panel').click();
+  await page.evaluate(()=>(window as any).__SEMANTIC_GLYPH__.step(1));
+  const first=await page.locator('canvas').screenshot({path:`${capture}/body-${mode}-a.png`});
+  await page.evaluate(()=>(window as any).__SEMANTIC_GLYPH__.step(8));
+  const second=await page.locator('canvas').screenshot({path:`${capture}/body-${mode}-b.png`});
+  expect(second.equals(first)).toBe(false);expect((await inspect(page)).bodyMotion).toBe(1);
+  await page.waitForTimeout(350);expect((await page.locator('canvas').screenshot()).equals(second)).toBe(true);
+  expect((await inspect(page)).gpuError).toBe(0);expect(errors).toEqual([]);
+});
+
+test('画像経由生成へ英語の説明を渡し、元の文章を表面に残す',async({page})=>{
+  const {readFile}=await import('node:fs/promises');const glb=await readFile('public/text-image-models/mesh128-first/vase-y-up.glb');
+  let generationRequest='';await start(page);
+  await page.route('**/description-api/describe',route=>route.fulfill({contentType:'application/json',body:'{"text_en":"a simple ceramic vase"}'}));
+  await page.route('**/image-api/generate',async route=>{generationRequest=route.request().postDataJSON().text;await route.fulfill({contentType:'model/gltf-binary',body:glb});});
+  await page.locator('#compare-open').click();await page.locator('#method').selectOption('image-ja');await page.locator('#close-panel').click();await feed(page,'白い陶器の花瓶');
+  const state=await inspect(page);expect(generationRequest).toBe('a simple ceramic vase');expect(state.letters.slice(1).map((l:any)=>l.text).join('')).toBe('白い陶器の花瓶');expect(state.loaded).toMatch(/^blob:/);expect(state.last.note).toContain('SDXL Turbo');
+});
+
+test('画像経由の前景抽出が失敗したら本文と元の形を残す',async({page})=>{
+  await start(page);await rules(page);await feed(page,'青い剣');const before=await inspect(page);
+  await page.route('**/description-api/describe',route=>route.fulfill({contentType:'application/json',body:'{"text_en":"a thin sword"}'}));
+  await page.route('**/image-api/generate',route=>route.fulfill({status:422,contentType:'application/json',body:'{"error":"Foreground mask is empty"}'}));
+  await page.locator('#compare-open').click();await page.locator('#method').selectOption('image-ja');await page.locator('#close-panel').click();
+  await page.locator('#input-open').click();await page.locator('#text').fill('細い剣');await page.locator('#text').press('Enter');await expect(page.locator('#text')).toBeEnabled();
+  await expect(page.locator('#text')).toHaveValue('細い剣');expect((await inspect(page)).spec).toEqual(before.spec);expect((await inspect(page)).count).toBe(before.count);
+});
+
+test('縦長画面でも、揺らぐ形の輪郭を画面内に収める',async({page})=>{
+  await page.setViewportSize({width:390,height:844});await start(page);await rules(page);await feed(page,'白い球体');
+  await page.locator('#compare-open').click();await page.locator('#rotation').uncheck();await page.locator('#flow').fill('0');await page.locator('#body-motion').fill('1');await page.locator('#close-panel').click();
+  for(let i=0;i<4;i++){
+    await page.evaluate(()=>(window as any).__SEMANTIC_GLYPH__.step(8));
+    const visible=await page.evaluate(()=>{
+      const c=document.querySelector('canvas')!,gl=c.getContext('webgl2')!,pixels=new Uint8Array(c.width*c.height*4);
+      gl.readPixels(0,0,c.width,c.height,gl.RGBA,gl.UNSIGNED_BYTE,pixels);let left=c.width,right=0,count=0;
+      for(let i=0;i<pixels.length;i+=4)if(Math.max(pixels[i],pixels[i+1],pixels[i+2])>30){const x=(i/4)%c.width;left=Math.min(left,x);right=Math.max(right,x);count++;}
+      return {left,right,width:c.width,count,error:gl.getError()};
+    });
+    expect(visible.count).toBeGreaterThan(500);expect(visible.left).toBeGreaterThan(12);expect(visible.right).toBeLessThan(visible.width-12);expect(visible.error).toBe(0);
+  }
+});
+
+test('同じ文章で生成した6形状を読み込み、元の文章を面に保つ',async({page})=>{
+  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+  await start(page);await rules(page);await feed(page,'白い文字の表面');const letters=(await inspect(page)).letters;
+  for(const subject of ['sailboat','umbrella','watering-can'])for(const method of ['shap-e','image-triposr']){
+    const path=`/end-to-end-models/paired-v1/${subject}-${method}.glb`;
+    await page.locator('#compare-open').click();await page.locator('#generated').selectOption(path);await page.locator('#load-generated').click();
+    await expect.poll(async()=> (await inspect(page)).loaded).toBe(path);
+    await page.evaluate(()=>(window as any).__SEMANTIC_GLYPH__.step(10));
+    expect((await inspect(page)).letters).toEqual(letters);expect((await inspect(page)).gpuError).toBe(0);
+  }
+  await page.screenshot({path:`${capture}/paired-watering-can.png`});
+  const before=await inspect(page);await feed(page,'四角く');
+  const after=await inspect(page);expect(after.loaded).toBe(before.loaded);expect(after.vertices).toBe(before.vertices);expect(after.bounds).not.toEqual(before.bounds);expect(after.spec.squareness).toBe(1);
+  expect(errors).toEqual([]);
 });

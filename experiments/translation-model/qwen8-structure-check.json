@@ -1,0 +1,9 @@
+{
+  "tensors": 907,
+  "allShapesNonempty": true,
+  "promptSHA256": "29101ddd61f921b98c66f89b6782e92b54e93a4c259a025310b4f2c1cdf8464e",
+  "configAutoMap": false,
+  "remoteCode": false,
+  "format": "safetensors",
+  "modelLoadedToGPU": false
+}

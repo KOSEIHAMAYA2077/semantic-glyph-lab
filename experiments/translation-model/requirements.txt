@@ -1,0 +1,5 @@
+torch==2.14.0
+transformers==5.17.0
+sentencepiece==0.2.2
+sacremoses==0.2.0
+safetensors==0.8.0

@@ -1,0 +1,203 @@
+{
+  "date": "2026-09-30",
+  "protocol": "experiments/end-to-end/protocol.json",
+  "protocolSha256": "656d72e2aff978446c020f871faaf355f2abfd317823ab520c44d261bac56693",
+  "attribution": "Powered by Stability AI",
+  "syntheticOnly": true,
+  "models": [
+    {
+      "id": "e2e-paired-v1-sailboat-shap-e",
+      "label": "小さな帆船 · Shap-E",
+      "path": "/end-to-end-models/paired-v1/sailboat-shap-e.glb",
+      "sha256": "9faec2634e7e29d52a03deacab64acc241d0b06e368795d8b77e663b3321a8c6",
+      "bytes": 551168,
+      "vertices": 15297,
+      "faces": 30570,
+      "prompt": "a small sailboat",
+      "japaneseInput": "小さな帆船",
+      "seed": 20260930,
+      "sourceMethod": "Shap-E",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "partial",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://github.com/openai/shap-e"
+      ],
+      "licenseLinks": [
+        "https://github.com/openai/shap-e/blob/main/LICENSE"
+      ],
+      "httpSeconds": 47.67709274997469,
+      "endToEndSeconds": 49.2410089999903,
+      "observedLimitations": "船体・帆・マストは読めるが、帆とマストに分離や穴があり、マストは非常に細い。9成分。",
+      "surfaceAssessment": "船体と帆の面に文字が載る。細いマストは点や線に近く、文字として読みにくい。",
+      "evidence": "experiments/end-to-end/paired-v1/screens/sailboat-shap-e.png",
+      "descriptionSource": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/tree/383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+      "descriptionLicense": "Apache-2.0; recorded in experiments/translation-model/qwen8-manifest.json",
+      "transform": "none; both APIs already export Y-up; raw response retained",
+      "descriptionLicenseLink": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/blob/383413e909f3bc5303ce195ebbdf0339c5a1a2a3/LICENSE"
+    },
+    {
+      "id": "e2e-paired-v1-sailboat-image-triposr",
+      "label": "小さな帆船 · SDXL Turbo → TripoSR",
+      "path": "/end-to-end-models/paired-v1/sailboat-image-triposr.glb",
+      "sha256": "55cc9c1b0528c44b6d6e38db5127e0a00eac617e534f5f4b50c864f33c56adea",
+      "bytes": 309044,
+      "vertices": 8566,
+      "faces": 17120,
+      "prompt": "a small sailboat",
+      "japaneseInput": "小さな帆船",
+      "seed": 20260930,
+      "sourceMethod": "SDXL Turbo → TripoSR",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "partial",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo",
+        "https://github.com/VAST-AI-Research/TripoSR"
+      ],
+      "licenseLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo/blob/71153311d3dbb46851df1931d3ca6e939de83304/LICENSE.md",
+        "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/LICENSE"
+      ],
+      "httpSeconds": 17.67688837501919,
+      "endToEndSeconds": 19.240804625034798,
+      "observedLimitations": "丸みのある船体と太いマスト・帆が見える。マスト先端に浮いた小片があり、帆に小さな穴。5成分。",
+      "surfaceAssessment": "船体と帆を文字が覆い、マストもShap-Eより太く文字模様が残る。離れた小片もそのまま表示される。",
+      "evidence": "experiments/end-to-end/paired-v1/screens/sailboat-image-triposr.png",
+      "descriptionSource": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/tree/383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+      "descriptionLicense": "Apache-2.0; recorded in experiments/translation-model/qwen8-manifest.json",
+      "transform": "none; both APIs already export Y-up; raw response retained",
+      "descriptionLicenseLink": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/blob/383413e909f3bc5303ce195ebbdf0339c5a1a2a3/LICENSE"
+    },
+    {
+      "id": "e2e-paired-v1-umbrella-shap-e",
+      "label": "開いた傘 · Shap-E",
+      "path": "/end-to-end-models/paired-v1/umbrella-shap-e.glb",
+      "sha256": "b5b50795f51634c94764d1045d845a929170dbe6ae0bca5e97434c5a72e2d636",
+      "bytes": 1266596,
+      "vertices": 35162,
+      "faces": 70324,
+      "prompt": "an open umbrella",
+      "japaneseInput": "開いた傘",
+      "seed": 20260930,
+      "sourceMethod": "Shap-E",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "partial",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://github.com/openai/shap-e"
+      ],
+      "licenseLinks": [
+        "https://github.com/openai/shap-e/blob/main/LICENSE"
+      ],
+      "httpSeconds": 41.0515982080251,
+      "endToEndSeconds": 42.636479458014946,
+      "observedLimitations": "開いた傘の面は3方向で自然に読める。軸が細い線になり、下端の柄が離れた点に近い。4成分。下面全体は固定した上方3視点からは評価できない。",
+      "surfaceAssessment": "広い傘面は文字で覆えるが、柄はほぼ点と筋に見える。",
+      "evidence": "experiments/end-to-end/paired-v1/screens/umbrella-shap-e.png",
+      "descriptionSource": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/tree/383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+      "descriptionLicense": "Apache-2.0; recorded in experiments/translation-model/qwen8-manifest.json",
+      "transform": "none; both APIs already export Y-up; raw response retained",
+      "descriptionLicenseLink": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/blob/383413e909f3bc5303ce195ebbdf0339c5a1a2a3/LICENSE"
+    },
+    {
+      "id": "e2e-paired-v1-umbrella-image-triposr",
+      "label": "開いた傘 · SDXL Turbo → TripoSR",
+      "path": "/end-to-end-models/paired-v1/umbrella-image-triposr.glb",
+      "sha256": "5b17d2ac198887a1df78eaa8b1e58265851c4cc23a340f0046fa01cfd03b9337",
+      "bytes": 383348,
+      "vertices": 10626,
+      "faces": 21252,
+      "prompt": "an open umbrella",
+      "japaneseInput": "開いた傘",
+      "seed": 20260930,
+      "sourceMethod": "SDXL Turbo → TripoSR",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "partial",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo",
+        "https://github.com/VAST-AI-Research/TripoSR"
+      ],
+      "licenseLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo/blob/71153311d3dbb46851df1931d3ca6e939de83304/LICENSE.md",
+        "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/LICENSE"
+      ],
+      "httpSeconds": 17.799132791988086,
+      "endToEndSeconds": 19.384014041977935,
+      "observedLimitations": "J字の柄は残る。傘面が厚く片側へ歪み、裏側が塊に近い。1成分でも形が正しいとは限らない。",
+      "surfaceAssessment": "柄にも文字模様が残る一方、厚く膨れた面まで文字で強調される。",
+      "evidence": "experiments/end-to-end/paired-v1/screens/umbrella-image-triposr.png",
+      "descriptionSource": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/tree/383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+      "descriptionLicense": "Apache-2.0; recorded in experiments/translation-model/qwen8-manifest.json",
+      "transform": "none; both APIs already export Y-up; raw response retained",
+      "descriptionLicenseLink": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/blob/383413e909f3bc5303ce195ebbdf0339c5a1a2a3/LICENSE"
+    },
+    {
+      "id": "e2e-paired-v1-watering-can-shap-e",
+      "label": "長い注ぎ口が付いたじょうろ · Shap-E",
+      "path": "/end-to-end-models/paired-v1/watering-can-shap-e.glb",
+      "sha256": "01c59c1148b50406e7de06f505c7aae3081580c731d6a59db7ec15127a18c274",
+      "bytes": 697344,
+      "vertices": 19372,
+      "faces": 38676,
+      "prompt": "a long spout watering can",
+      "japaneseInput": "長い注ぎ口が付いたじょうろ",
+      "seed": 20260930,
+      "sourceMethod": "Shap-E",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "partial",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://github.com/openai/shap-e"
+      ],
+      "licenseLinks": [
+        "https://github.com/openai/shap-e/blob/main/LICENSE"
+      ],
+      "httpSeconds": 40.967505584005266,
+      "endToEndSeconds": 44.536432250984944,
+      "observedLimitations": "胴と長い細線はあるが、注ぎ口・取っ手が細すぎ、浮遊片と切れが多い。22成分。胴の口は見えるが、全体は通常のじょうろとして読み取りにくい。",
+      "surfaceAssessment": "胴には文字が載る。途切れた注ぎ口と取っ手は文字を載せても復元されない。",
+      "evidence": "experiments/end-to-end/paired-v1/screens/watering-can-shap-e.png",
+      "descriptionSource": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/tree/383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+      "descriptionLicense": "Apache-2.0; recorded in experiments/translation-model/qwen8-manifest.json",
+      "transform": "none; both APIs already export Y-up; raw response retained",
+      "descriptionLicenseLink": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/blob/383413e909f3bc5303ce195ebbdf0339c5a1a2a3/LICENSE"
+    },
+    {
+      "id": "e2e-paired-v1-watering-can-image-triposr",
+      "label": "長い注ぎ口が付いたじょうろ · SDXL Turbo → TripoSR",
+      "path": "/end-to-end-models/paired-v1/watering-can-image-triposr.glb",
+      "sha256": "e32548069a12c10839e287b240c8a16e9f1cd1e079c693db3593a9300ed7420c",
+      "bytes": 314276,
+      "vertices": 8706,
+      "faces": 17416,
+      "prompt": "a long spout watering can",
+      "japaneseInput": "長い注ぎ口が付いたじょうろ",
+      "seed": 20260930,
+      "sourceMethod": "SDXL Turbo → TripoSR",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "partial",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo",
+        "https://github.com/VAST-AI-Research/TripoSR"
+      ],
+      "licenseLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo/blob/71153311d3dbb46851df1931d3ca6e939de83304/LICENSE.md",
+        "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/LICENSE"
+      ],
+      "httpSeconds": 15.80427195795346,
+      "endToEndSeconds": 19.37319862493314,
+      "observedLimitations": "胴・長い注ぎ口・取っ手が明瞭で1成分につながる。取っ手の輪の穴は残るが、注ぎ口先端の孔はなく円板状。細部を正確な道具として再現してはいない。",
+      "surfaceAssessment": "胴・注ぎ口・取っ手に連続した文字模様が載り、じょうろの輪郭も保つ。",
+      "evidence": "experiments/end-to-end/paired-v1/screens/watering-can-image-triposr.png",
+      "descriptionSource": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/tree/383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+      "descriptionLicense": "Apache-2.0; recorded in experiments/translation-model/qwen8-manifest.json",
+      "transform": "none; both APIs already export Y-up; raw response retained",
+      "descriptionLicenseLink": "https://huggingface.co/Qwen/Qwen3-8B-MLX-4bit/blob/383413e909f3bc5303ce195ebbdf0339c5a1a2a3/LICENSE"
+    }
+  ],
+  "failures": [],
+  "runManifest": "/end-to-end-models/paired-v1/manifest.json"
+}

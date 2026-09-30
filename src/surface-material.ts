@@ -1,15 +1,18 @@
 import * as THREE from 'three';
 import type { LetterField } from './letters';
+import { BODY_MOTION_GLSL } from './body-motion';
 export function createSurfaceMaterial(field: LetterField) {
   return new THREE.ShaderMaterial({
     side: THREE.DoubleSide, depthWrite: true,
     uniforms: {
       glyphs: { value: field.texture }, time: { value: 0 }, grid: { value: field.grid }, density: { value: 15 },
+      bodyTime: { value: 0 }, bodyMotion: { value: 0 },
       flow: { value: 1 }, brightness: { value: 1 }, reveal: { value: 1 },
     },
     vertexShader: `
+      ${BODY_MOTION_GLSL}
       varying vec3 p; varying vec3 n; varying vec3 viewN;
-      void main() { p = position; n = normal; viewN = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }
+      void main() { p = position; n = normal; viewN = normalize(normalMatrix * bodyNormal(position,normal)); gl_Position = projectionMatrix * modelViewMatrix * vec4(bodyWarp(position), 1.); }
     `,
     fragmentShader: `
       uniform sampler2D glyphs;

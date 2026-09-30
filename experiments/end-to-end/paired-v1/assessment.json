@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-30",
+  "method": "Manual inspection of the frozen three grey views and three shared text-surface views. No mesh edits, generation retries, or prompt corrections.",
+  "translation": [
+    {"id": "sailboat", "text_en": "a small sailboat", "meaning": "retained", "note": "Absolute smallness cannot be assessed after independent size normalization."},
+    {"id": "umbrella", "text_en": "an open umbrella", "meaning": "retained"},
+    {"id": "watering-can", "text_en": "a long spout watering can", "meaning": "retained", "note": "Awkward English, but the watering can and long spout remain. Passed through without correction."}
+  ],
+  "models": [
+    {"case": "sailboat", "method": "shap-e", "semanticAssessment": "partial", "criteria": ["yes", "yes", "partial", "partial"], "observedLimitations": "船体・帆・マストは読めるが、帆とマストに分離や穴があり、マストは非常に細い。9成分。", "surface": "船体と帆の面に文字が載る。細いマストは点や線に近く、文字として読みにくい。", "evidence": "screens/sailboat-shap-e.png"},
+    {"case": "sailboat", "method": "image-triposr", "semanticAssessment": "partial", "criteria": ["yes", "yes", "partial", "yes"], "observedLimitations": "丸みのある船体と太いマスト・帆が見える。マスト先端に浮いた小片があり、帆に小さな穴。5成分。", "surface": "船体と帆を文字が覆い、マストもShap-Eより太く文字模様が残る。離れた小片もそのまま表示される。", "evidence": "screens/sailboat-image-triposr.png"},
+    {"case": "umbrella", "method": "shap-e", "semanticAssessment": "partial", "criteria": ["yes", "yes", "partial", "partial"], "observedLimitations": "開いた傘の面は3方向で自然に読める。軸が細い線になり、下端の柄が離れた点に近い。4成分。下面全体は固定した上方3視点からは評価できない。", "surface": "広い傘面は文字で覆えるが、柄はほぼ点と筋に見える。", "evidence": "screens/umbrella-shap-e.png"},
+    {"case": "umbrella", "method": "image-triposr", "semanticAssessment": "partial", "criteria": ["yes", "yes", "yes", "no"], "observedLimitations": "J字の柄は残る。傘面が厚く片側へ歪み、裏側が塊に近い。1成分でも形が正しいとは限らない。", "surface": "柄にも文字模様が残る一方、厚く膨れた面まで文字で強調される。", "evidence": "screens/umbrella-image-triposr.png"},
+    {"case": "watering-can", "method": "shap-e", "semanticAssessment": "partial", "criteria": ["partial", "partial", "no", "partial"], "observedLimitations": "胴と長い細線はあるが、注ぎ口・取っ手が細すぎ、浮遊片と切れが多い。22成分。胴の口は見えるが、全体は通常のじょうろとして読み取りにくい。", "surface": "胴には文字が載る。途切れた注ぎ口と取っ手は文字を載せても復元されない。", "evidence": "screens/watering-can-shap-e.png"},
+    {"case": "watering-can", "method": "image-triposr", "semanticAssessment": "partial", "criteria": ["yes", "yes", "yes", "partial"], "observedLimitations": "胴・長い注ぎ口・取っ手が明瞭で1成分につながる。取っ手の輪の穴は残るが、注ぎ口先端の孔はなく円板状。細部を正確な道具として再現してはいない。", "surface": "胴・注ぎ口・取っ手に連続した文字模様が載り、じょうろの輪郭も保つ。", "evidence": "screens/watering-can-image-triposr.png"}
+  ],
+  "limitations": [
+    "Three synthetic examples, one seed per method; not a general success-rate study.",
+    "Intermediate image and mask are not retained by the live API, so these six outputs alone do not locate each error to image generation, masking, or reconstruction.",
+    "Views use fixed cameras above the object; completely hidden undersides cannot be judged.",
+    "Text coverage is visually inspected, not quantitatively measured as a surface-area percentage or reading-accuracy score."
+  ]
+}

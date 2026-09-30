@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-30",
+  "inferenceTriggered": false,
+  "cases": [
+    {
+      "case": "ascii",
+      "status": 400,
+      "expected": 400,
+      "error": {
+        "error": "Use a short English/ASCII description"
+      }
+    },
+    {
+      "case": "context",
+      "status": 400,
+      "expected": 400,
+      "error": {
+        "error": "Description plus fixed image framing exceeds 77 CLIP tokens; shorten it"
+      }
+    },
+    {
+      "case": "body",
+      "status": 413,
+      "expected": 413,
+      "error": {
+        "error": "Request body exceeds limits"
+      }
+    },
+    {
+      "case": "host",
+      "status": 403,
+      "expected": 403,
+      "error": {
+        "error": "Origin or Host is not allowed"
+      }
+    },
+    {
+      "case": "origin",
+      "status": 403,
+      "expected": 403,
+      "error": {
+        "error": "Origin or Host is not allowed"
+      }
+    }
+  ]
+}

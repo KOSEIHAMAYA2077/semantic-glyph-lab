@@ -9,6 +9,7 @@ import { createForm } from './geometry';
 import { compositionGroup, type Composition } from './composition';
 import { deformImport } from './deform-import';
 import { AdvectionLayer } from './advection/layer';
+import { MAX_BODY_DISPLACEMENT } from './body-motion';
 import { DEFAULT_FORM, type FormSpec } from './types';
 
 export class SurfaceScene {
@@ -102,7 +103,7 @@ export class SurfaceScene {
   }
   private keepInFrame(geometry:THREE.BufferGeometry,count=1) {
     geometry.computeBoundingSphere();
-    const radius=geometry.boundingSphere!.radius*(count>1?(count<4?.52:.36):1)+(count>1?1.5:0);
+    const radius=(geometry.boundingSphere!.radius+MAX_BODY_DISPLACEMENT)*(count>1?(count<4?.52:.36):1)+(count>1?1.5:0);
     const halfVertical=THREE.MathUtils.degToRad(this.camera.fov*.5);
     const half=Math.min(halfVertical,Math.atan(Math.tan(halfVertical)*this.camera.aspect));
     const required=radius/Math.sin(half)*1.08;
@@ -175,10 +176,11 @@ export class SurfaceScene {
       if (k === 1) this.transition = undefined;
     }
     this.field.refresh(this.time); this.material.uniforms.grid.value = this.field.grid;
-    this.material.uniforms.time.value = this.time;
+    this.material.uniforms.time.value = this.time;this.material.uniforms.bodyTime.value=this.time;
     const flowStep=Math.min(step,.035)*this.material.uniforms.flow.value;
     this.flowTime+=flowStep;
     if(this.advection) {
+      this.advection.setBodyMotion(this.time,this.material.uniforms.bodyMotion.value);
       // Substeps preserve the speed control even though the walker caps dt.
       const steps=Math.max(1,Math.ceil(flowStep/.035));
       for(let i=0;i<steps;i++) this.advection.update(flowStep/steps,this.flowTime,1.4/this.material.uniforms.density.value);
@@ -191,7 +193,7 @@ export class SurfaceScene {
     return { spec: { ...this.spec }, letters: this.field.letters.map(l => ({ ...l })), count: this.field.letters.length,
       time: this.time, paused: this.paused, loaded: this.loaded, vertices: this.geometry.getAttribute('position').count,
       bounds: { min: this.geometry.boundingBox!.min.toArray(), max: this.geometry.boundingBox!.max.toArray() },
-      flow: this.material.uniforms.flow.value, renderMode:this.renderMode, frames: this.frames, renderer: this.renderer.info.render,
+      flow: this.material.uniforms.flow.value, renderMode:this.renderMode, bodyMotion:this.material.uniforms.bodyMotion.value, frames: this.frames, renderer: this.renderer.info.render,
       gpuError:this.renderer.getContext().getError() };
   }
 }

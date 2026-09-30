@@ -9,7 +9,7 @@ const examples = ['剣', '細長い花瓶', '四角い', 'ねじれた剣', '森
 $('#app').innerHTML = `<main id="scene" aria-label="ことばの面"></main><div id="start"><span>press enter</span></div><div id="badge"></div><p id="notice" hidden></p>
 <section id="entry" hidden><form id="form"><div id="input-row"><label for="text">&gt;</label><input id="text" aria-label="加える文章" autocomplete="off" spellcheck="false" placeholder="文章を入力"><button>↵</button></div></form><p id="status" role="status"></p></section>
 <nav id="actions" aria-label="操作"><button id="input-open">入力</button><button id="compare-open">比較</button><button id="pause">止める</button><button id="save-image">画像</button></nav>
-<section id="panel" hidden aria-label="比較と操作"><p>形とことば</p><label>解釈<select id="method"><option value="semantic">意味から選ぶ</option><option value="rules">明示した語だけ</option><option value="compose">部品から作る・実験</option><option value="generate-ja">文章から立体生成・実験</option><option value="generate">英語から直接生成・実験</option></select></label><p id="model-state">ローカルモデルを確認中</p><p id="method-note"></p><label>文字の動かし方<select id="render-mode"><option value="texture">面を覆う</option><option value="advection">面を歩く・実験</option></select></label><p id="render-note"></p><label>文字の密度<input id="density" type="range" min="5" max="35" value="15"></label><label>流れ<input id="flow" type="range" min="0" max="1.8" step=".1" value="1"></label><label><input id="rotation" type="checkbox" checked> ゆっくり回転</label><div class="examples">${examples.map(e => `<button data-example="${e}">${e}</button>`).join('')}</div><p>文章はこの端末内で解釈します。色は追加する文字だけに付きます。ドラッグで回転、スクロールで距離。</p><label>生成・復元した形<select id="generated"><option value="">準備中</option></select></label><button id="load-generated" disabled>形を読み込む</button><label>既存の素材<select id="asset"><option value="tree_oak">木</option><option value="mushroom_red">きのこ</option><option value="flower_purpleA">花</option></select></label><button id="load-asset">素材を読み込む</button><p id="details"></p><button id="close-panel">閉じる</button></section>`;
+<section id="panel" hidden aria-label="比較と操作"><p>形とことば</p><label>解釈<select id="method"><option value="semantic">意味から選ぶ</option><option value="rules">明示した語だけ</option><option value="compose">部品から作る・実験</option><option value="generate-ja">文章から立体生成・実験</option><option value="image-ja">文章→画像→立体・実験</option><option value="generate">英語から直接生成・実験</option></select></label><p id="model-state">ローカルモデルを確認中</p><p id="method-note"></p><label>文字の動かし方<select id="render-mode"><option value="texture">面を覆う</option><option value="advection">面を歩く・実験</option></select></label><p id="render-note"></p><label>文字の密度<input id="density" type="range" min="5" max="35" value="15"></label><label>流れ<input id="flow" type="range" min="0" max="1.8" step=".1" value="1"></label><label>形の揺らぎ<input id="body-motion" type="range" min="0" max="1" step=".1" value="0"></label><label><input id="rotation" type="checkbox" checked> ゆっくり回転</label><div class="examples">${examples.map(e => `<button data-example="${e}">${e}</button>`).join('')}</div><p>文章はこの端末内で解釈します。色は追加する文字だけに付きます。ドラッグで回転、スクロールで距離。</p><label>生成・復元した形<select id="generated"><option value="">準備中</option></select></label><button id="load-generated" disabled>形を読み込む</button><label>既存の素材<select id="asset"><option value="tree_oak">木</option><option value="mushroom_red">きのこ</option><option value="flower_purpleA">花</option></select></label><button id="load-asset">素材を読み込む</button><p id="details"></p><button id="close-panel">閉じる</button></section>`;
 let scene: SurfaceScene;
 try { scene = new SurfaceScene($('#scene')); } catch(e) { $('#status').textContent = `描画を開始できません: ${String(e)}`; $('#entry').hidden = false; throw e; }
 let busy = false, composing = false, ended = -Infinity, apiAvailable = false, last: Interpretation | undefined;
@@ -38,25 +38,26 @@ async function feed(text: string) {
   try {
     let result: Interpretation;
     const method = ($('#method') as HTMLSelectElement).value;
-    if (method === 'generate' || method === 'generate-ja') {
+    if (['generate','generate-ja','image-ja'].includes(method)) {
+      const throughImage=method==='image-ja';
       let description=text;
-      if(method==='generate-ja') {
+      if(method!=='generate') {
         if(text.length>2000)throw new Error('立体の説明は一度に2,000文字までです。');
         $('#status').textContent='文章から形の説明を作っています…';
-        const described=await fetch('/compose-api/describe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text}),signal:AbortSignal.timeout(60000)});
+        const described=await fetch('/description-api/describe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text}),signal:AbortSignal.timeout(60000)});
         if(!described.ok)throw new Error(described.status===422?'物体を特定できませんでした。形や物の説明を加えてください。':'形の説明を作れませんでした。');
         const data=await described.json();ensureCurrent();
         if(typeof data.text_en!=='string' || !data.text_en.trim() || data.text_en.length>300)throw new Error('物体を特定できませんでした。形や物の説明を加えてください。');
         description=data.text_en;
       }
-      $('#status').textContent = '立体を生成しています… 約1分';
-      const response=await fetch('/generate-api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:description}),signal:AbortSignal.timeout(240000)});
+      $('#status').textContent = throughImage ? '画像から立体を作っています… 約30秒' : '立体を生成しています… 約1分';
+      const response=await fetch(throughImage?'/image-api/generate':'/generate-api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:description}),signal:AbortSignal.timeout(240000)});
       if (!response.ok) { const err=await response.json().catch(()=>({})); throw new Error(err.error??'立体を生成できませんでした。'); }
       const blob=await response.blob();ensureCurrent();
       const url=URL.createObjectURL(blob);
       try { if(!await scene.loadGLB(url)) throw new Error('新しい形の選択に切り替わりました。'); }
       finally { URL.revokeObjectURL(url); }
-      result={spec:{...scene.spec},source:'composed',candidates:[],ink:localInterpret(text,scene.spec).ink,elapsedMs:Number(response.headers.get('X-Generation-Ms'))||performance.now()-began,note:`Shap-E · ${description}`};
+      result={spec:{...scene.spec},source:'composed',candidates:[],ink:localInterpret(text,scene.spec).ink,elapsedMs:Number(response.headers.get('X-Generation-Ms'))||performance.now()-began,note:`${throughImage?'SDXL Turbo → TripoSR':'Shap-E'} · ${description}`};
     } else if (method === 'compose') {
       if (text.length > 2000) throw new Error('部品の生成は一度に2,000文字までです。');
       $('#status').textContent = '形を作っています…';
@@ -74,7 +75,7 @@ async function feed(text: string) {
     } else result = localInterpret(text, scene.spec);
     ensureCurrent(); last = result;
     scene.field.add(text, scene.time, result.ink);
-    if (!['compose','generate','generate-ja'].includes(method) && result.source !== 'unchanged') {
+    if (!['compose','generate','generate-ja','image-ja'].includes(method) && result.source !== 'unchanged') {
       if (scene.loaded && result.objectSelected === false) scene.setImportedAttributes(result.spec);
       else scene.setForm(result.spec);
     }
@@ -98,7 +99,7 @@ document.addEventListener('keydown', event => {
 });
 $('#method').onchange=()=>{
   const mode=($('#method') as HTMLSelectElement).value;
-  $('#method-note').textContent = mode==='generate-ja' ? '文章から物体の説明を作り、立体を生成します。約1分。' : mode==='generate' ? '英語の短い物体説明。約1分。形の精度には限界があります。' : mode==='compose' ? '文章から部品を組みます。数秒。位置や数を間違えることがあります。' : '24種の形から選び、四角さやねじれを変えます。';
+  $('#method-note').textContent = mode==='image-ja' ? '画像を経て立体を作ります。約30秒。細い部分や裏側は崩れることがあります。Powered by Stability AI' : mode==='generate-ja' ? '文章から物体の説明を作り、立体を生成します。約1分。' : mode==='generate' ? '英語の短い物体説明。約1分。形の精度には限界があります。' : mode==='compose' ? '文章から部品を組みます。数秒。位置や数を間違えることがあります。' : '24種の形から選び、四角さやねじれを変えます。';
 };
 $('#input-open').onclick = openInput;
 $('#compare-open').onclick = () => { $('#panel').hidden = !$('#panel').hidden; };
@@ -107,6 +108,7 @@ $('#pause').onclick = () => { scene.paused = !scene.paused; update(); };
 $('#density').oninput = () => { scene.material.uniforms.density.value = Number(($('#density') as HTMLInputElement).value); };
 $('#render-mode').onchange=()=>{ const mode=($('#render-mode') as HTMLSelectElement).value==='advection'?'advection':'texture';scene.setRenderMode(mode);$('#render-note').textContent=mode==='advection'?'文字ごとに面をたどります。細かな曲面では一部が隠れます。':''; };
 $('#flow').oninput = () => { scene.material.uniforms.flow.value = Number(($('#flow') as HTMLInputElement).value); };
+$('#body-motion').oninput=()=>{scene.material.uniforms.bodyMotion.value=Number(($('#body-motion') as HTMLInputElement).value);};
 $('#rotation').onchange = () => { scene.controls.autoRotate = ($('#rotation') as HTMLInputElement).checked; };
 document.querySelectorAll<HTMLButtonElement>('[data-example]').forEach(button => { button.onclick = () => { if(busy)return; openInput(); ($('#text') as HTMLInputElement).value = button.dataset.example!; $('#panel').hidden = true; }; });
 $('#save-image').onclick = () => { scene.render(0); const a = document.createElement('a'); a.download = 'semantic-glyph.png'; a.href = scene.renderer.domElement.toDataURL('image/png'); a.click(); };
@@ -117,12 +119,12 @@ async function health() {
 void health(); setInterval(health, 15000);
 async function generated() {
   const select = $('#generated') as HTMLSelectElement; select.replaceChildren();
-  for (const folder of ['generated','reconstructed','text-image-models']) {
+  for (const folder of ['generated','reconstructed','text-image-models','end-to-end-models']) {
     try {
       const response=await fetch(`/${folder}/manifest.json`);if(!response.ok)continue;
       const manifest=await response.json(), models=Array.isArray(manifest)?manifest:manifest.models;
       if(!Array.isArray(models))continue;
-      const group=document.createElement('optgroup');group.label=folder==='generated'?'文章から直接生成':folder==='reconstructed'?'画像から復元':'文章→画像→立体';
+      const group=document.createElement('optgroup');group.label=folder==='generated'?'文章から直接生成':folder==='reconstructed'?'画像から復元':folder==='end-to-end-models'?'同じ文章の比較':'文章→画像→立体';
       for(const m of models) {
         if(typeof m.path!=='string')continue;
         const option=document.createElement('option');option.textContent=m.label??m.prompt??m.id;
@@ -135,7 +137,7 @@ async function generated() {
 }
 $('#load-generated').onclick = async () => {
   const path = ($('#generated') as HTMLSelectElement).value;
-  if (!/^\/(?:generated|reconstructed|text-image-models)\/[\w.\-/]+\.glb$/.test(path) || path.includes('..')) return;
+  if (!/^\/(?:generated|reconstructed|text-image-models|end-to-end-models)\/[\w.\-/]+\.glb$/.test(path) || path.includes('..')) return;
   sceneRevision++;
   $('#model-state').textContent = '形を読み込み中';
   try { if (await scene.loadGLB(path)) { awakened = true; update(); $('#panel').hidden = true; } }

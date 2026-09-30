@@ -2,8 +2,9 @@ import * as THREE from 'three';
 import type { LetterField } from '../letters';
 import { Surface, type Particle } from './surface';
 import { StreamField } from './stream';
+import { BODY_MOTION_GLSL } from '../body-motion';
 
-/** Optional static-mesh comparison. Geometry and LetterField remain caller-owned. */
+/** Walk rest-space triangles; render letters on the same warped triangles as the body. */
 export class AdvectionLayer {
   readonly group = new THREE.Group();
   private readonly surface: Surface;
@@ -11,9 +12,17 @@ export class AdvectionLayer {
   private readonly particles: Particle[];
   private readonly glyphGeometry = new THREE.PlaneGeometry(1, 1);
   private readonly glyphMaterial: THREE.ShaderMaterial;
-  private readonly bodyMaterial = new THREE.MeshBasicMaterial({ color: 0x000000, side: THREE.DoubleSide });
+  private readonly bodyMaterial = new THREE.ShaderMaterial({
+    uniforms:{bodyTime:{value:0},bodyMotion:{value:0}},side:THREE.DoubleSide,
+    vertexShader:`${BODY_MOTION_GLSL} void main(){gl_Position=projectionMatrix*modelViewMatrix*vec4(bodyWarp(position),1.);}`,
+    fragmentShader:'void main(){gl_FragColor=vec4(0.,0.,0.,1.);}'
+  });
   private readonly glyphs: THREE.InstancedMesh;
   private readonly indices: THREE.InstancedBufferAttribute;
+  private readonly triangleA: THREE.InstancedBufferAttribute;
+  private readonly triangleB: THREE.InstancedBufferAttribute;
+  private readonly triangleC: THREE.InstancedBufferAttribute;
+  private readonly triangleFaces: Int32Array;
   private revision = -1;
   private disposed = false;
   private readonly dummy = new THREE.Object3D();
@@ -25,11 +34,32 @@ export class AdvectionLayer {
     this.surface = new Surface(geometry); this.stream = new StreamField(this.surface); this.particles = this.surface.seed(count);
     this.indices = new THREE.InstancedBufferAttribute(new Float32Array(count), 1);
     this.indices.setUsage(THREE.DynamicDrawUsage); this.glyphGeometry.setAttribute('glyphIndex', this.indices);
+    this.triangleA = new THREE.InstancedBufferAttribute(new Float32Array(count * 3), 3);
+    this.triangleB = new THREE.InstancedBufferAttribute(new Float32Array(count * 3), 3);
+    this.triangleC = new THREE.InstancedBufferAttribute(new Float32Array(count * 3), 3);
+    for (const [name, attribute] of [['triangleA', this.triangleA], ['triangleB', this.triangleB], ['triangleC', this.triangleC]] as const) {
+      attribute.setUsage(THREE.DynamicDrawUsage); this.glyphGeometry.setAttribute(name, attribute);
+    }
+    this.triangleFaces = new Int32Array(count).fill(-1);
     this.glyphMaterial = new THREE.ShaderMaterial({
-      uniforms: { atlas: { value: field.texture }, grid: { value: field.grid } }, side: THREE.FrontSide,
-      vertexShader: `attribute float glyphIndex; uniform float grid; varying vec2 glyphUv;
+      uniforms: { atlas: { value: field.texture }, grid: { value: field.grid },bodyTime:{value:0},bodyMotion:{value:0} }, side: THREE.FrontSide,
+      vertexShader: `${BODY_MOTION_GLSL} attribute float glyphIndex; uniform float grid; varying vec2 glyphUv;
+        attribute vec3 triangleA, triangleB, triangleC;
+        vec3 glyphOnWarpedFace(vec3 p) {
+          if(bodyMotion==0.) return p;
+          vec3 e1=triangleB-triangleA, e2=triangleC-triangleA, d=p-triangleA;
+          vec3 areaNormal=cross(e1,e2);
+          float areaSquared=max(dot(areaNormal,areaNormal),1.e-30);
+          // Cross products avoid the Gram determinant's cancellation on thin faces.
+          float u=dot(cross(d,e2),areaNormal)/areaSquared;
+          float v=dot(cross(e1,d),areaNormal)/areaSquared;
+          float height=dot(d,areaNormal)*inversesqrt(areaSquared);
+          vec3 a=bodyWarp(triangleA), b=bodyWarp(triangleB), c=bodyWarp(triangleC);
+          vec3 warpedNormal=normalize(cross(b-a,c-a));
+          return a+u*(b-a)+v*(c-a)+height*warpedNormal;
+        }
         void main(){glyphUv=vec2(mod(glyphIndex,grid)+uv.x,grid-1.0-floor(glyphIndex/grid)+uv.y)/grid;
-        gl_Position=projectionMatrix*modelViewMatrix*instanceMatrix*vec4(position,1.0);}`,
+        vec3 base=(instanceMatrix*vec4(position,1.0)).xyz;gl_Position=projectionMatrix*modelViewMatrix*vec4(glyphOnWarpedFace(base),1.0);}`,
       fragmentShader: `uniform sampler2D atlas; varying vec2 glyphUv;
         void main(){vec3 ink=texture2D(atlas,glyphUv).rgb;if(max(ink.r,max(ink.g,ink.b))<.14)discard;gl_FragColor=vec4(ink,1.0);}`,
     });
@@ -53,15 +83,27 @@ export class AdvectionLayer {
     }
     if (dt > 0 && Number.isFinite(dt) && Number.isFinite(time)) this.stream.step(this.particles, Math.min(dt, .035), time);
     const size = Number.isFinite(glyphSize) && glyphSize > 0 ? glyphSize : .09;
+    let trianglesChanged = false;
     for (let i = 0; i < this.particles.length; i++) {
-      const p = this.particles[i], normal = this.surface.faces[p.face].normal;
+      const p = this.particles[i], face = this.surface.faces[p.face], normal = face.normal;
+      if (this.triangleFaces[i] !== p.face) {
+        this.triangleFaces[i] = p.face; trianglesChanged = true;
+        this.triangleA.setXYZ(i, face.a.x, face.a.y, face.a.z);
+        this.triangleB.setXYZ(i, face.a.x + face.e1.x, face.a.y + face.e1.y, face.a.z + face.e1.z);
+        this.triangleC.setXYZ(i, face.a.x + face.e2.x, face.a.y + face.e2.y, face.a.z + face.e2.z);
+      }
       this.up.copy(p.up).addScaledVector(normal, -p.up.dot(normal)).normalize();
       this.right.crossVectors(this.up, normal).normalize(); this.basis.makeBasis(this.right, this.up, normal);
       this.dummy.position.copy(p.position).addScaledVector(normal, .002);
       this.dummy.quaternion.setFromRotationMatrix(this.basis); this.dummy.scale.setScalar(size); this.dummy.updateMatrix();
       this.glyphs.setMatrixAt(i, this.dummy.matrix);
     }
+    if (trianglesChanged) this.triangleA.needsUpdate = this.triangleB.needsUpdate = this.triangleC.needsUpdate = true;
     this.glyphs.instanceMatrix.needsUpdate = true;
+  }
+  setBodyMotion(time:number,amount:number){
+    this.bodyMaterial.uniforms.bodyTime.value=this.glyphMaterial.uniforms.bodyTime.value=time;
+    this.bodyMaterial.uniforms.bodyMotion.value=this.glyphMaterial.uniforms.bodyMotion.value=amount;
   }
   dispose() {
     if (this.disposed) return;

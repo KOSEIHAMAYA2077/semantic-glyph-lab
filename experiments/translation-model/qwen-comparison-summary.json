@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-30",
+  "samePrompt": true,
+  "sameGreedy": true,
+  "fineTuned": false,
+  "apiChanged": false,
+  "groups": [
+    {
+      "source": "qwen8-run-01.jsonl",
+      "group": "first-pass-for-qwen",
+      "count": 10,
+      "success": 10,
+      "explicitNoSubject": 0,
+      "medianMs": 1312.5,
+      "minMs": 1182,
+      "maxMs": 1637
+    },
+    {
+      "source": "qwen8-run-01.jsonl",
+      "group": "reused-regression",
+      "count": 13,
+      "success": 11,
+      "explicitNoSubject": 2,
+      "medianMs": 1312,
+      "minMs": 973,
+      "maxMs": 2030
+    },
+    {
+      "source": "qwen4b-fresh-01.jsonl",
+      "group": "first-pass-for-qwen",
+      "count": 10,
+      "success": 10,
+      "explicitNoSubject": 0,
+      "medianMs": 815.0,
+      "minMs": 778,
+      "maxMs": 1113
+    }
+  ],
+  "decision": "8B is a candidate with useful noun fixes, but no universal improvement. It loses left-side information and mistranslates spiral shell. Retain all comparisons and stop adding models."
+}

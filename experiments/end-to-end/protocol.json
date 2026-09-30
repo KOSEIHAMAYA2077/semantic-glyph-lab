@@ -1,0 +1,22 @@
+{
+  "version": "end-to-end-v1",
+  "fixedBeforeInference": "2026-09-30; fixed before this experiment's 4188 or generation requests",
+  "purpose": "Compare two generation paths from exactly the same translated synthetic Japanese input, without editing translations or selecting retries.",
+  "cases": [
+    {"id": "sailboat", "text": "小さな帆船", "criteria": ["boat hull recognisable", "mast and sail recognisable", "hull/mast/sail spatially connected plausibly", "thin sail visible from multiple views"], "unscorable": "absolute smallness without a scale reference"},
+    {"id": "umbrella", "text": "開いた傘", "criteria": ["umbrella recognisable", "canopy open rather than folded", "shaft/handle distinct", "thin canopy has plausible front and back"]},
+    {"id": "watering-can", "text": "長い注ぎ口が付いたじょうろ", "criteria": ["watering-can body recognisable", "long spout distinct and attached to body", "handle distinct", "holes/openings and thin parts not filled or broken"]}
+  ],
+  "description": {"url": "http://127.0.0.1:4188/describe", "health": "http://127.0.0.1:4188/health", "requestsPerCase": 1, "manualEditing": false, "timeoutSeconds": 90},
+  "methods": [
+    {"id": "shap-e", "label": "Shap-E", "url": "http://127.0.0.1:4186/generate", "health": "http://127.0.0.1:4186/health", "requestsPerCase": 1, "timeoutSeconds": 150, "seed": 20260930, "steps": 32, "grid": 128, "startup": "persistent model worker already loaded"},
+    {"id": "image-triposr", "label": "SDXL Turbo → TripoSR", "url": "http://127.0.0.1:4187/generate", "health": "http://127.0.0.1:4187/health", "requestsPerCase": 1, "timeoutSeconds": 150, "seed": 20260930, "steps": 4, "grid": 128, "startup": "new image and reconstruction worker per request", "internalSuffix": ". One complete isolated object centered on a plain gray background. Matte clay sculpture, three-quarter product view."}
+  ],
+  "executionOrder": "For each case in listed order: one description request, then Shap-E, then image-TripoSR. No concurrent GPU requests. Do not retry or hand-edit failed or semantically incorrect output.",
+  "failureHandling": "Keep HTTP status, safe error response and elapsed time. If translation fails, mark both generators skipped. If generation fails, retain failure and continue next method/case.",
+  "rendering": {"upAxis": "Y", "normalization": "shared SurfaceScene centers bounding box and scales longest side to 2.6", "viewAzimuthDegrees": [35, 145, 255], "elevationDegrees": 20, "cameraDistance": 7.2, "fovDegrees": 38, "bodyMotion": 0, "textDensity": 15, "flow": 1, "timeSeconds": 12, "renderMode": "texture", "ink": "#ffffff", "letters": "小さな帆船。開いた傘。長い注ぎ口が付いたじょうろ。", "views": "three identical camera views in grey and in the shared text surface material"},
+  "assessment": "After fixed generation, mark each criterion yes/partial/no/unassessable and cite saved views. Separate translation errors, object/part structure, back-side flattening, thin parts, holes and text coverage. No general success-rate claim from three examples or one seed.",
+  "timingCaveat": "Record description time, generator HTTP time, API stage times, and the sum. Shap-E keeps weights loaded while image-TripoSR cold-starts; these are observed service latencies, not equalized algorithm benchmarks. Identical seed integers do not imply matched noise between different models.",
+  "provenance": "Only the three synthetic descriptions above. Client explicitly saves returned generated GLBs into public/end-to-end-models. Services do not persist request text or generated artifacts. No reference images or user writing are used.",
+  "attribution": "Powered by Stability AI"
+}
