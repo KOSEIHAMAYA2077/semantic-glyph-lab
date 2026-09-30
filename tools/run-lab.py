@@ -12,6 +12,7 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 SERVICES = [
+    ('retrieval', 4189, 'semantics-venv', 'server/retrieval.py'),
     ('meaning', 4184, 'semantics-venv', 'server/app.py'),
     ('composition', 4185, 'composition-venv', 'server/composition.py'),
     ('generation', 4186, 'shap-e-venv', 'server/generation.py'),
@@ -33,6 +34,7 @@ def occupied(port):
 def verified_service(name, data):
     try:
         obj=json.loads(data)
+        if name=='retrieval': return obj.get('service')=='local-asset-retrieval' and obj.get('local') is True and obj.get('storesInput') is False
         if name=='meaning': return 'semanticReady' in obj and obj.get('model')=='sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2' and obj.get('storesInput') is False
         if name=='composition': return obj.get('model') in ('Qwen/Qwen3-4B-Instruct-2507','Qwen/Qwen3-4B-MLX-4bit')
         if name=='description': return obj.get('model')=='Qwen/Qwen3-8B-MLX-4bit' and obj.get('capabilities')==['describe'] and obj.get('local') is True

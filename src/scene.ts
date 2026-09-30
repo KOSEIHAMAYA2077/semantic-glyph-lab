@@ -10,6 +10,8 @@ import { compositionGroup, type Composition } from './composition';
 import { deformImport } from './deform-import';
 import { AdvectionLayer } from './advection/layer';
 import { MAX_BODY_DISPLACEMENT } from './body-motion';
+import { FluidField } from './fluid/field';
+import { fluidMaterial } from './fluid/material';
 import { DEFAULT_FORM, type FormSpec } from './types';
 
 export class SurfaceScene {
@@ -26,7 +28,10 @@ export class SurfaceScene {
   private transition?: { from: Float32Array; to: Float32Array; normalsFrom: Float32Array; normalsTo: Float32Array; elapsed: number };
   private loadingToken = 0;
   private importedBase?: THREE.BufferGeometry;
-  renderMode: 'texture' | 'advection' = 'texture';
+  renderMode: 'texture' | 'advection' | 'fluid' = 'texture';
+  private fluid?: FluidField;
+  private fluidSurface?: THREE.ShaderMaterial;
+  private fluidAccumulator=0;
   private advection?: AdvectionLayer;
   private advectionCopies: THREE.InstancedMesh[] = [];
   private flowTime = 0;
@@ -53,7 +58,7 @@ export class SurfaceScene {
     const count = this.spec.count;
     if(this.renderMode === 'advection') this.advection=new AdvectionLayer(this.geometry,this.field,4096);
     for (let i = 0; i < count; i++) {
-      let mesh: THREE.Object3D = new THREE.Mesh(this.geometry, this.material);
+      let mesh: THREE.Object3D = new THREE.Mesh(this.geometry, this.renderMode==='fluid'?this.fluidSurface!:this.material);
       if(this.advection) {
         mesh=i===0?this.advection.group:this.advection.group.clone();
         if(i>0) {
@@ -70,15 +75,21 @@ export class SurfaceScene {
       this.group.add(mesh);
     }
   }
-  setRenderMode(mode: 'texture' | 'advection') {
+  setRenderMode(mode: 'texture' | 'advection' | 'fluid') {
     if(mode===this.renderMode)return;
+    if(mode==='fluid'&&!this.fluid){
+      this.fluid=new FluidField(this.renderer);
+      this.fluidSurface=fluidMaterial(this.field,this.fluid.displacement);
+      this.fluidSurface.vertexShader=this.material.vertexShader;
+      for(const key of ['glyphs','grid','density','bodyMotion','bodyTime'])this.fluidSurface.uniforms[key]=this.material.uniforms[key];
+    }
     if(this.transition) {
       (this.geometry.getAttribute('position') as THREE.BufferAttribute).array.set(this.transition.to);
       (this.geometry.getAttribute('normal') as THREE.BufferAttribute).array.set(this.transition.normalsTo);
       this.geometry.getAttribute('position').needsUpdate=this.geometry.getAttribute('normal').needsUpdate=true;
       this.transition=undefined;
     }
-    this.renderMode=mode;this.populate();
+    this.fluidAccumulator=0;this.renderMode=mode;this.populate();
   }
   setForm(spec: FormSpec) {
     this.loadingToken++; const next = createForm(spec);
@@ -185,6 +196,12 @@ export class SurfaceScene {
       const steps=Math.max(1,Math.ceil(flowStep/.035));
       for(let i=0;i<steps;i++) this.advection.update(flowStep/steps,this.flowTime,1.4/this.material.uniforms.density.value);
     }
+    if(this.renderMode==='fluid'&&this.fluid&&this.fluidSurface){
+      // At most six steps per frame. A hidden tab never accumulates catch-up work.
+      this.fluidAccumulator=Math.min(.1,this.fluidAccumulator+flowStep);
+      while(this.fluidAccumulator+1e-9>=this.fluid.fixedDt){this.fluid.step();this.fluidAccumulator-=this.fluid.fixedDt;}
+      this.fluidSurface.uniforms.displacement.value=this.fluid.displacement;
+    }
     if (!this.paused) this.controls.update(step);
     this.renderer.render(this.world, this.camera); this.frames++;
   }
@@ -194,6 +211,12 @@ export class SurfaceScene {
       time: this.time, paused: this.paused, loaded: this.loaded, vertices: this.geometry.getAttribute('position').count,
       bounds: { min: this.geometry.boundingBox!.min.toArray(), max: this.geometry.boundingBox!.max.toArray() },
       flow: this.material.uniforms.flow.value, renderMode:this.renderMode, bodyMotion:this.material.uniforms.bodyMotion.value, frames: this.frames, renderer: this.renderer.info.render,
+      fluid:this.fluid?{steps:this.fluid.steps,time:this.fluid.time}:null,
       gpuError:this.renderer.getContext().getError() };
+  }
+  inspectFluid(){return this.fluid?.inspect();}
+  resetFluid(){
+    this.fluid?.reset();this.fluidAccumulator=0;
+    if(this.fluid&&this.fluidSurface)this.fluidSurface.uniforms.displacement.value=this.fluid.displacement;
   }
 }

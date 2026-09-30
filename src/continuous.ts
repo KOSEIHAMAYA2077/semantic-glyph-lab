@@ -6,7 +6,7 @@ export interface AcceptedWriting { id:number; raw:string; state:'queued'|'interp
 export interface ContinuousState { pending:number; phase:'idle'|'interpreting'|'generating'|'installing'; error:string; canRetry:boolean }
 interface Hooks<T> {
   accepted(writing:AcceptedWriting):void;
-  route(text:string,current:ShapeContext):Promise<ShapeIntent>;
+  route(text:string,current:ShapeContext,writing:Readonly<AcceptedWriting>):Promise<ShapeIntent>;
   generate(description:string):Promise<T>;
   known(current:ShapeContext):void;
   edit(current:ShapeContext):void;
@@ -82,7 +82,7 @@ export class ContinuousInput<T> {
         const epoch=this.epoch;
         entry.state='interpreting';this.phase='interpreting';this.emit();
         try {
-          const intent=await this.hooks.route(entry.raw,this.current);
+          const intent=await this.hooks.route(entry.raw,this.current,Object.freeze({...entry}));
           if(epoch!==this.epoch){entry.state='cancelled';continue;}
           this.context=applyIntent(this.context,intent);
           if(intent.action==='new') {

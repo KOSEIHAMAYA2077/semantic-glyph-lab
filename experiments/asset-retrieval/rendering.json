@@ -1,0 +1,20 @@
+{
+  "upAxis": "Y",
+  "normalization": "shared SurfaceScene centers bounding box and scales longest side to 2.6",
+  "viewAzimuthDegrees": [
+    35,
+    145,
+    255
+  ],
+  "elevationDegrees": 20,
+  "cameraDistance": 7.2,
+  "fovDegrees": 38,
+  "bodyMotion": 0,
+  "textDensity": 15,
+  "flow": 1,
+  "timeSeconds": 12,
+  "renderMode": "texture",
+  "ink": "#ffffff",
+  "letters": "陶器の花瓶。長い注ぎ口が付いたじょうろ。長くねじれた剣。",
+  "views": "three identical camera views in grey and in the shared text surface material"
+}

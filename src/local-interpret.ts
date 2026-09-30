@@ -82,3 +82,15 @@ export function localInterpret(text: string, previous: FormSpec): Interpretation
   if (Object.keys(changes).length) source = 'composed';
   return { spec, source, candidates, objectSelected: Boolean(noun), elapsedMs: 0, ...(ink ? { ink } : {}), ...(note ? { note } : {}) };
 }
+
+// Only complete attribute commands bypass asset search. An adjective inside a
+// new object description ("長い注ぎ口のじょうろ") must not edit the old object.
+export function localAttributeEdit(text:string,previous:FormSpec):Interpretation|undefined {
+  const result=localInterpret(text,previous);
+  const normalized=text.normalize('NFKC').trim().toLowerCase();
+  // The general rule parser removes grammatical particles such as "する" and
+  // "な". Preserve prohibitions before that removal in this strict edit gate.
+  if(/(?:る|す|く)な(?:[\s。、!！?？]|$)/.test(normalized))return undefined;
+  const parsed=attributes(normalized.replace(/(赤|青|白|黄色)(?:く|い)/g,'$1 '));
+  return !result.objectSelected&&!parsed.residual&&Object.keys(parsed.changes).length?result:undefined;
+}

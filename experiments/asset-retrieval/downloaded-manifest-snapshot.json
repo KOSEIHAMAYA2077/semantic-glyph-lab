@@ -1,0 +1,144 @@
+{
+  "createdUTC": "2026-09-30T07:08:18.754706+00:00",
+  "credit": "Powered by Poly Haven",
+  "apiTerms": "https://github.com/Poly-Haven/Public-API/blob/master/ToS.md",
+  "license": "CC0-1.0 for these asset-derived GLBs. Bulk API metadata is not redistributed or labeled CC0.",
+  "sourceManifest": "experiments/asset-retrieval/source-manifest.json",
+  "models": [
+    {
+      "id": "polyhaven-ceramic_vase_03",
+      "label": "素材検索: 陶器の花瓶",
+      "path": "/retrieval-models/ceramic_vase_03-geometry.glb",
+      "sha256": "cf4829a5ab69501b88526dc51155ed6b5bccaf960e633345434c7d5f1360f950",
+      "bytes": 308992,
+      "source": "https://polyhaven.com/a/ceramic_vase_03",
+      "assetId": "ceramic_vase_03",
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "credit": "Powered by Poly Haven",
+      "sourceMethod": "Multilingual metadata retrieval of existing CC0 mesh, not 3D generation",
+      "originalSourcePreserved": true,
+      "derivation": "Read official glTF2 scene transforms, flatten geometry, preserve normals, omit original material and textures. Y-up per glTF. No repair, simplification or requested twist deformation.",
+      "vertices": 7263,
+      "faces": 11136,
+      "bounds": [
+        [
+          -0.056120797991752625,
+          2.455843787174672e-05,
+          -0.056119807064533234
+        ],
+        [
+          0.05611971765756607,
+          0.41439637541770935,
+          0.056119803339242935
+        ]
+      ],
+      "finite": true,
+      "geometryRoundtripVerified": true,
+      "componentsAfterWeldingForInspectionOnly": 1,
+      "watertightAfterWeldingForInspectionOnly": true,
+      "largestComponentAreaShare": 1.0,
+      "retrievalCaveat": "Object and requested material or spout found; mesh details are verified separately in comparison images.",
+      "name": "Ceramic Vase 03",
+      "description": "A tall ceramic vase with a narrow rectangular body and an opening at the top.",
+      "descriptionOrigin": "New concise factual description written for this experiment; not copied API prose.",
+      "catalogueScope": "One of three already-downloaded assets. The other 518 catalogue meshes are not available locally."
+    },
+    {
+      "id": "polyhaven-watering_can_metal_01",
+      "label": "素材検索: じょうろ",
+      "path": "/retrieval-models/watering_can_metal_01-geometry.glb",
+      "sha256": "519e5144daba225c0047e8a9455267df53c731e2f678397fa7316f5f34ff32a2",
+      "bytes": 328844,
+      "source": "https://polyhaven.com/a/watering_can_metal_01",
+      "assetId": "watering_can_metal_01",
+      "authors": {
+        "Charles Nderitu": "All"
+      },
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "credit": "Powered by Poly Haven",
+      "sourceMethod": "Multilingual metadata retrieval of existing CC0 mesh, not 3D generation",
+      "originalSourcePreserved": true,
+      "derivation": "Read official glTF2 scene transforms, flatten geometry, preserve normals, omit original material and textures. Y-up per glTF. No repair, simplification or requested twist deformation.",
+      "vertices": 7741,
+      "faces": 11837,
+      "bounds": [
+        [
+          -0.09528457373380661,
+          -0.0010444645304232836,
+          -0.17470625042915344
+        ],
+        [
+          0.09573400020599365,
+          0.19577406346797943,
+          0.2776298224925995
+        ]
+      ],
+      "finite": true,
+      "geometryRoundtripVerified": true,
+      "componentsAfterWeldingForInspectionOnly": 5,
+      "watertightAfterWeldingForInspectionOnly": false,
+      "largestComponentAreaShare": 0.870942946300411,
+      "retrievalCaveat": "Object and requested material or spout found; mesh details are verified separately in comparison images.",
+      "name": "Watering Can Metal 01",
+      "description": "A metal watering can with a rounded container, curved handles and a long spout.",
+      "descriptionOrigin": "New concise factual description written for this experiment; not copied API prose.",
+      "catalogueScope": "One of three already-downloaded assets. The other 518 catalogue meshes are not available locally."
+    },
+    {
+      "id": "polyhaven-wooden_handle_saber",
+      "label": "素材検索: 剣（ねじれ未反映）",
+      "path": "/retrieval-models/wooden_handle_saber-geometry.glb",
+      "sha256": "deab95d3023df7c7d5a10d41db7cac325f9ac757eae41f9007c8f27874b26595",
+      "bytes": 113580,
+      "source": "https://polyhaven.com/a/wooden_handle_saber",
+      "assetId": "wooden_handle_saber",
+      "authors": {
+        "Ulan Cabanilla": "All"
+      },
+      "license": "CC0-1.0",
+      "licenseSource": "https://polyhaven.com/license",
+      "credit": "Powered by Poly Haven",
+      "sourceMethod": "Multilingual metadata retrieval of existing CC0 mesh, not 3D generation",
+      "originalSourcePreserved": true,
+      "derivation": "Read official glTF2 scene transforms, flatten geometry, preserve normals, omit original material and textures. Y-up per glTF. No repair, simplification or requested twist deformation.",
+      "vertices": 2675,
+      "faces": 4031,
+      "bounds": [
+        [
+          -0.012846197001636028,
+          -0.09618058800697327,
+          -0.06570485979318619
+        ],
+        [
+          0.012846441939473152,
+          0.839275062084198,
+          0.057083677500486374
+        ]
+      ],
+      "finite": true,
+      "geometryRoundtripVerified": true,
+      "componentsAfterWeldingForInspectionOnly": 7,
+      "watertightAfterWeldingForInspectionOnly": false,
+      "largestComponentAreaShare": 0.7423234586199536,
+      "retrievalCaveat": "Sword base object found, but requested twist not represented.",
+      "name": "Wooden Handle Saber",
+      "description": "A saber with a long curved blade, a wooden handle and a crossguard.",
+      "descriptionOrigin": "New concise factual description written for this experiment; not copied API prose.",
+      "catalogueScope": "One of three already-downloaded assets. The other 518 catalogue meshes are not available locally."
+    }
+  ],
+  "runtimeRetrievalScope": {
+    "count": 3,
+    "inputFields": [
+      "name",
+      "description"
+    ],
+    "descriptionRights": "Original experiment descriptions; asset names and source links identify CC0 assets. No bulk metadata or site preview is republished.",
+    "availability": "Local geometry-only GLBs only; no runtime API download is implied."
+  }
+}

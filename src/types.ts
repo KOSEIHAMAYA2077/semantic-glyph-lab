@@ -11,7 +11,7 @@ export interface FormSpec {
 export const DEFAULT_FORM: FormSpec = { object: 'sphere', squareness: 0, elongation: 1, twist: 0, bend: 0, roughness: 0, count: 1 };
 export interface Interpretation {
   spec: FormSpec;
-  source: 'explicit' | 'embedding' | 'composed' | 'unchanged';
+  source: 'explicit' | 'embedding' | 'composed' | 'retrieved' | 'unchanged';
   candidates: { object: ObjectId; score: number }[];
   ink?: string;
   elapsedMs: number;

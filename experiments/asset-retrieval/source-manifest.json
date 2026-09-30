@@ -1,0 +1,185 @@
+{
+  "startedUTC": "2026-09-30T07:07:08.645432+00:00",
+  "provider": "Poly Haven",
+  "credit": "Powered by Poly Haven",
+  "assetLicense": "CC0-1.0",
+  "licenseSource": "https://polyhaven.com/license",
+  "apiTerms": "https://github.com/Poly-Haven/Public-API/blob/master/ToS.md",
+  "selectedAfterRetrieval": true,
+  "selectionReason": "Top1 name+description matches the base object for vase, watering can and sword. The saber does not satisfy the requested twist; it remains a partial match.",
+  "files": [
+    {
+      "asset": "ceramic_vase_03",
+      "relativePath": "ceramic_vase_03_1k.gltf",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/ceramic_vase_03/ceramic_vase_03_1k.gltf",
+      "bytes": 2690,
+      "sha256": "72ea418ae3a761a651ea6bc4ce6daced649a2bd6c1c570227ba73af9e25d07f4",
+      "officialMD5": "5c5ad889be3b7464bc87d29f0d85cd73",
+      "actualMD5": "5c5ad889be3b7464bc87d29f0d85cd73"
+    },
+    {
+      "asset": "ceramic_vase_03",
+      "relativePath": "textures/ceramic_vase_03_rough_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ceramic_vase_03/ceramic_vase_03_rough_1k.jpg",
+      "bytes": 154214,
+      "sha256": "5db8b7b46da1c0354aec3ace7c3c0234c35211614d4cc82b5d1dd6257d11ada3",
+      "officialMD5": "f7b93888bf3bb21f280f38635f2fb401",
+      "actualMD5": "f7b93888bf3bb21f280f38635f2fb401"
+    },
+    {
+      "asset": "ceramic_vase_03",
+      "relativePath": "textures/ceramic_vase_03_nor_gl_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ceramic_vase_03/ceramic_vase_03_nor_gl_1k.jpg",
+      "bytes": 181966,
+      "sha256": "bf5afd92bcf977af46f2f279d8fc025ce1dd5f69f4205dc6ac2a97df1759d426",
+      "officialMD5": "e8ea6ff7afcb3b2dd57bc5a9b7d61d6d",
+      "actualMD5": "e8ea6ff7afcb3b2dd57bc5a9b7d61d6d"
+    },
+    {
+      "asset": "ceramic_vase_03",
+      "relativePath": "ceramic_vase_03.bin",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/ceramic_vase_03/ceramic_vase_03.bin",
+      "bytes": 299232,
+      "sha256": "19ced3c9a4231e0e0f0d2693661e40db15590ad99b3c84feecaa19067311fa6b",
+      "officialMD5": "4ad56bfebd58d98eb20f13a5e4fb6476",
+      "actualMD5": "4ad56bfebd58d98eb20f13a5e4fb6476"
+    },
+    {
+      "asset": "ceramic_vase_03",
+      "relativePath": "textures/ceramic_vase_03_diff_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ceramic_vase_03/ceramic_vase_03_diff_1k.jpg",
+      "bytes": 127057,
+      "sha256": "a939cd965fa2a3b5240e2c2a3cecdd404ae66542abb967d1ebcbdfa9657a0212",
+      "officialMD5": "f5688bd3b1835b5dd94f701704d5dc5d",
+      "actualMD5": "f5688bd3b1835b5dd94f701704d5dc5d"
+    },
+    {
+      "asset": "watering_can_metal_01",
+      "relativePath": "watering_can_metal_01_1k.gltf",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/watering_can_metal_01/watering_can_metal_01_1k.gltf",
+      "bytes": 3183,
+      "sha256": "aaf3cdf52d64d1081fc7a9113a1ee91a0f8c9bcf569b5ac9927c713b65bbbd2e",
+      "officialMD5": "38a69c7bdf66a2a9e3348b4c766c8d64",
+      "actualMD5": "38a69c7bdf66a2a9e3348b4c766c8d64"
+    },
+    {
+      "asset": "watering_can_metal_01",
+      "relativePath": "textures/watering_can_metal_01_nor_gl_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/watering_can_metal_01/watering_can_metal_01_nor_gl_1k.jpg",
+      "bytes": 725001,
+      "sha256": "13aaedd908aba518ab28d3401881529c9d2ee656459a110f5619b9aad2e86be7",
+      "officialMD5": "a94eebe05e42b53dd3b8f75a9a341598",
+      "actualMD5": "a94eebe05e42b53dd3b8f75a9a341598"
+    },
+    {
+      "asset": "watering_can_metal_01",
+      "relativePath": "watering_can_metal_01.bin",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/watering_can_metal_01/watering_can_metal_01.bin",
+      "bytes": 318736,
+      "sha256": "8d8db62f70b3a0a8887dbc31f6507bd2dfb93b2878527cc06362dca766493a32",
+      "officialMD5": "26a41806730e420dc894a685d9a80fe3",
+      "actualMD5": "26a41806730e420dc894a685d9a80fe3"
+    },
+    {
+      "asset": "watering_can_metal_01",
+      "relativePath": "textures/watering_can_metal_01_arm_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/watering_can_metal_01/watering_can_metal_01_arm_1k.jpg",
+      "bytes": 944654,
+      "sha256": "966f78fca72dd7ae358c3199f6f7734830a7b09c782673e3e4bdfd0ce2d16689",
+      "officialMD5": "ccc868c2394c1d085f1f76997626ccac",
+      "actualMD5": "ccc868c2394c1d085f1f76997626ccac"
+    },
+    {
+      "asset": "watering_can_metal_01",
+      "relativePath": "textures/watering_can_metal_01_diff_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/watering_can_metal_01/watering_can_metal_01_diff_1k.jpg",
+      "bytes": 619613,
+      "sha256": "e684096ed02bf20dbe46875185aeef02bbc50d31730badfe5853a36ccc5ee2fe",
+      "officialMD5": "ea49aa546a86f15b6401b1a1bdc8cac2",
+      "actualMD5": "ea49aa546a86f15b6401b1a1bdc8cac2"
+    },
+    {
+      "asset": "wooden_handle_saber",
+      "relativePath": "wooden_handle_saber_1k.gltf",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wooden_handle_saber/wooden_handle_saber_1k.gltf",
+      "bytes": 2838,
+      "sha256": "33456f9b2984bc17fddcff194fbdb83bd963abdd472d46e17550b5cbba6b40ec",
+      "officialMD5": "d7d48bbcb67ba15a1141e364979e02d1",
+      "actualMD5": "d7d48bbcb67ba15a1141e364979e02d1"
+    },
+    {
+      "asset": "wooden_handle_saber",
+      "relativePath": "wooden_handle_saber.bin",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wooden_handle_saber/wooden_handle_saber.bin",
+      "bytes": 109788,
+      "sha256": "893dda3e18c4f53aff61d317dc28b4da89247b380b1e82e898527d544876436f",
+      "officialMD5": "82e86aeac0953c427db1afb46a85d422",
+      "actualMD5": "82e86aeac0953c427db1afb46a85d422"
+    },
+    {
+      "asset": "wooden_handle_saber",
+      "relativePath": "textures/wooden_handle_saber_nor_gl_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_handle_saber/wooden_handle_saber_nor_gl_1k.jpg",
+      "bytes": 507069,
+      "sha256": "0646795086192634a25583623c1126d222898cf3879af5938d6f659242f29bf8",
+      "officialMD5": "de3f88798f0b3f2c438f69b7171c6621",
+      "actualMD5": "de3f88798f0b3f2c438f69b7171c6621"
+    },
+    {
+      "asset": "wooden_handle_saber",
+      "relativePath": "textures/wooden_handle_saber_diff_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_handle_saber/wooden_handle_saber_diff_1k.jpg",
+      "bytes": 467365,
+      "sha256": "cae0c923165bf6a0694b11d757fd23edf9540051a46b0190ac5fbf8863a7a07b",
+      "officialMD5": "f9747dc9dce8749e107b7180701e9ad4",
+      "actualMD5": "f9747dc9dce8749e107b7180701e9ad4"
+    },
+    {
+      "asset": "wooden_handle_saber",
+      "relativePath": "textures/wooden_handle_saber_arm_1k.jpg",
+      "source": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_handle_saber/wooden_handle_saber_arm_1k.jpg",
+      "bytes": 732962,
+      "sha256": "768de3e00c7a5e7ae706fbbc8acca6b5178cba99d9cb006f63e983adaf27af07",
+      "officialMD5": "5f74c37f353d7ce66a1f6f1e6bb44ecc",
+      "actualMD5": "5f74c37f353d7ce66a1f6f1e6bb44ecc"
+    }
+  ],
+  "models": [
+    {
+      "id": "ceramic_vase_03",
+      "name": "Ceramic Vase 03",
+      "source": "https://polyhaven.com/a/ceramic_vase_03",
+      "authors": {
+        "James Ray Cock": "All"
+      },
+      "mainFile": "ceramic_vase_03_1k.gltf",
+      "gltfExtensionsRequired": [],
+      "sourceKeptUnmodified": true
+    },
+    {
+      "id": "watering_can_metal_01",
+      "name": "Watering Can Metal 01",
+      "source": "https://polyhaven.com/a/watering_can_metal_01",
+      "authors": {
+        "Charles Nderitu": "All"
+      },
+      "mainFile": "watering_can_metal_01_1k.gltf",
+      "gltfExtensionsRequired": [],
+      "sourceKeptUnmodified": true
+    },
+    {
+      "id": "wooden_handle_saber",
+      "name": "Wooden Handle Saber",
+      "source": "https://polyhaven.com/a/wooden_handle_saber",
+      "authors": {
+        "Ulan Cabanilla": "All"
+      },
+      "mainFile": "wooden_handle_saber_1k.gltf",
+      "gltfExtensionsRequired": [],
+      "sourceKeptUnmodified": true
+    }
+  ],
+  "completedUTC": "2026-09-30T07:07:10.489739+00:00",
+  "downloadedAssetBytes": 5196368,
+  "metadataAndAssetsBytes": 5833081
+}

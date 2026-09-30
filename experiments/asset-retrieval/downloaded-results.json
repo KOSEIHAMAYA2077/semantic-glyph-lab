@@ -1,0 +1,207 @@
+{
+  "protocol": {
+    "frozenUTC": "2026-09-30T07:11:23.419469+00:00",
+    "manifestSHA256": "68fb0d568ec0a8efa96ad332a8823ff861210d86faeba74bb82ec70e488f04fa",
+    "cases": "Same ten artificial queries, reused after selecting assets; no new held-out claim.",
+    "caption": "name + new experiment description",
+    "count": 3,
+    "topK": 3,
+    "threshold": null,
+    "policy": "Ranking diagnostic only. Do not calibrate a threshold or claim all inputs should select an asset."
+  },
+  "blockedIPAttempts": 0,
+  "model": "same verified multilingual MiniLM int8 ONNX, CPU",
+  "encoderCodeSHA256": "120fdf2dd0b9b8cc366d1a6d7c26b6af37bea66f29b88cd9ea2699f4b9501fc7",
+  "cases": [
+    {
+      "id": "vase",
+      "text": "陶器の花瓶。",
+      "elapsedMs": 1.83,
+      "ranked": [
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.863513
+        },
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": 0.242816
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.098569
+        }
+      ]
+    },
+    {
+      "id": "watering-can",
+      "text": "長い注ぎ口が付いたじょうろ。",
+      "elapsedMs": 2.027,
+      "ranked": [
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": 0.44257
+        },
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.309303
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.160214
+        }
+      ]
+    },
+    {
+      "id": "twisted-sword",
+      "text": "長くねじれた剣。",
+      "elapsedMs": 1.484,
+      "ranked": [
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.701525
+        },
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": 0.290718
+        },
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.24789
+        }
+      ]
+    },
+    {
+      "id": "chair",
+      "text": "木製の椅子。",
+      "elapsedMs": 1.944,
+      "ranked": [
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.309751
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.294429
+        },
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": 0.017702
+        }
+      ]
+    },
+    {
+      "id": "barrel",
+      "text": "木でできた樽。",
+      "elapsedMs": 1.817,
+      "ranked": [
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.29825
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.276037
+        },
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": 0.232633
+        }
+      ]
+    },
+    {
+      "id": "football",
+      "text": "革のサッカーボール。",
+      "elapsedMs": 1.596,
+      "ranked": [
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.28124
+        },
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.201781
+        },
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": 0.11065
+        }
+      ]
+    },
+    {
+      "id": "horse-statue",
+      "text": "馬の形をした彫刻。",
+      "elapsedMs": 1.675,
+      "ranked": [
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.487686
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.254995
+        },
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": 0.124062
+        }
+      ]
+    },
+    {
+      "id": "umbrella",
+      "text": "開いた傘。",
+      "elapsedMs": 1.38,
+      "ranked": [
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": 0.195454
+        },
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.183828
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.028529
+        }
+      ]
+    },
+    {
+      "id": "chain",
+      "text": "三つの輪が鎖状につながったもの。",
+      "elapsedMs": 2.481,
+      "ranked": [
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.32973
+        },
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": 0.258296
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.168183
+        }
+      ]
+    },
+    {
+      "id": "abstract",
+      "text": "ただ静かな気分。",
+      "elapsedMs": 1.797,
+      "ranked": [
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "score": 0.037608
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "score": 0.011667
+        },
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "score": -0.028786
+        }
+      ]
+    }
+  ]
+}

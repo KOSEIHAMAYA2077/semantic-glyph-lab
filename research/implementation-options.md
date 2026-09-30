@@ -117,3 +117,9 @@ TripoSGはトップレベルのMIT表記と個別ソースの条件が重なる�
 並行して、文字の受理と形の生成を分離するCPUハーネスを作った。67件の試験で、即時の原文保持、待機上限、古い生成の無効化、生成中の属性編集、失敗時の再試行を検証した。意味精度が未達なので画面には未接続であり、UI・IME・WebGLとの結線はまだ評価していない。
 
 [初回の全結果](../experiments/input-routing/README.md)、[二段階](../experiments/input-routing-v2/README.md)、[14B](../experiments/input-routing-model/RESULTS.md)、[4B Instruct](../experiments/input-routing-instruct/README.md)、[独立した読解](../experiments/continuous-input/ROUTING-REVIEW.md)、[CPUハーネス](../experiments/continuous-input/RESULTS.md)。語義・視覚の確認は担当エージェントの読解・画面確認で、人間の参加者による試験は行っていない。
+
+## 素材取得と渦の追加比較
+
+無料の実メッシュを検索して文字面へ載せる経路も試した。Poly Havenの521件の名前/説明を多言語MiniLMで検索し、花瓶・じょうろ・剣のCC0素材を取得した。実素材は取っ手や注ぎ口の配置を保てる一方、所蔵3点だけでは未所蔵の馬が花瓶へ高スコアになる。対話版は**3候補を利用者が選ぶ**方式にし、スコアによる自動置換は撤回した。既存形の取得は生成より形を保ちやすいが、任意の名詞が所蔵されているとは限らない。[521件と3点の別評価](../experiments/asset-retrieval/RESULTS.md)。
+
+文字の動きには128²の2D流体場を三平面から投影する実験を追加した。弱い流れでの補間誤差を修正し、60秒で面の文字を保持した。しかし300秒で伸び、600秒で逆写像の折返しが358/16,384セルに出る。無期限の文字循環として採用せず、比較用optionと手動の流れリセットに留めた。母体の変形とは独立に併用できる。[全比較と長時間の制限](../experiments/fluid-surface/README.md)、[v0.4統合確認](../experiments/surface-04/RESULTS.md)。

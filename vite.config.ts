@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 export default defineConfig({ server: { proxy: {
+  '/retrieval-api': { target: 'http://127.0.0.1:4189', changeOrigin: true, rewrite: path => path.replace(/^\/retrieval-api/, '') },
   '/api': { target: 'http://127.0.0.1:4184', changeOrigin: true, rewrite: path => path.replace(/^\/api/, '') },
   '/description-api': { target: 'http://127.0.0.1:4188', changeOrigin: true, rewrite: path => path.replace(/^\/description-api/, '') },
   '/image-api': { target: 'http://127.0.0.1:4187', changeOrigin: true, rewrite: path => path.replace(/^\/image-api/, '') },

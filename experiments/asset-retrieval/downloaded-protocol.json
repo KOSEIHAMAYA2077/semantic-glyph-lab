@@ -1,0 +1,10 @@
+{
+  "frozenUTC": "2026-09-30T07:11:23.419469+00:00",
+  "manifestSHA256": "68fb0d568ec0a8efa96ad332a8823ff861210d86faeba74bb82ec70e488f04fa",
+  "cases": "Same ten artificial queries, reused after selecting assets; no new held-out claim.",
+  "caption": "name + new experiment description",
+  "count": 3,
+  "topK": 3,
+  "threshold": null,
+  "policy": "Ranking diagnostic only. Do not calibrate a threshold or claim all inputs should select an asset."
+}
