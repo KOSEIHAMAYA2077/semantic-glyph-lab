@@ -1,0 +1,61 @@
+{
+  "reviewedUTC": "2026-09-30T06:58:32.189917+00:00",
+  "reviewer": "agent semantic_mesh_research, manual language review; not an external human participant",
+  "basis": "Predeclared humanCheck descriptions in the original evaluation plan; no output repair or dictionary replacement.",
+  "unknownCases": [
+    {
+      "id": "multiple-related",
+      "writing": "椅子の上に鳥がとまっている。",
+      "rawModelOutput": "{\"action\":\"new\",\"target\":{\"form\":null,\"object_en\":\"a bird sitting on a chair\"},\"changes\":{}}",
+      "objectAndRelationPreserved": true,
+      "reason": "Both bird and chair, with bird on chair, are preserved."
+    },
+    {
+      "id": "unknown-umbrella",
+      "writing": "開いた傘。",
+      "rawModelOutput": "{\"action\":\"new\",\"target\":{\"form\":null,\"object_en\":\"open umbrella\"},\"changes\":{}}",
+      "objectAndRelationPreserved": true,
+      "reason": "Umbrella and open state are preserved."
+    },
+    {
+      "id": "unknown-funnel",
+      "writing": "先の細い漏斗。",
+      "rawModelOutput": "{\"action\":\"edit\",\"target\":null,\"changes\":{\"elongation\":1.3}}",
+      "objectAndRelationPreserved": false,
+      "reason": "Edits the current cone, losing funnel and its narrow outlet."
+    },
+    {
+      "id": "unknown-watering-can",
+      "writing": "長い注ぎ口のあるじょうろ。",
+      "rawModelOutput": "{\"action\":\"edit\",\"target\":null,\"changes\":{\"elongation\":1.3}}",
+      "objectAndRelationPreserved": false,
+      "reason": "Edits current vase, losing watering can and its long spout."
+    },
+    {
+      "id": "unknown-teapot",
+      "writing": "急須。",
+      "rawModelOutput": "{\"action\":\"new\",\"target\":{\"form\":null,\"object_en\":\"kamaboko\"},\"changes\":{}}",
+      "objectAndRelationPreserved": false,
+      "reason": "kamaboko does not mean teapot. Format pass is not semantic pass."
+    },
+    {
+      "id": "linked-identical-parts",
+      "writing": "三つの輪を鎖状につないだもの。",
+      "rawModelOutput": "{\"action\":\"edit\",\"target\":null,\"changes\":{\"count\":3}}",
+      "objectAndRelationPreserved": false,
+      "reason": "Changes count of current ring; linked relationship is absent."
+    },
+    {
+      "id": "negated-unknown",
+      "writing": "花瓶ではなく水差しにして。",
+      "rawModelOutput": "{\"action\":\"new\",\"target\":{\"form\":null,\"object_en\":\"water pitcher\"},\"changes\":{}}",
+      "objectAndRelationPreserved": true,
+      "reason": "water pitcher preserves the replacement object rather than the negated vase."
+    }
+  ],
+  "correctUnknownTargets": 3,
+  "unknownTotal": 7,
+  "strictContractPass": 16,
+  "strictContractAndReviewedUnknownMeaningPass": 15,
+  "caveat": "The latter score adds the predeclared semantic check on unknown targets; it does not claim complete semantic correctness on all cases."
+}

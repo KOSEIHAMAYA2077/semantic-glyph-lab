@@ -1,0 +1,32 @@
+{
+  "environment": ".local/translation-model-venv-v2",
+  "purpose": "pip refreshed in separate environment; verify legacy shared-weight alias matches official loader and does not cause the observed lexical failures",
+  "modelLoad": {
+    "loadMs": 2277,
+    "tensorCount": 259,
+    "parameters": 75749376,
+    "device": "cpu",
+    "weightsOnly": true,
+    "strictStateDict": true,
+    "sharedAliasRestored": true
+  },
+  "stateTensorCount": 259,
+  "mismatchedKeys": [],
+  "outputs": [
+    {
+      "id": "nested-relations",
+      "officialLoaderOutput": "A tree has grown out of a vase and a bird has grown out of its branches.",
+      "identicalToExplicitLoader": true
+    },
+    {
+      "id": "negative-vase",
+      "officialLoaderOutput": "It's not a vase, it's a bottle and an emergency with a handle.",
+      "identicalToExplicitLoader": true
+    },
+    {
+      "id": "asymmetric-fruit",
+      "officialLoaderOutput": "Two chocolates are on top of the plate. Only one on the left is thin.",
+      "identicalToExplicitLoader": true
+    }
+  ]
+}

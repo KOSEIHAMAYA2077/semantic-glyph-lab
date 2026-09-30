@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-30",
+  "meaning": "Artifact validity is independent of semantic quality",
+  "samples": [
+    {
+      "run": "mesh128-first",
+      "id": "sword",
+      "sha256": "d8b90fb2d665962545fd6c289640bcac99ef474d3993f80df2cfa9ba41964d03",
+      "finite": true,
+      "facesInRange": true,
+      "sourceHashMatches": true,
+      "rotationOnly": true,
+      "vertices": 2939,
+      "faces": 5874
+    },
+    {
+      "run": "mesh128-first",
+      "id": "vase",
+      "sha256": "d00e7574206fa65817d61a1c1a3e5f66957078466e2166fe65d3db2ecd8a75f9",
+      "finite": true,
+      "facesInRange": true,
+      "sourceHashMatches": true,
+      "rotationOnly": true,
+      "vertices": 10822,
+      "faces": 21640
+    },
+    {
+      "run": "mesh128-first",
+      "id": "twisted-vase",
+      "sha256": "1b494773c1eafbcf210ecef014f744c62ec70c9d11340e7417c52dd7d2fe1939",
+      "finite": true,
+      "facesInRange": true,
+      "sourceHashMatches": true,
+      "rotationOnly": true,
+      "vertices": 19968,
+      "faces": 39928
+    },
+    {
+      "run": "mesh128-sword-rgb",
+      "id": "sword",
+      "sha256": "9cd1b90f3f9acfd1df398cd59738673c0e555d69b20862a40df78d69857ec41b",
+      "finite": true,
+      "facesInRange": true,
+      "sourceHashMatches": true,
+      "rotationOnly": true,
+      "vertices": 14133,
+      "faces": 28262
+    },
+    {
+      "run": "mesh128-sword-v2",
+      "id": "sword",
+      "sha256": "657eac139d9051f90489bc22f45138440e3cab8af867017061bad532eb8960e5",
+      "finite": true,
+      "facesInRange": true,
+      "sourceHashMatches": true,
+      "rotationOnly": true,
+      "vertices": 786,
+      "faces": 1568
+    },
+    {
+      "run": "mesh128-sword-white-border",
+      "id": "sword",
+      "sha256": "2e6ea3e6c9f32c67dc57bcbe59cca90e5f38ccbe61c1ed89bc390a791ee0af48",
+      "finite": true,
+      "facesInRange": true,
+      "sourceHashMatches": true,
+      "rotationOnly": true,
+      "vertices": 4784,
+      "faces": 9560
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "groups": {
+    "regression-v1": {
+      "cases": 24,
+      "actionSchemaValid": 24,
+      "actionMatches": 9,
+      "pipelineSchemaValid": 18,
+      "chosenActions": {
+        "edit": 19,
+        "keep": 5
+      },
+      "expectedActions": {
+        "new": 11,
+        "edit": 5,
+        "keep": 8
+      },
+      "editStageCalls": 19,
+      "editStageSchemaValid": 13,
+      "expectedEditCases": 5,
+      "expectedEditContractMatches": 5,
+      "newStageCalls": 0,
+      "newStageSchemaValid": 0,
+      "actionTime": {
+        "n": 24,
+        "medianMs": 1154.5,
+        "minMs": 1127,
+        "maxMs": 2404
+      },
+      "editTime": {
+        "n": 19,
+        "medianMs": 1114,
+        "minMs": 978,
+        "maxMs": 1402
+      },
+      "descriptionTime": {
+        "n": 0,
+        "medianMs": null,
+        "minMs": null,
+        "maxMs": null
+      },
+      "totalTime": {
+        "n": 24,
+        "medianMs": 2266.5,
+        "minMs": 1128,
+        "maxMs": 3407
+      }
+    },
+    "first-pass-v2": {
+      "cases": 12,
+      "actionSchemaValid": 12,
+      "actionMatches": 7,
+      "pipelineSchemaValid": 10,
+      "chosenActions": {
+        "new": 2,
+        "edit": 7,
+        "keep": 3
+      },
+      "expectedActions": {
+        "new": 4,
+        "keep": 6,
+        "edit": 2
+      },
+      "editStageCalls": 7,
+      "editStageSchemaValid": 5,
+      "expectedEditCases": 2,
+      "expectedEditContractMatches": 2,
+      "newStageCalls": 2,
+      "newStageSchemaValid": 2,
+      "actionTime": {
+        "n": 12,
+        "medianMs": 1181.5,
+        "minMs": 1169,
+        "maxMs": 1229
+      },
+      "editTime": {
+        "n": 7,
+        "medianMs": 1141,
+        "minMs": 1037,
+        "maxMs": 1227
+      },
+      "descriptionTime": {
+        "n": 2,
+        "medianMs": 1241.5,
+        "minMs": 1181,
+        "maxMs": 1302
+      },
+      "totalTime": {
+        "n": 12,
+        "medianMs": 2327.0,
+        "minMs": 1175,
+        "maxMs": 2497
+      }
+    }
+  },
+  "scope": "Artificial examples, one fixed draw each. Not a general accuracy estimate. New target meaning reviewed separately from schema.",
+  "humanNewDescriptionReview": [
+    {
+      "id": "fresh-gear",
+      "description": "a gear standing upright",
+      "targetRetained": true,
+      "attributesRelationsRetained": true,
+      "note": "gearと直立を保持。形の生成は未実行。"
+    },
+    {
+      "id": "fresh-boat-bridge",
+      "description": "a small boat floating under a bridge",
+      "targetRetained": true,
+      "attributesRelationsRetained": true,
+      "note": "舟と橋、下、浮かぶ、小さいを保持。形の生成は未実行。"
+    }
+  ],
+  "selectionBias": "Only 2 of the 15 expected new cases reached description. Both descriptions looked faithful, which does not evaluate description quality for the 13 cases blocked by action errors."
+}

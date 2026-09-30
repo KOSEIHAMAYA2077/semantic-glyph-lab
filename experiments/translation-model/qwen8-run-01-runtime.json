@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen3-8B-MLX-4bit",
+  "revision": "383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+  "loadMs": 440,
+  "temperature": 0,
+  "thinking": false,
+  "maxTokens": 512,
+  "maxAttempts": 2,
+  "promptSHA256": "29101ddd61f921b98c66f89b6782e92b54e93a4c259a025310b4f2c1cdf8464e",
+  "validationSourceSHA256": "86a629d2993b2625a80b632d50d4850d6f964aa3bbc2a974c5bc4efaab3e2f7f",
+  "freshPlanSHA256": "3488aa11ce7f182bf22028a43abb4b53299ce37280665bb8dadc5580bd828470",
+  "regressionPlanSHA256": "9aba6be5564eeae33bf60a8b986348bea900c3219688f5178b877c07593e8b05",
+  "comparisonLimit": "8B original Qwen3 vs 4B Instruct-2507; quantization group128 vs group64. Not an isolated parameter-count ablation. Non-thinking greedy controls the comparison but differs from 8B official temperature0.7 recommendation.",
+  "mlxPeakBytes": 4939575564,
+  "maxRSSBytesDarwin": 4707270656
+}

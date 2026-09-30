@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-30",
+  "pipeline": "SDXL Turbo -> optional U2NETP -> TripoSR",
+  "background": "u2netp",
+  "device": "mps",
+  "grid": 128,
+  "networkAttempts": 0,
+  "samples": [
+    {
+      "id": "sword",
+      "subject": "a medieval sword with a long straight blade and a crossguard",
+      "prompt": "A full-length straight medieval sword standing vertically, blade tip pointing up, handle at the bottom, entire sword fitting inside the image with wide empty margins. A simple light gray clay model on a plain dark gray background. Orthographic front view. A straight blade and a simple crossguard.",
+      "seed": 20260930,
+      "imageSeconds": 1.789646165969316,
+      "imagePath": "experiments/text-image/turbo4-sword-v2/sword.png",
+      "foregroundFraction": 0.02306365966796875,
+      "preprocessSeconds": 0.13660995801910758,
+      "reconstructSeconds": 1.2325082080205902,
+      "extractionSeconds": 0.3860109170200303,
+      "vertices": 786,
+      "faces": 1568,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.0014803393248222034,
+      "bounds": [
+        [
+          0.11683642864227295,
+          0.15765678882598877,
+          0.14409250020980835
+        ],
+        [
+          0.30768680572509766,
+          0.45809972286224365,
+          0.4993399679660797
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0,
+      "success": true,
+      "path": "/text-image-models/mesh128-sword-v2/sword-y-up.glb",
+      "rawPath": "/text-image-models/mesh128-sword-v2/sword-z-up.glb",
+      "sha256": "657eac139d9051f90489bc22f45138440e3cab8af867017061bad532eb8960e5",
+      "rawSha256": "56f8cf2ee51892d9912b19f60d6f85e6173f1381acd35a863c44c712fd1b47c8",
+      "bytes": 29052,
+      "latentSha256": "300a4019056249020a0bd8a2922cfc8a4f7d6f02a8a2047f84a92008cb1e1680",
+      "sumStageSeconds": 3.544775249029044
+    }
+  ],
+  "imageManifestSha256": "6ca7088d7840de1a63f77af72fd7a2bcd218c99b1849f415f6aba3b39c0ad375",
+  "initializationSeconds": 2.54874599998584,
+  "totalSeconds": 4.315725791966543,
+  "peakRssBytes": 3789684736,
+  "mpsDriverBytes": 2594914304
+}

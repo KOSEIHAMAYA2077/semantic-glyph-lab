@@ -1,0 +1,105 @@
+{
+  "date": "2026-09-30",
+  "device": "mps",
+  "resolution": 128,
+  "torch": "2.14.0",
+  "precision": "float32",
+  "networkAttempts": 0,
+  "samples": [
+    {
+      "id": "chair",
+      "input": "examples/chair.png",
+      "networkSeconds": 1.1402169169741683,
+      "extractionSeconds": 0.40983091603266075,
+      "vertices": 10224,
+      "faces": 20448,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.0663560103559764,
+      "bounds": [
+        [
+          -0.3074091076850891,
+          -0.27951985597610474,
+          -0.499717116355896
+        ],
+        [
+          0.29757702350616455,
+          0.2930949926376343,
+          0.5717177391052246
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0,
+      "success": true,
+      "path": "reconstructed/mps128-three/triposr-chair.glb",
+      "bytes": 368876,
+      "sha256": "4ddee3b24838cc69ad144c4993e6d4f2a014b30f2277f34f613fe80edfd375fc"
+    },
+    {
+      "id": "horse",
+      "input": "examples/horse.png",
+      "networkSeconds": 1.0321532920352183,
+      "extractionSeconds": 0.3954772499855608,
+      "vertices": 10711,
+      "faces": 21418,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.06458156133741792,
+      "bounds": [
+        [
+          -0.14194649457931519,
+          -0.4860195219516754,
+          -0.49956750869750977
+        ],
+        [
+          0.2805020809173584,
+          0.4989560842514038,
+          0.48305320739746094
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0,
+      "success": true,
+      "path": "reconstructed/mps128-three/triposr-horse.glb",
+      "bytes": 386364,
+      "sha256": "0cc89bced6f652261ecce8d6207163f044116e1c20a031dc0da2e5275e0df6ff"
+    },
+    {
+      "id": "teapot",
+      "input": "examples/teapot.png",
+      "networkSeconds": 1.023287917021662,
+      "extractionSeconds": 0.3966664579929784,
+      "vertices": 11814,
+      "faces": 23636,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.12105039170456122,
+      "bounds": [
+        [
+          -0.29325950145721436,
+          -0.5264784097671509,
+          -0.3444143533706665
+        ],
+        [
+          0.2765103578567505,
+          0.5273816585540771,
+          0.35259246826171875
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0000000000000002,
+      "success": true,
+      "path": "reconstructed/mps128-three/triposr-teapot.glb",
+      "bytes": 426212,
+      "sha256": "ff311597ccc477073e4889cb8d711191e2b7794fce1006ee4b52f6b8e0cbdf24"
+    }
+  ],
+  "compatibility": "mac_runner.py",
+  "initializationSeconds": 2.674629333021585,
+  "totalSeconds": 7.1669352920143865,
+  "peakRssBytes": 3781853184,
+  "mpsDriverBytes": 2594914304
+}

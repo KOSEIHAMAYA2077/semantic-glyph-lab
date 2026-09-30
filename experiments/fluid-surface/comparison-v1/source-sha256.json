@@ -1,0 +1,8 @@
+{
+  "src/fluid/preview.html": "5e0d57da8c18cf15f541eb302823e506fbea2629a4261c2854e6f31b9c8564c6",
+  "src/fluid/operators.ts": "f13ac84d34e1e8c05152323681570513b8b32d56cf8af8c84ee509a9a24deff0",
+  "src/fluid/operators.test.ts": "54071de1396ae540fbaadb8926656089659fdbb7b4715efe4cb4eacd9a218009",
+  "src/fluid/material.ts": "88c5c8c7a6b6d012cd9600436aa2bcd8ac72bb5014a5e0ce24d305fa46c66fb4",
+  "src/fluid/field.ts": "f43146ff57338a0ed6428d69027c52f879ae52612012a39c47bf48900304145a",
+  "src/fluid/preview.ts": "23d3a20ff008c2350ed1e879c72125b21952dae469251a17632ff8669230c9a7"
+}

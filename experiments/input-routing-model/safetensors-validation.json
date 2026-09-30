@@ -1,0 +1,27 @@
+{
+  "headerOnlyNoModelExecution": true,
+  "tensorCount": 1007,
+  "weightMapExactMatch": true,
+  "files": [
+    {
+      "filename": "model-00001-of-00002.safetensors",
+      "headerBytes": 81728,
+      "tensorCount": 717,
+      "dtypeCounts": {
+        "BF16": 516,
+        "U32": 201
+      },
+      "expectedFileBytesFromHeader": 5360593224
+    },
+    {
+      "filename": "model-00002-of-00002.safetensors",
+      "headerBytes": 33032,
+      "tensorCount": 290,
+      "dtypeCounts": {
+        "BF16": 209,
+        "U32": 81
+      },
+      "expectedFileBytesFromHeader": 2485808912
+    }
+  ]
+}

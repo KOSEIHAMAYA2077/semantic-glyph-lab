@@ -1,0 +1,103 @@
+{
+  "source": "run-02.jsonl",
+  "sourceSHA256": "6c452aa3d9714d7dadaf69c56c4c1663d1087d8818bd850636ea4a6b2e466c0f",
+  "tokenizer": "official openai/CLIP, context 77 including start/end, truncate=False; CPU only; no model weights",
+  "cases": [
+    {
+      "id": "vase-handles",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 12,
+      "characters": 48,
+      "words": 10
+    },
+    {
+      "id": "negative-sphere",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 4,
+      "characters": 6,
+      "words": 2
+    },
+    {
+      "id": "sword-rings",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 9,
+      "characters": 40,
+      "words": 7
+    },
+    {
+      "id": "narrative-shell",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 9,
+      "characters": 36,
+      "words": 7
+    },
+    {
+      "id": "heart-chair",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 11,
+      "characters": 36,
+      "words": 6
+    },
+    {
+      "id": "nested-relations",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 16,
+      "characters": 58,
+      "words": 13
+    },
+    {
+      "id": "negative-vase",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 11,
+      "characters": 37,
+      "words": 9
+    },
+    {
+      "id": "floating-island",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 14,
+      "characters": 54,
+      "words": 12
+    },
+    {
+      "id": "square-cloud",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 17,
+      "characters": 80,
+      "words": 14
+    },
+    {
+      "id": "asymmetric-fruit",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 13,
+      "characters": 47,
+      "words": 10
+    },
+    {
+      "id": "emotion-only",
+      "status": 422
+    },
+    {
+      "id": "ambiguous-pronoun",
+      "status": 422
+    },
+    {
+      "id": "instruction-in-source",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 5,
+      "characters": 11,
+      "words": 3
+    }
+  ]
+}

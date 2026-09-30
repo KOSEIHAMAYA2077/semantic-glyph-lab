@@ -1,0 +1,51 @@
+{
+  "id": "shap-e-vase-outer-shell-v1",
+  "object": "vase",
+  "prompt": "a tall ceramic vase with a narrow neck and a round body",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260931,
+  "device": "mps",
+  "steps": 32,
+  "grid": 128,
+  "status": "ok",
+  "path": "/generated/shap-e-vase-outer-shell-v1.glb",
+  "seconds": 40.836,
+  "sample_seconds": 38.994,
+  "vertices": 56210,
+  "faces": 112520,
+  "bounds": [
+    [
+      -0.4822423756122589,
+      -1.0077438354492188,
+      -0.4832537770271301
+    ],
+    [
+      0.4852769374847412,
+      1.007491946220398,
+      0.48136889934539795
+    ]
+  ],
+  "area": 9.44978015444238,
+  "volume": 0.31685313418408007,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 1,
+  "sha256": "9ff67e6da3ea6b30948c76144a36a5d3ab9904e45f93a5fa460d764c0b2a87fb",
+  "bytes": 2025612,
+  "sdf_min": -1.0,
+  "sdf_max": 0.9674608707427979,
+  "process_peak_rss_bytes_so_far": 3624288256,
+  "mps_driver_allocated_bytes_after": 5386240000,
+  "refined_from": "shap-e-vase-mps32-grid64-fixed",
+  "refinement_seconds": 1.842,
+  "label": "Shap-E \u00b7 vase \u00b7 128\u00b3 \u00b7 outer shell",
+  "run": "outer-shells-v1",
+  "derived_from": "shap-e-vase-mps32-grid128-refined",
+  "derivation": "Largest-area watertight, winding-consistent component with positive signed volume. Explicit single-object display derivative; not a general asset cleanup rule.",
+  "postprocess_seconds": 0.143,
+  "source_components": 22,
+  "retained_area_fraction": 0.9843019364690584,
+  "license": "Generated with MIT-licensed OpenAI Shap-E",
+  "research_note": "One explicitly selected outer component; secondary parts and cavity shells omitted only in this derivative."
+}

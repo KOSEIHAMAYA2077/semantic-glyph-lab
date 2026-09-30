@@ -1,0 +1,42 @@
+{
+  "decision": "Do not replace Qwen description API with OPUS-MT. Low CPU latency but lexical and relationship errors damage target geometry.",
+  "model": "Helsinki-NLP/opus-mt-ja-en",
+  "groups": [
+    {
+      "name": "reused-regression",
+      "cases": 13,
+      "minMs": 74,
+      "medianMs": 166,
+      "maxMs": 226
+    },
+    {
+      "name": "first-pass-fresh",
+      "cases": 10,
+      "minMs": 124,
+      "medianMs": 164.5,
+      "maxMs": 239
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "evaluate.py",
+      "sha256": "7fdf5180a6746294a17b709ac039ba1a6ea85371c562ba22ca30448391c2cffd"
+    },
+    {
+      "path": "verify_loader.py",
+      "sha256": "b2a69e7708b9c1af8c8fd5baf35c1d647ed508b0e5bd0bdacf2ce6584a762472"
+    },
+    {
+      "path": "prepare.py",
+      "sha256": "4fcd743b724cd7d14bacbf5b6d6844f57f4ca8d5e63d2e972f015ad4cb30e9bf"
+    },
+    {
+      "path": "fresh-plan.json",
+      "sha256": "3488aa11ce7f182bf22028a43abb4b53299ce37280665bb8dadc5580bd828470"
+    },
+    {
+      "path": "model-manifest.json",
+      "sha256": "73cf99f13e08867e3770c989e52af544a082d2faad906f0ecd10ebd861fe1a12"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "date": "2026-09-30",
+  "protocol": "experiments/end-to-end/protocol.json",
+  "protocolSha256": "656d72e2aff978446c020f871faaf355f2abfd317823ab520c44d261bac56693",
+  "attribution": "Powered by Stability AI",
+  "syntheticOnly": true,
+  "models": [
+    {
+      "id": "e2e-paired-v1-sailboat-shap-e",
+      "label": "小さな帆船 · Shap-E",
+      "path": "/end-to-end-models/paired-v1/sailboat-shap-e.glb",
+      "sha256": "9faec2634e7e29d52a03deacab64acc241d0b06e368795d8b77e663b3321a8c6",
+      "bytes": 551168,
+      "vertices": 15297,
+      "faces": 30570,
+      "prompt": "a small sailboat",
+      "japaneseInput": "小さな帆船",
+      "seed": "20260930",
+      "sourceMethod": "Shap-E",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "pending",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://github.com/openai/shap-e"
+      ],
+      "licenseLinks": [
+        "https://github.com/openai/shap-e/blob/main/LICENSE"
+      ],
+      "httpSeconds": 47.67709274997469,
+      "endToEndSeconds": 49.2410089999903
+    },
+    {
+      "id": "e2e-paired-v1-sailboat-image-triposr",
+      "label": "小さな帆船 · SDXL Turbo → TripoSR",
+      "path": "/end-to-end-models/paired-v1/sailboat-image-triposr.glb",
+      "sha256": "55cc9c1b0528c44b6d6e38db5127e0a00eac617e534f5f4b50c864f33c56adea",
+      "bytes": 309044,
+      "vertices": 8566,
+      "faces": 17120,
+      "prompt": "a small sailboat",
+      "japaneseInput": "小さな帆船",
+      "seed": "20260930",
+      "sourceMethod": "SDXL Turbo → TripoSR",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "pending",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo",
+        "https://github.com/VAST-AI-Research/TripoSR"
+      ],
+      "licenseLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo/blob/71153311d3dbb46851df1931d3ca6e939de83304/LICENSE.md",
+        "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/LICENSE"
+      ],
+      "httpSeconds": 17.67688837501919,
+      "endToEndSeconds": 19.240804625034798
+    },
+    {
+      "id": "e2e-paired-v1-umbrella-shap-e",
+      "label": "開いた傘 · Shap-E",
+      "path": "/end-to-end-models/paired-v1/umbrella-shap-e.glb",
+      "sha256": "b5b50795f51634c94764d1045d845a929170dbe6ae0bca5e97434c5a72e2d636",
+      "bytes": 1266596,
+      "vertices": 35162,
+      "faces": 70324,
+      "prompt": "an open umbrella",
+      "japaneseInput": "開いた傘",
+      "seed": "20260930",
+      "sourceMethod": "Shap-E",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "pending",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://github.com/openai/shap-e"
+      ],
+      "licenseLinks": [
+        "https://github.com/openai/shap-e/blob/main/LICENSE"
+      ],
+      "httpSeconds": 41.0515982080251,
+      "endToEndSeconds": 42.636479458014946
+    },
+    {
+      "id": "e2e-paired-v1-umbrella-image-triposr",
+      "label": "開いた傘 · SDXL Turbo → TripoSR",
+      "path": "/end-to-end-models/paired-v1/umbrella-image-triposr.glb",
+      "sha256": "5b17d2ac198887a1df78eaa8b1e58265851c4cc23a340f0046fa01cfd03b9337",
+      "bytes": 383348,
+      "vertices": 10626,
+      "faces": 21252,
+      "prompt": "an open umbrella",
+      "japaneseInput": "開いた傘",
+      "seed": "20260930",
+      "sourceMethod": "SDXL Turbo → TripoSR",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "pending",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo",
+        "https://github.com/VAST-AI-Research/TripoSR"
+      ],
+      "licenseLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo/blob/71153311d3dbb46851df1931d3ca6e939de83304/LICENSE.md",
+        "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/LICENSE"
+      ],
+      "httpSeconds": 17.799132791988086,
+      "endToEndSeconds": 19.384014041977935
+    },
+    {
+      "id": "e2e-paired-v1-watering-can-shap-e",
+      "label": "長い注ぎ口が付いたじょうろ · Shap-E",
+      "path": "/end-to-end-models/paired-v1/watering-can-shap-e.glb",
+      "sha256": "01c59c1148b50406e7de06f505c7aae3081580c731d6a59db7ec15127a18c274",
+      "bytes": 697344,
+      "vertices": 19372,
+      "faces": 38676,
+      "prompt": "a long spout watering can",
+      "japaneseInput": "長い注ぎ口が付いたじょうろ",
+      "seed": "20260930",
+      "sourceMethod": "Shap-E",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "pending",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://github.com/openai/shap-e"
+      ],
+      "licenseLinks": [
+        "https://github.com/openai/shap-e/blob/main/LICENSE"
+      ],
+      "httpSeconds": 40.967505584005266,
+      "endToEndSeconds": 44.536432250984944
+    },
+    {
+      "id": "e2e-paired-v1-watering-can-image-triposr",
+      "label": "長い注ぎ口が付いたじょうろ · SDXL Turbo → TripoSR",
+      "path": "/end-to-end-models/paired-v1/watering-can-image-triposr.glb",
+      "sha256": "e32548069a12c10839e287b240c8a16e9f1cd1e079c693db3593a9300ed7420c",
+      "bytes": 314276,
+      "vertices": 8706,
+      "faces": 17416,
+      "prompt": "a long spout watering can",
+      "japaneseInput": "長い注ぎ口が付いたじょうろ",
+      "seed": "20260930",
+      "sourceMethod": "SDXL Turbo → TripoSR",
+      "descriptionModel": "Qwen/Qwen3-8B-MLX-4bit",
+      "semanticAssessment": "pending",
+      "provenance": "Local generation from fixed synthetic input in experiments/end-to-end/protocol.json",
+      "sourceLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo",
+        "https://github.com/VAST-AI-Research/TripoSR"
+      ],
+      "licenseLinks": [
+        "https://huggingface.co/stabilityai/sdxl-turbo/blob/71153311d3dbb46851df1931d3ca6e939de83304/LICENSE.md",
+        "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/LICENSE"
+      ],
+      "httpSeconds": 15.80427195795346,
+      "endToEndSeconds": 19.37319862493314
+    }
+  ],
+  "failures": []
+}

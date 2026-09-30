@@ -1,0 +1,16 @@
+{
+  "id": "shap-e-twisted-vase-mps32-grid64",
+  "object": "twisted-vase",
+  "prompt": "a twisted ceramic vase with a spiral body",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260934,
+  "device": "mps",
+  "steps": 32,
+  "grid": 64,
+  "status": "failed",
+  "seconds": 0.57,
+  "error": "TypeError(\"Cannot convert a MPS Tensor to float64 dtype as the MPS framework doesn't support float64. Please use float32 instead.\")",
+  "process_peak_rss_bytes_so_far": 3491119104,
+  "mps_driver_allocated_bytes_after": 5386240000
+}

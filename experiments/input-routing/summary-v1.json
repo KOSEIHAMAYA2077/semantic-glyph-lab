@@ -1,0 +1,28 @@
+{
+  "cases": 24,
+  "jsonSyntaxValid": 24,
+  "schemaValid": 3,
+  "strictPredeclaredContractPass": 0,
+  "rawActionMatches": 10,
+  "unknownTargetCases": [
+    "multiple-related",
+    "unknown-umbrella",
+    "unknown-funnel",
+    "unknown-watering-can",
+    "unknown-teapot",
+    "linked-identical-parts",
+    "negated-unknown"
+  ],
+  "unknownReturnedAsNonemptyEnglish": 0,
+  "firstSchemaErrors": {
+    "edit and keep must preserve target": 20,
+    "Unknown attributes": 1
+  },
+  "latencyMs": {
+    "median": 2391.0,
+    "min": 1882,
+    "max": 3194,
+    "total": 58369
+  },
+  "scoringCaveat": "new-sphere is penalized for omitting explicitly requested count=1 although the default yields the intended final shape. Raw action diagnostics are not accepted executions."
+}

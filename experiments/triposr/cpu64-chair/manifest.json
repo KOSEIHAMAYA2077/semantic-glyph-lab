@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-30",
+  "device": "cpu",
+  "resolution": 64,
+  "torch": "2.14.0",
+  "precision": "float32",
+  "networkAttempts": 0,
+  "samples": [
+    {
+      "id": "chair",
+      "input": "examples/chair.png",
+      "networkSeconds": 2.610236874956172,
+      "extractionSeconds": 0.08752870903117582,
+      "vertices": 2448,
+      "faces": 4896,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.07224014820290825,
+      "bounds": [
+        [
+          -0.3146888017654419,
+          -0.2879716157913208,
+          -0.5103469491004944
+        ],
+        [
+          0.30937516689300537,
+          0.28923678398132324,
+          0.5834407806396484
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0,
+      "success": true,
+      "path": "reconstructed/cpu64-chair/triposr-chair.glb",
+      "bytes": 88936,
+      "sha256": "e383d4fb931e39752aca7d5e48eef12cb1f8d12e51e9a82e2fdab7911388e07f"
+    }
+  ],
+  "compatibility": "mac_runner.py",
+  "initializationSeconds": 2.3380064590019174,
+  "totalSeconds": 5.050528541964013,
+  "peakRssBytes": 3778543616
+}

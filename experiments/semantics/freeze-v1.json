@@ -1,0 +1,9 @@
+{
+  "frozenAt": "2026-09-30T05:05:08.682368+00:00",
+  "policy": "Held-out evaluation only; do not tune catalog or thresholds against this fixture",
+  "files": {
+    "experiments/semantics/heldout-v1.json": "d977c67d4c12c0acac0433acdb59c884effdd1779b7011b43cb5ccb56e221ffc",
+    "server/catalog.py": "a11cc209caef0491c7b937f3c7a3cbe393017303573513d79c4ba8b72ed2db90",
+    "server/interpreter.py": "6a5c4a25eb0eaeaa40fed2d73a40e1f78329522097ae308604a31a024fbd9cff"
+  }
+}

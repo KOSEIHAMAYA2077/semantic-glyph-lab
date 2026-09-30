@@ -1,0 +1,391 @@
+{
+  "protocolSha256": "656d72e2aff978446c020f871faaf355f2abfd317823ab520c44d261bac56693",
+  "date": "2026-09-30T06:20:33.223341+00:00",
+  "sourceVersionsBefore": {
+    "server/generation.py": "a65ecf5e5187726e092e121378999d083474c1df6f92621b635f284bb1b0ee96",
+    "server/image_pipeline.py": "ed1e0c7137405ddda73d047735710080c082f49e93ab3ec0957ec5aab3c86667",
+    "server/composition.py": "86a629d2993b2625a80b632d50d4850d6f964aa3bbc2a974c5bc4efaab3e2f7f",
+    "src/scene.ts": "21163f46e405a7c947a8b32a89fe5635ffba73066f95c98b1d57f825b5a6bb9a",
+    "src/letters.ts": "47930a750d30fb39554c0588feccd20f249f64cfacc1b2ce9c98316193bbb658",
+    "src/surface-material.ts": "9e8d5d0e0ccf02d8822d9fd561efca601971351d7289aaf9f6b3f0053cdb3bc2",
+    "src/body-motion.ts": "8ea6f442fb07410c45faad397ad5072f3b2df1e970c09469be5b7d37477e0443"
+  },
+  "health": {
+    "http://127.0.0.1:4188/health": {
+      "httpStatus": 200,
+      "httpSeconds": 0.006850583013147116,
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
+      },
+      "bytes": 307,
+      "body": {
+        "ok": true,
+        "busy": false,
+        "model": "Qwen/Qwen3-8B-MLX-4bit",
+        "revision": "383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+        "local": true,
+        "capabilities": [
+          "describe"
+        ],
+        "maxCharacters": 2000,
+        "temperature": 0,
+        "thinking": false,
+        "promptSHA256": "29101ddd61f921b98c66f89b6782e92b54e93a4c259a025310b4f2c1cdf8464e"
+      }
+    },
+    "http://127.0.0.1:4186/health": {
+      "httpStatus": 200,
+      "httpSeconds": 0.0014174579991959035,
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
+      },
+      "bytes": 237,
+      "body": {
+        "ok": true,
+        "busy": false,
+        "model": "openai/shap-e:text300M",
+        "revision": "50131012ee11c9d2617f3886c10f000d3c7a3b43",
+        "device": "mps",
+        "steps": 32,
+        "grid": 128,
+        "seed": 20260930,
+        "local": true,
+        "maxCharacters": 300,
+        "maxClipTokens": 77
+      }
+    },
+    "http://127.0.0.1:4187/health": {
+      "httpStatus": 200,
+      "httpSeconds": 0.00044245796743780375,
+      "headers": {
+        "X-Content-Type-Options": "nosniff"
+      },
+      "bytes": 275,
+      "body": {
+        "ready": true,
+        "busy": false,
+        "pipeline": "SDXL Turbo -> U2NETP -> TripoSR",
+        "coldStartPerRequest": true,
+        "device": "mps",
+        "maxTextChars": 300,
+        "clipContext": 77,
+        "timeoutSeconds": 120.0,
+        "storesInput": false,
+        "storesOutput": false,
+        "attribution": "Powered by Stability AI"
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "sailboat",
+      "text": "小さな帆船",
+      "methods": [
+        {
+          "id": "shap-e",
+          "httpStatus": 200,
+          "httpSeconds": 47.67709274997469,
+          "headers": {
+            "X-Content-Type-Options": "nosniff",
+            "X-Generation-Ms": "47663",
+            "X-Sample-Ms": "45701",
+            "X-Generation-Seed": "20260930",
+            "X-CLIP-Tokens": "6",
+            "X-Mesh-Faces": "30570"
+          },
+          "bytes": 551168,
+          "inputSha256": "db004d435ae9f54b231dcc78feff108b0e56ba2470b093fc1384c7f686f2e81e",
+          "endToEndSeconds": 49.2410089999903,
+          "vertices": 15297,
+          "faces": 30570,
+          "finite": true,
+          "watertight": true,
+          "windingConsistent": true,
+          "volume": 0.08882112917334471,
+          "bounds": [
+            [
+              -0.2630285322666168,
+              -1.0043927431106567,
+              -0.8836079835891724
+            ],
+            [
+              0.26361048221588135,
+              1.001656413078308,
+              0.8726491332054138
+            ]
+          ],
+          "components": 9,
+          "largestComponentAreaShare": 0.7154851512434637,
+          "sha256": "9faec2634e7e29d52a03deacab64acc241d0b06e368795d8b77e663b3321a8c6",
+          "path": "/end-to-end-models/paired-v1/sailboat-shap-e.glb"
+        },
+        {
+          "id": "image-triposr",
+          "httpStatus": 200,
+          "httpSeconds": 17.67688837501919,
+          "headers": {
+            "X-Content-Type-Options": "nosniff",
+            "X-Generation-Ms": "17675",
+            "X-Image-Ms": "1835",
+            "X-Reconstruction-Ms": "1663",
+            "X-Image-Stage-Ms": "11453",
+            "X-Generation-Seed": "20260930",
+            "X-Mesh-Faces": "17120",
+            "X-CLIP-Tokens": "28"
+          },
+          "bytes": 309044,
+          "inputSha256": "db004d435ae9f54b231dcc78feff108b0e56ba2470b093fc1384c7f686f2e81e",
+          "endToEndSeconds": 19.240804625034798,
+          "vertices": 8566,
+          "faces": 17120,
+          "finite": true,
+          "watertight": true,
+          "windingConsistent": true,
+          "volume": 0.03761621403541016,
+          "bounds": [
+            [
+              -0.2513390779495239,
+              -0.5094966888427734,
+              -0.5090116262435913
+            ],
+            [
+              0.29324162006378174,
+              0.5149003267288208,
+              0.4995514452457428
+            ]
+          ],
+          "components": 5,
+          "largestComponentAreaShare": 0.979877745509026,
+          "sha256": "55cc9c1b0528c44b6d6e38db5127e0a00eac617e534f5f4b50c864f33c56adea",
+          "path": "/end-to-end-models/paired-v1/sailboat-image-triposr.glb"
+        }
+      ],
+      "description": {
+        "httpStatus": 200,
+        "httpSeconds": 1.563916250015609,
+        "headers": {
+          "X-Content-Type-Options": "nosniff"
+        },
+        "bytes": 100,
+        "response": {
+          "text_en": "a small sailboat",
+          "elapsedMs": 1562,
+          "model": "Qwen/Qwen3-8B-MLX-4bit",
+          "attempts": 1
+        }
+      },
+      "text_en": "a small sailboat",
+      "sharedEnglishSha256": "db004d435ae9f54b231dcc78feff108b0e56ba2470b093fc1384c7f686f2e81e"
+    },
+    {
+      "id": "umbrella",
+      "text": "開いた傘",
+      "methods": [
+        {
+          "id": "shap-e",
+          "httpStatus": 200,
+          "httpSeconds": 41.0515982080251,
+          "headers": {
+            "X-Content-Type-Options": "nosniff",
+            "X-Generation-Ms": "41039",
+            "X-Sample-Ms": "39067",
+            "X-Generation-Seed": "20260930",
+            "X-CLIP-Tokens": "5",
+            "X-Mesh-Faces": "70324"
+          },
+          "bytes": 1266596,
+          "inputSha256": "45103ed5e8555bb57acc986d1e8231499ad0e3d8d14ddaec2387a50eab821e46",
+          "endToEndSeconds": 42.636479458014946,
+          "vertices": 35162,
+          "faces": 70324,
+          "finite": true,
+          "watertight": true,
+          "windingConsistent": true,
+          "volume": 0.13829744729194643,
+          "bounds": [
+            [
+              -0.9380003809928894,
+              -0.9542924761772156,
+              -0.9933101534843445
+            ],
+            [
+              0.9423797130584717,
+              1.0008455514907837,
+              0.9889581799507141
+            ]
+          ],
+          "components": 4,
+          "largestComponentAreaShare": 0.9915950516266887,
+          "sha256": "b5b50795f51634c94764d1045d845a929170dbe6ae0bca5e97434c5a72e2d636",
+          "path": "/end-to-end-models/paired-v1/umbrella-shap-e.glb"
+        },
+        {
+          "id": "image-triposr",
+          "httpStatus": 200,
+          "httpSeconds": 17.799132791988086,
+          "headers": {
+            "X-Content-Type-Options": "nosniff",
+            "X-Generation-Ms": "17785",
+            "X-Image-Ms": "2105",
+            "X-Reconstruction-Ms": "1634",
+            "X-Image-Stage-Ms": "11550",
+            "X-Generation-Seed": "20260930",
+            "X-Mesh-Faces": "21252",
+            "X-CLIP-Tokens": "27"
+          },
+          "bytes": 383348,
+          "inputSha256": "45103ed5e8555bb57acc986d1e8231499ad0e3d8d14ddaec2387a50eab821e46",
+          "endToEndSeconds": 19.384014041977935,
+          "vertices": 10626,
+          "faces": 21252,
+          "finite": true,
+          "watertight": true,
+          "windingConsistent": true,
+          "volume": 0.03764891494589166,
+          "bounds": [
+            [
+              -0.3836318254470825,
+              -0.33486407995224,
+              -0.3865891695022583
+            ],
+            [
+              0.38953983783721924,
+              0.3750617504119873,
+              0.41574689745903015
+            ]
+          ],
+          "components": 1,
+          "largestComponentAreaShare": 1.0,
+          "sha256": "5b17d2ac198887a1df78eaa8b1e58265851c4cc23a340f0046fa01cfd03b9337",
+          "path": "/end-to-end-models/paired-v1/umbrella-image-triposr.glb"
+        }
+      ],
+      "description": {
+        "httpStatus": 200,
+        "httpSeconds": 1.5848812499898486,
+        "headers": {
+          "X-Content-Type-Options": "nosniff"
+        },
+        "bytes": 100,
+        "response": {
+          "text_en": "an open umbrella",
+          "elapsedMs": 1583,
+          "model": "Qwen/Qwen3-8B-MLX-4bit",
+          "attempts": 1
+        }
+      },
+      "text_en": "an open umbrella",
+      "sharedEnglishSha256": "45103ed5e8555bb57acc986d1e8231499ad0e3d8d14ddaec2387a50eab821e46"
+    },
+    {
+      "id": "watering-can",
+      "text": "長い注ぎ口が付いたじょうろ",
+      "methods": [
+        {
+          "id": "shap-e",
+          "httpStatus": 200,
+          "httpSeconds": 40.967505584005266,
+          "headers": {
+            "X-Content-Type-Options": "nosniff",
+            "X-Generation-Ms": "40958",
+            "X-Sample-Ms": "38949",
+            "X-Generation-Seed": "20260930",
+            "X-CLIP-Tokens": "7",
+            "X-Mesh-Faces": "38676"
+          },
+          "bytes": 697344,
+          "inputSha256": "2545996815c73c832a7128bfc95ee873f715d79216a126b1e89baeef8a99751c",
+          "endToEndSeconds": 44.536432250984944,
+          "vertices": 19372,
+          "faces": 38676,
+          "finite": true,
+          "watertight": true,
+          "windingConsistent": true,
+          "volume": 0.1414978916260669,
+          "bounds": [
+            [
+              -1.0060077905654907,
+              -0.7515939474105835,
+              -0.34260380268096924
+            ],
+            [
+              1.0005027055740356,
+              0.7253772616386414,
+              0.34071242809295654
+            ]
+          ],
+          "components": 22,
+          "largestComponentAreaShare": 0.8605314565816218,
+          "sha256": "01c59c1148b50406e7de06f505c7aae3081580c731d6a59db7ec15127a18c274",
+          "path": "/end-to-end-models/paired-v1/watering-can-shap-e.glb"
+        },
+        {
+          "id": "image-triposr",
+          "httpStatus": 200,
+          "httpSeconds": 15.80427195795346,
+          "headers": {
+            "X-Content-Type-Options": "nosniff",
+            "X-Generation-Ms": "15793",
+            "X-Image-Ms": "1725",
+            "X-Reconstruction-Ms": "1649",
+            "X-Image-Stage-Ms": "9522",
+            "X-Generation-Seed": "20260930",
+            "X-Mesh-Faces": "17416",
+            "X-CLIP-Tokens": "29"
+          },
+          "bytes": 314276,
+          "inputSha256": "2545996815c73c832a7128bfc95ee873f715d79216a126b1e89baeef8a99751c",
+          "endToEndSeconds": 19.37319862493314,
+          "vertices": 8706,
+          "faces": 17416,
+          "finite": true,
+          "watertight": true,
+          "windingConsistent": true,
+          "volume": 0.05844419865583248,
+          "bounds": [
+            [
+              -0.29081881046295166,
+              -0.37643104791641235,
+              -0.5126731395721436
+            ],
+            [
+              0.24310815334320068,
+              0.361639142036438,
+              0.46501418948173523
+            ]
+          ],
+          "components": 1,
+          "largestComponentAreaShare": 1.0,
+          "sha256": "e32548069a12c10839e287b240c8a16e9f1cd1e079c693db3593a9300ed7420c",
+          "path": "/end-to-end-models/paired-v1/watering-can-image-triposr.glb"
+        }
+      ],
+      "description": {
+        "httpStatus": 200,
+        "httpSeconds": 3.568926666979678,
+        "headers": {
+          "X-Content-Type-Options": "nosniff"
+        },
+        "bytes": 109,
+        "response": {
+          "text_en": "a long spout watering can",
+          "elapsedMs": 3561,
+          "model": "Qwen/Qwen3-8B-MLX-4bit",
+          "attempts": 1
+        }
+      },
+      "text_en": "a long spout watering can",
+      "sharedEnglishSha256": "2545996815c73c832a7128bfc95ee873f715d79216a126b1e89baeef8a99751c"
+    }
+  ],
+  "sourceVersionsAfter": {
+    "server/generation.py": "a65ecf5e5187726e092e121378999d083474c1df6f92621b635f284bb1b0ee96",
+    "server/image_pipeline.py": "ed1e0c7137405ddda73d047735710080c082f49e93ab3ec0957ec5aab3c86667",
+    "server/composition.py": "86a629d2993b2625a80b632d50d4850d6f964aa3bbc2a974c5bc4efaab3e2f7f",
+    "src/scene.ts": "21163f46e405a7c947a8b32a89fe5635ffba73066f95c98b1d57f825b5a6bb9a",
+    "src/letters.ts": "47930a750d30fb39554c0588feccd20f249f64cfacc1b2ce9c98316193bbb658",
+    "src/surface-material.ts": "9e8d5d0e0ccf02d8822d9fd561efca601971351d7289aaf9f6b3f0053cdb3bc2",
+    "src/body-motion.ts": "8ea6f442fb07410c45faad397ad5072f3b2df1e970c09469be5b7d37477e0443"
+  },
+  "sourceChangedDuringRun": false
+}

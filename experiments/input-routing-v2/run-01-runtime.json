@@ -1,0 +1,42 @@
+{
+  "startedUTC": "2026-09-30T06:51:54.564472+00:00",
+  "model": "Qwen/Qwen3-8B-MLX-4bit",
+  "revision": "383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+  "weightSHA256": "fcc83d7537bee76cc143be3e25f8954b816798f93528103db1cddb02977c5617",
+  "protocol": {
+    "frozenUTC": "2026-09-30T06:51:29.494159+00:00",
+    "groups": {
+      "regression": 24,
+      "fresh": 12
+    },
+    "sha256": {
+      "experiments/input-routing-v2/fresh-plan.json": "22c2ff1778004cc8417f7ae976b4af7c2fd53406d5de71616767bf3d3069a5b8",
+      "experiments/input-routing-v2/fresh-plan-lock.json": "7fd42376af516fc3b955832ca28105a1266c1dcc3cd64c4a8d22cf56de058d71",
+      "experiments/input-routing-v2/action-prompt.txt": "ce97485a6a68c6ab6954f839781373ff91d708364eb920d38f23a8ce5fb28f9d",
+      "experiments/input-routing-v2/edit-prompt.txt": "28b6e675ca1b8b314642352a380f0521b3ff3b51f4bd7c679219b5b8732abf9f",
+      "experiments/input-routing-v2/description-prompt.txt": "29101ddd61f921b98c66f89b6782e92b54e93a4c259a025310b4f2c1cdf8464e",
+      "experiments/input-routing-v2/contracts.py": "e0c8202f2382d03cfa4cf90ca9f2e80b28e7d2ed10056fb2e065ce20690bad7a",
+      "experiments/input-routing-v2/evaluate.py": "f87978a70e85d5a75ffe5c39722276bfb55d7831b23edf1854b3cf922788785c",
+      "experiments/input-routing/evaluation-plan.json": "144a6912b0ddb4556dd49d6502f3fdfd45ad50ccb19d927b3e66ade4fbadbefd",
+      "experiments/input-routing/schema.py": "91f969401d32eebcae3f74042d32d115c9376114f14d31879c848d4b41ac3758",
+      "experiments/input-routing/evaluate.py": "05bcaf67c6e505037bfabc020178366d0499e43d7b8f172ef6a296ebc7aea10f"
+    }
+  },
+  "temperature": 0.7,
+  "topP": 0.8,
+  "topK": 20,
+  "thinking": false,
+  "seed": 17,
+  "seedPolicy": "Reset seed17 before each stage; exactly one draw, no repair or resampling.",
+  "maxTokens": {
+    "action": 64,
+    "edit": 256,
+    "description": 512
+  },
+  "loadMs": 870,
+  "comparisonLimit": "Architecture, prompts and sampling all differ from v1; not an isolated causal ablation. New English descriptions are not form-ID or count-patch outputs.",
+  "completedUTC": "2026-09-30T06:53:09.741856+00:00",
+  "mlxPeakBytes": 4937593132,
+  "maxRSSBytesDarwin": 4477272064,
+  "blockedIPAttempts": 0
+}

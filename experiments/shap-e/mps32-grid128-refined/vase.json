@@ -1,0 +1,42 @@
+{
+  "id": "shap-e-vase-mps32-grid128-refined",
+  "object": "vase",
+  "prompt": "a tall ceramic vase with a narrow neck and a round body",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260931,
+  "device": "mps",
+  "steps": 32,
+  "grid": 128,
+  "status": "ok",
+  "path": "/generated/shap-e-vase-mps32-grid128-refined.glb",
+  "seconds": 40.836,
+  "sample_seconds": 38.994,
+  "vertices": 57251,
+  "faces": 114522,
+  "bounds": [
+    [
+      -0.4822423739696112,
+      -1.0077437903937392,
+      -0.4832537793737697
+    ],
+    [
+      0.4852769506259227,
+      1.0074919452817421,
+      0.48136889840674213
+    ]
+  ],
+  "area": 9.600489275988734,
+  "volume": 0.31770592300534917,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 22,
+  "sha256": "f2be70d1902b8bafd7c94586647430e1721380b4665d8076bec9d674030f5290",
+  "bytes": 2062044,
+  "sdf_min": -1.0,
+  "sdf_max": 0.9674608707427979,
+  "process_peak_rss_bytes_so_far": 3624288256,
+  "mps_driver_allocated_bytes_after": 5386240000,
+  "refined_from": "shap-e-vase-mps32-grid64-fixed",
+  "refinement_seconds": 1.842
+}

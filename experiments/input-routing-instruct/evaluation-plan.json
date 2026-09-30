@@ -1,0 +1,642 @@
+{
+  "version": 1,
+  "purpose": "人工例の意図分類・既知形への不当近似を一度だけ評価。実ユーザー原稿なし。",
+  "evaluation": "同一prompt、greedy、各例1要求。例別辞書補正・再生成なし。閾値は操作上の規約であり自然言語の唯一の正解ではない。",
+  "automaticScore": "action、known/unknown target、changesのキーと事前許容範囲。英語の語義・部品・関係は別途目視評価。",
+  "cases": [
+    {
+      "id": "new-sphere",
+      "category": "new-known",
+      "writing": "球体をひとつ。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {
+          "count": {
+            "equals": 1
+          }
+        },
+        "target": "sphere"
+      },
+      "humanCheck": "球へ変更。明示された全体数1。"
+    },
+    {
+      "id": "edit-generated-square",
+      "category": "edit-unknown",
+      "writing": "これを四角くして。",
+      "current": {
+        "target": {
+          "form": null,
+          "object_en": "a watering can"
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "edit",
+        "changes": {
+          "squareness": {
+            "range": [
+              0.65,
+              1
+            ]
+          }
+        }
+      },
+      "humanCheck": "じょうろの対象を保存し、四角さだけ変更。花瓶に置換しない。"
+    },
+    {
+      "id": "slight-elongation",
+      "category": "edit-attribute",
+      "writing": "少し細長くして。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "edit",
+        "changes": {
+          "elongation": {
+            "range": [
+              1.1,
+              1.6
+            ]
+          }
+        }
+      },
+      "humanCheck": "相対的な軽い縦長化。"
+    },
+    {
+      "id": "attribute-prohibition",
+      "category": "keep-attribute-negation",
+      "writing": "四角くしないで。",
+      "current": {
+        "target": {
+          "form": "cube",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0.8,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "四角くする変更の禁止であり、現在の四角さを0に戻す指示ではない。"
+    },
+    {
+      "id": "abstract-mood",
+      "category": "keep-abstract",
+      "writing": "今日は静かな気分です。",
+      "current": {
+        "target": {
+          "form": "tree",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "具体的な新対象・編集なし。"
+    },
+    {
+      "id": "negated-preserve",
+      "category": "keep-negation",
+      "writing": "球にはしないで。いまの形をそのままにして。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "否定された球を新対象にしない。"
+    },
+    {
+      "id": "negated-replacement",
+      "category": "new-negation",
+      "writing": "立方体ではなく球に変えて。",
+      "current": {
+        "target": {
+          "form": "cube",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {},
+        "target": "sphere"
+      },
+      "humanCheck": "拒否対象でなく球を選ぶ。"
+    },
+    {
+      "id": "multiple-related",
+      "category": "new-composite",
+      "writing": "椅子の上に鳥がとまっている。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {},
+        "target": "unknown"
+      },
+      "humanCheck": "椅子と鳥の両方、鳥が椅子の上という関係を英語に保持。"
+    },
+    {
+      "id": "color-only",
+      "category": "keep-color",
+      "writing": "青色で。",
+      "current": {
+        "target": {
+          "form": "sphere",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "色は文字追加側。形には変更なし。"
+    },
+    {
+      "id": "same-bare-subject",
+      "category": "keep-same-subject",
+      "writing": "花瓶。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0.4,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "同じ対象を名指すだけ。新しい形を生成・再初期化しない。"
+    },
+    {
+      "id": "unknown-umbrella",
+      "category": "new-unknown",
+      "writing": "開いた傘。",
+      "current": {
+        "target": {
+          "form": "flower",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {},
+        "target": "unknown"
+      },
+      "humanCheck": "開いたumbrella。flowerやmushroomへの近似禁止。"
+    },
+    {
+      "id": "unknown-funnel",
+      "category": "new-unknown",
+      "writing": "先の細い漏斗。",
+      "current": {
+        "target": {
+          "form": "cone",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {},
+        "target": "unknown"
+      },
+      "humanCheck": "funnelと細い出口。coneへの近似禁止。"
+    },
+    {
+      "id": "unknown-watering-can",
+      "category": "new-unknown",
+      "writing": "長い注ぎ口のあるじょうろ。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {},
+        "target": "unknown"
+      },
+      "humanCheck": "watering canと長いspout。vaseへの近似禁止。"
+    },
+    {
+      "id": "unknown-teapot",
+      "category": "new-unknown",
+      "writing": "急須。",
+      "current": {
+        "target": {
+          "form": "mug",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {},
+        "target": "unknown"
+      },
+      "humanCheck": "teapot。mug/vase/bottleへの近似禁止。"
+    },
+    {
+      "id": "linked-identical-parts",
+      "category": "new-composite",
+      "writing": "三つの輪を鎖状につないだもの。",
+      "current": {
+        "target": {
+          "form": "ring",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "target": "unknown",
+        "changes": {}
+      },
+      "humanCheck": "three interlinked rings等。数だけでなく連結関係を保持し、ring count3へ落とさない。"
+    },
+    {
+      "id": "known-with-modifiers",
+      "category": "new-attributes",
+      "writing": "四角くねじれた花瓶。",
+      "current": {
+        "target": {
+          "form": "sphere",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {
+          "squareness": {
+            "range": [
+              0.65,
+              1
+            ]
+          },
+          "twist": {
+            "abs_min": 0.3
+          }
+        },
+        "target": "vase"
+      },
+      "humanCheck": "花瓶、四角さとねじれ。"
+    },
+    {
+      "id": "same-subject-edit",
+      "category": "edit-named-context",
+      "writing": "花瓶をさらに細長く。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1.3,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "edit",
+        "changes": {
+          "elongation": {
+            "range": [
+              1.4,
+              2.5
+            ]
+          }
+        }
+      },
+      "humanCheck": "同じ対象の編集であり新規vase再作成ではない。"
+    },
+    {
+      "id": "unsupported-size",
+      "category": "keep-unsupported",
+      "writing": "少し大きくして。",
+      "current": {
+        "target": {
+          "form": "cube",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "全体size未対応。elongationへ誤変換しない。"
+    },
+    {
+      "id": "eight-rings",
+      "category": "new-count",
+      "writing": "円環を8個。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {
+          "count": {
+            "equals": 8
+          }
+        },
+        "target": "ring"
+      },
+      "humanCheck": "同一全体の個数8。"
+    },
+    {
+      "id": "count-edit",
+      "category": "edit-count",
+      "writing": "同じものを3個にして。",
+      "current": {
+        "target": {
+          "form": "ring",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 2
+        }
+      },
+      "expected": {
+        "action": "edit",
+        "changes": {
+          "count": {
+            "equals": 3
+          }
+        }
+      },
+      "humanCheck": "ring本体維持、数だけ3へ。"
+    },
+    {
+      "id": "neutral-roughness",
+      "category": "edit-reset",
+      "writing": "表面をなめらかに戻して。",
+      "current": {
+        "target": {
+          "form": "rock",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0.8,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "edit",
+        "changes": {
+          "roughness": {
+            "equals": 0
+          }
+        }
+      },
+      "humanCheck": "ざらつき解除。岩という対象を保存。"
+    },
+    {
+      "id": "negated-unknown",
+      "category": "new-unknown-negation",
+      "writing": "花瓶ではなく水差しにして。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {},
+        "target": "unknown"
+      },
+      "humanCheck": "pitcher/jug。否定されたvaseや近いbottle/mugへ寄せない。"
+    },
+    {
+      "id": "ambiguous-pronoun",
+      "category": "keep-ambiguous",
+      "writing": "あれみたいにして。",
+      "current": {
+        "target": {
+          "form": null,
+          "object_en": "a watering can"
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "参照先がなく対象を捏造しない。"
+    },
+    {
+      "id": "quoted-shape-preserve",
+      "category": "keep-quoted",
+      "writing": "「球体にして」という言葉だけを追加。形は変えないで。",
+      "current": {
+        "target": {
+          "form": "cube",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "引用の球という語より、明示された維持を優先。"
+    }
+  ]
+}

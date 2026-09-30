@@ -1,0 +1,34 @@
+{
+  "source": "https://kenney.nl/assets/nature-kit",
+  "download": "https://kenney.nl/media/pages/assets/nature-kit/37ac38a37b-1677698939/kenney_nature-kit.zip",
+  "retrieved": "2026-09-30",
+  "license": "CC0-1.0",
+  "archiveBytes": 10537521,
+  "archiveSha256": "fa7974a0d342bfe63c38664ba9f8ec1a4aab8ea25f099bdc56870e33588c4d9d",
+  "files": [
+    {
+      "archivePath": "License.txt",
+      "file": "License.txt",
+      "bytes": 611,
+      "sha256": "cb96b75e3560ac78d7a53ce6f083f4cdb5c53faea6141b62d63458dcfe1e4b9d"
+    },
+    {
+      "archivePath": "Models/OBJ format/tree_oak.obj",
+      "file": "tree_oak.obj",
+      "bytes": 18279,
+      "sha256": "1a1dba69f49a454492db2413110e0867dc6dc3d5fe412d2499047625c93a3c06"
+    },
+    {
+      "archivePath": "Models/OBJ format/mushroom_red.obj",
+      "file": "mushroom_red.obj",
+      "bytes": 3429,
+      "sha256": "aea11334dbf3e587652405626d3d59ffc91b7e423cfe117e70c68829d55ebd9b"
+    },
+    {
+      "archivePath": "Models/OBJ format/flower_purpleA.obj",
+      "file": "flower_purpleA.obj",
+      "bytes": 5745,
+      "sha256": "039c21db5a505edeb9d889077436b5f18055ae28b58ad89795b016ee29981479"
+    }
+  ]
+}

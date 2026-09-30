@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-30",
+  "python": "3.12.14",
+  "machine": "arm64",
+  "packages": {
+    "torch": "2.14.0",
+    "numpy": "2.5.3",
+    "trimesh": "5.1.0",
+    "scikit-image": "0.26.0",
+    "PyYAML": "6.0.3"
+  },
+  "extraWeightsDownloaded": 0,
+  "weightsManifest": "experiments/shap-e/downloads.json",
+  "sourceFiles": [
+    {
+      "path": "experiments/shap-e/generate.py",
+      "bytes": 8565,
+      "sha256": "dc93178d261cb646b8fcf666147354bb3c0cc5f32ebc70be1ed7f6c335f7625d"
+    },
+    {
+      "path": "experiments/shap-e/mps_compat.py",
+      "bytes": 614,
+      "sha256": "25f6a30ac10ff88e8ecd735ae401c47e0737738bf9989e3f16bc45d2259941bb"
+    },
+    {
+      "path": "experiments/shap-e/downloads.json",
+      "bytes": 2094,
+      "sha256": "be1276667e9f87eb5f765cc502200b0326e446dfab22f822d9dbfca646ff8f0e"
+    },
+    {
+      "path": "experiments/shap-e/requirements.freeze.txt",
+      "bytes": 1277,
+      "sha256": "e4c5e61bf102d172000327bd67da74487aee3ea8755665b55621ccc9c9bd6bc1"
+    },
+    {
+      "path": "server/generation.py",
+      "bytes": 15383,
+      "sha256": "a65ecf5e5187726e092e121378999d083474c1df6f92621b635f284bb1b0ee96"
+    },
+    {
+      "path": "server/test_generation.py",
+      "bytes": 5685,
+      "sha256": "a86b8e5b0004ac844789f0e37ef7d3a0deffad0555a549d02bbd40f690efae85"
+    },
+    {
+      "path": "experiments/generation/smoke_http.py",
+      "bytes": 2941,
+      "sha256": "92ffba3428f3bac4b0c96f95c116d22328f52b7f39d96f4effea540b284abd3f"
+    },
+    {
+      "path": "experiments/generation/preview.html",
+      "bytes": 1634,
+      "sha256": "8c0595e341fb06ee5e0b41ed0762c227326ffa9ed4b991ca2445560eed2795b3"
+    },
+    {
+      "path": "experiments/generation/teapot-v1.glb",
+      "bytes": 1951128,
+      "sha256": "d573fdfdd8ee939fd569591a9ea9b31cff115c2885003b30f9174b645464724f"
+    },
+    {
+      "path": "experiments/generation/teapot-v1-views.png",
+      "bytes": 144182,
+      "sha256": "bd96da5c4d15f3325a8eb04d97f9f7c49144408befabb0dd711a006cf60acc02"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "at": "2026-09-30T07:40:11.090Z",
+  "kind": "local browser mocks; no model inference",
+  "cases": [
+    {
+      "name": "immediate raw and color during generation; latest attributes before adoption",
+      "pass": true,
+      "ms": 457,
+      "accepted": 3,
+      "glyphs": 18,
+      "installed": 1,
+      "urls": [
+        1,
+        1
+      ],
+      "descriptions": 1,
+      "generations": 1,
+      "glError": 0,
+      "expectedHttpConsole": []
+    },
+    {
+      "name": "identical raw captures different submit modes and retains mode on retry",
+      "pass": true,
+      "ms": 408,
+      "accepted": 2,
+      "glyphs": 7,
+      "installed": 1,
+      "urls": [
+        1,
+        1
+      ],
+      "descriptions": 2,
+      "generations": 1,
+      "glError": 0,
+      "expectedHttpConsole": [
+        {
+          "text": "Failed to load resource: the server responded with a status of 422 (Unprocessable Entity)",
+          "location": "http://127.0.0.1:4183/description-api/describe"
+        }
+      ]
+    },
+    {
+      "name": "new target after delayed generation discards old mesh",
+      "pass": true,
+      "ms": 325,
+      "accepted": 3,
+      "glyphs": 7,
+      "installed": 1,
+      "urls": [
+        1,
+        1
+      ],
+      "descriptions": 2,
+      "generations": 2,
+      "glError": 0,
+      "expectedHttpConsole": []
+    },
+    {
+      "name": "generation failure retry keeps text once and applies later edit",
+      "pass": true,
+      "ms": 379,
+      "accepted": 2,
+      "glyphs": 8,
+      "installed": 1,
+      "urls": [
+        1,
+        1
+      ],
+      "descriptions": 1,
+      "generations": 2,
+      "glError": 0,
+      "expectedHttpConsole": [
+        {
+          "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+          "location": "http://127.0.0.1:4183/image-api/generate"
+        }
+      ]
+    },
+    {
+      "name": "strict edit rejection retains raw; prohibited and noun commands do not edit",
+      "pass": true,
+      "ms": 293,
+      "accepted": 2,
+      "glyphs": 17,
+      "installed": 0,
+      "urls": [
+        0,
+        0
+      ],
+      "descriptions": 0,
+      "generations": 0,
+      "glError": 0,
+      "expectedHttpConsole": []
+    },
+    {
+      "name": "IME composition Enter and 80ms trailing Enter do not send",
+      "pass": true,
+      "ms": 366,
+      "accepted": 2,
+      "glyphs": 7,
+      "installed": 0,
+      "urls": [
+        0,
+        0
+      ],
+      "descriptions": 0,
+      "generations": 0,
+      "glError": 0,
+      "expectedHttpConsole": []
+    },
+    {
+      "name": "input 2000 and total 4096 are atomic; no truncation or lost draft",
+      "pass": true,
+      "ms": 558,
+      "accepted": 3,
+      "glyphs": 4096,
+      "installed": 0,
+      "urls": [
+        0,
+        0
+      ],
+      "descriptions": 0,
+      "generations": 0,
+      "glError": 0,
+      "expectedHttpConsole": []
+    },
+    {
+      "name": "queue 8 keeps rejected draft; cancel retains visible identity and text",
+      "pass": true,
+      "ms": 426,
+      "accepted": 11,
+      "glyphs": 26,
+      "installed": 1,
+      "urls": [
+        1,
+        1
+      ],
+      "descriptions": 2,
+      "generations": 2,
+      "glError": 0,
+      "expectedHttpConsole": []
+    },
+    {
+      "name": "cancel during description prevents image stage; future writes work",
+      "pass": true,
+      "ms": 316,
+      "accepted": 2,
+      "glyphs": 6,
+      "installed": 0,
+      "urls": [
+        0,
+        0
+      ],
+      "descriptions": 1,
+      "generations": 0,
+      "glError": 0,
+      "expectedHttpConsole": []
+    },
+    {
+      "name": "cancel during Blob loading invalidates geometry install and revokes URL",
+      "pass": true,
+      "ms": 364,
+      "accepted": 1,
+      "glyphs": 5,
+      "installed": 0,
+      "urls": [
+        1,
+        1
+      ],
+      "descriptions": 1,
+      "generations": 1,
+      "glError": 0,
+      "expectedHttpConsole": []
+    },
+    {
+      "name": "invalid GLB retry releases both URLs without duplicate text",
+      "pass": true,
+      "ms": 378,
+      "accepted": 1,
+      "glyphs": 5,
+      "installed": 1,
+      "urls": [
+        2,
+        2
+      ],
+      "descriptions": 1,
+      "generations": 2,
+      "glError": 0,
+      "expectedHttpConsole": []
+    }
+  ],
+  "errors": []
+}

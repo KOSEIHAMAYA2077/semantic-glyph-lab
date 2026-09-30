@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-30",
+  "syntheticPrompt": "a simple ceramic vase",
+  "port": 4187,
+  "service": "local SDXL Turbo -> U2NETP -> TripoSR",
+  "rawGlbSaved": false,
+  "sourceImageSaved": false,
+  "httpStatus": 200,
+  "httpSeconds": 29.80775154096773,
+  "headers": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Generation-Ms": "29797",
+    "X-Image-Ms": "2509",
+    "X-Reconstruction-Ms": "1690",
+    "X-Image-Stage-Ms": "11022",
+    "X-Generation-Seed": "20260930",
+    "X-Mesh-Faces": "24242",
+    "X-CLIP-Tokens": "28"
+  },
+  "bytes": 437192,
+  "sha256": "04c315371bca0d44a3b1c113829b5f08622ca9d17f0e4c7428b86fde6eef56a1",
+  "vertices": 12123,
+  "faces": 24242,
+  "finite": true,
+  "watertight": true,
+  "windingConsistent": true,
+  "bounds": [
+    [
+      -0.257049560546875,
+      -0.5097174644470215,
+      -0.4292480945587158
+    ],
+    [
+      0.35012221336364746,
+      0.48500514030456543,
+      0.4407707154750824
+    ]
+  ],
+  "components": 1
+}

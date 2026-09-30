@@ -1,0 +1,164 @@
+{
+  "date": "2026-09-30",
+  "pipeline": "local text -> image -> mask -> mesh; synthetic English descriptions",
+  "attribution": "Powered by Stability AI",
+  "licenseNotice": "See experiments/text-image/SDXL_TURBO_LICENSE.md and NOTICE. Model weights are not redistributed.",
+  "models": [
+    {
+      "path": "/text-image-models/mesh128-first/sword-y-up.glb",
+      "rawPath": "/text-image-models/mesh128-first/sword-z-up.glb",
+      "sha256": "d8b90fb2d665962545fd6c289640bcac99ef474d3993f80df2cfa9ba41964d03",
+      "bytes": 106564,
+      "subject": "a medieval sword with a long straight blade and a crossguard",
+      "prompt": "A medieval sword with a long straight blade and a crossguard, upright, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting.",
+      "seed": 20260930,
+      "vertices": 2939,
+      "faces": 5874,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.004911483805584545,
+      "bounds": [
+        [
+          -0.09826117753982544,
+          -0.32204896211624146,
+          -0.5094465017318726
+        ],
+        [
+          0.17090463638305664,
+          0.5133956670761108,
+          0.4711318612098694
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 0.9999999999999999,
+      "sumStageSeconds": 9.106502749957144,
+      "id": "text-image-sword",
+      "label": "画像経由: 剣・初回",
+      "sourceMethod": "SDXL Turbo 4-step text-to-image -> U2NETP foreground removal -> TripoSR 128-grid image-to-3D",
+      "imagePath": "experiments/text-image/turbo4-first/sword.png",
+      "runManifest": "experiments/text-image/mesh128-first/manifest.json",
+      "transform": "rotation X=-pi/2, Z-up to Y-up; no mesh repair",
+      "artifactGenerated": true,
+      "semanticAssessment": "partial",
+      "observedLimitations": "画像の先端が切れ、背景除去で刃先を欠損。短い刃として復元。"
+    },
+    {
+      "path": "/text-image-models/mesh128-first/vase-y-up.glb",
+      "rawPath": "/text-image-models/mesh128-first/vase-z-up.glb",
+      "sha256": "d00e7574206fa65817d61a1c1a3e5f66957078466e2166fe65d3db2ecd8a75f9",
+      "bytes": 390356,
+      "subject": "a tall ceramic vase with a narrow neck and a round body",
+      "prompt": "A tall ceramic vase with a narrow neck and a round body, open mouth, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting.",
+      "seed": 20260931,
+      "vertices": 10822,
+      "faces": 21640,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.13266411240939222,
+      "bounds": [
+        [
+          -0.20721447467803955,
+          -0.5246586799621582,
+          -0.2776550054550171
+        ],
+        [
+          0.2199329137802124,
+          0.5131783485412598,
+          0.277931809425354
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0,
+      "sumStageSeconds": 3.1098788760136813,
+      "id": "text-image-vase",
+      "label": "画像経由: 花瓶",
+      "sourceMethod": "SDXL Turbo 4-step text-to-image -> U2NETP foreground removal -> TripoSR 128-grid image-to-3D",
+      "imagePath": "experiments/text-image/turbo4-first/vase.png",
+      "runManifest": "experiments/text-image/mesh128-first/manifest.json",
+      "transform": "rotation X=-pi/2, Z-up to Y-up; no mesh repair",
+      "artifactGenerated": true,
+      "semanticAssessment": "partial",
+      "observedLimitations": "首と胴は分かるが背面は平たく、画像の横筋が凹凸に混入。"
+    },
+    {
+      "path": "/text-image-models/mesh128-first/twisted-vase-y-up.glb",
+      "rawPath": "/text-image-models/mesh128-first/twisted-vase-z-up.glb",
+      "sha256": "1b494773c1eafbcf210ecef014f744c62ec70c9d11340e7417c52dd7d2fe1939",
+      "bytes": 719564,
+      "subject": "a ceramic vase with a spirally twisted body",
+      "prompt": "A ceramic vase with a spirally twisted body, open mouth, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting.",
+      "seed": 20260934,
+      "vertices": 19968,
+      "faces": 39928,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.30602070273711596,
+      "bounds": [
+        [
+          -0.39848458766937256,
+          -0.5265410542488098,
+          -0.41716468334198
+        ],
+        [
+          0.4268150329589844,
+          0.5212070941925049,
+          0.40734580159187317
+        ]
+      ],
+      "components": 2,
+      "largestComponentAreaShare": 0.9996786853540399,
+      "sumStageSeconds": 3.043624834099319,
+      "id": "text-image-twisted-vase",
+      "label": "画像経由: ねじれた花瓶",
+      "sourceMethod": "SDXL Turbo 4-step text-to-image -> U2NETP foreground removal -> TripoSR 128-grid image-to-3D",
+      "imagePath": "experiments/text-image/turbo4-first/twisted-vase.png",
+      "runManifest": "experiments/text-image/mesh128-first/manifest.json",
+      "transform": "rotation X=-pi/2, Z-up to Y-up; no mesh repair",
+      "artifactGenerated": true,
+      "semanticAssessment": "partial",
+      "observedLimitations": "ねじれの輪郭は残るが背面は平たい。ごく小さな別成分あり。"
+    },
+    {
+      "path": "/text-image-models/mesh128-sword-v2/sword-y-up.glb",
+      "rawPath": "/text-image-models/mesh128-sword-v2/sword-z-up.glb",
+      "sha256": "657eac139d9051f90489bc22f45138440e3cab8af867017061bad532eb8960e5",
+      "bytes": 29052,
+      "subject": "a medieval sword with a long straight blade and a crossguard",
+      "prompt": "A full-length straight medieval sword standing vertically, blade tip pointing up, handle at the bottom, entire sword fitting inside the image with wide empty margins. A simple light gray clay model on a plain dark gray background. Orthographic front view. A straight blade and a simple crossguard.",
+      "seed": 20260930,
+      "vertices": 786,
+      "faces": 1568,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.0014803393248222034,
+      "bounds": [
+        [
+          0.11683642864227295,
+          0.15765678882598877,
+          0.14409250020980835
+        ],
+        [
+          0.30768680572509766,
+          0.45809972286224365,
+          0.4993399679660797
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0,
+      "sumStageSeconds": 3.544775249029044,
+      "id": "text-image-sword-v2",
+      "label": "画像経由: 剣・構図再試行",
+      "sourceMethod": "SDXL Turbo 4-step text-to-image -> U2NETP foreground removal -> TripoSR 128-grid image-to-3D",
+      "imagePath": "experiments/text-image/turbo4-sword-v2/sword.png",
+      "runManifest": "experiments/text-image/mesh128-sword-v2/manifest.json",
+      "transform": "rotation X=-pi/2, Z-up to Y-up; no mesh repair",
+      "artifactGenerated": true,
+      "semanticAssessment": "failed",
+      "observedLimitations": "画像には全体が入ったが前景除去で刃が消え、ほぼ柄だけを復元。"
+    }
+  ]
+}

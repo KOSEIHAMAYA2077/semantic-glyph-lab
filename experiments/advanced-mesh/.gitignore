@@ -1,0 +1,4 @@
+# Retain this experiment locally while publishing only the licensing decision.
+*
+!.gitignore
+!README.md

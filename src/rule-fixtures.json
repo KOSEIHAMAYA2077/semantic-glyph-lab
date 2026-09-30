@@ -1,0 +1,5107 @@
+{
+  "format": 1,
+  "sources": {
+    "catalog.py": "a11cc209caef0491c7b937f3c7a3cbe393017303573513d79c4ba8b72ed2db90",
+    "interpreter.py": "120fdf2dd0b9b8cc366d1a6d7c26b6af37bea66f29b88cd9ea2699f4b9501fc7"
+  },
+  "fixtures": [
+    {
+      "text": "",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "　",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "四角くねじれた",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 1.0,
+          "elongation": 1.4,
+          "twist": 0.65,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "細長い花瓶",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 2.3,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "長くねじれた剣",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.8,
+          "twist": 0.65,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "もっと長くして",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.8,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "普通の形へ戻す",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "reset",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "元に",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "通常の形",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "普通の比率",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.0,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "元の長さ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.0,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "ねじれなし",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.0,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "ねじれを戻す",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.0,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "捻れなし",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.0,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "untwisted",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.0,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "まっすぐ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.0,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "逆にねじれた",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": -0.65,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "左巻き",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": -0.65,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "この球体ではなく花瓶",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "花瓶ではない",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "note": "否定または未対応の変形を含むため、現在の形を保ちました。"
+      }
+    },
+    {
+      "text": "花瓶ではなく剣",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "剣じゃない",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "note": "否定または未対応の変形を含むため、現在の形を保ちました。"
+      }
+    },
+    {
+      "text": "sphereではない",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "note": "否定または未対応の変形を含むため、現在の形を保ちました。"
+      }
+    },
+    {
+      "text": "花瓶以外",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "note": "否定または未対応の変形を含むため、現在の形を保ちました。"
+      }
+    },
+    {
+      "text": "花瓶を除く",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "note": "否定または未対応の変形を含むため、現在の形を保ちました。"
+      }
+    },
+    {
+      "text": "剣と花瓶",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "花瓶と剣",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "瓶に花を入れる",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "flower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "flower",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "spring",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "tablecloth",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "swordfish",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "homeless",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "balloon",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "sphere-shaped",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "CUBE",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ＣＵＢＥ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "木曜日に作家と会う",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "大きな木",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "tree",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "tree",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ひとりで遠くまで歩くもの",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "それではないと思う",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "はなれていく",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "赤色にして",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "ink": "#ef6969"
+      }
+    },
+    {
+      "text": "白色の剣",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true,
+        "ink": "#eeeae2"
+      }
+    },
+    {
+      "text": "red blue",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "ink": "#79a7ff"
+      }
+    },
+    {
+      "text": "#aabbcc",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "ink": "#aabbcc"
+      }
+    },
+    {
+      "text": "赤 #123456 青",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "ink": "#123456"
+      }
+    },
+    {
+      "text": "hundred",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "８個の輪",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 8
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "三個の花瓶",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "99個の輪",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 8
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "0個",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "球体を4個",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 4
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "二つの星",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "star",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 2
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "star",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "五匹の魚",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "fish",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 5
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "fish",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "四羽の鳥",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "bird",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 4
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "bird",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "少しだけ大きく",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "note": "否定または未対応の変形を含むため、現在の形を保ちました。"
+      }
+    },
+    {
+      "text": "もっと小さく",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false,
+        "note": "否定または未対応の変形を含むため、現在の形を保ちました。"
+      }
+    },
+    {
+      "text": "四角くしてから丸く",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.0,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "丸くしてから四角く",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 1.0,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "滑らかで普通の比率",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.0,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.0,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "曲がった花瓶をまっすぐに",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.0,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "未知の文章を追加するだけ。",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "objectSelected": false
+      }
+    },
+    {
+      "text": "😀 花瓶ではなく剣 🌌",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "球体",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "球面",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ボール",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "sphere",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ball",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "立方体",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "直方体",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "キューブ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "サイコロ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "cube",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "cuboid",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "花瓶",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "かびん",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "壺",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "つぼ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "vase",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.4,
+          "elongation": 1.4,
+          "twist": 0.4,
+          "bend": 0.4,
+          "roughness": 0.3,
+          "count": 3
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "剣",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "刀",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "短剣",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ソード",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "sword",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "blade",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "樹木",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "tree",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "tree",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "木",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "tree",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "tree",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "樹",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "tree",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "tree",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "tree",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "tree",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "tree",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "花",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "flower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "flower",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "はな",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "flower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "flower",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "フラワー",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "flower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "flower",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "flower",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "flower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "flower",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "魚",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "fish",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "fish",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "さかな",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "fish",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "fish",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "フィッシュ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "fish",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "fish",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "fish",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "fish",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "fish",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "鳥",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "bird",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "bird",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "とり",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "bird",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "bird",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "bird",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "bird",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "bird",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "椅子",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "chair",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "chair",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "いす",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "chair",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "chair",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "イス",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "chair",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "chair",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "チェア",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "chair",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "chair",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "chair",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "chair",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "chair",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "seat",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "chair",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "chair",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "机",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "table",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "table",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "テーブル",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "table",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "table",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "卓",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "table",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "table",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "table",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "table",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "table",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "desk",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "table",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "table",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "マグ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mug",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mug",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "コップ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mug",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mug",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "カップ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mug",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mug",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "湯呑",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mug",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mug",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "mug",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mug",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mug",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "cup",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mug",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mug",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ボトル",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "bottle",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "bottle",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "瓶",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "bottle",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "bottle",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "びん",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "bottle",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "bottle",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "bottle",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "bottle",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "bottle",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "家",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "house",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "house",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "住宅",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "house",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "house",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "小屋",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "house",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "house",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ハウス",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "house",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "house",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "house",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "house",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "house",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "home",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "house",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "house",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "塔",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "tower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "tower",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "タワー",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "tower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "tower",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "tower",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "tower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "tower",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "円環",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "輪",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "リング",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ドーナツ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "トーラス",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ring",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "torus",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "donut",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "星",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "star",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "star",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "スター",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "star",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "star",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "star",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "star",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "star",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ハート",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "heart",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "heart",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "heart",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "heart",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "heart",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "結び目",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "knot",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "knot",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "結び",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "knot",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "knot",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ノット",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "knot",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "knot",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "メビウス",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "knot",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "knot",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "knot",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "knot",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "knot",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "mobius",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "knot",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "knot",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "貝殻",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "shell",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "shell",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "貝",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "shell",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "shell",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "シェル",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "shell",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "shell",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "shell",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "shell",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "shell",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "円錐",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cone",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cone",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "コーン",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cone",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cone",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "cone",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cone",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cone",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "ピラミッド",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "pyramid",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "pyramid",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "角錐",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "pyramid",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "pyramid",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "pyramid",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "pyramid",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "pyramid",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "岩",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "rock",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "rock",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "石",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "rock",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "rock",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "rock",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "rock",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "rock",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "stone",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "rock",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "rock",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "雲",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cloud",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cloud",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "くも",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cloud",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cloud",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "cloud",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "cloud",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "cloud",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "キノコ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mushroom",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mushroom",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "きのこ",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mushroom",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mushroom",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "茸",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mushroom",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mushroom",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    },
+    {
+      "text": "mushroom",
+      "previous": {
+        "object": "vase",
+        "squareness": 0.4,
+        "elongation": 1.4,
+        "twist": 0.4,
+        "bend": 0.4,
+        "roughness": 0.3,
+        "count": 3
+      },
+      "expected": {
+        "spec": {
+          "object": "mushroom",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "explicit",
+        "candidates": [
+          {
+            "object": "mushroom",
+            "score": 1.0
+          }
+        ],
+        "objectSelected": true
+      }
+    }
+  ]
+}

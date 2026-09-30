@@ -1,0 +1,7 @@
+{
+  "date": "2026-09-30",
+  "stage": "strict model load before inference",
+  "error": "Missing key in state_dict: lm_head.weight",
+  "explanation": "Original official checkpoint predates explicit shared output-layer key in current Transformers. No inference was executed; preserved original runner before compatibility fix.",
+  "runnerSHA256": "d722f44907a2ed236e838df3caf1b193a235062760fae478e89a7dd5f92fb82d"
+}

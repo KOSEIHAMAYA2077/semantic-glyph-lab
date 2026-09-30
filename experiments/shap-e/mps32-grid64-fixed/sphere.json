@@ -1,0 +1,40 @@
+{
+  "id": "shap-e-sphere-mps32-grid64-fixed",
+  "object": "sphere",
+  "prompt": "a perfectly round sphere",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260932,
+  "device": "mps",
+  "steps": 32,
+  "grid": 64,
+  "status": "ok",
+  "path": "/generated/shap-e-sphere-mps32-grid64-fixed.glb",
+  "seconds": 39.34,
+  "sample_seconds": 39.065,
+  "vertices": 35702,
+  "faces": 71384,
+  "bounds": [
+    [
+      -1.011232675067962,
+      -1.002297700397552,
+      -1.0028139144655257
+    ],
+    [
+      1.0113028874472967,
+      1.0023701985677085,
+      1.0028448956353322
+    ]
+  ],
+  "area": 24.006174508745627,
+  "volume": 2.085170476152222,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 14,
+  "sha256": "22ca577fc0245c8a7dc7f0f3922966b5d71fe32e8d5d28467d64690bb487a841",
+  "bytes": 1285796,
+  "sdf_min": -1.0,
+  "sdf_max": 0.5784032344818115,
+  "process_peak_rss_bytes_so_far": 3624288256,
+  "mps_driver_allocated_bytes_after": 5386240000
+}

@@ -1,0 +1,162 @@
+{
+  "startedUTC": "2026-09-30T07:53:44.868Z",
+  "base": "http://127.0.0.1:4191",
+  "pass": true,
+  "inputs": [
+    "  青い文字\n二行目  ",
+    "四角く"
+  ],
+  "checks": {
+    "normalEntry": true,
+    "builtWritingEntry": true,
+    "keepAppendsOnceAndPreservesShape": true,
+    "attributeEdit": true,
+    "rawTextRetainedIncludingWhitespace": true,
+    "pauseStopsSceneAndPixels": true,
+    "resumeWorks": true,
+    "noGenerationOrExternalCalls": true,
+    "noNetworkJavascriptOrGLErrors": true
+  },
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/assets/index-BJe7GCdR.js",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/assets/index-Da4lYeQx.css",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/assets/local-interpret-dbRzJc8Z.js",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/api/health",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/generated/manifest.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/reconstructed/manifest.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/text-image-models/manifest.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/end-to-end-models/manifest.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/retrieval-models/manifest.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/src/writing-preview/index.html",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/assets/index-C7MIgrJ2.css",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/assets/index-kxx3qAHR.js",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:4191/assets/local-interpret-dbRzJc8Z.js",
+      "status": 200
+    }
+  ],
+  "networkErrors": [],
+  "consoleErrors": [],
+  "javascriptErrors": [],
+  "forbiddenRequests": [],
+  "note": "Fixed synthetic input only. No generation, description, composition, or interpretation API call is allowed.",
+  "buildFiles": {
+    "dist/index.html": {
+      "bytes": 492,
+      "sha256": "29ccfdc79a8f03470adb46acd29d0ae7ad588c85c7f352a8cefaabf345d31e78"
+    },
+    "dist/src/writing-preview/index.html": {
+      "bytes": 2177,
+      "sha256": "5b67bed4edba73a0327d0441cae0345e751e221020eebba2609aa258f8cdeafc"
+    }
+  },
+  "browser": "154.0.8037.58",
+  "normalGL": 0,
+  "final": {
+    "spec": {
+      "object": "sphere",
+      "squareness": 1,
+      "elongation": 1,
+      "twist": 0,
+      "bend": 0,
+      "roughness": 0,
+      "count": 1
+    },
+    "letterCount": 11,
+    "raw": [
+      {
+        "id": 1,
+        "raw": "  青い文字\n二行目  ",
+        "state": "applied",
+        "mode": "keep"
+      },
+      {
+        "id": 2,
+        "raw": "四角く",
+        "state": "applied",
+        "mode": "edit"
+      }
+    ],
+    "paused": true,
+    "gpuError": 0,
+    "state": {
+      "pending": 0,
+      "phase": "idle",
+      "error": "",
+      "canRetry": false,
+      "canRetryGeneration": false
+    },
+    "audit": {
+      "accepted": 2,
+      "installed": 0,
+      "urlsCreated": 0,
+      "urlsRevoked": 0,
+      "routes": [
+        {
+          "id": 1,
+          "mode": "keep"
+        },
+        {
+          "id": 2,
+          "mode": "edit"
+        }
+      ]
+    }
+  },
+  "screenshot": "writing-paused.png",
+  "finishedUTC": "2026-09-30T07:53:48.274Z"
+}

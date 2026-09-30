@@ -1,0 +1,41 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Frozen end-to-end comparison</title>
+<style>body{margin:0;background:#000;color:#ddd;font:16px monospace}#host{width:1560px;height:1040px}#title{position:absolute;top:10px;left:18px;margin:0}.label{position:absolute;left:18px;pointer-events:none}.gray{top:42px}.letters{top:562px}canvas{display:block}</style>
+<div id="host"></div><p id="title"></p><span class="label gray">灰色 / 35° · 145° · 255°</span><span class="label letters">文字の面 / 同じ3方向</span>
+<script type="module">
+import * as THREE from 'three';
+import {SurfaceScene} from '/src/scene.ts';
+const query=new URLSearchParams(location.search),path=query.get('model');
+if(!path?.startsWith('/end-to-end-models/')||!path.endsWith('.glb'))throw new Error('Experiment model required');
+const protocol=await (await fetch('./protocol.json')).json(),settings=protocol.rendering;
+const scene=new SurfaceScene(document.querySelector('#host'));
+scene.renderer.setPixelRatio(1);scene.renderer.setSize(1560,1040);
+scene.controls.autoRotate=false;scene.controls.enabled=false;
+await scene.loadGLB(path);
+scene.field.add(settings.letters,0,settings.ink);
+scene.material.uniforms.density.value=settings.textDensity;
+scene.material.uniforms.flow.value=settings.flow;
+scene.material.uniforms.bodyMotion.value=settings.bodyMotion;
+scene.time=settings.timeSeconds;scene.paused=true;
+scene.camera.fov=settings.fovDegrees;scene.camera.aspect=1;scene.camera.updateProjectionMatrix();
+scene.world.add(new THREE.HemisphereLight(0xe6efff,0x48403a,2.5));
+const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(-2,4,3);scene.world.add(light);
+const gray=new THREE.MeshStandardMaterial({color:0x9b9fa4,roughness:.7,side:THREE.DoubleSide});
+function draw(){
+ scene.renderer.setScissorTest(true);
+ for(let row=0;row<2;row++){
+  scene.group.traverse(node=>{if(node.isMesh)node.material=row===0?gray:scene.material;});
+  for(let col=0;col<3;col++){
+   const az=THREE.MathUtils.degToRad(settings.viewAzimuthDegrees[col]),el=THREE.MathUtils.degToRad(settings.elevationDegrees);
+   scene.camera.position.set(Math.cos(el)*Math.sin(az),Math.sin(el),Math.cos(el)*Math.cos(az)).multiplyScalar(settings.cameraDistance);scene.camera.lookAt(0,0,0);
+   scene.renderer.setViewport(col*520,(1-row)*520,520,520);scene.renderer.setScissor(col*520,(1-row)*520,520,520);scene.render(0);
+  }
+ }
+ document.body.dataset.ready='true';
+}
+document.querySelector('#title').textContent=query.get('label')||path;
+// Let the constructor's ResizeObserver settle before fixing the square subview cameras.
+await new Promise(requestAnimationFrame);scene.camera.aspect=1;scene.camera.updateProjectionMatrix();draw();
+window.__E2E_COMPARE__={inspect:()=>scene.inspect(),draw,settings};
+</script>

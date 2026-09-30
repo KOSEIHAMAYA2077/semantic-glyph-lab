@@ -1,0 +1,66 @@
+[
+  {
+    "text": "長い注ぎ口が付いたじょうろ",
+    "response": {
+      "candidates": [
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "name": "Watering Can Metal 01",
+          "path": "/retrieval-models/watering_can_metal_01-geometry.glb",
+          "source": "https://polyhaven.com/a/watering_can_metal_01",
+          "score": 0.35407
+        },
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "name": "Ceramic Vase 03",
+          "path": "/retrieval-models/ceramic_vase_03-geometry.glb",
+          "source": "https://polyhaven.com/a/ceramic_vase_03",
+          "score": 0.255158
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "name": "Wooden Handle Saber",
+          "path": "/retrieval-models/wooden_handle_saber-geometry.glb",
+          "source": "https://polyhaven.com/a/wooden_handle_saber",
+          "score": 0.198719
+        }
+      ],
+      "catalogCount": 3,
+      "maxTokens": 128,
+      "elapsedMs": 2.725
+    },
+    "httpMs": 8.347
+  },
+  {
+    "text": "馬の形をした彫刻",
+    "response": {
+      "candidates": [
+        {
+          "id": "polyhaven-ceramic_vase_03",
+          "name": "Ceramic Vase 03",
+          "path": "/retrieval-models/ceramic_vase_03-geometry.glb",
+          "source": "https://polyhaven.com/a/ceramic_vase_03",
+          "score": 0.499667
+        },
+        {
+          "id": "polyhaven-wooden_handle_saber",
+          "name": "Wooden Handle Saber",
+          "path": "/retrieval-models/wooden_handle_saber-geometry.glb",
+          "source": "https://polyhaven.com/a/wooden_handle_saber",
+          "score": 0.28029
+        },
+        {
+          "id": "polyhaven-watering_can_metal_01",
+          "name": "Watering Can Metal 01",
+          "path": "/retrieval-models/watering_can_metal_01-geometry.glb",
+          "source": "https://polyhaven.com/a/watering_can_metal_01",
+          "score": 0.145632
+        }
+      ],
+      "catalogCount": 3,
+      "maxTokens": 128,
+      "elapsedMs": 1.942
+    },
+    "httpMs": 2.497
+  }
+]

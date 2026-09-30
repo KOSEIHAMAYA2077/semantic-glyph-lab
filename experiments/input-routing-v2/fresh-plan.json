@@ -1,0 +1,307 @@
+{
+  "version": 2,
+  "scope": "12 artificial examples fixed before v2 prompts and all inference; not used for training or repeated prompt tuning.",
+  "caveat": "Protocol author knows these artificial cases. This is not an externally blinded benchmark. Model pretraining exposure is unknown.",
+  "cases": [
+    {
+      "id": "fresh-gear",
+      "category": "new-unknown",
+      "writing": "歯車を立てて置いて。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {}
+      },
+      "humanCheck": "A gear, standing/upright. Do not replace it with a wheel/ring."
+    },
+    {
+      "id": "fresh-negated-lamp",
+      "category": "new-negation",
+      "writing": "木ではなく、街灯に変える。",
+      "current": {
+        "target": {
+          "form": "tree",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {}
+      },
+      "humanCheck": "A street lamp, not a tree."
+    },
+    {
+      "id": "fresh-part-only-edit",
+      "category": "keep-unsupported-part",
+      "writing": "胴だけを四角くして。",
+      "current": {
+        "target": {
+          "form": null,
+          "object_en": "a teapot with a spout and a handle"
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "Part-only transformation cannot be encoded as whole-object squareness; keep conservatively."
+    },
+    {
+      "id": "fresh-bend-generated",
+      "category": "edit-unknown",
+      "writing": "今のものを少し曲げたい。",
+      "current": {
+        "target": {
+          "form": null,
+          "object_en": "a bell"
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "edit",
+        "changes": {
+          "bend": {
+            "range": [
+              -0.5,
+              0.5
+            ],
+            "abs_min": 0.15
+          }
+        }
+      },
+      "humanCheck": "Preserve the bell and change bend only."
+    },
+    {
+      "id": "fresh-prohibited-bend",
+      "category": "keep-negation",
+      "writing": "曲げない。今のねじれも保つ。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0.6,
+          "bend": 0.4,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "Prohibition/preservation must not reset the current bend or twist."
+    },
+    {
+      "id": "fresh-color-smooth",
+      "category": "edit-color-independent",
+      "writing": "文字は緑にして、表面はつるつるに戻す。",
+      "current": {
+        "target": {
+          "form": null,
+          "object_en": "a watering can"
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0.7,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "edit",
+        "changes": {
+          "roughness": {
+            "equals": 0
+          }
+        }
+      },
+      "humanCheck": "Only roughness is geometric. Color is handled outside this router."
+    },
+    {
+      "id": "fresh-abstract-writing",
+      "category": "keep-abstract",
+      "writing": "約束を忘れた寂しさを書き留める。",
+      "current": {
+        "target": {
+          "form": "flower",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "No concrete new visual subject."
+    },
+    {
+      "id": "fresh-boat-bridge",
+      "category": "new-composite",
+      "writing": "橋の下に小さな舟が浮かぶ。",
+      "current": {
+        "target": {
+          "form": "rock",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {}
+      },
+      "humanCheck": "A small boat below/under a bridge; preserve both objects and their relation."
+    },
+    {
+      "id": "fresh-same-unknown",
+      "category": "keep-same-subject",
+      "writing": "じょうろ。",
+      "current": {
+        "target": {
+          "form": null,
+          "object_en": "a watering can"
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "Same unknown subject, no changes."
+    },
+    {
+      "id": "fresh-count-overflow",
+      "category": "keep-unsupported-count",
+      "writing": "同じものを12個並べて。",
+      "current": {
+        "target": {
+          "form": "sphere",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "Count exceeds 8; no silent clamp."
+    },
+    {
+      "id": "fresh-explicit-reset",
+      "category": "new-reset",
+      "writing": "同じ球をいったん作り直す。",
+      "current": {
+        "target": {
+          "form": "sphere",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 1,
+          "twist": 0.7,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "new",
+        "changes": {}
+      },
+      "humanCheck": "A new sphere, without carrying the prior twist into the description."
+    },
+    {
+      "id": "fresh-relative-limit",
+      "category": "keep-at-upper-bound",
+      "writing": "もっと細長くして。",
+      "current": {
+        "target": {
+          "form": "vase",
+          "object_en": null
+        },
+        "attributes": {
+          "squareness": 0,
+          "elongation": 2.5,
+          "twist": 0,
+          "bend": 0,
+          "roughness": 0,
+          "count": 1
+        }
+      },
+      "expected": {
+        "action": "keep",
+        "changes": {}
+      },
+      "humanCheck": "Elongation is already at maximum. No unchanged edit or unsupported larger value."
+    }
+  ]
+}

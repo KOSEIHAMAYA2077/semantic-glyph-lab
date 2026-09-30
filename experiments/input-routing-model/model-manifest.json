@@ -1,0 +1,95 @@
+{
+  "model": "Qwen/Qwen3-14B-MLX-4bit",
+  "revision": "ba63a5141812f9870287df53341123a71ba41433",
+  "license": "apache-2.0",
+  "startedUTC": "2026-09-30T06:50:42.163161+00:00",
+  "completedUTC": "2026-09-30T06:53:54.793218+00:00",
+  "files": [
+    {
+      "name": "LICENSE",
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/LICENSE",
+      "officialLFSSHA256": null,
+      "officialGitBlobId": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab"
+    },
+    {
+      "name": "README.md",
+      "bytes": 14749,
+      "sha256": "1c8d2f8b86dd7bdbea2056ac9becf3372f30a6a99babfe5f7d24c859e8bbebf2",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/README.md",
+      "officialLFSSHA256": null,
+      "officialGitBlobId": "329f187f18e032377114ac5d3b52d51a739e51af"
+    },
+    {
+      "name": "config.json",
+      "bytes": 941,
+      "sha256": "b2b3caeb0beef3a231730ec846241585b64c7c88b99dba427450f6a9f2a04214",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/config.json",
+      "officialLFSSHA256": null,
+      "officialGitBlobId": "c30e4e7bfe27b4fe1389d6e69b17c5fc4a90cb07"
+    },
+    {
+      "name": "merges.txt",
+      "bytes": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/merges.txt",
+      "officialLFSSHA256": null,
+      "officialGitBlobId": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "bytes": 5360593224,
+      "sha256": "f2f502ca7604ad6789b124bf9cd7a192fda5a60e6f52b1fe521c3aa4dad598ce",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/model-00001-of-00002.safetensors",
+      "officialLFSSHA256": "f2f502ca7604ad6789b124bf9cd7a192fda5a60e6f52b1fe521c3aa4dad598ce",
+      "officialGitBlobId": "92d307cf1498767bfa9ccb7727ee1e87200f75db"
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "bytes": 2485808912,
+      "sha256": "d3758e05e08bcfb5fcd1b76d74758366355c80464398702051ce0388045e898e",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/model-00002-of-00002.safetensors",
+      "officialLFSSHA256": "d3758e05e08bcfb5fcd1b76d74758366355c80464398702051ce0388045e898e",
+      "officialGitBlobId": "67e01b93bda9b559af7c4cd0e5ed95c144b3b251"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "bytes": 86266,
+      "sha256": "4825c397a7eb6ddde3827310ced22cdc3f6d1c2d5ca393e111bdcd9ad5601b05",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/model.safetensors.index.json",
+      "officialLFSSHA256": null,
+      "officialGitBlobId": "6fa68bc54d943b232aab2c6d221a5e029af7980c"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/tokenizer.json",
+      "officialLFSSHA256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "officialGitBlobId": "cd71f61a15a522601badb3dc960d800d9cb3766c"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 9690,
+      "sha256": "f45a828b27bfe1ae2080246d6de51c29370a0978f15b3299123830d5ba9e08a1",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/tokenizer_config.json",
+      "officialLFSSHA256": null,
+      "officialGitBlobId": "131252626f88d8285427aeeea5ed744d4dd8480c"
+    },
+    {
+      "name": "vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "source": "https://huggingface.co/Qwen/Qwen3-14B-MLX-4bit/resolve/ba63a5141812f9870287df53341123a71ba41433/vocab.json",
+      "officialLFSSHA256": null,
+      "officialGitBlobId": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    }
+  ],
+  "totalBytes": 7862396465,
+  "weightBytes": 7846402136,
+  "bits": 4,
+  "groupSize": 128,
+  "tensorCount": 1007,
+  "codePolicy": "No model Python code acquired. Built-in mlx_lm qwen3, trust_remote_code=False. No dependency update."
+}

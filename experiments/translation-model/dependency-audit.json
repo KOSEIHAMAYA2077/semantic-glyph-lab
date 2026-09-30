@@ -1,0 +1,439 @@
+{
+  "date": "2026-09-30",
+  "method": "PyPI release metadata for installed packages; reported vulnerabilities only, not a malware or unknown-vulnerability guarantee",
+  "packages": [
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "source": "https://pypi.org/project/Jinja2/3.1.6/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.3",
+      "source": "https://pypi.org/project/MarkupSafe/3.0.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "source": "https://pypi.org/project/PyYAML/6.0.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "source": "https://pypi.org/project/Pygments/2.21.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "source": "https://pypi.org/project/annotated-doc/0.0.5/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "source": "https://pypi.org/project/anyio/4.15.1/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "source": "https://pypi.org/project/certifi/2026.7.22/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "source": "https://pypi.org/project/click/8.5.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2",
+      "source": "https://pypi.org/project/cloudpickle/3.1.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "filelock",
+      "version": "4.0.7",
+      "source": "https://pypi.org/project/filelock/4.0.7/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "source": "https://pypi.org/project/fsspec/2026.9.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "source": "https://pypi.org/project/h11/0.16.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.6.0",
+      "source": "https://pypi.org/project/hf-xet/1.6.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "source": "https://pypi.org/project/httpcore/1.0.9/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "source": "https://pypi.org/project/httpx/0.28.1/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "1.33.0",
+      "source": "https://pypi.org/project/huggingface_hub/1.33.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "source": "https://pypi.org/project/idna/3.20/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "joblib",
+      "version": "1.6.0",
+      "source": "https://pypi.org/project/joblib/1.6.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "source": "https://pypi.org/project/markdown-it-py/4.2.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "source": "https://pypi.org/project/mdurl/0.1.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "source": "https://pypi.org/project/mpmath/1.3.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "networkx",
+      "version": "3.7",
+      "source": "https://pypi.org/project/networkx/3.7/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3",
+      "source": "https://pypi.org/project/numpy/2.5.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "source": "https://pypi.org/project/packaging/26.3/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "pip",
+      "version": "25.0.1",
+      "source": "https://pypi.org/project/pip/25.0.1/",
+      "reportedVulnerabilities": [
+        {
+          "aliases": [
+            "CVE-2025-8869",
+            "PYSEC-2026-1795"
+          ],
+          "details": "When extracting a tar archive pip may not check symbolic links point into the extraction directory if the tarfile module doesn't implement PEP 706. Note that upgrading pip to a \"fixed\" version for this vulnerability doesn't fix all known vulnerabilities that are remediated by using a Python version that implements PEP 706. Note that this is a vulnerability in pip's fallback implementation of tar extraction for Python versions that don't implement PEP 706 and therefore are not secure to all vulnerabilities in the Python 'tarfile' module. If you're using a Python version that implements PEP 706 then pip doesn't use the \"vulnerable\" fallback code. Mitigations include upgrading to a version of pip that includes the fix, upgrading to a Python version that implements PEP 706 (Python >=3.9.17, >=3.10.12, >=3.11.4, or >=3.12), applying the linked patch, or inspecting source distributions (sdists) before installation as is already a best-practice.",
+          "fixed_in": [
+            "25.3"
+          ],
+          "id": "GHSA-4xh5-x5gv-qwph",
+          "link": "https://osv.dev/vulnerability/GHSA-4xh5-x5gv-qwph",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-1703",
+            "PYSEC-2026-1796"
+          ],
+          "details": "When pip is installing and extracting a maliciously crafted wheel archive, files may be extracted outside the installation directory. The path traversal is limited to prefixes of the installation directory, thus isn't able to inject or overwrite executable files in typical situations.",
+          "fixed_in": [
+            "26.0"
+          ],
+          "id": "GHSA-6vgw-5pg2-w6jp",
+          "link": "https://osv.dev/vulnerability/GHSA-6vgw-5pg2-w6jp",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-3219",
+            "PYSEC-2026-2875"
+          ],
+          "details": "pip handles concatenated tar and ZIP files as ZIP files regardless of filename or whether a file is both a tar and ZIP file. This behavior could result in confusing installation behavior, such as installing \"incorrect\" files according to the filename of the archive. New behavior only proceeds with installation if the file identifies uniquely as a ZIP or tar archive, not as both.",
+          "fixed_in": [
+            "26.1"
+          ],
+          "id": "GHSA-58qw-9mgm-455v",
+          "link": "https://osv.dev/vulnerability/GHSA-58qw-9mgm-455v",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-6357",
+            "PYSEC-2026-2876"
+          ],
+          "details": "pip prior to version 26.1 would run self-update check functionality after installing wheel files which required importing well-known Python modules names. These module imports were intentionally deferred to increase startup time of the pip CLI. The patch changes self-update functionality to run before wheels are installed to prevent newly-installed modules from being imported shortly after the installation of a wheel package. Users should still review package contents prior to installation.",
+          "fixed_in": [
+            "26.1"
+          ],
+          "id": "GHSA-jp4c-xjxw-mgf9",
+          "link": "https://osv.dev/vulnerability/GHSA-jp4c-xjxw-mgf9",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-8643",
+            "GHSA-wf93-45jw-7689"
+          ],
+          "details": "pip would treat console_scripts and gui_scripts as paths instead of file names without sanitizing the resolved absolute path to the installation directory, leading to entry points being installed outside the installation directory.",
+          "fixed_in": [
+            "26.1.2"
+          ],
+          "id": "PYSEC-2026-196",
+          "link": "https://osv.dev/vulnerability/PYSEC-2026-196",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2025-8869",
+            "GHSA-4xh5-x5gv-qwph"
+          ],
+          "details": "When extracting a tar archive pip may not check symbolic links point into the extraction directory if the tarfile module doesn't implement PEP 706. Note that upgrading pip to a \"fixed\" version for this vulnerability doesn't fix all known vulnerabilities that are remediated by using a Python version that implements PEP 706. Note that this is a vulnerability in pip's fallback implementation of tar extraction for Python versions that don't implement PEP 706 and therefore are not secure to all vulnerabilities in the Python 'tarfile' module. If you're using a Python version that implements PEP 706 then pip doesn't use the \"vulnerable\" fallback code. Mitigations include upgrading to a version of pip that includes the fix, upgrading to a Python version that implements PEP 706 (Python >=3.9.17, >=3.10.12, >=3.11.4, or >=3.12), applying the linked patch, or inspecting source distributions (sdists) before installation as is already a best-practice.",
+          "fixed_in": [
+            "25.3"
+          ],
+          "id": "PYSEC-2026-1795",
+          "link": "https://osv.dev/vulnerability/PYSEC-2026-1795",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-1703",
+            "GHSA-6vgw-5pg2-w6jp"
+          ],
+          "details": "When pip is installing and extracting a maliciously crafted wheel archive, files may be extracted outside the installation directory. The path traversal is limited to prefixes of the installation directory, thus isn't able to inject or overwrite executable files in typical situations.",
+          "fixed_in": [
+            "26.0"
+          ],
+          "id": "PYSEC-2026-1796",
+          "link": "https://osv.dev/vulnerability/PYSEC-2026-1796",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-8643",
+            "PYSEC-2026-196"
+          ],
+          "details": "pip would treat console_scripts and gui_scripts as paths instead of file names without sanitizing the resolved absolute path to the installation directory, leading to entry points being installed outside the installation directory.",
+          "fixed_in": [
+            "26.1.2"
+          ],
+          "id": "GHSA-wf93-45jw-7689",
+          "link": "https://osv.dev/vulnerability/GHSA-wf93-45jw-7689",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-3219",
+            "GHSA-58qw-9mgm-455v"
+          ],
+          "details": "pip handles concatenated tar and ZIP files as ZIP files regardless of filename or whether a file is both a tar and ZIP file. This behavior could result in confusing installation behavior, such as installing \"incorrect\" files according to the filename of the archive. New behavior only proceeds with installation if the file identifies uniquely as a ZIP or tar archive, not as both.",
+          "fixed_in": [
+            "26.1"
+          ],
+          "id": "PYSEC-2026-2875",
+          "link": "https://osv.dev/vulnerability/PYSEC-2026-2875",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-6357",
+            "GHSA-jp4c-xjxw-mgf9"
+          ],
+          "details": "pip prior to version 26.1 would run self-update check functionality after installing wheel files which required importing well-known Python modules names. These module imports were intentionally deferred to increase startup time of the pip CLI. The patch changes self-update functionality to run before wheels are installed to prevent newly-installed modules from being imported shortly after the installation of a wheel package. Users should still review package contents prior to installation.",
+          "fixed_in": [
+            "26.1"
+          ],
+          "id": "PYSEC-2026-2876",
+          "link": "https://osv.dev/vulnerability/PYSEC-2026-2876",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-13346",
+            "GHSA-qwm4-qh6w-59xr"
+          ],
+          "details": "pip would incorrectly handle doubly-encoded package URLs from indexes allowing for files to be installed to arbitrary locations on disk even when installing wheels.\n\n\n\n\nThis vulnerability requires downloading or installing a package from a malicious package index to succeed, malicious packages alone are not able to exploit this vulnerability. Note that this vulnerability only materially impacts users running `pip download` with the `--only-binary` option as installing source distributions from an untrusted index is already an unsafe operation that executes code during install time.",
+          "fixed_in": [
+            "26.2"
+          ],
+          "id": "PYSEC-2026-3721",
+          "link": "https://osv.dev/vulnerability/PYSEC-2026-3721",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        },
+        {
+          "aliases": [
+            "CVE-2026-13346",
+            "PYSEC-2026-3721"
+          ],
+          "details": "pip would incorrectly handle doubly-encoded package URLs from indexes allowing for files to be installed to arbitrary locations on disk even when installing wheels.\n\nThis vulnerability requires downloading or installing a package from a malicious package index to succeed, malicious packages alone are not able to exploit this vulnerability. Note that this vulnerability only materially impacts users running `pip download` with the `--only-binary` option as installing source distributions from an untrusted index is already an unsafe operation that executes code during install time.",
+          "fixed_in": [
+            "26.2.0"
+          ],
+          "id": "GHSA-qwm4-qh6w-59xr",
+          "link": "https://osv.dev/vulnerability/GHSA-qwm4-qh6w-59xr",
+          "source": "osv",
+          "summary": null,
+          "withdrawn": null
+        }
+      ]
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "source": "https://pypi.org/project/regex/2026.9.29/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "source": "https://pypi.org/project/rich/15.0.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "sacremoses",
+      "version": "0.2.0",
+      "source": "https://pypi.org/project/sacremoses/0.2.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "source": "https://pypi.org/project/safetensors/0.8.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.2",
+      "source": "https://pypi.org/project/sentencepiece/0.2.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "setuptools",
+      "version": "84.0.0",
+      "source": "https://pypi.org/project/setuptools/84.0.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4",
+      "source": "https://pypi.org/project/shellingham/1.5.4/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "source": "https://pypi.org/project/sympy/1.14.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.2",
+      "source": "https://pypi.org/project/tokenizers/0.23.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "torch",
+      "version": "2.14.0",
+      "source": "https://pypi.org/project/torch/2.14.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "source": "https://pypi.org/project/tqdm/4.70.1/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "transformers",
+      "version": "5.17.0",
+      "source": "https://pypi.org/project/transformers/5.17.0/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "typer",
+      "version": "0.27.2",
+      "source": "https://pypi.org/project/typer/0.27.2/",
+      "reportedVulnerabilities": []
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "source": "https://pypi.org/project/typing_extensions/4.16.0/",
+      "reportedVulnerabilities": []
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": ".local/translation-model-venv/lib/python3.12/site-packages/transformers/models/marian/modeling_marian.py",
+      "sha256": "48f354c0d8b7e15c46e1e1315e5137189d037ba37c06b6d2a1de7ac9c6e8d8b7"
+    },
+    {
+      "path": ".local/translation-model-venv/lib/python3.12/site-packages/transformers/models/marian/tokenization_marian.py",
+      "sha256": "525c84e8b47fc31ec012b82fda9d7e824f2a00ac771dd67d1049410773b559cc"
+    },
+    {
+      "path": "experiments/translation-model/evaluate.py",
+      "sha256": "7fdf5180a6746294a17b709ac039ba1a6ea85371c562ba22ca30448391c2cffd"
+    },
+    {
+      "path": "experiments/translation-model/prepare.py",
+      "sha256": "4fcd743b724cd7d14bacbf5b6d6844f57f4ca8d5e63d2e972f015ad4cb30e9bf"
+    }
+  ]
+}

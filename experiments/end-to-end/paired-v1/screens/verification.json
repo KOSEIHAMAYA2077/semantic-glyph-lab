@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-30",
+  "sourceHashes": {
+    "src/scene.ts": "21163f46e405a7c947a8b32a89fe5635ffba73066f95c98b1d57f825b5a6bb9a",
+    "src/letters.ts": "47930a750d30fb39554c0588feccd20f249f64cfacc1b2ce9c98316193bbb658",
+    "src/surface-material.ts": "9e8d5d0e0ccf02d8822d9fd561efca601971351d7289aaf9f6b3f0053cdb3bc2",
+    "src/body-motion.ts": "8ea6f442fb07410c45faad397ad5072f3b2df1e970c09469be5b7d37477e0443"
+  },
+  "entries": [
+    {
+      "id": "e2e-paired-v1-sailboat-shap-e",
+      "path": "experiments/end-to-end/paired-v1/screens/sailboat-shap-e.png",
+      "vertices": 91710,
+      "letters": 26,
+      "gpuError": 0
+    },
+    {
+      "id": "e2e-paired-v1-sailboat-image-triposr",
+      "path": "experiments/end-to-end/paired-v1/screens/sailboat-image-triposr.png",
+      "vertices": 51360,
+      "letters": 26,
+      "gpuError": 0
+    },
+    {
+      "id": "e2e-paired-v1-umbrella-shap-e",
+      "path": "experiments/end-to-end/paired-v1/screens/umbrella-shap-e.png",
+      "vertices": 210972,
+      "letters": 26,
+      "gpuError": 0
+    },
+    {
+      "id": "e2e-paired-v1-umbrella-image-triposr",
+      "path": "experiments/end-to-end/paired-v1/screens/umbrella-image-triposr.png",
+      "vertices": 63756,
+      "letters": 26,
+      "gpuError": 0
+    },
+    {
+      "id": "e2e-paired-v1-watering-can-shap-e",
+      "path": "experiments/end-to-end/paired-v1/screens/watering-can-shap-e.png",
+      "vertices": 116028,
+      "letters": 26,
+      "gpuError": 0
+    },
+    {
+      "id": "e2e-paired-v1-watering-can-image-triposr",
+      "path": "experiments/end-to-end/paired-v1/screens/watering-can-image-triposr.png",
+      "vertices": 52248,
+      "letters": 26,
+      "gpuError": 0
+    }
+  ],
+  "errors": [],
+  "remote": []
+}

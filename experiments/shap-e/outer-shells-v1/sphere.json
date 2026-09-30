@@ -1,0 +1,51 @@
+{
+  "id": "shap-e-sphere-outer-shell-v1",
+  "object": "sphere",
+  "prompt": "a perfectly round sphere",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260932,
+  "device": "mps",
+  "steps": 32,
+  "grid": 128,
+  "status": "ok",
+  "path": "/generated/shap-e-sphere-outer-shell-v1.glb",
+  "seconds": 40.938,
+  "sample_seconds": 39.065,
+  "vertices": 95716,
+  "faces": 191508,
+  "bounds": [
+    [
+      -1.0057190656661987,
+      -1.00165593624115,
+      -1.0013333559036255
+    ],
+    [
+      1.005737543106079,
+      1.0017457008361816,
+      1.0019688606262207
+    ]
+  ],
+  "area": 16.009224103471468,
+  "volume": 3.9281058942012606,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 1,
+  "sha256": "632a1a7b2024dfee7f81044f52d8282ca2c598706292f241bbc86eac5169b204",
+  "bytes": 3447536,
+  "sdf_min": -1.0,
+  "sdf_max": 0.5850220322608948,
+  "process_peak_rss_bytes_so_far": 3624288256,
+  "mps_driver_allocated_bytes_after": 5386240000,
+  "refined_from": "shap-e-sphere-mps32-grid64-fixed",
+  "refinement_seconds": 1.873,
+  "label": "Shap-E \u00b7 sphere \u00b7 128\u00b3 \u00b7 outer shell",
+  "run": "outer-shells-v1",
+  "derived_from": "shap-e-sphere-mps32-grid128-refined",
+  "derivation": "Largest-area watertight, winding-consistent component with positive signed volume. Explicit single-object display derivative; not a general asset cleanup rule.",
+  "postprocess_seconds": 0.329,
+  "source_components": 12,
+  "retained_area_fraction": 0.646453729397013,
+  "license": "Generated with MIT-licensed OpenAI Shap-E",
+  "research_note": "One explicitly selected outer component; secondary parts and cavity shells omitted only in this derivative."
+}

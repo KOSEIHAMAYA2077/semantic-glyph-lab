@@ -1,0 +1,791 @@
+{
+  "completedUTC": "2026-09-30T07:05:32.741413+00:00",
+  "providerCredit": "Powered by Poly Haven",
+  "protocol": {
+    "frozenUTC": "2026-09-30T07:04:06.744105+00:00",
+    "protocolSHA256": "c351f5d01557d8efcf71878305f251c9dee245808b3d5f292037b9993d9b3d20",
+    "cases": 10,
+    "frozenBeforeCatalogueAndInference": true
+  },
+  "catalogue": {
+    "retrievedUTC": "2026-09-30T07:04:06.959443+00:00",
+    "source": "https://api.polyhaven.com/assets?type=models",
+    "bytes": 543024,
+    "sha256": "e6820b6dfd8d3d35e865b0cd7ec7a658a23b867402804089b5e37ffa4b238332",
+    "modelCount": 521,
+    "rawMetadataPublic": false,
+    "userAgent": "SemanticGlyphLab-AssetRetrieval/0.1 (independent research; local metadata search)"
+  },
+  "model": {
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "license": "Apache-2.0",
+    "source": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  },
+  "modelManifestSHA256": "9113de76959c32bfe26e664d141570f3efab46765fec1b816172f0264feea3ee",
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "packages": {
+    "numpy": "2.5.3",
+    "onnxruntime": "1.30.0",
+    "tokenizers": "0.23.2"
+  },
+  "loadMs": 102.249,
+  "indexMs": {
+    "name": 422.873,
+    "name-description": 2212.346
+  },
+  "captionTruncations": 0,
+  "blockedIPAttempts": 0,
+  "cases": [
+    {
+      "id": "vase",
+      "text": "陶器の花瓶。",
+      "expectedTarget": "vase",
+      "requiredQualifiers": [
+        "ceramic"
+      ],
+      "elapsedMs": 8.222,
+      "rankings": {
+        "name": [
+          {
+            "id": "ceramic_vase_03",
+            "name": "Ceramic Vase 03",
+            "score": 0.887736,
+            "source": "https://polyhaven.com/a/ceramic_vase_03"
+          },
+          {
+            "id": "ceramic_vase_04",
+            "name": "Ceramic Vase 04",
+            "score": 0.879,
+            "source": "https://polyhaven.com/a/ceramic_vase_04"
+          },
+          {
+            "id": "ceramic_vase_01",
+            "name": "Ceramic Vase 01",
+            "score": 0.875789,
+            "source": "https://polyhaven.com/a/ceramic_vase_01"
+          },
+          {
+            "id": "ceramic_vase_02",
+            "name": "Ceramic Vase 02",
+            "score": 0.862987,
+            "source": "https://polyhaven.com/a/ceramic_vase_02"
+          },
+          {
+            "id": "antique_ceramic_vase_01",
+            "name": "Antique Ceramic Vase 01",
+            "score": 0.835549,
+            "source": "https://polyhaven.com/a/antique_ceramic_vase_01"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "ceramic_vase_03",
+            "name": "Ceramic Vase 03",
+            "score": 0.83662,
+            "source": "https://polyhaven.com/a/ceramic_vase_03"
+          },
+          {
+            "id": "ceramic_vase_02",
+            "name": "Ceramic Vase 02",
+            "score": 0.833566,
+            "source": "https://polyhaven.com/a/ceramic_vase_02"
+          },
+          {
+            "id": "ceramic_vase_04",
+            "name": "Ceramic Vase 04",
+            "score": 0.82599,
+            "source": "https://polyhaven.com/a/ceramic_vase_04"
+          },
+          {
+            "id": "antique_ceramic_vase_01",
+            "name": "Antique Ceramic Vase 01",
+            "score": 0.784958,
+            "source": "https://polyhaven.com/a/antique_ceramic_vase_01"
+          },
+          {
+            "id": "ceramic_vase_01",
+            "name": "Ceramic Vase 01",
+            "score": 0.772426,
+            "source": "https://polyhaven.com/a/ceramic_vase_01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "watering-can",
+      "text": "長い注ぎ口が付いたじょうろ。",
+      "expectedTarget": "watering can",
+      "requiredQualifiers": [
+        "long spout"
+      ],
+      "elapsedMs": 2.478,
+      "rankings": {
+        "name": [
+          {
+            "id": "pipe_wrench",
+            "name": "Pipe Wrench",
+            "score": 0.516805,
+            "source": "https://polyhaven.com/a/pipe_wrench"
+          },
+          {
+            "id": "drain_cleaner",
+            "name": "Drain Cleaner",
+            "score": 0.489282,
+            "source": "https://polyhaven.com/a/drain_cleaner"
+          },
+          {
+            "id": "pliers",
+            "name": "Pliers",
+            "score": 0.473117,
+            "source": "https://polyhaven.com/a/pliers"
+          },
+          {
+            "id": "plastic_bottle_gallon",
+            "name": "Plastic Bottle Gallon",
+            "score": 0.443917,
+            "source": "https://polyhaven.com/a/plastic_bottle_gallon"
+          },
+          {
+            "id": "wooden_spoon",
+            "name": "Wooden Spoon",
+            "score": 0.434953,
+            "source": "https://polyhaven.com/a/wooden_spoon"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "watering_can_metal_01",
+            "name": "Watering Can Metal 01",
+            "score": 0.429862,
+            "source": "https://polyhaven.com/a/watering_can_metal_01"
+          },
+          {
+            "id": "drain_cleaner",
+            "name": "Drain Cleaner",
+            "score": 0.399735,
+            "source": "https://polyhaven.com/a/drain_cleaner"
+          },
+          {
+            "id": "lifebuoy",
+            "name": "Lifebuoy",
+            "score": 0.39858,
+            "source": "https://polyhaven.com/a/lifebuoy"
+          },
+          {
+            "id": "plastic_bottle_gallon",
+            "name": "Plastic Bottle Gallon",
+            "score": 0.387672,
+            "source": "https://polyhaven.com/a/plastic_bottle_gallon"
+          },
+          {
+            "id": "pipe_wrench",
+            "name": "Pipe Wrench",
+            "score": 0.383428,
+            "source": "https://polyhaven.com/a/pipe_wrench"
+          }
+        ]
+      }
+    },
+    {
+      "id": "twisted-sword",
+      "text": "長くねじれた剣。",
+      "expectedTarget": "sword",
+      "requiredQualifiers": [
+        "long",
+        "twisted"
+      ],
+      "elapsedMs": 1.889,
+      "rankings": {
+        "name": [
+          {
+            "id": "ornate_medieval_dagger",
+            "name": "Ornate Medieval Dagger",
+            "score": 0.680203,
+            "source": "https://polyhaven.com/a/ornate_medieval_dagger"
+          },
+          {
+            "id": "wooden_handle_saber",
+            "name": "Wooden Handle Saber",
+            "score": 0.603735,
+            "source": "https://polyhaven.com/a/wooden_handle_saber"
+          },
+          {
+            "id": "metal_tool_chest",
+            "name": "Metal Tool Chest",
+            "score": 0.542164,
+            "source": "https://polyhaven.com/a/metal_tool_chest"
+          },
+          {
+            "id": "worn_metal_rack",
+            "name": "Worn Metal Rack",
+            "score": 0.534402,
+            "source": "https://polyhaven.com/a/worn_metal_rack"
+          },
+          {
+            "id": "ornate_war_hammer",
+            "name": "Ornate War Hammer",
+            "score": 0.526491,
+            "source": "https://polyhaven.com/a/ornate_war_hammer"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "wooden_handle_saber",
+            "name": "Wooden Handle Saber",
+            "score": 0.651173,
+            "source": "https://polyhaven.com/a/wooden_handle_saber"
+          },
+          {
+            "id": "ornate_medieval_dagger",
+            "name": "Ornate Medieval Dagger",
+            "score": 0.608742,
+            "source": "https://polyhaven.com/a/ornate_medieval_dagger"
+          },
+          {
+            "id": "machete",
+            "name": "Machete",
+            "score": 0.560869,
+            "source": "https://polyhaven.com/a/machete"
+          },
+          {
+            "id": "antique_katana_01",
+            "name": "Antique Katana 01",
+            "score": 0.528835,
+            "source": "https://polyhaven.com/a/antique_katana_01"
+          },
+          {
+            "id": "antique_estoc",
+            "name": "Antique Estoc",
+            "score": 0.52735,
+            "source": "https://polyhaven.com/a/antique_estoc"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chair",
+      "text": "木製の椅子。",
+      "expectedTarget": "chair",
+      "requiredQualifiers": [
+        "wooden"
+      ],
+      "elapsedMs": 1.943,
+      "rankings": {
+        "name": [
+          {
+            "id": "WoodenChair_01",
+            "name": "Wooden Chair 01",
+            "score": 0.957654,
+            "source": "https://polyhaven.com/a/WoodenChair_01"
+          },
+          {
+            "id": "wooden_stool_01",
+            "name": "Wooden Stool 01",
+            "score": 0.939705,
+            "source": "https://polyhaven.com/a/wooden_stool_01"
+          },
+          {
+            "id": "wooden_stool_02",
+            "name": "Wooden Stool 02",
+            "score": 0.92703,
+            "source": "https://polyhaven.com/a/wooden_stool_02"
+          },
+          {
+            "id": "painted_wooden_chair_01",
+            "name": "Painted Wooden Chair 01",
+            "score": 0.894769,
+            "source": "https://polyhaven.com/a/painted_wooden_chair_01"
+          },
+          {
+            "id": "folding_wooden_stool",
+            "name": "Folding Wooden Stool",
+            "score": 0.893266,
+            "source": "https://polyhaven.com/a/folding_wooden_stool"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "painted_wooden_chair_01",
+            "name": "Painted Wooden Chair 01",
+            "score": 0.866762,
+            "source": "https://polyhaven.com/a/painted_wooden_chair_01"
+          },
+          {
+            "id": "painted_wooden_chair_02",
+            "name": "Painted Wooden Chair 02",
+            "score": 0.866706,
+            "source": "https://polyhaven.com/a/painted_wooden_chair_02"
+          },
+          {
+            "id": "WoodenChair_01",
+            "name": "Wooden Chair 01",
+            "score": 0.861244,
+            "source": "https://polyhaven.com/a/WoodenChair_01"
+          },
+          {
+            "id": "wooden_stool_01",
+            "name": "Wooden Stool 01",
+            "score": 0.840104,
+            "source": "https://polyhaven.com/a/wooden_stool_01"
+          },
+          {
+            "id": "mid_century_lounge_chair",
+            "name": "Mid Century Lounge Chair",
+            "score": 0.822824,
+            "source": "https://polyhaven.com/a/mid_century_lounge_chair"
+          }
+        ]
+      }
+    },
+    {
+      "id": "barrel",
+      "text": "木でできた樽。",
+      "expectedTarget": "barrel",
+      "requiredQualifiers": [
+        "wooden"
+      ],
+      "elapsedMs": 1.529,
+      "rankings": {
+        "name": [
+          {
+            "id": "wooden_barrels_01",
+            "name": "Wooden Barrels 01",
+            "score": 0.883876,
+            "source": "https://polyhaven.com/a/wooden_barrels_01"
+          },
+          {
+            "id": "wooden_crate_01",
+            "name": "Wooden Crate 01",
+            "score": 0.693393,
+            "source": "https://polyhaven.com/a/wooden_crate_01"
+          },
+          {
+            "id": "wooden_hammer_01",
+            "name": "Wooden Hammer 01",
+            "score": 0.690876,
+            "source": "https://polyhaven.com/a/wooden_hammer_01"
+          },
+          {
+            "id": "wooden_crate_02",
+            "name": "Wooden Crate 02",
+            "score": 0.680892,
+            "source": "https://polyhaven.com/a/wooden_crate_02"
+          },
+          {
+            "id": "handsaw_wood",
+            "name": "Handsaw Wood",
+            "score": 0.66729,
+            "source": "https://polyhaven.com/a/handsaw_wood"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "wooden_barrels_01",
+            "name": "Wooden Barrels 01",
+            "score": 0.722862,
+            "source": "https://polyhaven.com/a/wooden_barrels_01"
+          },
+          {
+            "id": "wine_barrel_01",
+            "name": "Wine Barrel 01",
+            "score": 0.621884,
+            "source": "https://polyhaven.com/a/wine_barrel_01"
+          },
+          {
+            "id": "wooden_crate_01",
+            "name": "Wooden Crate 01",
+            "score": 0.620579,
+            "source": "https://polyhaven.com/a/wooden_crate_01"
+          },
+          {
+            "id": "wooden_crate_02",
+            "name": "Wooden Crate 02",
+            "score": 0.592411,
+            "source": "https://polyhaven.com/a/wooden_crate_02"
+          },
+          {
+            "id": "trowel_01",
+            "name": "Trowel 01",
+            "score": 0.571466,
+            "source": "https://polyhaven.com/a/trowel_01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "football",
+      "text": "革のサッカーボール。",
+      "expectedTarget": "soccer ball",
+      "requiredQualifiers": [
+        "leather"
+      ],
+      "elapsedMs": 1.416,
+      "rankings": {
+        "name": [
+          {
+            "id": "football",
+            "name": "Football",
+            "score": 0.631767,
+            "source": "https://polyhaven.com/a/football"
+          },
+          {
+            "id": "dirty_football",
+            "name": "Dirty Football",
+            "score": 0.537372,
+            "source": "https://polyhaven.com/a/dirty_football"
+          },
+          {
+            "id": "american_football",
+            "name": "American Football",
+            "score": 0.512975,
+            "source": "https://polyhaven.com/a/american_football"
+          },
+          {
+            "id": "wooden_bowl_01",
+            "name": "Wooden Bowl 01",
+            "score": 0.427351,
+            "source": "https://polyhaven.com/a/wooden_bowl_01"
+          },
+          {
+            "id": "wooden_bowl_02",
+            "name": "Wooden Bowl 02",
+            "score": 0.401434,
+            "source": "https://polyhaven.com/a/wooden_bowl_02"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "dirty_football",
+            "name": "Dirty Football",
+            "score": 0.775104,
+            "source": "https://polyhaven.com/a/dirty_football"
+          },
+          {
+            "id": "american_football",
+            "name": "American Football",
+            "score": 0.624566,
+            "source": "https://polyhaven.com/a/american_football"
+          },
+          {
+            "id": "football",
+            "name": "Football",
+            "score": 0.621823,
+            "source": "https://polyhaven.com/a/football"
+          },
+          {
+            "id": "baseball_01",
+            "name": "Baseball 01",
+            "score": 0.456622,
+            "source": "https://polyhaven.com/a/baseball_01"
+          },
+          {
+            "id": "baseball_bat",
+            "name": "Baseball Bat",
+            "score": 0.395525,
+            "source": "https://polyhaven.com/a/baseball_bat"
+          }
+        ]
+      }
+    },
+    {
+      "id": "horse-statue",
+      "text": "馬の形をした彫刻。",
+      "expectedTarget": "horse statue",
+      "requiredQualifiers": [],
+      "elapsedMs": 2.279,
+      "rankings": {
+        "name": [
+          {
+            "id": "horse_statue_01",
+            "name": "Horse Statue 01",
+            "score": 0.87427,
+            "source": "https://polyhaven.com/a/horse_statue_01"
+          },
+          {
+            "id": "horse_head",
+            "name": "Horse Head",
+            "score": 0.704324,
+            "source": "https://polyhaven.com/a/horse_head"
+          },
+          {
+            "id": "gothic_statue",
+            "name": "Gothic Statue",
+            "score": 0.645483,
+            "source": "https://polyhaven.com/a/gothic_statue"
+          },
+          {
+            "id": "antique_ceramic_vase_01",
+            "name": "Antique Ceramic Vase 01",
+            "score": 0.581803,
+            "source": "https://polyhaven.com/a/antique_ceramic_vase_01"
+          },
+          {
+            "id": "bronze_whale_statue",
+            "name": "Bronze Whale Statue",
+            "score": 0.539278,
+            "source": "https://polyhaven.com/a/bronze_whale_statue"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "horse_statue_01",
+            "name": "Horse Statue 01",
+            "score": 0.881625,
+            "source": "https://polyhaven.com/a/horse_statue_01"
+          },
+          {
+            "id": "horse_head",
+            "name": "Horse Head",
+            "score": 0.83301,
+            "source": "https://polyhaven.com/a/horse_head"
+          },
+          {
+            "id": "lion_head",
+            "name": "Lion Head",
+            "score": 0.602888,
+            "source": "https://polyhaven.com/a/lion_head"
+          },
+          {
+            "id": "gothic_statue",
+            "name": "Gothic Statue",
+            "score": 0.586364,
+            "source": "https://polyhaven.com/a/gothic_statue"
+          },
+          {
+            "id": "bull_head",
+            "name": "Bull Head",
+            "score": 0.570335,
+            "source": "https://polyhaven.com/a/bull_head"
+          }
+        ]
+      }
+    },
+    {
+      "id": "umbrella",
+      "text": "開いた傘。",
+      "expectedTarget": "umbrella",
+      "requiredQualifiers": [
+        "open"
+      ],
+      "elapsedMs": 1.937,
+      "rankings": {
+        "name": [
+          {
+            "id": "covered_car",
+            "name": "Covered Car",
+            "score": 0.334055,
+            "source": "https://polyhaven.com/a/covered_car"
+          },
+          {
+            "id": "croissant",
+            "name": "Croissant",
+            "score": 0.332645,
+            "source": "https://polyhaven.com/a/croissant"
+          },
+          {
+            "id": "WetFloorSign_01",
+            "name": "Wet Floor Sign 01",
+            "score": 0.3252,
+            "source": "https://polyhaven.com/a/WetFloorSign_01"
+          },
+          {
+            "id": "pliers",
+            "name": "Pliers",
+            "score": 0.324529,
+            "source": "https://polyhaven.com/a/pliers"
+          },
+          {
+            "id": "plastic_broom",
+            "name": "Plastic Broom",
+            "score": 0.319197,
+            "source": "https://polyhaven.com/a/plastic_broom"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "WetFloorSign_01",
+            "name": "Wet Floor Sign 01",
+            "score": 0.267162,
+            "source": "https://polyhaven.com/a/WetFloorSign_01"
+          },
+          {
+            "id": "korean_fire_extinguisher_01",
+            "name": "Korean Fire Extinguisher 01",
+            "score": 0.256229,
+            "source": "https://polyhaven.com/a/korean_fire_extinguisher_01"
+          },
+          {
+            "id": "cigarette_pack",
+            "name": "Cigarette Pack",
+            "score": 0.252944,
+            "source": "https://polyhaven.com/a/cigarette_pack"
+          },
+          {
+            "id": "fire_alarm",
+            "name": "Fire Alarm",
+            "score": 0.244581,
+            "source": "https://polyhaven.com/a/fire_alarm"
+          },
+          {
+            "id": "ammo_box",
+            "name": "Ammo Box",
+            "score": 0.241765,
+            "source": "https://polyhaven.com/a/ammo_box"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chain",
+      "text": "三つの輪が鎖状につながったもの。",
+      "expectedTarget": "three linked rings",
+      "requiredQualifiers": [
+        "three",
+        "interlinked"
+      ],
+      "elapsedMs": 2.212,
+      "rankings": {
+        "name": [
+          {
+            "id": "spinning_wheel_01",
+            "name": "Spinning Wheel 01",
+            "score": 0.516642,
+            "source": "https://polyhaven.com/a/spinning_wheel_01"
+          },
+          {
+            "id": "round_spectacles",
+            "name": "Round Spectacles",
+            "score": 0.515942,
+            "source": "https://polyhaven.com/a/round_spectacles"
+          },
+          {
+            "id": "rusted_wheel_rim_01",
+            "name": "Rusted Wheel Rim 01",
+            "score": 0.498379,
+            "source": "https://polyhaven.com/a/rusted_wheel_rim_01"
+          },
+          {
+            "id": "rusted_wheel_rim_02",
+            "name": "Rusted Wheel Rim 02",
+            "score": 0.462541,
+            "source": "https://polyhaven.com/a/rusted_wheel_rim_02"
+          },
+          {
+            "id": "brass_goblets",
+            "name": "Brass Goblets",
+            "score": 0.461999,
+            "source": "https://polyhaven.com/a/brass_goblets"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "modular_airduct_circular_01",
+            "name": "Modular Airduct Circular 01",
+            "score": 0.489988,
+            "source": "https://polyhaven.com/a/modular_airduct_circular_01"
+          },
+          {
+            "id": "brass_goblets",
+            "name": "Brass Goblets",
+            "score": 0.459152,
+            "source": "https://polyhaven.com/a/brass_goblets"
+          },
+          {
+            "id": "seadogs_compass",
+            "name": "Seadogs Compass",
+            "score": 0.418246,
+            "source": "https://polyhaven.com/a/seadogs_compass"
+          },
+          {
+            "id": "spinning_wheel_01",
+            "name": "Spinning Wheel 01",
+            "score": 0.413492,
+            "source": "https://polyhaven.com/a/spinning_wheel_01"
+          },
+          {
+            "id": "rusted_wheel_rim_01",
+            "name": "Rusted Wheel Rim 01",
+            "score": 0.404327,
+            "source": "https://polyhaven.com/a/rusted_wheel_rim_01"
+          }
+        ]
+      }
+    },
+    {
+      "id": "abstract",
+      "text": "ただ静かな気分。",
+      "expectedTarget": null,
+      "requiredQualifiers": [],
+      "elapsedMs": 1.854,
+      "rankings": {
+        "name": [
+          {
+            "id": "dry_quiver_leaf",
+            "name": "Dry Quiver Leaf",
+            "score": 0.292745,
+            "source": "https://polyhaven.com/a/dry_quiver_leaf"
+          },
+          {
+            "id": "tree_small_02",
+            "name": "Tree Small 02",
+            "score": 0.276269,
+            "source": "https://polyhaven.com/a/tree_small_02"
+          },
+          {
+            "id": "dry_branches_medium_01",
+            "name": "Dry Branches Medium 01",
+            "score": 0.270498,
+            "source": "https://polyhaven.com/a/dry_branches_medium_01"
+          },
+          {
+            "id": "dustpan",
+            "name": "Dustpan",
+            "score": 0.26738,
+            "source": "https://polyhaven.com/a/dustpan"
+          },
+          {
+            "id": "GreenChair_01",
+            "name": "Green Chair 01",
+            "score": 0.253821,
+            "source": "https://polyhaven.com/a/GreenChair_01"
+          }
+        ],
+        "name-description": [
+          {
+            "id": "mid_century_lounge_chair",
+            "name": "Mid Century Lounge Chair",
+            "score": 0.27509,
+            "source": "https://polyhaven.com/a/mid_century_lounge_chair"
+          },
+          {
+            "id": "tree_small_02",
+            "name": "Tree Small 02",
+            "score": 0.233553,
+            "source": "https://polyhaven.com/a/tree_small_02"
+          },
+          {
+            "id": "tree_stump_02",
+            "name": "Tree Stump 02",
+            "score": 0.226031,
+            "source": "https://polyhaven.com/a/tree_stump_02"
+          },
+          {
+            "id": "modern_arm_chair_01",
+            "name": "Modern Arm Chair 01",
+            "score": 0.22497,
+            "source": "https://polyhaven.com/a/modern_arm_chair_01"
+          },
+          {
+            "id": "dry_quiver_leaf",
+            "name": "Dry Quiver Leaf",
+            "score": 0.22432,
+            "source": "https://polyhaven.com/a/dry_quiver_leaf"
+          }
+        ]
+      }
+    }
+  ]
+}

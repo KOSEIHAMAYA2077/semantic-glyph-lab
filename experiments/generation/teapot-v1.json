@@ -1,0 +1,39 @@
+{
+  "input": "a teapot",
+  "purpose": "artificial HTTP integration case; not user text",
+  "status": 200,
+  "httpWallMs": 41972,
+  "generationMs": 40955,
+  "sampleMs": 38901,
+  "clipTokens": 4,
+  "seed": 20260930,
+  "steps": 32,
+  "grid": 128,
+  "device": "mps",
+  "bytes": 1951128,
+  "sha256": "d573fdfdd8ee939fd569591a9ea9b31cff115c2885003b30f9174b645464724f",
+  "vertices": 54182,
+  "faces": 108348,
+  "finite": true,
+  "bounds": [
+    [
+      -1.0070388317108154,
+      -0.5504498481750488,
+      -0.6806008815765381
+    ],
+    [
+      1.0071370601654053,
+      0.5525197982788086,
+      0.6750236749649048
+    ]
+  ],
+  "area": 9.240239684326877,
+  "watertight": true,
+  "windingConsistent": true,
+  "components": 5,
+  "concurrentRequest": {
+    "status": 503,
+    "wallMs": 1
+  },
+  "output": "teapot-v1.glb"
+}

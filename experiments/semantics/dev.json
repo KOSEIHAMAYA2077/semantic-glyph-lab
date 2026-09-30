@@ -1,0 +1,14 @@
+{
+  "role": "development examples; not held out",
+  "cases": [
+    {"text":"四角い花瓶","object":"vase"},
+    {"text":"長くねじれた剣","object":"sword"},
+    {"text":"腰を下ろして休めるもの","object":"chair"},
+    {"text":"海を泳ぐ生き物","object":"fish"},
+    {"text":"屋根の下で暮らしたい","object":"house"},
+    {"text":"もっと長くして","object":"sphere"},
+    {"text":"明日の試験は難しそうだ","object":null},
+    {"text":"xxx zzz qqq","object":null},
+    {"text":"今日はとても楽しかった","object":null}
+  ]
+}

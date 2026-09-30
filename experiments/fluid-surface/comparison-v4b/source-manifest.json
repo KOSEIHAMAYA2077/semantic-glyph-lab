@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-09-30T07:25:10.603300+00:00",
+  "syntheticOnly": true,
+  "sourceSha256": {
+    "src/fluid/preview.html": "ef64da14d85ca796762ffcc9104166d6cb6c14bddc68b48cd8c458d51e17254f",
+    "src/fluid/operators.ts": "f13ac84d34e1e8c05152323681570513b8b32d56cf8af8c84ee509a9a24deff0",
+    "src/fluid/operators.test.ts": "54071de1396ae540fbaadb8926656089659fdbb7b4715efe4cb4eacd9a218009",
+    "src/fluid/material.ts": "88c5c8c7a6b6d012cd9600436aa2bcd8ac72bb5014a5e0ce24d305fa46c66fb4",
+    "src/fluid/field.ts": "2e274666b7b6d1cccaf1cae9a895ba12cde42150efbfe7bbda3c079b288492ec",
+    "src/fluid/preview.ts": "7560348610f7ce7ac8a4fceed5105089582bbba1839d7341eb166be86d370ef2",
+    "src/surface-material.ts": "9e8d5d0e0ccf02d8822d9fd561efca601971351d7289aaf9f6b3f0053cdb3bc2",
+    "src/letters.ts": "47930a750d30fb39554c0588feccd20f249f64cfacc1b2ce9c98316193bbb658",
+    "src/geometry/index.ts": "3569afe5fe69902ae75ad7f8631e4db73f8d7eb61ffb7f5864d533e757dd32ac",
+    "experiments/fluid-surface/capture.mjs": "68901b6edf1155a7985e8aa33a893b6191b7221264ed51ad80306dfa7cd7d49f",
+    "experiments/fluid-surface/serve.mjs": "7bfa486aa76221c94a3a792e1f470355e36148c83d4301d0d5b0571c6150010b"
+  },
+  "assetSha256": {
+    "public/end-to-end-models/paired-v1/watering-can-image-triposr.glb": "e32548069a12c10839e287b240c8a16e9f1cd1e079c693db3593a9300ed7420c"
+  },
+  "parameters": {
+    "size": 128,
+    "fixedDt": 0.016666666666666666,
+    "seed": 20260930,
+    "pressureIterations": 40,
+    "forceScale": 0.4,
+    "transport": "first-order",
+    "interpolation": "manual",
+    "previewPort": 4190
+  }
+}

@@ -1,0 +1,626 @@
+{
+  "at": "2026-09-30T07:41:25.144Z",
+  "modelPath": "description-api/describe -> image-api/generate; no mock",
+  "artificialInputs": [
+    "取っ手が二つ付いた丸い花瓶",
+    "四角く",
+    "水面を光が流れる。"
+  ],
+  "events": [
+    {
+      "event": "request",
+      "url": "/description-api/describe",
+      "seconds": 0.1519794589999999,
+      "body": {
+        "text": "取っ手が二つ付いた丸い花瓶"
+      }
+    },
+    {
+      "event": "request",
+      "url": "/image-api/generate",
+      "seconds": 4.600381042,
+      "body": {
+        "text": "a round vase with two handles"
+      }
+    },
+    {
+      "event": "response",
+      "url": "/description-api/describe",
+      "status": 200,
+      "seconds": 4.5992092090000005,
+      "headers": {
+        "access-control-allow-origin": "http://127.0.0.1:4183",
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-length": "113",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Wed, 30 Sep 2026 07:41:29 GMT",
+        "server": "LocalDescription/0.1 Python/3.12.14",
+        "vary": "Origin",
+        "x-content-type-options": "nosniff"
+      },
+      "body": {
+        "text_en": "a round vase with two handles",
+        "elapsedMs": 4443,
+        "model": "Qwen/Qwen3-8B-MLX-4bit",
+        "attempts": 1
+      }
+    },
+    {
+      "event": "response",
+      "url": "/image-api/generate",
+      "status": 200,
+      "seconds": 25.628614999999996,
+      "headers": {
+        "access-control-allow-origin": "http://127.0.0.1:4183",
+        "access-control-expose-headers": "X-Generation-Ms, X-Image-Ms, X-Reconstruction-Ms, X-Image-Stage-Ms, X-Generation-Seed, X-CLIP-Tokens, X-Mesh-Faces",
+        "cache-control": "no-store",
+        "connection": "keep-alive",
+        "content-length": "906692",
+        "content-type": "model/gltf-binary",
+        "date": "Wed, 30 Sep 2026 07:41:50 GMT",
+        "server": "LocalImageMesh/0.1 Python/3.12.14",
+        "vary": "Origin",
+        "x-clip-tokens": "30",
+        "x-content-type-options": "nosniff",
+        "x-generation-ms": "21007",
+        "x-generation-seed": "20260930",
+        "x-image-ms": "1978",
+        "x-image-stage-ms": "14126",
+        "x-mesh-faces": "50328",
+        "x-reconstruction-ms": "1690"
+      },
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "externalRequests": [],
+  "waiting": {
+    "scene": {
+      "spec": {
+        "object": "sphere",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "取",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "っ",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "手",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "が",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "二",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "つ",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "付",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "い",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "た",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "丸",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "い",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "花",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "瓶",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "四",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "角",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "く",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "水",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "面",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "を",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "光",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "が",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "流",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "れ",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "る",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "。",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        }
+      ],
+      "count": 26,
+      "time": 4.490999999976157,
+      "paused": false,
+      "loaded": "",
+      "vertices": 3575,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 1,
+      "renderMode": "texture",
+      "bodyMotion": 0,
+      "frames": 271,
+      "renderer": {
+        "frame": 271,
+        "calls": 1,
+        "triangles": 6768,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0
+    },
+    "current": {
+      "target": {
+        "form": null,
+        "object_en": "a round vase with two handles"
+      },
+      "attributes": {
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      }
+    },
+    "displayed": {
+      "target": {
+        "form": "sphere",
+        "object_en": null
+      },
+      "attributes": {
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      }
+    },
+    "state": {
+      "pending": 2,
+      "phase": "generating",
+      "error": "",
+      "canRetry": false
+    },
+    "accepted": [
+      {
+        "id": 1,
+        "raw": "取っ手が二つ付いた丸い花瓶",
+        "state": "applied",
+        "mode": "new"
+      },
+      {
+        "id": 2,
+        "raw": "四角く",
+        "state": "queued",
+        "mode": "edit"
+      },
+      {
+        "id": 3,
+        "raw": "水面を光が流れる。",
+        "state": "queued",
+        "mode": "keep"
+      }
+    ],
+    "audit": {
+      "accepted": 3,
+      "installed": 0,
+      "urlsCreated": 0,
+      "urlsRevoked": 0,
+      "routes": [
+        {
+          "id": 1,
+          "mode": "new"
+        }
+      ]
+    }
+  },
+  "final": {
+    "scene": {
+      "spec": {
+        "object": "sphere",
+        "squareness": 1,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "取",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "っ",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "手",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "が",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "二",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "つ",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "付",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "い",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "た",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "丸",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "い",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "花",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "瓶",
+          "ink": "#ffffff",
+          "at": 0.024499999976158135,
+          "auto": true
+        },
+        {
+          "text": "四",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "角",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "く",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "水",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "面",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "を",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "光",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "が",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "流",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "れ",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "る",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        },
+        {
+          "text": "。",
+          "ink": "#ffffff",
+          "at": 4.490999999976157,
+          "auto": true
+        }
+      ],
+      "count": 26,
+      "time": 25.523499999975854,
+      "paused": false,
+      "loaded": "blob:http://127.0.0.1:4183/bf6aadc7-7c28-4d70-accf-d485fae181bc",
+      "vertices": 150984,
+      "bounds": {
+        "min": [
+          -1.1989264488220215,
+          -1.4239672422409058,
+          -1.4361742734909058
+        ],
+        "max": [
+          1.3007543087005615,
+          1.4072896242141724,
+          1.4240727424621582
+        ]
+      },
+      "flow": 1,
+      "renderMode": "texture",
+      "bodyMotion": 0,
+      "frames": 1532,
+      "renderer": {
+        "frame": 1532,
+        "calls": 1,
+        "triangles": 50328,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0
+    },
+    "current": {
+      "target": {
+        "form": null,
+        "object_en": "a round vase with two handles"
+      },
+      "attributes": {
+        "squareness": 1,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      }
+    },
+    "displayed": {
+      "target": {
+        "form": null,
+        "object_en": "a round vase with two handles"
+      },
+      "attributes": {
+        "squareness": 1,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      }
+    },
+    "state": {
+      "pending": 0,
+      "phase": "idle",
+      "error": "",
+      "canRetry": false
+    },
+    "accepted": [
+      {
+        "id": 1,
+        "raw": "取っ手が二つ付いた丸い花瓶",
+        "state": "applied",
+        "mode": "new"
+      },
+      {
+        "id": 2,
+        "raw": "四角く",
+        "state": "applied",
+        "mode": "edit"
+      },
+      {
+        "id": 3,
+        "raw": "水面を光が流れる。",
+        "state": "applied",
+        "mode": "keep"
+      }
+    ],
+    "audit": {
+      "accepted": 3,
+      "installed": 1,
+      "urlsCreated": 1,
+      "urlsRevoked": 1,
+      "routes": [
+        {
+          "id": 1,
+          "mode": "new"
+        },
+        {
+          "id": 2,
+          "mode": "edit"
+        },
+        {
+          "id": 3,
+          "mode": "keep"
+        }
+      ]
+    }
+  },
+  "pass": false,
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'Failed to load resource: the server responded with a status of 404 (Not Found)'\n+ ]\n- []\n",
+  "seconds": 25.791314459000002
+}

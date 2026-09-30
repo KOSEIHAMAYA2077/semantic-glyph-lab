@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "date": "2026-09-30",
+  "purpose": "Compare Japanese semantic retrieval over official English model metadata; preserve catalogue absence and qualifiers.",
+  "provider": "Poly Haven official public API",
+  "metadataEndpoint": "https://api.polyhaven.com/assets?type=models",
+  "metadataMaxBytes": 3000000,
+  "rawMetadataLocation": ".local/asset-retrieval-metadata/catalogue.json",
+  "metadataPublication": "Do not publish the bulk metadata or website renders. Publish identifiers, scores, own assessments and source links only.",
+  "model": "Existing verified sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 int8 ONNX, CPU only",
+  "candidateCaption": "Official name followed by description when available; no added Japanese aliases, category rewriting or query-specific correction.",
+  "baselineCaption": "Official name only",
+  "topK": 5,
+  "acceptance": "Similarity is a ranking, not a proof of object identity. Report top1, top3, qualifier loss and catalogue absence separately after reading results. No threshold tuning, retries or invented matches.",
+  "meshSelection": "Up to three distinct suitable top-ranked models that match a query object. Prefer vase, watering can, sword if present; otherwise chair, barrel, football, horse statue in that order. No more than three downloads; 1GB total maximum. Keep original model files and create separate geometry-only GLB.",
+  "cases": [
+    {"id":"vase","text":"陶器の花瓶。","target":"vase","requiredQualifiers":["ceramic"],"forbidApproximationTo":["bottle","mug"]},
+    {"id":"watering-can","text":"長い注ぎ口が付いたじょうろ。","target":"watering can","requiredQualifiers":["long spout"],"forbidApproximationTo":["vase","pitcher"]},
+    {"id":"twisted-sword","text":"長くねじれた剣。","target":"sword","requiredQualifiers":["long","twisted"],"forbidApproximationTo":["knife","axe"]},
+    {"id":"chair","text":"木製の椅子。","target":"chair","requiredQualifiers":["wooden"],"forbidApproximationTo":["stool","bench"]},
+    {"id":"barrel","text":"木でできた樽。","target":"barrel","requiredQualifiers":["wooden"],"forbidApproximationTo":["bucket"]},
+    {"id":"football","text":"革のサッカーボール。","target":"soccer ball","requiredQualifiers":["leather"],"forbidApproximationTo":["basketball"]},
+    {"id":"horse-statue","text":"馬の形をした彫刻。","target":"horse statue","requiredQualifiers":[],"forbidApproximationTo":["human statue","other animal"]},
+    {"id":"umbrella","text":"開いた傘。","target":"umbrella","requiredQualifiers":["open"],"forbidApproximationTo":["parasol lamp","mushroom"]},
+    {"id":"chain","text":"三つの輪が鎖状につながったもの。","target":"three linked rings","requiredQualifiers":["three","interlinked"],"forbidApproximationTo":["single ring","separate rings"]},
+    {"id":"abstract","text":"ただ静かな気分。","target":null,"requiredQualifiers":[],"forbidApproximationTo":["any concrete object asserted as exact"]}
+  ]
+}

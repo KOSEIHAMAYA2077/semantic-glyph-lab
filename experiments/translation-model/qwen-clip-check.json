@@ -1,0 +1,240 @@
+{
+  "method": "Official CLIP tokenizer CPU, truncate=False, no ML weights loaded",
+  "groups": [
+    {
+      "source": "qwen8-run-01.jsonl",
+      "cases": [
+        {
+          "id": "vase-handles",
+          "status": 200,
+          "clipTokens": 14,
+          "characters": 54,
+          "ascii": true
+        },
+        {
+          "id": "negative-sphere",
+          "status": 200,
+          "clipTokens": 6,
+          "characters": 19,
+          "ascii": true
+        },
+        {
+          "id": "sword-rings",
+          "status": 200,
+          "clipTokens": 9,
+          "characters": 42,
+          "ascii": true
+        },
+        {
+          "id": "narrative-shell",
+          "status": 200,
+          "clipTokens": 11,
+          "characters": 42,
+          "ascii": true
+        },
+        {
+          "id": "heart-chair",
+          "status": 200,
+          "clipTokens": 11,
+          "characters": 36,
+          "ascii": true
+        },
+        {
+          "id": "nested-relations",
+          "status": 200,
+          "clipTokens": 14,
+          "characters": 52,
+          "ascii": true
+        },
+        {
+          "id": "negative-vase",
+          "status": 200,
+          "clipTokens": 10,
+          "characters": 36,
+          "ascii": true
+        },
+        {
+          "id": "floating-island",
+          "status": 200,
+          "clipTokens": 14,
+          "characters": 53,
+          "ascii": true
+        },
+        {
+          "id": "square-cloud",
+          "status": 200,
+          "clipTokens": 9,
+          "characters": 39,
+          "ascii": true
+        },
+        {
+          "id": "asymmetric-fruit",
+          "status": 200,
+          "clipTokens": 11,
+          "characters": 35,
+          "ascii": true
+        },
+        {
+          "id": "emotion-only",
+          "status": 422
+        },
+        {
+          "id": "ambiguous-pronoun",
+          "status": 422
+        },
+        {
+          "id": "instruction-in-source",
+          "status": 200,
+          "clipTokens": 5,
+          "characters": 11,
+          "ascii": true
+        },
+        {
+          "id": "funnel-gear",
+          "status": 200,
+          "clipTokens": 14,
+          "characters": 54,
+          "ascii": true
+        },
+        {
+          "id": "hourglass-stand",
+          "status": 200,
+          "clipTokens": 12,
+          "characters": 49,
+          "ascii": true
+        },
+        {
+          "id": "pencil-ring",
+          "status": 200,
+          "clipTokens": 11,
+          "characters": 43,
+          "ascii": true
+        },
+        {
+          "id": "lotus-candles",
+          "status": 200,
+          "clipTokens": 12,
+          "characters": 48,
+          "ascii": true
+        },
+        {
+          "id": "kettle-sides",
+          "status": 200,
+          "clipTokens": 18,
+          "characters": 69,
+          "ascii": true
+        },
+        {
+          "id": "torii-windmill",
+          "status": 200,
+          "clipTokens": 10,
+          "characters": 32,
+          "ascii": true
+        },
+        {
+          "id": "mushroom-lamp",
+          "status": 200,
+          "clipTokens": 11,
+          "characters": 39,
+          "ascii": true
+        },
+        {
+          "id": "mirror-branches",
+          "status": 200,
+          "clipTokens": 12,
+          "characters": 58,
+          "ascii": true
+        },
+        {
+          "id": "negative-gear",
+          "status": 200,
+          "clipTokens": 10,
+          "characters": 34,
+          "ascii": true
+        },
+        {
+          "id": "dream-umbrella",
+          "status": 200,
+          "clipTokens": 7,
+          "characters": 30,
+          "ascii": true
+        }
+      ]
+    },
+    {
+      "source": "qwen4b-fresh-01.jsonl",
+      "cases": [
+        {
+          "id": "funnel-gear",
+          "status": 200,
+          "clipTokens": 12,
+          "characters": 42,
+          "ascii": true
+        },
+        {
+          "id": "hourglass-stand",
+          "status": 200,
+          "clipTokens": 12,
+          "characters": 46,
+          "ascii": true
+        },
+        {
+          "id": "pencil-ring",
+          "status": 200,
+          "clipTokens": 11,
+          "characters": 40,
+          "ascii": true
+        },
+        {
+          "id": "lotus-candles",
+          "status": 200,
+          "clipTokens": 13,
+          "characters": 59,
+          "ascii": true
+        },
+        {
+          "id": "kettle-sides",
+          "status": 200,
+          "clipTokens": 18,
+          "characters": 66,
+          "ascii": true
+        },
+        {
+          "id": "torii-windmill",
+          "status": 200,
+          "clipTokens": 10,
+          "characters": 32,
+          "ascii": true
+        },
+        {
+          "id": "mushroom-lamp",
+          "status": 200,
+          "clipTokens": 11,
+          "characters": 40,
+          "ascii": true
+        },
+        {
+          "id": "mirror-branches",
+          "status": 200,
+          "clipTokens": 13,
+          "characters": 59,
+          "ascii": true
+        },
+        {
+          "id": "negative-gear",
+          "status": 200,
+          "clipTokens": 11,
+          "characters": 47,
+          "ascii": true
+        },
+        {
+          "id": "dream-umbrella",
+          "status": 200,
+          "clipTokens": 9,
+          "characters": 39,
+          "ascii": true
+        }
+      ]
+    }
+  ]
+}

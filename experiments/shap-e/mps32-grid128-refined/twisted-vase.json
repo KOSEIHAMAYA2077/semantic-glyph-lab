@@ -1,0 +1,42 @@
+{
+  "id": "shap-e-twisted-vase-mps32-grid128-refined",
+  "object": "twisted-vase",
+  "prompt": "a twisted ceramic vase with a spiral body",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260934,
+  "device": "mps",
+  "steps": 32,
+  "grid": 128,
+  "status": "ok",
+  "path": "/generated/shap-e-twisted-vase-mps32-grid128-refined.glb",
+  "seconds": 40.917,
+  "sample_seconds": 39.03,
+  "vertices": 151588,
+  "faces": 303176,
+  "bounds": [
+    [
+      -0.8577001076044999,
+      -1.0077683043292187,
+      -0.8575123464028667
+    ],
+    [
+      0.8645728404127706,
+      1.0077456977423722,
+      0.8684006638414278
+    ]
+  ],
+  "area": 25.442465742148215,
+  "volume": 1.5295367809795624,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 14,
+  "sha256": "7332f883f428d7b2c4ca2fd272b432673cd15f5d29b25bebd6372356522f1288",
+  "bytes": 5457936,
+  "sdf_min": -1.0,
+  "sdf_max": 0.973504900932312,
+  "process_peak_rss_bytes_so_far": 3624288256,
+  "mps_driver_allocated_bytes_after": 5386240000,
+  "refined_from": "shap-e-twisted-vase-mps32-grid64-fixed",
+  "refinement_seconds": 1.887
+}

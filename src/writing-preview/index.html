@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>文字 — 連続入力試作</title></head>
+<body>
+  <div id="stage"></div>
+  <form id="terminal" autocomplete="off">
+    <div class="controls">
+      <select id="mode" aria-label="この入力の操作">
+        <option value="new">文章から形を作る</option>
+        <option value="edit">今の形を変える</option>
+        <option value="keep" selected>文字だけ加える</option>
+      </select>
+      <button type="submit">送信</button>
+      <button id="cancel" type="button">待機を取り消す</button>
+      <button id="retry" type="button" hidden>再試行</button>
+      <button id="retry-generation" type="button" hidden>形の生成を再試行</button>
+      <button id="pause" type="button" aria-pressed="false">一時停止</button>
+      <button id="help" type="button" aria-expanded="false">?</button>
+    </div>
+    <label class="sr-only" for="text">入力する文章</label>
+    <textarea id="text" rows="3" spellcheck="false" placeholder=">" autofocus></textarea>
+    <div class="line"><span id="state" role="status" aria-live="polite"></span><span id="count"></span></div>
+    <p id="error" role="alert" hidden></p>
+    <p id="hint" hidden>Enter：送信 / Shift+Enter：改行<br>形の変更：四角く、ねじれた、3個、ねじれを戻す。色：赤、青、白、黄色、#aabbcc。<br>生成中も入力できます。取消は現在の形と文字を残します。処理中の生成は終了まで待ちます。<br>原文はこのページを開いている間だけ保持します。再読込すると消えます。</p>
+    <details id="history"><summary>原文 <span id="history-count">0</span></summary><ol id="entries"></ol></details>
+    <small id="credit">Powered by Stability AI</small>
+  </form>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

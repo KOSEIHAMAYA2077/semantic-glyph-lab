@@ -1,0 +1,40 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Local LLM composition — actual output review</title>
+<style>
+body{margin:0;background:#090909;color:#ddd;font:14px monospace}canvas{position:fixed;inset:0;pointer-events:none}
+#grid{display:grid;grid-template-columns:repeat(3,480px)}figure{box-sizing:border-box;margin:0;height:400px;position:relative;padding:12px;border:1px solid #333}
+figcaption{position:absolute;bottom:12px;left:12px;right:12px;z-index:2}small{display:block;color:#999;margin-top:6px}
+</style>
+<div id="grid"></div>
+<script type="module">
+import * as THREE from 'three';
+import {createForm,FORM_IDS} from '../../src/geometry/index.ts';
+import {DEFAULT_FORM} from '../../src/types.ts';
+const requested=new URLSearchParams(location.search).get('run')||'run-01.jsonl';
+if(!/^run-[0-9]+\.jsonl$/.test(requested))throw Error('Unknown result file');
+const data=(await(await fetch('./'+requested)).text()).trim().split('\n').map(x=>JSON.parse(x));
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(1);renderer.setSize(1440,800);renderer.setScissorTest(true);document.body.append(renderer.domElement);
+const factory={box:()=>new THREE.BoxGeometry(1,1,1),sphere:()=>new THREE.SphereGeometry(.5,32,24),cylinder:()=>new THREE.CylinderGeometry(.5,.5,1,32),cone:()=>new THREE.ConeGeometry(.5,1,32),torus:()=>new THREE.TorusGeometry(.4,.1,16,64)};
+for(let i=0;i<Math.min(6,data.length);i++){
+ const item=data[i], scene=new THREE.Scene();scene.background=new THREE.Color('#090909');
+ const figure=document.createElement('figure'),caption=document.createElement('figcaption'),note=document.createElement('small');
+ caption.textContent=item.input;note.textContent=`${item.status===200?'JSON accepted':'FAILED'} · ${item.result.parts?.length||0} parts · ${(item.wallMs/1000).toFixed(1)}s · ${item.split}`;caption.append(note);figure.append(caption);document.querySelector('#grid').append(figure);
+ const group=new THREE.Group();scene.add(group);
+ for(const part of item.result.parts||[]){
+  let geometry;
+  if(factory[part.kind]&&!part.deformation)geometry=factory[part.kind]();
+  else{
+   geometry=createForm({...DEFAULT_FORM,object:part.kind,...part.deformation});
+   geometry.computeBoundingBox();const size=geometry.boundingBox.getSize(new THREE.Vector3()),center=geometry.boundingBox.getCenter(new THREE.Vector3());
+   geometry.translate(-center.x,-center.y,-center.z);const scale=1/Math.max(size.x,size.y,size.z);geometry.scale(scale,scale,scale);
+  }
+  const mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({color:0xa0a0a0,roughness:.6}));mesh.position.fromArray(part.position);mesh.scale.fromArray(part.scale);mesh.rotation.set(...part.rotation);group.add(mesh);
+ }
+ const bounds=new THREE.Box3().setFromObject(group),center=bounds.getCenter(new THREE.Vector3()),radius=bounds.getSize(new THREE.Vector3()).length()/2;
+ const camera=new THREE.PerspectiveCamera(36,480/400,.01,100);camera.position.copy(center).add(new THREE.Vector3(2.4,1.2,5.2).normalize().multiplyScalar(Math.max(5,radius*3.3)));camera.lookAt(center);
+ scene.add(new THREE.HemisphereLight(0xe6ecff,0x555050,2.3));const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(-2,5,4);scene.add(light);
+ const x=i%3*480,y=800-(Math.floor(i/3)+1)*400;renderer.setViewport(x,y,480,400);renderer.setScissor(x,y,480,400);renderer.render(scene,camera);
+}
+document.body.dataset.ready='true';
+</script>

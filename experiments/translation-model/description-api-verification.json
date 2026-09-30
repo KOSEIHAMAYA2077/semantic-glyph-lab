@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-30",
+  "service": "http://127.0.0.1:4188",
+  "model": "Qwen/Qwen3-8B-MLX-4bit",
+  "revision": "383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+  "tests": 6,
+  "files": [
+    {
+      "path": "server/description.py",
+      "sha256": "35e64b9cfa2091b394d65859e0e7b5c63d2203e5b147dd9da674726b8f88e94c"
+    },
+    {
+      "path": "server/test_description_service.py",
+      "sha256": "aa8d3507f432bc4b7a733c2498a8617f714baafc7a33f8684ca67c9e8e11e95a"
+    },
+    {
+      "path": "server/composition.py",
+      "sha256": "86a629d2993b2625a80b632d50d4850d6f964aa3bbc2a974c5bc4efaab3e2f7f"
+    },
+    {
+      "path": "experiments/translation-model/qwen-description-prompt.txt",
+      "sha256": "29101ddd61f921b98c66f89b6782e92b54e93a4c259a025310b4f2c1cdf8464e"
+    }
+  ]
+}

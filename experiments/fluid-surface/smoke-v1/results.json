@@ -1,0 +1,121 @@
+{
+  "label": "smoke-v1",
+  "smoke": true,
+  "probe": {
+    "size": 128,
+    "seed": 20260930,
+    "steps": 0,
+    "time": 0,
+    "fixedDt": 0.016666666666666666,
+    "pressureIterations": 40,
+    "finite": true,
+    "divergenceBeforeRms": 1.6060203169437566,
+    "divergenceAfterRms": 0.021884026934653897,
+    "divergenceRatio": 0.013626245386670462,
+    "maxSpeedUVPerSecond": 0.0006195143016958351,
+    "maxDisplacementUV": 0,
+    "mapJacobian": {
+      "min": 1,
+      "max": 1,
+      "mean": 1,
+      "nonPositive": 0
+    },
+    "gpuError": 0,
+    "probe": "periodic frequency 8/11 compressive velocity",
+    "iterations": 100,
+    "cpuPostDivergenceRms": 0.021884026513604053,
+    "cpuGpuVelocityMaxDifference": 2.9802322387695312e-8
+  },
+  "determinism": {
+    "identicalSamples": true,
+    "sampleValues": 128
+  },
+  "pauseCheck": {
+    "before": 60,
+    "whilePaused": 60,
+    "afterResume": 71
+  },
+  "snapshots": [
+    {
+      "requestedTime": 0,
+      "shape": "sphere",
+      "mode": "fluid",
+      "paused": true,
+      "steps": 0,
+      "time": 0,
+      "letters": 44,
+      "grid": 8,
+      "triangles": 6768,
+      "graphics": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "cpuMsMedian": 0,
+      "cpuMsP95": 0,
+      "frameMsMedian": 0,
+      "frameMsP95": 0,
+      "simulation": {
+        "size": 128,
+        "seed": 20260930,
+        "steps": 0,
+        "time": 0,
+        "fixedDt": 0.016666666666666666,
+        "pressureIterations": 40,
+        "finite": true,
+        "divergenceBeforeRms": 0,
+        "divergenceAfterRms": 0,
+        "divergenceRatio": null,
+        "maxSpeedUVPerSecond": 0,
+        "maxDisplacementUV": 0,
+        "mapJacobian": {
+          "min": 1,
+          "max": 1,
+          "mean": 1,
+          "nonPositive": 0
+        },
+        "gpuError": 0
+      },
+      "gpuError": 0
+    },
+    {
+      "requestedTime": 20,
+      "shape": "sphere",
+      "mode": "fluid",
+      "paused": true,
+      "steps": 1200,
+      "time": 20,
+      "letters": 44,
+      "grid": 8,
+      "triangles": 6768,
+      "graphics": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+      "cpuMsMedian": 0,
+      "cpuMsP95": 0,
+      "frameMsMedian": 0,
+      "frameMsP95": 0,
+      "simulation": {
+        "size": 128,
+        "seed": 20260930,
+        "steps": 1200,
+        "time": 20,
+        "fixedDt": 0.016666666666666666,
+        "pressureIterations": 40,
+        "finite": true,
+        "divergenceBeforeRms": 0.000017474844228841026,
+        "divergenceAfterRms": 0.000002207117863152951,
+        "divergenceRatio": 0.12630257725046012,
+        "maxSpeedUVPerSecond": 0.0026566136854196255,
+        "maxDisplacementUV": 0.03510622955792431,
+        "mapJacobian": {
+          "min": 0.4821946071791494,
+          "max": 1.5408500481095064,
+          "mean": 0.9999999999999967,
+          "nonPositive": 0
+        },
+        "gpuError": 0
+      },
+      "gpuError": 0
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "externalRequests": []
+}

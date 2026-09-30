@@ -1,0 +1,54 @@
+{
+  "recordedUTC": "2026-09-30T06:19:27.849271+00:00",
+  "baseCommit": "bc1a8d44b60953a0ae9cf41f88024c4c208b356e",
+  "sourceSHA256": {
+    "src/advection/layer.ts": "125fcb670860e55195cd30dc50925d7b67fce7667f4dae4ff40a2d2e0d02ec80",
+    "src/body-motion.ts": "8ea6f442fb07410c45faad397ad5072f3b2df1e970c09469be5b7d37477e0443",
+    "src/scene.ts": "21163f46e405a7c947a8b32a89fe5635ffba73066f95c98b1d57f825b5a6bb9a",
+    "src/main.ts": "4a4047e496d25d5dd53ad82328fa5c906b8d92304d023892059790f1e617f096"
+  },
+  "roi": [
+    250,
+    80,
+    1020,
+    820
+  ],
+  "screenCounts": [
+    {
+      "image": "flower_purpleA-t0.png",
+      "litPixelsInFixedROI": 22900
+    },
+    {
+      "image": "flower_purpleA-t16.png",
+      "litPixelsInFixedROI": 22102
+    },
+    {
+      "image": "flower_purpleA-t8.png",
+      "litPixelsInFixedROI": 22353
+    },
+    {
+      "image": "mushroom_red-t0.png",
+      "litPixelsInFixedROI": 47662
+    },
+    {
+      "image": "mushroom_red-t16.png",
+      "litPixelsInFixedROI": 48618
+    },
+    {
+      "image": "mushroom_red-t8.png",
+      "litPixelsInFixedROI": 48575
+    },
+    {
+      "image": "tree_oak-t0.png",
+      "litPixelsInFixedROI": 45599
+    },
+    {
+      "image": "tree_oak-t16.png",
+      "litPixelsInFixedROI": 45233
+    },
+    {
+      "image": "tree_oak-t8.png",
+      "litPixelsInFixedROI": 45008
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "retrievedUTC": "2026-09-30T06:50:42.162801+00:00",
+  "source": "https://huggingface.co/api/models/Qwen/Qwen3-14B-MLX-4bit/revision/ba63a5141812f9870287df53341123a71ba41433?blobs=true",
+  "model": "Qwen/Qwen3-14B-MLX-4bit",
+  "revision": "ba63a5141812f9870287df53341123a71ba41433",
+  "files": [
+    {
+      "rfilename": "LICENSE",
+      "blobId": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "size": 11343
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "329f187f18e032377114ac5d3b52d51a739e51af",
+      "size": 14749
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "c30e4e7bfe27b4fe1389d6e69b17c5fc4a90cb07",
+      "size": 941
+    },
+    {
+      "rfilename": "merges.txt",
+      "blobId": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+      "size": 1671853
+    },
+    {
+      "rfilename": "model-00001-of-00002.safetensors",
+      "blobId": "92d307cf1498767bfa9ccb7727ee1e87200f75db",
+      "size": 5360593224,
+      "lfs": {
+        "sha256": "f2f502ca7604ad6789b124bf9cd7a192fda5a60e6f52b1fe521c3aa4dad598ce",
+        "size": 5360593224,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model-00002-of-00002.safetensors",
+      "blobId": "67e01b93bda9b559af7c4cd0e5ed95c144b3b251",
+      "size": 2485808912,
+      "lfs": {
+        "sha256": "d3758e05e08bcfb5fcd1b76d74758366355c80464398702051ce0388045e898e",
+        "size": 2485808912,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model.safetensors.index.json",
+      "blobId": "6fa68bc54d943b232aab2c6d221a5e029af7980c",
+      "size": 86266
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "cd71f61a15a522601badb3dc960d800d9cb3766c",
+      "size": 11422654,
+      "lfs": {
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "size": 11422654,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "131252626f88d8285427aeeea5ed744d4dd8480c",
+      "size": 9690
+    },
+    {
+      "rfilename": "vocab.json",
+      "blobId": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "size": 2776833
+    }
+  ]
+}
