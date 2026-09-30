@@ -1,0 +1,51 @@
+{
+  "id": "shap-e-sword-outer-shell-v1",
+  "object": "sword",
+  "prompt": "a medieval sword with a long straight blade and a crossguard",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260930,
+  "device": "mps",
+  "steps": 32,
+  "grid": 128,
+  "status": "ok",
+  "path": "/generated/shap-e-sword-outer-shell-v1.glb",
+  "seconds": 41.153,
+  "sample_seconds": 39.329,
+  "vertices": 3364,
+  "faces": 6732,
+  "bounds": [
+    [
+      -0.17363294959068298,
+      -0.05641120299696922,
+      -0.9681992530822754
+    ],
+    [
+      0.11925163865089417,
+      0.049546729773283005,
+      0.9867233633995056
+    ]
+  ],
+  "area": 0.6416526590673745,
+  "volume": 0.0068237582819071,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 1,
+  "sha256": "267506770e2acb9b82299dc46a15acc77428914cf44f2c97f6dea0d8fb0dd7a0",
+  "bytes": 122000,
+  "sdf_min": -0.9999996423721313,
+  "sdf_max": 0.18927854299545288,
+  "process_peak_rss_bytes_so_far": 3624288256,
+  "mps_driver_allocated_bytes_after": 5386240000,
+  "refined_from": "shap-e-sword-mps32-grid64-fixed",
+  "refinement_seconds": 1.824,
+  "label": "Shap-E \u00b7 sword \u00b7 128\u00b3 \u00b7 outer shell",
+  "run": "outer-shells-v1",
+  "derived_from": "shap-e-sword-mps32-grid128-refined",
+  "derivation": "Largest-area watertight, winding-consistent component with positive signed volume. Explicit single-object display derivative; not a general asset cleanup rule.",
+  "postprocess_seconds": 0.01,
+  "source_components": 2,
+  "retained_area_fraction": 0.9760022678124031,
+  "license": "Generated with MIT-licensed OpenAI Shap-E",
+  "research_note": "One explicitly selected outer component; secondary parts and cavity shells omitted only in this derivative."
+}

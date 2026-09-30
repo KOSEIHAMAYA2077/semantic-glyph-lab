@@ -1,0 +1,42 @@
+{
+  "id": "shap-e-cube-mps32-grid128-refined",
+  "object": "cube",
+  "prompt": "a plain cube",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260933,
+  "device": "mps",
+  "steps": 32,
+  "grid": 128,
+  "status": "ok",
+  "path": "/generated/shap-e-cube-mps32-grid128-refined.glb",
+  "seconds": 41.499,
+  "sample_seconds": 39.571,
+  "vertices": 192330,
+  "faces": 384652,
+  "bounds": [
+    [
+      -1.0078738552378856,
+      -1.007873822384932,
+      -1.0078737754521407
+    ],
+    [
+      1.0078737754521407,
+      1.0078737754521407,
+      1.0078738552378856
+    ]
+  ],
+  "area": 45.515138099522474,
+  "volume": 1.3607195392411902,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 2,
+  "sha256": "4664fca5f7800390a7cf310bd86f2165880f3ffb2a0c3db2f2728cffe1d328ff",
+  "bytes": 6924552,
+  "sdf_min": -0.9655445218086243,
+  "sdf_max": 0.9999591708183289,
+  "process_peak_rss_bytes_so_far": 3624288256,
+  "mps_driver_allocated_bytes_after": 5386240000,
+  "refined_from": "shap-e-cube-mps32-grid64-fixed",
+  "refinement_seconds": 1.928
+}

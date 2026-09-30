@@ -1,0 +1,187 @@
+{
+  "checked_models": 14,
+  "models": [
+    {
+      "id": "shap-e-sword-mps32-grid64-fixed",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-vase-mps32-grid64-fixed",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-sphere-mps32-grid64-fixed",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-cube-mps32-grid64-fixed",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-twisted-vase-mps32-grid64-fixed",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-sword-mps32-grid128-refined",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-vase-mps32-grid128-refined",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-sphere-mps32-grid128-refined",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-cube-mps32-grid128-refined",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-twisted-vase-mps32-grid128-refined",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-sword-outer-shell-v1",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-vase-outer-shell-v1",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-sphere-outer-shell-v1",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    },
+    {
+      "id": "shap-e-cube-outer-shell-v1",
+      "status": "passed",
+      "checks": [
+        "file-sha256",
+        "mesh-round-trip",
+        "finite-vertices",
+        "face-count",
+        "vertex-count",
+        "watertight",
+        "consistent-winding"
+      ]
+    }
+  ]
+}

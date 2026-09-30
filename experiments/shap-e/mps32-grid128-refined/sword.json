@@ -1,0 +1,42 @@
+{
+  "id": "shap-e-sword-mps32-grid128-refined",
+  "object": "sword",
+  "prompt": "a medieval sword with a long straight blade and a crossguard",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260930,
+  "device": "mps",
+  "steps": 32,
+  "grid": 128,
+  "status": "ok",
+  "path": "/generated/shap-e-sword-mps32-grid128-refined.glb",
+  "seconds": 41.153,
+  "sample_seconds": 39.329,
+  "vertices": 3458,
+  "faces": 6916,
+  "bounds": [
+    [
+      -0.17363294466273993,
+      -0.05641120249830833,
+      -0.9681992418184056
+    ],
+    [
+      0.17783145453986227,
+      0.049546729861281946,
+      0.9867233460343728
+    ]
+  ],
+  "area": 0.6574294624608492,
+  "volume": 0.006846479222723238,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 2,
+  "sha256": "9e80648fc42a8d733da6322fc42789a16a1eb88858b5f0300ff9d03017391d53",
+  "bytes": 125252,
+  "sdf_min": -0.9999996423721313,
+  "sdf_max": 0.18927854299545288,
+  "process_peak_rss_bytes_so_far": 3624288256,
+  "mps_driver_allocated_bytes_after": 5386240000,
+  "refined_from": "shap-e-sword-mps32-grid64-fixed",
+  "refinement_seconds": 1.824
+}

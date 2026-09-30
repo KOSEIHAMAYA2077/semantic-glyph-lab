@@ -1,0 +1,3404 @@
+{
+  "fixture": "experiments/semantics/heldout-v1.json",
+  "fixtureSha256": "d977c67d4c12c0acac0433acdb59c884effdd1779b7011b43cb5ccb56e221ffc",
+  "modelRevision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "threshold": {
+    "score": 0.48,
+    "margin": 0.035
+  },
+  "catalogSha256": "a11cc209caef0491c7b937f3c7a3cbe393017303573513d79c4ba8b72ed2db90",
+  "interpreterSha256": "a5566f1ae8db8e7fbeee9bff78089bb749bf6c3da9df56cb4adb42e63c503609",
+  "loadMs": 599.97,
+  "summary": {
+    "rules:paraphrase": {
+      "correct": 1,
+      "count": 24,
+      "objectCorrect": 1
+    },
+    "semantic:paraphrase": {
+      "correct": 22,
+      "count": 24,
+      "objectCorrect": 22
+    },
+    "rules:composition": {
+      "correct": 10,
+      "count": 10,
+      "objectCorrect": 10
+    },
+    "semantic:composition": {
+      "correct": 10,
+      "count": 10,
+      "objectCorrect": 10
+    },
+    "rules:attribute_only": {
+      "correct": 8,
+      "count": 8,
+      "objectCorrect": 8
+    },
+    "semantic:attribute_only": {
+      "correct": 8,
+      "count": 8,
+      "objectCorrect": 8
+    },
+    "rules:unsupported": {
+      "correct": 10,
+      "count": 10,
+      "objectCorrect": 10
+    },
+    "semantic:unsupported": {
+      "correct": 10,
+      "count": 10,
+      "objectCorrect": 10
+    }
+  },
+  "latency": {
+    "rules": {
+      "medianMs": 0.1645,
+      "p95Ms": 0.232,
+      "maxMs": 22.393
+    },
+    "semantic": {
+      "medianMs": 2.1325000000000003,
+      "p95Ms": 3.327,
+      "maxMs": 3.743
+    }
+  },
+  "rows": [
+    {
+      "id": "p01",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "sphere",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 22.393
+      }
+    },
+    {
+      "id": "p01",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "sphere",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 0.79654
+          },
+          {
+            "object": "cone",
+            "score": 0.74619
+          },
+          {
+            "object": "ring",
+            "score": 0.7445
+          },
+          {
+            "object": "heart",
+            "score": 0.71685
+          },
+          {
+            "object": "cube",
+            "score": 0.69995
+          }
+        ],
+        "elapsedMs": 2.374
+      }
+    },
+    {
+      "id": "p02",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "cube",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.181
+      }
+    },
+    {
+      "id": "p02",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "cube",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 0.89804
+          },
+          {
+            "object": "pyramid",
+            "score": 0.75749
+          },
+          {
+            "object": "cone",
+            "score": 0.68002
+          },
+          {
+            "object": "sphere",
+            "score": 0.64182
+          },
+          {
+            "object": "knot",
+            "score": 0.61612
+          }
+        ],
+        "elapsedMs": 2.975
+      }
+    },
+    {
+      "id": "p03",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "vase",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.232
+      }
+    },
+    {
+      "id": "p03",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "vase",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 0.74447
+          },
+          {
+            "object": "cloud",
+            "score": 0.52155
+          },
+          {
+            "object": "flower",
+            "score": 0.5043
+          },
+          {
+            "object": "mug",
+            "score": 0.46773
+          },
+          {
+            "object": "cube",
+            "score": 0.45166
+          }
+        ],
+        "elapsedMs": 3.327
+      }
+    },
+    {
+      "id": "p04",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "sword",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.201
+      }
+    },
+    {
+      "id": "p04",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "sword",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 0.75565
+          },
+          {
+            "object": "mug",
+            "score": 0.46606
+          },
+          {
+            "object": "knot",
+            "score": 0.40084
+          },
+          {
+            "object": "bottle",
+            "score": 0.35209
+          },
+          {
+            "object": "star",
+            "score": 0.34509
+          }
+        ],
+        "elapsedMs": 2.43
+      }
+    },
+    {
+      "id": "p05",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "tree",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.164
+      }
+    },
+    {
+      "id": "p05",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "tree",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "tree",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "tree",
+            "score": 0.92325
+          },
+          {
+            "object": "vase",
+            "score": 0.74983
+          },
+          {
+            "object": "flower",
+            "score": 0.6717
+          },
+          {
+            "object": "mushroom",
+            "score": 0.5267
+          },
+          {
+            "object": "bird",
+            "score": 0.46523
+          }
+        ],
+        "elapsedMs": 2.846
+      }
+    },
+    {
+      "id": "p06",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "flower",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.167
+      }
+    },
+    {
+      "id": "p06",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "flower",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "flower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "flower",
+            "score": 0.69707
+          },
+          {
+            "object": "vase",
+            "score": 0.48553
+          },
+          {
+            "object": "bird",
+            "score": 0.35592
+          },
+          {
+            "object": "tree",
+            "score": 0.34355
+          },
+          {
+            "object": "cloud",
+            "score": 0.33745
+          }
+        ],
+        "elapsedMs": 2.059
+      }
+    },
+    {
+      "id": "p07",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "fish",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.165
+      }
+    },
+    {
+      "id": "p07",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "fish",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "fish",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "fish",
+            "score": 0.68923
+          },
+          {
+            "object": "shell",
+            "score": 0.46963
+          },
+          {
+            "object": "bird",
+            "score": 0.41361
+          },
+          {
+            "object": "cloud",
+            "score": 0.3829
+          },
+          {
+            "object": "bottle",
+            "score": 0.35252
+          }
+        ],
+        "elapsedMs": 2.913
+      }
+    },
+    {
+      "id": "p08",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "bird",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.175
+      }
+    },
+    {
+      "id": "p08",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "bird",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "bird",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "bird",
+            "score": 0.76992
+          },
+          {
+            "object": "fish",
+            "score": 0.63332
+          },
+          {
+            "object": "cloud",
+            "score": 0.43965
+          },
+          {
+            "object": "star",
+            "score": 0.43561
+          },
+          {
+            "object": "sword",
+            "score": 0.43519
+          }
+        ],
+        "elapsedMs": 2.223
+      }
+    },
+    {
+      "id": "p09",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "chair",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.154
+      }
+    },
+    {
+      "id": "p09",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "chair",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "chair",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "chair",
+            "score": 0.83116
+          },
+          {
+            "object": "table",
+            "score": 0.61597
+          },
+          {
+            "object": "house",
+            "score": 0.45388
+          },
+          {
+            "object": "cube",
+            "score": 0.35455
+          },
+          {
+            "object": "cone",
+            "score": 0.32629
+          }
+        ],
+        "elapsedMs": 2.518
+      }
+    },
+    {
+      "id": "p10",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "table",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 4
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.178
+      }
+    },
+    {
+      "id": "p10",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "table",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "table",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 4
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "table",
+            "score": 0.7409
+          },
+          {
+            "object": "chair",
+            "score": 0.54694
+          },
+          {
+            "object": "cube",
+            "score": 0.46496
+          },
+          {
+            "object": "pyramid",
+            "score": 0.44271
+          },
+          {
+            "object": "star",
+            "score": 0.44049
+          }
+        ],
+        "elapsedMs": 2.648
+      }
+    },
+    {
+      "id": "p11",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "mug",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.177
+      }
+    },
+    {
+      "id": "p11",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "mug",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "mug",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "mug",
+            "score": 0.84177
+          },
+          {
+            "object": "bottle",
+            "score": 0.65942
+          },
+          {
+            "object": "vase",
+            "score": 0.38478
+          },
+          {
+            "object": "cone",
+            "score": 0.28771
+          },
+          {
+            "object": "mushroom",
+            "score": 0.28107
+          }
+        ],
+        "elapsedMs": 3.163
+      }
+    },
+    {
+      "id": "p12",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "bottle",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.23
+      }
+    },
+    {
+      "id": "p12",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "bottle",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "bottle",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "bottle",
+            "score": 0.78362
+          },
+          {
+            "object": "mug",
+            "score": 0.71891
+          },
+          {
+            "object": "vase",
+            "score": 0.55485
+          },
+          {
+            "object": "ring",
+            "score": 0.49126
+          },
+          {
+            "object": "fish",
+            "score": 0.47878
+          }
+        ],
+        "elapsedMs": 3.064
+      }
+    },
+    {
+      "id": "p13",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "house",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.196
+      }
+    },
+    {
+      "id": "p13",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "house",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "house",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "house",
+            "score": 0.78816
+          },
+          {
+            "object": "tower",
+            "score": 0.61866
+          },
+          {
+            "object": "table",
+            "score": 0.41123
+          },
+          {
+            "object": "chair",
+            "score": 0.30463
+          },
+          {
+            "object": "cube",
+            "score": 0.29531
+          }
+        ],
+        "elapsedMs": 2.745
+      }
+    },
+    {
+      "id": "p14",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "tower",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.163
+      }
+    },
+    {
+      "id": "p14",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "tower",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "tower",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "tower",
+            "score": 0.8531
+          },
+          {
+            "object": "house",
+            "score": 0.54562
+          },
+          {
+            "object": "cube",
+            "score": 0.49303
+          },
+          {
+            "object": "cone",
+            "score": 0.46682
+          },
+          {
+            "object": "pyramid",
+            "score": 0.45573
+          }
+        ],
+        "elapsedMs": 3.201
+      }
+    },
+    {
+      "id": "p15",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "ring",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.178
+      }
+    },
+    {
+      "id": "p15",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "ring",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 0.85242
+          },
+          {
+            "object": "knot",
+            "score": 0.84416
+          },
+          {
+            "object": "cone",
+            "score": 0.7624
+          },
+          {
+            "object": "shell",
+            "score": 0.74352
+          },
+          {
+            "object": "cloud",
+            "score": 0.63494
+          }
+        ],
+        "elapsedMs": 2.741,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "p16",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "star",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 5
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.206
+      }
+    },
+    {
+      "id": "p16",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "star",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 5
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "star",
+            "score": 0.72215
+          },
+          {
+            "object": "cube",
+            "score": 0.71046
+          },
+          {
+            "object": "pyramid",
+            "score": 0.63517
+          },
+          {
+            "object": "knot",
+            "score": 0.63294
+          },
+          {
+            "object": "cloud",
+            "score": 0.63147
+          }
+        ],
+        "elapsedMs": 2.494,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "p17",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "heart",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.175,
+        "ink": "#ef6969"
+      }
+    },
+    {
+      "id": "p17",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "heart",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "heart",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "heart",
+            "score": 0.75299
+          },
+          {
+            "object": "ring",
+            "score": 0.37086
+          },
+          {
+            "object": "cone",
+            "score": 0.33098
+          },
+          {
+            "object": "star",
+            "score": 0.32646
+          },
+          {
+            "object": "mushroom",
+            "score": 0.28171
+          }
+        ],
+        "elapsedMs": 2.232,
+        "ink": "#ef6969"
+      }
+    },
+    {
+      "id": "p18",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "knot",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.167
+      }
+    },
+    {
+      "id": "p18",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "knot",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "knot",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "knot",
+            "score": 0.70505
+          },
+          {
+            "object": "ring",
+            "score": 0.60674
+          },
+          {
+            "object": "shell",
+            "score": 0.54231
+          },
+          {
+            "object": "sword",
+            "score": 0.48526
+          },
+          {
+            "object": "heart",
+            "score": 0.44801
+          }
+        ],
+        "elapsedMs": 2.259
+      }
+    },
+    {
+      "id": "p19",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "shell",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.157
+      }
+    },
+    {
+      "id": "p19",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "shell",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "shell",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "shell",
+            "score": 0.84673
+          },
+          {
+            "object": "fish",
+            "score": 0.50432
+          },
+          {
+            "object": "rock",
+            "score": 0.47624
+          },
+          {
+            "object": "knot",
+            "score": 0.46387
+          },
+          {
+            "object": "heart",
+            "score": 0.41985
+          }
+        ],
+        "elapsedMs": 2.121
+      }
+    },
+    {
+      "id": "p20",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "cone",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.165
+      }
+    },
+    {
+      "id": "p20",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "cone",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "cone",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "cone",
+            "score": 0.90617
+          },
+          {
+            "object": "pyramid",
+            "score": 0.81474
+          },
+          {
+            "object": "heart",
+            "score": 0.80178
+          },
+          {
+            "object": "cube",
+            "score": 0.80047
+          },
+          {
+            "object": "ring",
+            "score": 0.78566
+          }
+        ],
+        "elapsedMs": 3.027
+      }
+    },
+    {
+      "id": "p21",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "pyramid",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 1.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.18
+      }
+    },
+    {
+      "id": "p21",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "pyramid",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "pyramid",
+          "squareness": 1.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "pyramid",
+            "score": 0.91647
+          },
+          {
+            "object": "ring",
+            "score": 0.52281
+          },
+          {
+            "object": "sphere",
+            "score": 0.52174
+          },
+          {
+            "object": "cube",
+            "score": 0.52091
+          },
+          {
+            "object": "cone",
+            "score": 0.51271
+          }
+        ],
+        "elapsedMs": 3.743
+      }
+    },
+    {
+      "id": "p22",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "rock",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.7,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.26
+      }
+    },
+    {
+      "id": "p22",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "rock",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "rock",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.7,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "rock",
+            "score": 0.62485
+          },
+          {
+            "object": "knot",
+            "score": 0.53684
+          },
+          {
+            "object": "fish",
+            "score": 0.5052
+          },
+          {
+            "object": "shell",
+            "score": 0.491
+          },
+          {
+            "object": "heart",
+            "score": 0.48931
+          }
+        ],
+        "elapsedMs": 2.967
+      }
+    },
+    {
+      "id": "p23",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "cloud",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.174,
+        "ink": "#eeeae2"
+      }
+    },
+    {
+      "id": "p23",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "cloud",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "cloud",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "cloud",
+            "score": 0.61259
+          },
+          {
+            "object": "heart",
+            "score": 0.56229
+          },
+          {
+            "object": "vase",
+            "score": 0.52494
+          },
+          {
+            "object": "mushroom",
+            "score": 0.52431
+          },
+          {
+            "object": "sphere",
+            "score": 0.45697
+          }
+        ],
+        "elapsedMs": 2.513,
+        "ink": "#eeeae2"
+      }
+    },
+    {
+      "id": "p24",
+      "group": "paraphrase",
+      "mode": "rules",
+      "expectedObject": "mushroom",
+      "objectCorrect": false,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": false,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.162
+      }
+    },
+    {
+      "id": "p24",
+      "group": "paraphrase",
+      "mode": "semantic",
+      "expectedObject": "mushroom",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "mushroom",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "embedding",
+        "candidates": [
+          {
+            "object": "mushroom",
+            "score": 0.86139
+          },
+          {
+            "object": "cloud",
+            "score": 0.58463
+          },
+          {
+            "object": "tree",
+            "score": 0.49254
+          },
+          {
+            "object": "flower",
+            "score": 0.45442
+          },
+          {
+            "object": "vase",
+            "score": 0.44671
+          }
+        ],
+        "elapsedMs": 2.144
+      }
+    },
+    {
+      "id": "c01",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "vase",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.0,
+          "elongation": 2.3,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.227,
+        "ink": "#79a7ff"
+      }
+    },
+    {
+      "id": "c01",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "vase",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.0,
+          "elongation": 2.3,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.135,
+        "ink": "#79a7ff"
+      }
+    },
+    {
+      "id": "c02",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "sword",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.128
+      }
+    },
+    {
+      "id": "c02",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "sword",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "sword",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.124
+      }
+    },
+    {
+      "id": "c03",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "bottle",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "bottle",
+          "squareness": 1.0,
+          "elongation": 1.0,
+          "twist": 0.65,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "bottle",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.134
+      }
+    },
+    {
+      "id": "c03",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "bottle",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "bottle",
+          "squareness": 1.0,
+          "elongation": 1.0,
+          "twist": 0.65,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "bottle",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.143
+      }
+    },
+    {
+      "id": "c04",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "mushroom",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "mushroom",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.65,
+          "roughness": 0.0,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "mushroom",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.134
+      }
+    },
+    {
+      "id": "c04",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "mushroom",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "mushroom",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.65,
+          "roughness": 0.0,
+          "count": 3
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "mushroom",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.144
+      }
+    },
+    {
+      "id": "c05",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "tower",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "tower",
+          "squareness": 0.0,
+          "elongation": 0.65,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 8
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "tower",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.127
+      }
+    },
+    {
+      "id": "c05",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "tower",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "tower",
+          "squareness": 0.0,
+          "elongation": 0.65,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 8
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "tower",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.126
+      }
+    },
+    {
+      "id": "c06",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "vase",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.152,
+        "ink": "#bd99ef"
+      }
+    },
+    {
+      "id": "c06",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "vase",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.147,
+        "ink": "#bd99ef"
+      }
+    },
+    {
+      "id": "c07",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "cube",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.7,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.155
+      }
+    },
+    {
+      "id": "c07",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "cube",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "cube",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.7,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.134
+      }
+    },
+    {
+      "id": "c08",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "ring",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": -0.65,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.156
+      }
+    },
+    {
+      "id": "c08",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "ring",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "ring",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": -0.65,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.144
+      }
+    },
+    {
+      "id": "c09",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "table",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "table",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.65,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "table",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.133,
+        "ink": "#eeeae2"
+      }
+    },
+    {
+      "id": "c09",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "table",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "table",
+          "squareness": 0.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.65,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "table",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.132,
+        "ink": "#eeeae2"
+      }
+    },
+    {
+      "id": "c10",
+      "group": "composition",
+      "mode": "rules",
+      "expectedObject": "sphere",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 1.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.131,
+        "ink": "#efd66b"
+      }
+    },
+    {
+      "id": "c10",
+      "group": "composition",
+      "mode": "semantic",
+      "expectedObject": "sphere",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 1.0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [
+          {
+            "object": "sphere",
+            "score": 1.0
+          }
+        ],
+        "elapsedMs": 0.129,
+        "ink": "#efd66b"
+      }
+    },
+    {
+      "id": "a01",
+      "group": "attribute_only",
+      "mode": "rules",
+      "expectedObject": "vase",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.65,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.129
+      }
+    },
+    {
+      "id": "a01",
+      "group": "attribute_only",
+      "mode": "semantic",
+      "expectedObject": "vase",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "vase",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.65,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.128
+      }
+    },
+    {
+      "id": "a02",
+      "group": "attribute_only",
+      "mode": "rules",
+      "expectedObject": "sword",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0,
+          "elongation": 2.3,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.128
+      }
+    },
+    {
+      "id": "a02",
+      "group": "attribute_only",
+      "mode": "semantic",
+      "expectedObject": "sword",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sword",
+          "squareness": 0,
+          "elongation": 2.3,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.129
+      }
+    },
+    {
+      "id": "a03",
+      "group": "attribute_only",
+      "mode": "rules",
+      "expectedObject": "bird",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "bird",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.124,
+        "ink": "#ef6969"
+      }
+    },
+    {
+      "id": "a03",
+      "group": "attribute_only",
+      "mode": "semantic",
+      "expectedObject": "bird",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "bird",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.123,
+        "ink": "#ef6969"
+      }
+    },
+    {
+      "id": "a04",
+      "group": "attribute_only",
+      "mode": "rules",
+      "expectedObject": "tree",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "tree",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.175
+      }
+    },
+    {
+      "id": "a04",
+      "group": "attribute_only",
+      "mode": "semantic",
+      "expectedObject": "tree",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "tree",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.132
+      }
+    },
+    {
+      "id": "a05",
+      "group": "attribute_only",
+      "mode": "rules",
+      "expectedObject": "rock",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "rock",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.127
+      }
+    },
+    {
+      "id": "a05",
+      "group": "attribute_only",
+      "mode": "semantic",
+      "expectedObject": "rock",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "rock",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0.0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.125
+      }
+    },
+    {
+      "id": "a06",
+      "group": "attribute_only",
+      "mode": "rules",
+      "expectedObject": "flower",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "flower",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 5
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.147
+      }
+    },
+    {
+      "id": "a06",
+      "group": "attribute_only",
+      "mode": "semantic",
+      "expectedObject": "flower",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "flower",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 5
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.125
+      }
+    },
+    {
+      "id": "a07",
+      "group": "attribute_only",
+      "mode": "rules",
+      "expectedObject": "knot",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "knot",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.13
+      }
+    },
+    {
+      "id": "a07",
+      "group": "attribute_only",
+      "mode": "semantic",
+      "expectedObject": "knot",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "knot",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.124
+      }
+    },
+    {
+      "id": "a08",
+      "group": "attribute_only",
+      "mode": "rules",
+      "expectedObject": "tower",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "tower",
+          "squareness": 0,
+          "elongation": 0.65,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.148
+      }
+    },
+    {
+      "id": "a08",
+      "group": "attribute_only",
+      "mode": "semantic",
+      "expectedObject": "tower",
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "tower",
+          "squareness": 0,
+          "elongation": 0.65,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "composed",
+        "candidates": [],
+        "elapsedMs": 0.14
+      }
+    },
+    {
+      "id": "u01",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.137
+      }
+    },
+    {
+      "id": "u01",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "chair",
+            "score": 0.28185
+          },
+          {
+            "object": "table",
+            "score": 0.1654
+          },
+          {
+            "object": "pyramid",
+            "score": 0.13805
+          },
+          {
+            "object": "bottle",
+            "score": 0.1335
+          },
+          {
+            "object": "mushroom",
+            "score": 0.13097
+          }
+        ],
+        "elapsedMs": 2.144,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "u02",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.174
+      }
+    },
+    {
+      "id": "u02",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 0.25016
+          },
+          {
+            "object": "knot",
+            "score": 0.23977
+          },
+          {
+            "object": "sphere",
+            "score": 0.23599
+          },
+          {
+            "object": "vase",
+            "score": 0.22824
+          },
+          {
+            "object": "cloud",
+            "score": 0.22749
+          }
+        ],
+        "elapsedMs": 1.908,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "u03",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.16
+      }
+    },
+    {
+      "id": "u03",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "vase",
+            "score": 0.31753
+          },
+          {
+            "object": "bottle",
+            "score": 0.30249
+          },
+          {
+            "object": "mug",
+            "score": 0.26628
+          },
+          {
+            "object": "cloud",
+            "score": 0.2441
+          },
+          {
+            "object": "knot",
+            "score": 0.22488
+          }
+        ],
+        "elapsedMs": 1.887,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "u04",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.158
+      }
+    },
+    {
+      "id": "u04",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "heart",
+            "score": 0.45639
+          },
+          {
+            "object": "cone",
+            "score": 0.3668
+          },
+          {
+            "object": "mushroom",
+            "score": 0.36449
+          },
+          {
+            "object": "vase",
+            "score": 0.32153
+          },
+          {
+            "object": "cloud",
+            "score": 0.28859
+          }
+        ],
+        "elapsedMs": 2.191,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "u05",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.22
+      }
+    },
+    {
+      "id": "u05",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "cube",
+            "score": 0.27162
+          },
+          {
+            "object": "cone",
+            "score": 0.25656
+          },
+          {
+            "object": "pyramid",
+            "score": 0.23721
+          },
+          {
+            "object": "mug",
+            "score": 0.23713
+          },
+          {
+            "object": "sphere",
+            "score": 0.22723
+          }
+        ],
+        "elapsedMs": 3.402,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "u06",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.217
+      }
+    },
+    {
+      "id": "u06",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "heart",
+            "score": 0.22587
+          },
+          {
+            "object": "knot",
+            "score": 0.18352
+          },
+          {
+            "object": "table",
+            "score": 0.18065
+          },
+          {
+            "object": "mug",
+            "score": 0.17871
+          },
+          {
+            "object": "ring",
+            "score": 0.1565
+          }
+        ],
+        "elapsedMs": 2.422,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "u07",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.169
+      }
+    },
+    {
+      "id": "u07",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "cone",
+            "score": 0.30479
+          },
+          {
+            "object": "ring",
+            "score": 0.29115
+          },
+          {
+            "object": "heart",
+            "score": 0.25959
+          },
+          {
+            "object": "cloud",
+            "score": 0.23203
+          },
+          {
+            "object": "mug",
+            "score": 0.22944
+          }
+        ],
+        "elapsedMs": 1.855,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "u08",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.161
+      }
+    },
+    {
+      "id": "u08",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "cloud",
+            "score": 0.18096
+          },
+          {
+            "object": "tower",
+            "score": 0.17553
+          },
+          {
+            "object": "house",
+            "score": 0.1754
+          },
+          {
+            "object": "bottle",
+            "score": 0.16862
+          },
+          {
+            "object": "flower",
+            "score": 0.15663
+          }
+        ],
+        "elapsedMs": 2.082,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "u09",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.206
+      }
+    },
+    {
+      "id": "u09",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "ring",
+            "score": 0.17965
+          },
+          {
+            "object": "knot",
+            "score": 0.12138
+          },
+          {
+            "object": "heart",
+            "score": 0.07585
+          },
+          {
+            "object": "bottle",
+            "score": 0.0745
+          },
+          {
+            "object": "cone",
+            "score": 0.0652
+          }
+        ],
+        "elapsedMs": 1.714,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    },
+    {
+      "id": "u10",
+      "group": "unsupported",
+      "mode": "rules",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [],
+        "elapsedMs": 0.157
+      }
+    },
+    {
+      "id": "u10",
+      "group": "unsupported",
+      "mode": "semantic",
+      "expectedObject": null,
+      "objectCorrect": true,
+      "attributesCorrect": true,
+      "inkCorrect": true,
+      "allCorrect": true,
+      "result": {
+        "spec": {
+          "object": "sphere",
+          "squareness": 0,
+          "elongation": 1.0,
+          "twist": 0.0,
+          "bend": 0.0,
+          "roughness": 0,
+          "count": 1
+        },
+        "source": "unchanged",
+        "candidates": [
+          {
+            "object": "cloud",
+            "score": 0.34407
+          },
+          {
+            "object": "star",
+            "score": 0.25803
+          },
+          {
+            "object": "bird",
+            "score": 0.21295
+          },
+          {
+            "object": "tower",
+            "score": 0.1982
+          },
+          {
+            "object": "knot",
+            "score": 0.18726
+          }
+        ],
+        "elapsedMs": 2.032,
+        "note": "近い候補を十分に絞れないため、現在の形を保ちました。"
+      }
+    }
+  ]
+}

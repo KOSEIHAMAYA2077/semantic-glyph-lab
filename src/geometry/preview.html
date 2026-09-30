@@ -1,0 +1,34 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Geometry silhouette inspection — research harness</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#101010;color:#bbb;font:14px monospace}
+  #grid{display:grid;grid-template-columns:repeat(6,1fr);width:1440px}figure{margin:0;position:relative;height:240px;border:1px solid #242424}
+  figcaption{position:absolute;bottom:8px;left:12px;z-index:2}canvas{position:fixed;inset:0;pointer-events:none}
+</style>
+<div id="grid"></div>
+<script type="module">
+import * as THREE from 'three';
+import {createForm,FORM_IDS} from './index.ts';
+import {DEFAULT_FORM} from '../types.ts';
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(1);renderer.setSize(1440,960);renderer.setScissorTest(true);
+document.body.append(renderer.domElement);
+const params=new URLSearchParams(location.search);
+const overrides=params.has('deformed')?{squareness:.7,elongation:1.4,twist:.5,bend:.25,roughness:.35}:{};
+const grid=document.querySelector('#grid');
+for(let i=0;i<FORM_IDS.length;i++){
+  const object=FORM_IDS[i], figure=document.createElement('figure');
+  figure.innerHTML=`<figcaption>${object}</figcaption>`;grid.append(figure);
+  const scene=new THREE.Scene();scene.background=new THREE.Color('#101010');
+  const camera=new THREE.PerspectiveCamera(36,1,.01,100);camera.position.set(3.9,2.1,6.8);camera.lookAt(0,0,0);
+  scene.add(new THREE.HemisphereLight(0xe3f2ff,0x43404a,2.6));
+  const light=new THREE.DirectionalLight(0xffffff,3.1);light.position.set(-2,5,4);scene.add(light);
+  const mesh=new THREE.Mesh(createForm({...DEFAULT_FORM,object,...overrides}),new THREE.MeshStandardMaterial({color:0x969a9e,roughness:.7,side:THREE.DoubleSide}));scene.add(mesh);
+  const radius=mesh.geometry.boundingSphere.radius;
+  camera.position.normalize().multiplyScalar(Math.max(7.8,radius*3.65));camera.lookAt(mesh.geometry.boundingSphere.center);
+  const x=i%6*240,y=960-(Math.floor(i/6)+1)*240;
+  renderer.setViewport(x,y,240,240);renderer.setScissor(x,y,240,240);renderer.render(scene,camera);
+}
+document.body.dataset.ready='true';
+</script>

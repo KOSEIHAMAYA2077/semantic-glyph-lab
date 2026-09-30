@@ -1,0 +1,51 @@
+{
+  "id": "shap-e-cube-outer-shell-v1",
+  "object": "cube",
+  "prompt": "a plain cube",
+  "provider": "shap-e",
+  "format": "glb",
+  "seed": 20260933,
+  "device": "mps",
+  "steps": 32,
+  "grid": 128,
+  "status": "ok",
+  "path": "/generated/shap-e-cube-outer-shell-v1.glb",
+  "seconds": 41.499,
+  "sample_seconds": 39.571,
+  "vertices": 98304,
+  "faces": 196604,
+  "bounds": [
+    [
+      -1.0078738927841187,
+      -1.007873773574829,
+      -1.007873773574829
+    ],
+    [
+      1.007873773574829,
+      1.007873773574829,
+      1.0078738927841187
+    ]
+  ],
+  "area": 24.268445994287898,
+  "volume": 8.167341255157995,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 1,
+  "sha256": "b489a4902f1f675bb262ffde1f3e4851291835d6a5cf578eaca0ff8ae8c74cd3",
+  "bytes": 3539744,
+  "sdf_min": -0.9655445218086243,
+  "sdf_max": 0.9999591708183289,
+  "process_peak_rss_bytes_so_far": 3624288256,
+  "mps_driver_allocated_bytes_after": 5386240000,
+  "refined_from": "shap-e-cube-mps32-grid64-fixed",
+  "refinement_seconds": 1.928,
+  "label": "Shap-E \u00b7 cube \u00b7 128\u00b3 \u00b7 outer shell",
+  "run": "outer-shells-v1",
+  "derived_from": "shap-e-cube-mps32-grid128-refined",
+  "derivation": "Largest-area watertight, winding-consistent component with positive signed volume. Explicit single-object display derivative; not a general asset cleanup rule.",
+  "postprocess_seconds": 0.389,
+  "source_components": 2,
+  "retained_area_fraction": 0.5331950417899595,
+  "license": "Generated with MIT-licensed OpenAI Shap-E",
+  "research_note": "One explicitly selected outer component; secondary parts and cavity shells omitted only in this derivative."
+}

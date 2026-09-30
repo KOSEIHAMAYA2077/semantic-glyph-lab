@@ -1,0 +1,218 @@
+{
+  "run": "mps32-grid128-refined",
+  "load_seconds": 0.318,
+  "note": "Only mesh extraction rerun. seconds combines prior sampling with current extraction, not a new end-to-end timer. Memory fields are from source sampling run.",
+  "source": "mps32-grid64-fixed",
+  "assets": [
+    {
+      "id": "shap-e-sword-mps32-grid128-refined",
+      "object": "sword",
+      "prompt": "a medieval sword with a long straight blade and a crossguard",
+      "provider": "shap-e",
+      "format": "glb",
+      "seed": 20260930,
+      "device": "mps",
+      "steps": 32,
+      "grid": 128,
+      "status": "ok",
+      "path": "/generated/shap-e-sword-mps32-grid128-refined.glb",
+      "seconds": 41.153,
+      "sample_seconds": 39.329,
+      "vertices": 3458,
+      "faces": 6916,
+      "bounds": [
+        [
+          -0.17363294466273993,
+          -0.05641120249830833,
+          -0.9681992418184056
+        ],
+        [
+          0.17783145453986227,
+          0.049546729861281946,
+          0.9867233460343728
+        ]
+      ],
+      "area": 0.6574294624608492,
+      "volume": 0.006846479222723238,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 2,
+      "sha256": "9e80648fc42a8d733da6322fc42789a16a1eb88858b5f0300ff9d03017391d53",
+      "bytes": 125252,
+      "sdf_min": -0.9999996423721313,
+      "sdf_max": 0.18927854299545288,
+      "process_peak_rss_bytes_so_far": 3624288256,
+      "mps_driver_allocated_bytes_after": 5386240000,
+      "refined_from": "shap-e-sword-mps32-grid64-fixed",
+      "refinement_seconds": 1.824
+    },
+    {
+      "id": "shap-e-vase-mps32-grid128-refined",
+      "object": "vase",
+      "prompt": "a tall ceramic vase with a narrow neck and a round body",
+      "provider": "shap-e",
+      "format": "glb",
+      "seed": 20260931,
+      "device": "mps",
+      "steps": 32,
+      "grid": 128,
+      "status": "ok",
+      "path": "/generated/shap-e-vase-mps32-grid128-refined.glb",
+      "seconds": 40.836,
+      "sample_seconds": 38.994,
+      "vertices": 57251,
+      "faces": 114522,
+      "bounds": [
+        [
+          -0.4822423739696112,
+          -1.0077437903937392,
+          -0.4832537793737697
+        ],
+        [
+          0.4852769506259227,
+          1.0074919452817421,
+          0.48136889840674213
+        ]
+      ],
+      "area": 9.600489275988734,
+      "volume": 0.31770592300534917,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 22,
+      "sha256": "f2be70d1902b8bafd7c94586647430e1721380b4665d8076bec9d674030f5290",
+      "bytes": 2062044,
+      "sdf_min": -1.0,
+      "sdf_max": 0.9674608707427979,
+      "process_peak_rss_bytes_so_far": 3624288256,
+      "mps_driver_allocated_bytes_after": 5386240000,
+      "refined_from": "shap-e-vase-mps32-grid64-fixed",
+      "refinement_seconds": 1.842
+    },
+    {
+      "id": "shap-e-sphere-mps32-grid128-refined",
+      "object": "sphere",
+      "prompt": "a perfectly round sphere",
+      "provider": "shap-e",
+      "format": "glb",
+      "seed": 20260932,
+      "device": "mps",
+      "steps": 32,
+      "grid": 128,
+      "status": "ok",
+      "path": "/generated/shap-e-sphere-mps32-grid128-refined.glb",
+      "seconds": 40.938,
+      "sample_seconds": 39.065,
+      "vertices": 148378,
+      "faces": 296792,
+      "bounds": [
+        [
+          -1.0057191238628598,
+          -1.0016558996335727,
+          -1.0013334018977607
+        ],
+        [
+          1.0057375449833907,
+          1.0017457496462843,
+          1.0019688446690718
+        ]
+      ],
+      "area": 24.76468685728239,
+      "volume": 2.1124352218814106,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 12,
+      "sha256": "3a5ac57061a21a36cab6cb1edf16fc1118e8179e0940859efff863db5c87807e",
+      "bytes": 5342808,
+      "sdf_min": -1.0,
+      "sdf_max": 0.5850220322608948,
+      "process_peak_rss_bytes_so_far": 3624288256,
+      "mps_driver_allocated_bytes_after": 5386240000,
+      "refined_from": "shap-e-sphere-mps32-grid64-fixed",
+      "refinement_seconds": 1.873
+    },
+    {
+      "id": "shap-e-cube-mps32-grid128-refined",
+      "object": "cube",
+      "prompt": "a plain cube",
+      "provider": "shap-e",
+      "format": "glb",
+      "seed": 20260933,
+      "device": "mps",
+      "steps": 32,
+      "grid": 128,
+      "status": "ok",
+      "path": "/generated/shap-e-cube-mps32-grid128-refined.glb",
+      "seconds": 41.499,
+      "sample_seconds": 39.571,
+      "vertices": 192330,
+      "faces": 384652,
+      "bounds": [
+        [
+          -1.0078738552378856,
+          -1.007873822384932,
+          -1.0078737754521407
+        ],
+        [
+          1.0078737754521407,
+          1.0078737754521407,
+          1.0078738552378856
+        ]
+      ],
+      "area": 45.515138099522474,
+      "volume": 1.3607195392411902,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 2,
+      "sha256": "4664fca5f7800390a7cf310bd86f2165880f3ffb2a0c3db2f2728cffe1d328ff",
+      "bytes": 6924552,
+      "sdf_min": -0.9655445218086243,
+      "sdf_max": 0.9999591708183289,
+      "process_peak_rss_bytes_so_far": 3624288256,
+      "mps_driver_allocated_bytes_after": 5386240000,
+      "refined_from": "shap-e-cube-mps32-grid64-fixed",
+      "refinement_seconds": 1.928
+    },
+    {
+      "id": "shap-e-twisted-vase-mps32-grid128-refined",
+      "object": "twisted-vase",
+      "prompt": "a twisted ceramic vase with a spiral body",
+      "provider": "shap-e",
+      "format": "glb",
+      "seed": 20260934,
+      "device": "mps",
+      "steps": 32,
+      "grid": 128,
+      "status": "ok",
+      "path": "/generated/shap-e-twisted-vase-mps32-grid128-refined.glb",
+      "seconds": 40.917,
+      "sample_seconds": 39.03,
+      "vertices": 151588,
+      "faces": 303176,
+      "bounds": [
+        [
+          -0.8577001076044999,
+          -1.0077683043292187,
+          -0.8575123464028667
+        ],
+        [
+          0.8645728404127706,
+          1.0077456977423722,
+          0.8684006638414278
+        ]
+      ],
+      "area": 25.442465742148215,
+      "volume": 1.5295367809795624,
+      "watertight": true,
+      "winding_consistent": true,
+      "components": 14,
+      "sha256": "7332f883f428d7b2c4ca2fd272b432673cd15f5d29b25bebd6372356522f1288",
+      "bytes": 5457936,
+      "sdf_min": -1.0,
+      "sdf_max": 0.973504900932312,
+      "process_peak_rss_bytes_so_far": 3624288256,
+      "mps_driver_allocated_bytes_after": 5386240000,
+      "refined_from": "shap-e-twisted-vase-mps32-grid64-fixed",
+      "refinement_seconds": 1.887
+    }
+  ]
+}
