@@ -1,0 +1,22 @@
+{
+  "completed": true,
+  "sourceSha256": {
+    "field.ts": "b39f827845d3e25b9703c0ad655cc57593750a00008bdea2c00ab2208a0a3a6b",
+    "preview.ts": "63b0e7436b4941c525c20df122cb2c621ab68a624b422838c63aba4267538db0",
+    "renewal.ts": "d4a1b6d75854d0fb74a537f77be0eafe470568b7e1ab9f95298361673a699627",
+    "material.ts": "45f69aa30932c7781ef2878fdd80597351b6c252ca939c7619c794e86b811721"
+  },
+  "checks": [
+    {
+      "transport": "first",
+      "beforeFirstResetMapMetricsMatch": true,
+      "probeResetsBothClocks": true
+    },
+    {
+      "transport": "corrected",
+      "beforeFirstResetMapMetricsMatch": true,
+      "probeResetsBothClocks": true
+    }
+  ],
+  "errors": []
+}

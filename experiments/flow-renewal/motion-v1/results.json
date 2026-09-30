@@ -1,0 +1,10 @@
+{
+  "sourceSha256": {
+    "field.ts": "b39f827845d3e25b9703c0ad655cc57593750a00008bdea2c00ab2208a0a3a6b",
+    "material.ts": "45f69aa30932c7781ef2878fdd80597351b6c252ca939c7619c794e86b811721",
+    "preview.ts": "63b0e7436b4941c525c20df122cb2c621ab68a624b422838c63aba4267538db0"
+  },
+  "scope": "Each video begins with a fixed-step jump from 0 to 45 seconds, followed by approximately 18 seconds of real-time motion. Not a 30-minute test. Recording overhead is present.",
+  "records": [],
+  "errors": []
+}

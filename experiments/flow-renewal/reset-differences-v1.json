@@ -1,0 +1,56 @@
+[
+  {
+    "mode": "fluid",
+    "boundaryStep": 1800,
+    "meanPixelAbsoluteDifferenceBeforeAfter": [
+      0.09440535536248397,
+      0.09375017803731663
+    ],
+    "units": "0..255 RGB values; cropped fixed body region; not perceived flicker"
+  },
+  {
+    "mode": "fluid",
+    "boundaryStep": 36000,
+    "meanPixelAbsoluteDifferenceBeforeAfter": [
+      0.02795898020225039,
+      0.028095712861415753
+    ],
+    "units": "0..255 RGB values; cropped fixed body region; not perceived flicker"
+  },
+  {
+    "mode": "renew",
+    "boundaryStep": 1800,
+    "meanPixelAbsoluteDifferenceBeforeAfter": [
+      0.09440535536248397,
+      0.09375872382851445
+    ],
+    "units": "0..255 RGB values; cropped fixed body region; not perceived flicker"
+  },
+  {
+    "mode": "renew",
+    "boundaryStep": 36000,
+    "meanPixelAbsoluteDifferenceBeforeAfter": [
+      0.09035465033471017,
+      0.09128044438114229
+    ],
+    "units": "0..255 RGB values; cropped fixed body region; not perceived flicker"
+  },
+  {
+    "mode": "coordinates",
+    "boundaryStep": 1800,
+    "meanPixelAbsoluteDifferenceBeforeAfter": [
+      0.09440535536248397,
+      0.09367041731947016
+    ],
+    "units": "0..255 RGB values; cropped fixed body region; not perceived flicker"
+  },
+  {
+    "mode": "coordinates",
+    "boundaryStep": 36000,
+    "meanPixelAbsoluteDifferenceBeforeAfter": [
+      0.09020082609314913,
+      0.09117789488676827
+    ],
+    "units": "0..255 RGB values; cropped fixed body region; not perceived flicker"
+  }
+]
