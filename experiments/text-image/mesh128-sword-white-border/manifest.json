@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-30",
+  "pipeline": "SDXL Turbo -> optional U2NETP -> TripoSR",
+  "background": "white-border",
+  "device": "mps",
+  "grid": 128,
+  "networkAttempts": 0,
+  "samples": [
+    {
+      "id": "sword",
+      "subject": "a medieval sword with a long straight blade and a crossguard",
+      "prompt": "A single complete medieval sword, full length, fully inside the frame with wide white margins, long straight blade and simple crossguard. The entire object is solid matte dark blue, including the blade, handle and crossguard. A simple dark blue clay sculpture isolated on a pure white background, front view, no cast shadow.",
+      "seed": 20260930,
+      "imageSeconds": 1.691133332962636,
+      "imagePath": "experiments/text-image/turbo4-sword-blue-v3/sword.png",
+      "backgroundRule": {
+        "minChannelExclusive": 200,
+        "maxChromaExclusive": 45,
+        "borderConnected": true
+      },
+      "foregroundFraction": 0.23504257202148438,
+      "preprocessSeconds": 0.048714958014898,
+      "reconstructSeconds": 1.2290786249795929,
+      "extractionSeconds": 0.39055512502091005,
+      "vertices": 4784,
+      "faces": 9560,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.010543163064017274,
+      "bounds": [
+        [
+          -0.06058233976364136,
+          -0.4579262137413025,
+          -0.49963128566741943
+        ],
+        [
+          0.21184813976287842,
+          0.5134044885635376,
+          0.4722343683242798
+        ]
+      ],
+      "components": 2,
+      "largestComponentAreaShare": 0.7362283848675492,
+      "success": true,
+      "path": "/text-image-models/mesh128-sword-white-border/sword-y-up.glb",
+      "rawPath": "/text-image-models/mesh128-sword-white-border/sword-z-up.glb",
+      "sha256": "2e6ea3e6c9f32c67dc57bcbe59cca90e5f38ccbe61c1ed89bc390a791ee0af48",
+      "rawSha256": "4e40715addc4180320ac7393fcb03046a395e1d38b0a44f7807c47d4bc18364b",
+      "bytes": 172940,
+      "latentSha256": "52c36a7815ad155d8d58c09c4f99e0ce9afe60241c214422ca0b252327115443",
+      "sumStageSeconds": 3.359482040978037
+    }
+  ],
+  "imageManifestSha256": "64a73f7aa93f8963a96c87c5881be740bd213119f9b6a09a2a5cfd6ea3c8ba2c",
+  "initializationSeconds": 2.5230388329946436,
+  "totalSeconds": 4.21041762502864,
+  "peakRssBytes": 3778297856,
+  "mpsDriverBytes": 2594914304
+}

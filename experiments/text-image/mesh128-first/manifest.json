@@ -1,0 +1,135 @@
+{
+  "date": "2026-09-30",
+  "pipeline": "SDXL Turbo -> optional U2NETP -> TripoSR",
+  "background": "u2netp",
+  "device": "mps",
+  "grid": 128,
+  "networkAttempts": 0,
+  "samples": [
+    {
+      "id": "sword",
+      "subject": "a medieval sword with a long straight blade and a crossguard",
+      "prompt": "A medieval sword with a long straight blade and a crossguard, upright, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting.",
+      "seed": 20260930,
+      "imageSeconds": 6.43820291699376,
+      "imagePath": "experiments/text-image/turbo4-first/sword.png",
+      "foregroundFraction": 0.08824920654296875,
+      "preprocessSeconds": 0.12953112495597452,
+      "reconstructSeconds": 1.93650162499398,
+      "extractionSeconds": 0.6022670830134302,
+      "vertices": 2939,
+      "faces": 5874,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.004911483805584545,
+      "bounds": [
+        [
+          -0.09826117753982544,
+          -0.32204896211624146,
+          -0.5094465017318726
+        ],
+        [
+          0.17090463638305664,
+          0.5133956670761108,
+          0.4711318612098694
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 0.9999999999999999,
+      "success": true,
+      "path": "/text-image-models/mesh128-first/sword-y-up.glb",
+      "rawPath": "/text-image-models/mesh128-first/sword-z-up.glb",
+      "sha256": "d8b90fb2d665962545fd6c289640bcac99ef474d3993f80df2cfa9ba41964d03",
+      "rawSha256": "9a075d74ebe4fa77d062381ce9d4a69be8d2bc3c7a1fe75efa2cade47567eef9",
+      "bytes": 106564,
+      "latentSha256": "3095c47160703f1f1e4388a50b392a3c874b2f9d985bfa956359bd919e0485c8",
+      "sumStageSeconds": 9.106502749957144
+    },
+    {
+      "id": "vase",
+      "subject": "a tall ceramic vase with a narrow neck and a round body",
+      "prompt": "A tall ceramic vase with a narrow neck and a round body, open mouth, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting.",
+      "seed": 20260931,
+      "imageSeconds": 1.6095890420256183,
+      "imagePath": "experiments/text-image/turbo4-first/vase.png",
+      "foregroundFraction": 0.27475738525390625,
+      "preprocessSeconds": 0.11402779200579971,
+      "reconstructSeconds": 1.0118335000006482,
+      "extractionSeconds": 0.3744285419816151,
+      "vertices": 10822,
+      "faces": 21640,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.13266411240939222,
+      "bounds": [
+        [
+          -0.20721447467803955,
+          -0.5246586799621582,
+          -0.2776550054550171
+        ],
+        [
+          0.2199329137802124,
+          0.5131783485412598,
+          0.277931809425354
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0,
+      "success": true,
+      "path": "/text-image-models/mesh128-first/vase-y-up.glb",
+      "rawPath": "/text-image-models/mesh128-first/vase-z-up.glb",
+      "sha256": "d00e7574206fa65817d61a1c1a3e5f66957078466e2166fe65d3db2ecd8a75f9",
+      "rawSha256": "e668b09d8fd16db6a26d31dc3388c70543ccd832bb35785e5cf191d5fb4f95b6",
+      "bytes": 390356,
+      "latentSha256": "e6f517f1564cfa4d82c9c62697792d1124ee1a0608616de924c0f9c16f4ea310",
+      "sumStageSeconds": 3.1098788760136813
+    },
+    {
+      "id": "twisted-vase",
+      "subject": "a ceramic vase with a spirally twisted body",
+      "prompt": "A ceramic vase with a spirally twisted body, open mouth, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting.",
+      "seed": 20260934,
+      "imageSeconds": 1.5418043750105426,
+      "imagePath": "experiments/text-image/turbo4-first/twisted-vase.png",
+      "foregroundFraction": 0.404144287109375,
+      "preprocessSeconds": 0.110749667044729,
+      "reconstructSeconds": 1.009541875042487,
+      "extractionSeconds": 0.38152891700156033,
+      "vertices": 19968,
+      "faces": 39928,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.30602070273711596,
+      "bounds": [
+        [
+          -0.39848458766937256,
+          -0.5265410542488098,
+          -0.41716468334198
+        ],
+        [
+          0.4268150329589844,
+          0.5212070941925049,
+          0.40734580159187317
+        ]
+      ],
+      "components": 2,
+      "largestComponentAreaShare": 0.9996786853540399,
+      "success": true,
+      "path": "/text-image-models/mesh128-first/twisted-vase-y-up.glb",
+      "rawPath": "/text-image-models/mesh128-first/twisted-vase-z-up.glb",
+      "sha256": "1b494773c1eafbcf210ecef014f744c62ec70c9d11340e7417c52dd7d2fe1939",
+      "rawSha256": "4661f6d7cae1c4a19d93975f3a4868f911dcb00235f0e1f7d9d2d56d0e8a7f26",
+      "bytes": 719564,
+      "latentSha256": "9fb26421d820c0b6faba8916e99e9d29853dd257a8cd67d52f999c582c76201b",
+      "sumStageSeconds": 3.043624834099319
+    }
+  ],
+  "imageManifestSha256": "cedc8cce726521c906d88fbe02ef9c42d435223ea2553a1e46fd6780c5f80bcd",
+  "initializationSeconds": 2.549644749960862,
+  "totalSeconds": 8.308304708974902,
+  "peakRssBytes": 4101750784,
+  "mpsDriverBytes": 2594914304
+}

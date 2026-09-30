@@ -58,6 +58,15 @@ class InterpretationTests(unittest.TestCase):
             result = Interpreter(FakeModel(candidates)).interpret("座って休めるもの")
             self.assertEqual(result["spec"]["object"], expected)
 
+    def test_unsupported_edit_and_negated_noun_never_retrieve_a_new_object(self):
+        model = FakeModel([{"object": "shell", "score": .8}, {"object": "sphere", "score": .2}])
+        for text in ["少しだけ大きく", "花瓶ではない"]:
+            result = Interpreter(model).interpret(text, dict(DEFAULT_FORM, object="cube"))
+            self.assertEqual(result["spec"]["object"], "cube")
+            self.assertFalse(result["objectSelected"])
+        self.assertEqual(model.calls, 0)
+        self.assertEqual(Interpreter(model).interpret("花瓶ではなく剣")["spec"]["object"], "sword")
+
     def test_rules_do_not_call_model(self):
         model = FakeModel([])
         Interpreter(model).interpret("座って休めるもの", mode="rules")

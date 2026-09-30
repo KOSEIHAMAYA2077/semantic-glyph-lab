@@ -47,7 +47,8 @@ The response implements `src/types.ts`'s `Interpretation`. The above example ret
 ## Validation
 
 ```sh
-.local/semantics-venv/bin/python -m unittest discover -s server -p 'test_*.py' -v
+.local/semantics-venv/bin/python server/test_interpreter.py -v
+.local/semantics-venv/bin/python server/test_api.py -v
 .local/semantics-venv/bin/python server/verify_offline.py
 .local/semantics-venv/bin/python server/evaluate.py --output experiments/semantics/my-new-run.json
 ```

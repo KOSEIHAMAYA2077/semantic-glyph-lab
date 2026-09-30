@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-30",
+  "models": [
+    {
+      "id": "triposr-chair",
+      "label": "画像から: 椅子",
+      "path": "/reconstructed/mps128-y-up/triposr-chair-y-up.glb",
+      "sha256": "248d73240ac7cd5ea5d58799fecb1678f5ed366e4d39e3cb13e6ae5157e609f7",
+      "bytes": 368960,
+      "sourceMethod": "TripoSR image-to-3D, not text-to-3D",
+      "inputSource": "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/examples/chair.png",
+      "rawSourceSha256": "4ddee3b24838cc69ad144c4993e6d4f2a014b30f2277f34f613fe80edfd375fc",
+      "transform": "rotation X=-pi/2, Z-up to Y-up; no mesh repair",
+      "vertices": 10224,
+      "faces": 20448,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.0663560103559764,
+      "bounds": [
+        [
+          -0.3074091076850891,
+          -0.499717116355896,
+          -0.2930949926376343
+        ],
+        [
+          0.29757702350616455,
+          0.5717177391052246,
+          0.27951985597610474
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0
+    },
+    {
+      "id": "triposr-horse",
+      "label": "画像から: 馬",
+      "path": "/reconstructed/mps128-y-up/triposr-horse-y-up.glb",
+      "sha256": "252c3d1950666551a7983b06e5d98356aed8654539a33ead38a20adf5278ab7c",
+      "bytes": 386448,
+      "sourceMethod": "TripoSR image-to-3D, not text-to-3D",
+      "inputSource": "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/examples/horse.png",
+      "rawSourceSha256": "0cc89bced6f652261ecce8d6207163f044116e1c20a031dc0da2e5275e0df6ff",
+      "transform": "rotation X=-pi/2, Z-up to Y-up; no mesh repair",
+      "vertices": 10711,
+      "faces": 21418,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.06458156133741792,
+      "bounds": [
+        [
+          -0.14194649457931519,
+          -0.49956750869750977,
+          -0.4989560842514038
+        ],
+        [
+          0.2805020809173584,
+          0.48305320739746094,
+          0.4860195219516754
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0
+    },
+    {
+      "id": "triposr-teapot",
+      "label": "画像から: ティーポット",
+      "path": "/reconstructed/mps128-y-up/triposr-teapot-y-up.glb",
+      "sha256": "00601ce22250174225e922cf20317e2d3c6c3eea673cb964fd23acbec0400aec",
+      "bytes": 426300,
+      "sourceMethod": "TripoSR image-to-3D, not text-to-3D",
+      "inputSource": "https://github.com/VAST-AI-Research/TripoSR/blob/107cefdc244c39106fa830359024f6a2f1c78871/examples/teapot.png",
+      "rawSourceSha256": "ff311597ccc477073e4889cb8d711191e2b7794fce1006ee4b52f6b8e0cbdf24",
+      "transform": "rotation X=-pi/2, Z-up to Y-up; no mesh repair",
+      "vertices": 11814,
+      "faces": 23636,
+      "finite": true,
+      "watertight": true,
+      "windingConsistent": true,
+      "volume": 0.12105039170456122,
+      "bounds": [
+        [
+          -0.29325950145721436,
+          -0.3444143533706665,
+          -0.5273816585540771
+        ],
+        [
+          0.2765103578567505,
+          0.35259246826171875,
+          0.5264784097671509
+        ]
+      ],
+      "components": 1,
+      "largestComponentAreaShare": 1.0000000000000002
+    }
+  ]
+}

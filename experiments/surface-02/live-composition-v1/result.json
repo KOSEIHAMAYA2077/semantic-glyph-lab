@@ -1,0 +1,55 @@
+{
+  "syntheticInput": "花瓶から木が生えている",
+  "result": {
+    "label": "flower vase with growing tree",
+    "parts": [
+      {
+        "kind": "vase",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1.5,
+          1.5,
+          1.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "kind": "tree",
+        "position": [
+          0,
+          1.2,
+          0.3
+        ],
+        "scale": [
+          0.8,
+          0.8,
+          0.8
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "deformation": {
+          "elongation": 1.8,
+          "twist": 0.3
+        }
+      }
+    ],
+    "elapsedMs": 3323,
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "attempts": 1,
+    "peakMemoryBytes": 3016396956,
+    "vocabulary": "forms"
+  },
+  "vertices": 100944,
+  "errors": []
+}

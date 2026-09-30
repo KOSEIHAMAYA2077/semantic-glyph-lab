@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-30",
+  "device": "mps",
+  "precision": "fp16; VAE follows pipeline upcast policy",
+  "steps": 4,
+  "guidanceScale": 0,
+  "resolution": [
+    512,
+    512
+  ],
+  "networkAttempts": 0,
+  "samples": [
+    {
+      "id": "sword",
+      "subject": "a medieval sword with a long straight blade and a crossguard",
+      "seed": 20260930,
+      "prompt": "A medieval sword with a long straight blade and a crossguard, upright, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting.",
+      "imageSeconds": 6.43820291699376,
+      "path": "experiments/text-image/turbo4-first/sword.png",
+      "sha256": "082161f0ed67fd010f02875e9c326b03037c3184f7283f326ba7ceb5854cd8aa",
+      "bytes": 294002,
+      "pixelStd": 45.75134838755202,
+      "pixelMin": 0,
+      "pixelMax": 255,
+      "success": true
+    },
+    {
+      "id": "vase",
+      "subject": "a tall ceramic vase with a narrow neck and a round body",
+      "seed": 20260931,
+      "prompt": "A tall ceramic vase with a narrow neck and a round body, open mouth, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting.",
+      "imageSeconds": 1.6095890420256183,
+      "path": "experiments/text-image/turbo4-first/vase.png",
+      "sha256": "39962c0a7130f32993379fae548466f7a79ac2f570c41b3b7690fb089b2443c7",
+      "bytes": 334703,
+      "pixelStd": 31.571053036585354,
+      "pixelMin": 0,
+      "pixelMax": 255,
+      "success": true
+    },
+    {
+      "id": "twisted-vase",
+      "subject": "a ceramic vase with a spirally twisted body",
+      "seed": 20260934,
+      "prompt": "A ceramic vase with a spirally twisted body, open mouth, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting.",
+      "imageSeconds": 1.5418043750105426,
+      "path": "experiments/text-image/turbo4-first/twisted-vase.png",
+      "sha256": "dd4d4788fe000a451bdc26104900fd40fecc07cc6d7844f98765cee73038e7dc",
+      "bytes": 292004,
+      "pixelStd": 38.40205739168522,
+      "pixelMin": 0,
+      "pixelMax": 255,
+      "success": true
+    }
+  ],
+  "initializationSeconds": 9.987254709005356,
+  "watermarkEnabled": true,
+  "fixtureSha256": "95616da7acfe621cae7193e9439fc19cf64a09e5f9180ed7bef2be9a6ea4810c",
+  "totalSeconds": 19.632528792019002,
+  "peakRssBytes": 566722560,
+  "mpsDriverBytes": 9690726400
+}

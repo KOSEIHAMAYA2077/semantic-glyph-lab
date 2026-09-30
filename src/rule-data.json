@@ -1,0 +1,415 @@
+{
+  "format": 1,
+  "sources": {
+    "catalog.py": "a11cc209caef0491c7b937f3c7a3cbe393017303573513d79c4ba8b72ed2db90",
+    "interpreter.py": "120fdf2dd0b9b8cc366d1a6d7c26b6af37bea66f29b88cd9ea2699f4b9501fc7"
+  },
+  "defaultForm": {
+    "object": "sphere",
+    "squareness": 0.0,
+    "elongation": 1.0,
+    "twist": 0.0,
+    "bend": 0.0,
+    "roughness": 0.0,
+    "count": 1
+  },
+  "objects": [
+    {
+      "id": "sphere",
+      "patterns": [
+        "球体",
+        "球面",
+        "ボール",
+        "(?<![a-z])sphere(?![a-z])",
+        "(?<![a-z])ball(?![a-z])"
+      ]
+    },
+    {
+      "id": "cube",
+      "patterns": [
+        "立方体",
+        "直方体",
+        "キューブ",
+        "サイコロ",
+        "(?<![a-z])cube(?![a-z])",
+        "(?<![a-z])cuboid(?![a-z])"
+      ]
+    },
+    {
+      "id": "vase",
+      "patterns": [
+        "花瓶",
+        "(?<![ぁ-ゖ])かびん(?![ぁ-ゖ])",
+        "(?<![\\u3400-\\u9fff])壺(?![\\u3400-\\u9fff])",
+        "(?<![ぁ-ゖ])つぼ(?![ぁ-ゖ])",
+        "(?<![a-z])vase(?![a-z])"
+      ]
+    },
+    {
+      "id": "sword",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])剣(?![\\u3400-\\u9fff])",
+        "(?<![\\u3400-\\u9fff])刀(?![\\u3400-\\u9fff])",
+        "短剣",
+        "ソード",
+        "(?<![a-z])sword(?![a-z])",
+        "(?<![a-z])blade(?![a-z])"
+      ]
+    },
+    {
+      "id": "tree",
+      "patterns": [
+        "樹木",
+        "(?<![\\u3400-\\u9fff])木(?![\\u3400-\\u9fff])",
+        "(?<![\\u3400-\\u9fff])樹(?![\\u3400-\\u9fff])",
+        "(?<![a-z])tree(?![a-z])"
+      ]
+    },
+    {
+      "id": "flower",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])花(?![\\u3400-\\u9fff])",
+        "(?<![ぁ-ゖ])はな(?![ぁ-ゖ])",
+        "フラワー",
+        "(?<![a-z])flower(?![a-z])"
+      ]
+    },
+    {
+      "id": "fish",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])魚(?![\\u3400-\\u9fff])",
+        "(?<![ぁ-ゖ])さかな(?![ぁ-ゖ])",
+        "フィッシュ",
+        "(?<![a-z])fish(?![a-z])"
+      ]
+    },
+    {
+      "id": "bird",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])鳥(?![\\u3400-\\u9fff])",
+        "(?<![ぁ-ゖ])とり(?![ぁ-ゖ])",
+        "(?<![a-z])bird(?![a-z])"
+      ]
+    },
+    {
+      "id": "chair",
+      "patterns": [
+        "椅子",
+        "(?<![ぁ-ゖ])いす(?![ぁ-ゖ])",
+        "イス",
+        "チェア",
+        "(?<![a-z])chair(?![a-z])",
+        "(?<![a-z])seat(?![a-z])"
+      ]
+    },
+    {
+      "id": "table",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])机(?![\\u3400-\\u9fff])",
+        "テーブル",
+        "(?<![\\u3400-\\u9fff])卓(?![\\u3400-\\u9fff])",
+        "(?<![a-z])table(?![a-z])",
+        "(?<![a-z])desk(?![a-z])"
+      ]
+    },
+    {
+      "id": "mug",
+      "patterns": [
+        "マグ",
+        "コップ",
+        "カップ",
+        "湯呑",
+        "(?<![a-z])mug(?![a-z])",
+        "(?<![a-z])cup(?![a-z])"
+      ]
+    },
+    {
+      "id": "bottle",
+      "patterns": [
+        "ボトル",
+        "(?<![\\u3400-\\u9fff])瓶(?![\\u3400-\\u9fff])",
+        "(?<![ぁ-ゖ])びん(?![ぁ-ゖ])",
+        "(?<![a-z])bottle(?![a-z])"
+      ]
+    },
+    {
+      "id": "house",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])家(?![\\u3400-\\u9fff])",
+        "住宅",
+        "小屋",
+        "ハウス",
+        "(?<![a-z])house(?![a-z])",
+        "(?<![a-z])home(?![a-z])"
+      ]
+    },
+    {
+      "id": "tower",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])塔(?![\\u3400-\\u9fff])",
+        "タワー",
+        "(?<![a-z])tower(?![a-z])"
+      ]
+    },
+    {
+      "id": "ring",
+      "patterns": [
+        "円環",
+        "(?<![\\u3400-\\u9fff])輪(?![\\u3400-\\u9fff])",
+        "リング",
+        "ドーナツ",
+        "トーラス",
+        "(?<![a-z])ring(?![a-z])",
+        "(?<![a-z])torus(?![a-z])",
+        "(?<![a-z])donut(?![a-z])"
+      ]
+    },
+    {
+      "id": "star",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])星(?![\\u3400-\\u9fff])",
+        "スター",
+        "(?<![a-z])star(?![a-z])"
+      ]
+    },
+    {
+      "id": "heart",
+      "patterns": [
+        "ハート",
+        "(?<![a-z])heart(?![a-z])"
+      ]
+    },
+    {
+      "id": "knot",
+      "patterns": [
+        "結び目",
+        "結び",
+        "ノット",
+        "メビウス",
+        "(?<![a-z])knot(?![a-z])",
+        "(?<![a-z])mobius(?![a-z])"
+      ]
+    },
+    {
+      "id": "shell",
+      "patterns": [
+        "貝殻",
+        "(?<![\\u3400-\\u9fff])貝(?![\\u3400-\\u9fff])",
+        "シェル",
+        "(?<![a-z])shell(?![a-z])"
+      ]
+    },
+    {
+      "id": "cone",
+      "patterns": [
+        "円錐",
+        "コーン",
+        "(?<![a-z])cone(?![a-z])"
+      ]
+    },
+    {
+      "id": "pyramid",
+      "patterns": [
+        "ピラミッド",
+        "角錐",
+        "(?<![a-z])pyramid(?![a-z])"
+      ]
+    },
+    {
+      "id": "rock",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])岩(?![\\u3400-\\u9fff])",
+        "(?<![\\u3400-\\u9fff])石(?![\\u3400-\\u9fff])",
+        "(?<![a-z])rock(?![a-z])",
+        "(?<![a-z])stone(?![a-z])"
+      ]
+    },
+    {
+      "id": "cloud",
+      "patterns": [
+        "(?<![\\u3400-\\u9fff])雲(?![\\u3400-\\u9fff])",
+        "(?<![ぁ-ゖ])くも(?![ぁ-ゖ])",
+        "(?<![a-z])cloud(?![a-z])"
+      ]
+    },
+    {
+      "id": "mushroom",
+      "patterns": [
+        "キノコ",
+        "(?<![ぁ-ゖ])きのこ(?![ぁ-ゖ])",
+        "(?<![\\u3400-\\u9fff])茸(?![\\u3400-\\u9fff])",
+        "(?<![a-z])mushroom(?![a-z])"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "pattern": "四角(?:い|く|な)?|角ば(?:った|る|り|って)?|角張(?:った|る|り|って)?|square|angular",
+      "key": "squareness",
+      "value": 1.0
+    },
+    {
+      "pattern": "丸(?:い|く)|円形|rounded?",
+      "key": "squareness",
+      "value": 0.0
+    },
+    {
+      "pattern": "長(?:い|く)|背(?:が|を)?高(?:い|く)|long|tall",
+      "key": "elongation",
+      "value": 1.8
+    },
+    {
+      "pattern": "細長(?:い|く)|elongated|slender",
+      "key": "elongation",
+      "value": 2.3
+    },
+    {
+      "pattern": "短(?:い|く)|平た(?:い|く)|short|flat",
+      "key": "elongation",
+      "value": 0.65
+    },
+    {
+      "pattern": "ねじ(?:れた|れる|れて|れ|る|って)?|捻(?:れた|れる|って|り|る)?|twist(?:ed)?|らせん状|螺旋状",
+      "key": "twist",
+      "value": 0.65
+    },
+    {
+      "pattern": "逆(?:に)?ねじ(?:れた|れる|れ|る|って)?|左巻き",
+      "key": "twist",
+      "value": -0.65
+    },
+    {
+      "pattern": "ねじ(?:れ|り)(?:なし|を戻す)|捻(?:れ|り)なし|untwist(?:ed)?",
+      "key": "twist",
+      "value": 0.0
+    },
+    {
+      "pattern": "曲(?:がった|がる|げる|げた|げて|がり|げ)|湾曲|bend|bent|curved?",
+      "key": "bend",
+      "value": 0.65
+    },
+    {
+      "pattern": "まっすぐ|真っ直ぐ|straight",
+      "key": "bend",
+      "value": 0.0
+    },
+    {
+      "pattern": "ごつごつ|ゴツゴツ|でこぼこ|凸凹|凹凸|荒(?:い|く)|rough|bumpy|rugged",
+      "key": "roughness",
+      "value": 0.7
+    },
+    {
+      "pattern": "滑らか|なめらか|つるつる|ツルツル|smooth",
+      "key": "roughness",
+      "value": 0.0
+    },
+    {
+      "pattern": "普通の比率|元の長さ|normal proportions",
+      "key": "elongation",
+      "value": 1.0
+    }
+  ],
+  "colors": [
+    {
+      "pattern": "(?<![\\u3400-\\u9fff])赤(?![\\u3400-\\u9fff])",
+      "ink": "#ef6969"
+    },
+    {
+      "pattern": "(?<![a-z])red(?![a-z])",
+      "ink": "#ef6969"
+    },
+    {
+      "pattern": "(?<![\\u3400-\\u9fff])青(?![\\u3400-\\u9fff])",
+      "ink": "#79a7ff"
+    },
+    {
+      "pattern": "(?<![a-z])blue(?![a-z])",
+      "ink": "#79a7ff"
+    },
+    {
+      "pattern": "黄色",
+      "ink": "#efd66b"
+    },
+    {
+      "pattern": "(?<![\\u3400-\\u9fff])黄(?![\\u3400-\\u9fff])",
+      "ink": "#efd66b"
+    },
+    {
+      "pattern": "(?<![a-z])yellow(?![a-z])",
+      "ink": "#efd66b"
+    },
+    {
+      "pattern": "(?<![\\u3400-\\u9fff])緑(?![\\u3400-\\u9fff])",
+      "ink": "#8cdca0"
+    },
+    {
+      "pattern": "(?<![a-z])green(?![a-z])",
+      "ink": "#8cdca0"
+    },
+    {
+      "pattern": "(?<![\\u3400-\\u9fff])紫(?![\\u3400-\\u9fff])",
+      "ink": "#bd99ef"
+    },
+    {
+      "pattern": "(?<![a-z])purple(?![a-z])",
+      "ink": "#bd99ef"
+    },
+    {
+      "pattern": "桃色",
+      "ink": "#ec9fc8"
+    },
+    {
+      "pattern": "ピンク",
+      "ink": "#ec9fc8"
+    },
+    {
+      "pattern": "(?<![a-z])pink(?![a-z])",
+      "ink": "#ec9fc8"
+    },
+    {
+      "pattern": "オレンジ",
+      "ink": "#efa665"
+    },
+    {
+      "pattern": "(?<![a-z])orange(?![a-z])",
+      "ink": "#efa665"
+    },
+    {
+      "pattern": "(?<![\\u3400-\\u9fff])白(?![\\u3400-\\u9fff])",
+      "ink": "#eeeae2"
+    },
+    {
+      "pattern": "(?<![a-z])white(?![a-z])",
+      "ink": "#eeeae2"
+    },
+    {
+      "pattern": "赤色",
+      "ink": "#ef6969"
+    },
+    {
+      "pattern": "青色",
+      "ink": "#79a7ff"
+    },
+    {
+      "pattern": "緑色",
+      "ink": "#8cdca0"
+    },
+    {
+      "pattern": "紫色",
+      "ink": "#bd99ef"
+    },
+    {
+      "pattern": "白色",
+      "ink": "#eeeae2"
+    }
+  ],
+  "countPattern": "([0-9]+|[一二三四五六七八九十])\\s*(?:個|つ|本|体|輪|枚|匹|羽)",
+  "compatibilityNotes": [
+    "Offline rules now follow server rules rather than their older reduced vocabulary.",
+    "New object names reset attributes to neutral; modifier-only input retains context.",
+    "Negated names are skipped; longest overlapping name and latest remaining name win.",
+    "Twist uses 0.65 rather than 0.7; slender uses 2.3; named ink matches server values.",
+    "The old blanket reset phrases reset, 元に, 普通の and 通常の no longer reset all attributes. Use explicit reversal phrases or 普通の比率 / 元の長さ.",
+    "Boundary matching is not general natural language understanding. This exports existing rules without widening server behavior."
+  ]
+}

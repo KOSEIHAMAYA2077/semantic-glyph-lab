@@ -1,0 +1,41 @@
+import { chromium } from '@playwright/test';
+import { mkdir, writeFile } from 'node:fs/promises';
+const runName = process.argv[2] ?? 'adapter-check-v3';
+if (!/^[a-z0-9-]+$/.test(runName)) throw new Error('Invalid output name');
+const out = new URL(`./${runName}/`, import.meta.url); await mkdir(out, { recursive: false });
+const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
+const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+const errors = [], httpErrors = []; page.on('pageerror', e => errors.push(String(e)));
+page.on('response', response => { if(response.status() >= 400) httpErrors.push({url:response.url(),status:response.status()}); });
+await page.goto('http://127.0.0.1:4183/src/advection/preview.html'); await page.waitForFunction(() => document.body.dataset.ready === 'true');
+const setup = await page.evaluate(async () => {
+  window.__advection.pause();
+  const THREE = await import('/node_modules/three/build/three.module.js');
+  const { AdvectionLayer } = await import('/src/advection/layer.ts');
+  const { LetterField } = await import('/src/letters.ts');
+  const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true }); renderer.setSize(1280, 900);
+  renderer.domElement.style.cssText = 'position:absolute;inset:0;z-index:30'; document.body.append(renderer.domElement);
+  const world = new THREE.Scene(), camera = new THREE.PerspectiveCamera(38, 1280/900, .01, 30); camera.position.z = 5.5;
+  const field = new LetterField(), geometry = new THREE.SphereGeometry(1.3, 48, 32), layer = new AdvectionLayer(geometry, field);
+  world.add(layer.group); renderer.render(world, camera);
+  window.__adapterCheck = { renderer, world, camera, field, geometry, layer };
+  return { grid: field.grid, letters: field.letters.length };
+});
+await page.screenshot({ path: new URL('initial-at.png', out).pathname });
+const added = await page.evaluate(forceAtlasReset => {
+  const { layer, field, renderer, world, camera } = window.__adapterCheck;
+  field.add('水面、記憶、星、花、風、123'.repeat(6), 0, '#ffd060');
+  if (forceAtlasReset) field.texture.dispose(); // Diagnostic only; caller owns it.
+  for (let i = 0; i < 120; i++) layer.update(1/60, i/60, .09);
+  field.refresh(2, true); renderer.render(world, camera);
+  const glyphs = layer.group.children.find(c => c.isInstancedMesh), material = glyphs.material;
+  const gl = renderer.getContext(), pixels = new Uint8Array(1280 * 900 * 4); gl.readPixels(0, 0, 1280, 900, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+  let yellowPixels = 0; for (let i = 0; i < pixels.length; i += 4) if (pixels[i] > 100 && pixels[i + 1] > 70 && pixels[i + 2] < pixels[i + 1] * .75) yellowPixels++;
+  return { grid: field.grid, shaderGrid: material.uniforms.grid.value, letters: field.letters.length, revision: field.revision, firstIndices: Array.from(glyphs.geometry.getAttribute('glyphIndex').array).slice(0, 30), calls: renderer.info.render.calls, glError: gl.getError(), yellowPixels };
+}, process.argv[3] === 'reset-atlas');
+await page.screenshot({ path: new URL('added-graphemes.png', out).pathname });
+await writeFile(new URL('results.json', out), JSON.stringify({ setup, added, errors, httpErrors }, null, 2), { flag: 'wx' });
+await page.evaluate(() => window.__adapterCheck.layer.dispose());
+await browser.close();
+if (!(added.grid > setup.grid && added.grid === added.shaderGrid && added.calls === 2 && added.yellowPixels > 1000 && added.glError === 0)) throw new Error('Adapter did not upload the expanded colored atlas correctly: ' + JSON.stringify(added));
+if (errors.length || httpErrors.some(e => !e.url.endsWith('/favicon.ico'))) throw new Error(JSON.stringify({errors,httpErrors}));

@@ -1,0 +1,5 @@
+[
+  {"id":"sword","subject":"a medieval sword with a long straight blade and a crossguard","seed":20260930,"prompt":"A medieval sword with a long straight blade and a crossguard, upright, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting."},
+  {"id":"vase","subject":"a tall ceramic vase with a narrow neck and a round body","seed":20260931,"prompt":"A tall ceramic vase with a narrow neck and a round body, open mouth, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting."},
+  {"id":"twisted-vase","subject":"a ceramic vase with a spirally twisted body","seed":20260934,"prompt":"A ceramic vase with a spirally twisted body, open mouth, complete object visible, centered, isolated on a plain gray background. Matte light gray clay sculpture, three-quarter product view, simple soft lighting."}
+]

@@ -189,12 +189,19 @@ class Interpreter:
         candidates = []
         source = "unchanged"
         note = None
+        negated_noun = any(re.search(term_pattern(alias) + r"\s*(?:ではなく|ではない|じゃない|以外|でなく|を除く)", normalized)
+                           for item in CATALOG.values() for alias in item["aliases"])
+        edit_words = r"大き(?:い|く)|小さ(?:い|く)|太(?:い|く)|厚(?:い|く)|薄(?:い|く)|幅を|bigger|larger|smaller|thicker|thinner"
+        unsupported_edit = bool(re.search(edit_words, normalized) and not re.sub(edit_words + r"|だけ|ちょっと|やや|もの|slightly|abit", "", residual))
         if noun:
             # A new object begins from neutral attributes; modifier-only instructions retain context.
             if noun != spec["object"]:
                 spec = dict(DEFAULT_FORM, object=noun)
             source = "explicit"
             candidates = [{"object": noun, "score": 1.0}]
+        elif negated_noun or unsupported_edit:
+            # Do not turn a rejected noun or an unsupported edit into a new object.
+            note = "否定または未対応の変形を含むため、現在の形を保ちました。"
         elif normalized and residual and mode == "semantic" and self.embeddings is not None:
             candidates = self.embeddings.search(normalized)
             top, runner = candidates[:2]
@@ -210,7 +217,7 @@ class Interpreter:
         spec.update(change)
         if change:
             source = "composed"
-        result = {"spec": spec, "source": source, "candidates": candidates,
+        result = {"spec": spec, "source": source, "candidates": candidates, "objectSelected": bool(noun),
                   "elapsedMs": round((time.perf_counter() - started) * 1000, 3)}
         if ink:
             result["ink"] = ink

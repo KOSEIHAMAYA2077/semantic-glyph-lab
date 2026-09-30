@@ -1,0 +1,5 @@
+This Stability AI Model is licensed under the Stability AI Community License, Copyright © Stability AI Ltd. All Rights Reserved.
+
+Powered by Stability AI.
+
+This experiment uses the original SDXL Turbo weights without fine-tuning or modification. Our local inference and reconstruction scripts are separate experiment code. Model weights are not redistributed in this repository. Generated image and mesh outputs are identified as experimental synthetic artifacts, not real objects or observations.

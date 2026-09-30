@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-30T05:47:07.447Z",
+  "browser": "154.0.8037.58",
+  "viewport": [
+    1280,
+    900
+  ],
+  "note": "rAF intervals in headless Chrome on this Mac; switch includes browser-control overhead; not isolated GPU timings",
+  "results": [
+    {
+      "name": "sphere",
+      "mode": "texture",
+      "frames": 240,
+      "medianIntervalMs": 16.699999999999818,
+      "p95IntervalMs": 16.799999999999727,
+      "maxIntervalMs": 16.800000000000182,
+      "switchMs": 2.379624999999919,
+      "vertices": 3575,
+      "gpuError": 0,
+      "errors": []
+    },
+    {
+      "name": "sphere",
+      "mode": "advection",
+      "particles": 4096,
+      "frames": 240,
+      "medianIntervalMs": 16.699999999999818,
+      "p95IntervalMs": 16.800000000000182,
+      "maxIntervalMs": 16.80000000000109,
+      "switchMs": 33.5816249999998,
+      "vertices": 3575,
+      "gpuError": 0,
+      "errors": []
+    },
+    {
+      "name": "shap-e-vase",
+      "mode": "texture",
+      "frames": 240,
+      "medianIntervalMs": 16.699999999999818,
+      "p95IntervalMs": 16.700000000000728,
+      "maxIntervalMs": 16.800000000000182,
+      "switchMs": 1.3071250000011787,
+      "vertices": 337560,
+      "gpuError": 0,
+      "errors": []
+    },
+    {
+      "name": "shap-e-vase",
+      "mode": "advection",
+      "particles": 4096,
+      "frames": 240,
+      "medianIntervalMs": 16.69999999999891,
+      "p95IntervalMs": 16.799999999999272,
+      "maxIntervalMs": 16.80000000000109,
+      "switchMs": 565.0427080000009,
+      "vertices": 337560,
+      "gpuError": 0,
+      "errors": []
+    },
+    {
+      "name": "triposr-horse",
+      "mode": "texture",
+      "frames": 240,
+      "medianIntervalMs": 16.699999999999818,
+      "p95IntervalMs": 16.700000000000728,
+      "maxIntervalMs": 16.800000000000182,
+      "switchMs": 1.4221250000009604,
+      "vertices": 64254,
+      "gpuError": 0,
+      "errors": []
+    },
+    {
+      "name": "triposr-horse",
+      "mode": "advection",
+      "particles": 4096,
+      "frames": 240,
+      "medianIntervalMs": 16.699999999999818,
+      "p95IntervalMs": 16.800000000000182,
+      "maxIntervalMs": 16.80000000000109,
+      "switchMs": 88.47091699999874,
+      "vertices": 64254,
+      "gpuError": 0,
+      "errors": []
+    }
+  ]
+}

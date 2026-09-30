@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-30",
+  "device": "mps",
+  "precision": "fp16; VAE follows pipeline upcast policy",
+  "steps": 4,
+  "guidanceScale": 0,
+  "resolution": [
+    512,
+    512
+  ],
+  "networkAttempts": 0,
+  "samples": [
+    {
+      "id": "sword",
+      "subject": "a medieval sword with a long straight blade and a crossguard",
+      "seed": 20260930,
+      "prompt": "A single complete medieval sword, full length, fully inside the frame with wide white margins, long straight blade and simple crossguard. The entire object is solid matte dark blue, including the blade, handle and crossguard. A simple dark blue clay sculpture isolated on a pure white background, front view, no cast shadow.",
+      "imageSeconds": 1.691133332962636,
+      "path": "experiments/text-image/turbo4-sword-blue-v3/sword.png",
+      "sha256": "d62d34eaaae7b24db186be2b469d6f4a09a0f02d5201a554c14f34e8f3540c51",
+      "bytes": 317317,
+      "pixelStd": 57.40910864994039,
+      "pixelMin": 0,
+      "pixelMax": 255,
+      "success": true
+    }
+  ],
+  "initializationSeconds": 6.130476833030116,
+  "watermarkEnabled": true,
+  "fixtureSha256": "e64bbf4d1d5153b2046a7f945e13b73c740cb08a6ea054e3ad362f467e884103",
+  "totalSeconds": 7.841553916980047,
+  "peakRssBytes": 467206144,
+  "mpsDriverBytes": 9789292544
+}

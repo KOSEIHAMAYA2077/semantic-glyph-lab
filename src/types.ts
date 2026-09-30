@@ -16,4 +16,5 @@ export interface Interpretation {
   ink?: string;
   elapsedMs: number;
   note?: string;
+  objectSelected?: boolean;
 }

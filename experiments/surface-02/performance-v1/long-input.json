@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-30T05:54:24.166Z",
+  "synthetic": true,
+  "letters": 3995,
+  "inputMs": 31.764875000000075,
+  "medianMs": 16.699999999999818,
+  "p95Ms": 16.799999999999727,
+  "maximumMs": 16.80000000000109,
+  "frames": 600,
+  "gpuError": 0,
+  "note": "rAF across first 10 seconds including red-to-white atlas updates; initial submit includes browser overhead"
+}

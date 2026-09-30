@@ -6,6 +6,9 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { LetterField } from './letters';
 import { createSurfaceMaterial } from './surface-material';
 import { createForm } from './geometry';
+import { compositionGroup, type Composition } from './composition';
+import { deformImport } from './deform-import';
+import { AdvectionLayer } from './advection/layer';
 import { DEFAULT_FORM, type FormSpec } from './types';
 
 export class SurfaceScene {
@@ -21,6 +24,12 @@ export class SurfaceScene {
   private geometry = createForm(this.spec);
   private transition?: { from: Float32Array; to: Float32Array; normalsFrom: Float32Array; normalsTo: Float32Array; elapsed: number };
   private loadingToken = 0;
+  private importedBase?: THREE.BufferGeometry;
+  renderMode: 'texture' | 'advection' = 'texture';
+  private advection?: AdvectionLayer;
+  private advectionCopies: THREE.InstancedMesh[] = [];
+  private flowTime = 0;
+  invalidateLoads() { this.loadingToken++; }
   constructor(host: HTMLElement) {
     this.renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     this.renderer.setClearColor(0x000000);
@@ -33,14 +42,24 @@ export class SurfaceScene {
     this.controls.autoRotate = true; this.controls.autoRotateSpeed = .25;
     this.controls.minDistance = 2.4; this.controls.maxDistance = 14;
     this.populate();
-    const resize = () => { this.renderer.setSize(host.clientWidth, host.clientHeight); this.camera.aspect = host.clientWidth / host.clientHeight; this.camera.updateProjectionMatrix(); };
+    const resize = () => { this.renderer.setSize(host.clientWidth, host.clientHeight); this.camera.aspect = host.clientWidth / host.clientHeight; this.camera.updateProjectionMatrix(); this.keepInFrame(this.geometry,this.spec.count); };
     new ResizeObserver(resize).observe(host); resize();
   }
   private populate() {
+    this.advectionCopies.forEach(mesh=>mesh.dispose()); this.advectionCopies=[];
+    this.advection?.dispose(); this.advection=undefined;
     this.group.clear();
     const count = this.spec.count;
+    if(this.renderMode === 'advection') this.advection=new AdvectionLayer(this.geometry,this.field,4096);
     for (let i = 0; i < count; i++) {
-      const mesh = new THREE.Mesh(this.geometry, this.material);
+      let mesh: THREE.Object3D = new THREE.Mesh(this.geometry, this.material);
+      if(this.advection) {
+        mesh=i===0?this.advection.group:this.advection.group.clone();
+        if(i>0) {
+          const original=this.advection.group.children.find(child=>child instanceof THREE.InstancedMesh) as THREE.InstancedMesh;
+          mesh.traverse(child=>{if(child instanceof THREE.InstancedMesh){child.instanceMatrix=original.instanceMatrix;this.advectionCopies.push(child);}});
+        }
+      }
       if (count > 1) {
         const radius = count === 2 ? .85 : 1.3, a = i * Math.PI * 2 / count;
         mesh.position.set(Math.cos(a) * radius, Math.sin(a) * radius * .65, Math.sin(a + .3) * .35);
@@ -50,10 +69,22 @@ export class SurfaceScene {
       this.group.add(mesh);
     }
   }
+  setRenderMode(mode: 'texture' | 'advection') {
+    if(mode===this.renderMode)return;
+    if(this.transition) {
+      (this.geometry.getAttribute('position') as THREE.BufferAttribute).array.set(this.transition.to);
+      (this.geometry.getAttribute('normal') as THREE.BufferAttribute).array.set(this.transition.normalsTo);
+      this.geometry.getAttribute('position').needsUpdate=this.geometry.getAttribute('normal').needsUpdate=true;
+      this.transition=undefined;
+    }
+    this.renderMode=mode;this.populate();
+  }
   setForm(spec: FormSpec) {
     this.loadingToken++; const next = createForm(spec);
+    this.importedBase?.dispose(); this.importedBase=undefined;
+    this.keepInFrame(next,spec.count);
     const position = this.geometry.getAttribute('position'), target = next.getAttribute('position');
-    if (!this.loaded && spec.object === this.spec.object && position.count === target.count) {
+    if (this.renderMode==='texture' && !this.loaded && spec.object === this.spec.object && position.count === target.count) {
       this.transition = {
         from: new Float32Array(position.array), to: new Float32Array(target.array),
         normalsFrom: new Float32Array(this.geometry.getAttribute('normal').array),
@@ -62,6 +93,22 @@ export class SurfaceScene {
       next.dispose();
     } else { this.geometry.dispose(); this.geometry = next; this.transition = undefined; }
     this.loaded = ''; this.spec = { ...spec }; this.populate();
+  }
+  setImportedAttributes(spec: FormSpec) {
+    if(!this.importedBase) return this.setForm(spec);
+    const next=deformImport(this.importedBase,spec);
+    this.geometry.dispose();this.geometry=next;this.transition=undefined;this.spec={...spec};
+    this.keepInFrame(next,spec.count);this.populate();
+  }
+  private keepInFrame(geometry:THREE.BufferGeometry,count=1) {
+    geometry.computeBoundingSphere();
+    const radius=geometry.boundingSphere!.radius*(count>1?(count<4?.52:.36):1)+(count>1?1.5:0);
+    const halfVertical=THREE.MathUtils.degToRad(this.camera.fov*.5);
+    const half=Math.min(halfVertical,Math.atan(Math.tan(halfVertical)*this.camera.aspect));
+    const required=radius/Math.sin(half)*1.08;
+    const offset=this.camera.position.clone().sub(this.controls.target);
+    if(offset.length()<required || offset.length()>required*1.65) this.camera.position.copy(this.controls.target).add(offset.setLength(Math.max(6.2,required)));
+    this.controls.maxDistance=Math.max(14,required*1.5);
   }
   async loadGLB(url: string) {
     const token = ++this.loadingToken;
@@ -84,6 +131,11 @@ export class SurfaceScene {
     // Geometry only: OBJLoader does not fetch the referenced material library.
     return this.installModel(new OBJLoader().parse(text), url, token);
   }
+  setComposition(data: Composition) {
+    const group=compositionGroup(data);
+    try { return this.installModel(group, `composition:${data.label}`, ++this.loadingToken); }
+    finally { group.traverse(obj=>{ if(obj instanceof THREE.Mesh) { obj.geometry.dispose(); const mats=Array.isArray(obj.material)?obj.material:[obj.material]; mats.forEach(m=>m.dispose()); } }); }
+  }
   private installModel(root: THREE.Object3D, url: string, token: number) {
     root.updateMatrixWorld(true);
     const geometries: THREE.BufferGeometry[] = [];
@@ -105,8 +157,9 @@ export class SurfaceScene {
     if (!Number.isFinite(max) || max <= 0 || merged.getAttribute('position').count > 2_000_000) { merged.dispose(); throw new Error('形のサイズまたは面数を確認できませんでした。'); }
     merged.translate(-center.x, -center.y, -center.z); merged.scale(2.6 / max, 2.6 / max, 2.6 / max);
     if (token !== this.loadingToken) { merged.dispose(); return false; }
+    this.importedBase?.dispose();this.importedBase=merged.clone();
     this.geometry.dispose(); this.geometry = merged; this.transition = undefined;
-    this.spec = { ...this.spec, count: 1 }; this.loaded = url; this.populate(); return true;
+    this.spec = { ...DEFAULT_FORM }; this.loaded = url; this.keepInFrame(merged);this.populate(); return true;
   }
   render(dt: number) {
     const step = this.paused ? 0 : dt;
@@ -123,6 +176,13 @@ export class SurfaceScene {
     }
     this.field.refresh(this.time); this.material.uniforms.grid.value = this.field.grid;
     this.material.uniforms.time.value = this.time;
+    const flowStep=Math.min(step,.035)*this.material.uniforms.flow.value;
+    this.flowTime+=flowStep;
+    if(this.advection) {
+      // Substeps preserve the speed control even though the walker caps dt.
+      const steps=Math.max(1,Math.ceil(flowStep/.035));
+      for(let i=0;i<steps;i++) this.advection.update(flowStep/steps,this.flowTime,1.4/this.material.uniforms.density.value);
+    }
     if (!this.paused) this.controls.update(step);
     this.renderer.render(this.world, this.camera); this.frames++;
   }
@@ -131,6 +191,7 @@ export class SurfaceScene {
     return { spec: { ...this.spec }, letters: this.field.letters.map(l => ({ ...l })), count: this.field.letters.length,
       time: this.time, paused: this.paused, loaded: this.loaded, vertices: this.geometry.getAttribute('position').count,
       bounds: { min: this.geometry.boundingBox!.min.toArray(), max: this.geometry.boundingBox!.max.toArray() },
-      flow: this.material.uniforms.flow.value, frames: this.frames, renderer: this.renderer.info.render };
+      flow: this.material.uniforms.flow.value, renderMode:this.renderMode, frames: this.frames, renderer: this.renderer.info.render,
+      gpuError:this.renderer.getContext().getError() };
   }
 }

@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-30",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "quantization": "local affine 4bit, group size 64; same model as composition",
+  "sampling": "greedy, temperature 0",
+  "maxOutputTokensPerAttempt": 512,
+  "maxAttempts": 2,
+  "extraWeightsDownloaded": 0,
+  "runs": [
+    {
+      "name": "run-01",
+      "count": 13,
+      "http200": 13,
+      "http422": 0,
+      "minMs": 509,
+      "medianMs": 685,
+      "maxMs": 1002,
+      "sameExamplesReused": false
+    },
+    {
+      "name": "run-02",
+      "count": 13,
+      "http200": 11,
+      "http422": 2,
+      "minMs": 596,
+      "medianMs": 812,
+      "maxMs": 973,
+      "sameExamplesReused": true
+    }
+  ],
+  "files": [
+    {
+      "path": "server/composition.py",
+      "sha256": "86a629d2993b2625a80b632d50d4850d6f964aa3bbc2a974c5bc4efaab3e2f7f"
+    },
+    {
+      "path": "server/composition-description-prompt.txt",
+      "sha256": "29101ddd61f921b98c66f89b6782e92b54e93a4c259a025310b4f2c1cdf8464e"
+    },
+    {
+      "path": "experiments/translation/prompt-01.txt",
+      "sha256": "88ba3240acb6bf1c209e0e3c89239e07afc4faf6920225c6ed738aaec0e35be1"
+    },
+    {
+      "path": "experiments/translation/prompt-02.txt",
+      "sha256": "29101ddd61f921b98c66f89b6782e92b54e93a4c259a025310b4f2c1cdf8464e"
+    },
+    {
+      "path": "experiments/translation/evaluation-plan.json",
+      "sha256": "9aba6be5564eeae33bf60a8b986348bea900c3219688f5178b877c07593e8b05"
+    },
+    {
+      "path": "experiments/translation/test_description.py",
+      "sha256": "c1b8be5e276bbf51ed401ce08228eac343c50b974e3358f3f54faad7f8e000e4"
+    },
+    {
+      "path": "experiments/translation/evaluate.py",
+      "sha256": "f2d727e5c75ef123f5bf654420888ee153ac0be7fb1d42b6941e615b243f0273"
+    },
+    {
+      "path": "experiments/translation/check_clip.py",
+      "sha256": "5a6eaac76d2ec2051da93205f733ce5f57a4d4b9abf4d577c99c74202f8af96a"
+    }
+  ]
+}

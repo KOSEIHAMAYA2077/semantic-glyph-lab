@@ -27,7 +27,11 @@ export class LetterField {
     this.lastRefresh = time;
     this.grid = Math.max(8, 2 ** Math.ceil(Math.log2(Math.ceil(Math.sqrt(this.letters.length)))));
     const size = this.grid * 64;
-    if (this.canvas.width !== size) { this.canvas.width = size; this.canvas.height = size; }
+    if (this.canvas.width !== size) {
+      // WebGL2 texture storage has immutable dimensions. Keep the shared texture
+      // object but release its allocation before uploading a larger atlas.
+      this.texture.dispose(); this.canvas.width = size; this.canvas.height = size;
+    }
     const ctx = this.canvas.getContext('2d')!;
     ctx.fillStyle = '#000'; ctx.fillRect(0, 0, size, size);
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.font = '44px "Hiragino Kaku Gothic ProN", "Yu Gothic", monospace';

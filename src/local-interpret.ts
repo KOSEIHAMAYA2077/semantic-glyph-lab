@@ -1,23 +1,84 @@
 import { type FormSpec, type Interpretation, type ObjectId } from './types';
-// Offline baseline only. The learned semantic experiment uses the local API.
-const words: [ObjectId, RegExp][] = [
- ['sphere',/球体|球|丸い|ボール|sphere|ball/i],['cube',/立方体|箱|キューブ|cube|box/i],['vase',/花瓶|壺|つぼ|vase/i],['sword',/剣|刀|ソード|sword/i],
- ['tree',/樹木|木|森林|tree/i],['flower',/花|flower/i],['fish',/魚|fish/i],['bird',/鳥|bird/i],['chair',/椅子|いす|chair/i],['table',/机|テーブル|table/i],['mug',/マグ|コップ|カップ|mug|cup/i],['bottle',/瓶|ボトル|bottle/i],['house',/家|住宅|house/i],['tower',/塔|タワー|tower/i],['ring',/円環|輪|リング|ring|torus/i],['star',/星|star/i],['heart',/ハート|heart/i],['knot',/結び目|knot/i],['shell',/貝|shell/i],['cone',/円錐|cone/i],['pyramid',/ピラミッド|四角錐|pyramid/i],['rock',/岩|石|rock/i],['cloud',/雲|cloud/i],['mushroom',/きのこ|キノコ|mushroom/i],
-];
+import source from './rule-data.json?raw';
+
+// Exported from server/catalog.py + server/interpreter.py. No semantic inference.
+// Regenerate with server/export-rule-fixtures.py and run parity tests after changes.
+interface RuleData {
+  defaultForm: FormSpec;
+  objects: { id: ObjectId; patterns: string[] }[];
+  attributes: { pattern: string; key: Exclude<keyof FormSpec, 'object'>; value: number }[];
+  colors: { pattern: string; ink: string }[];
+  countPattern: string;
+}
+const rules = JSON.parse(source) as RuleData;
+const negation = String.raw`\s*(?:ではなく|ではない|じゃない|以外|でなく|を除く)`;
+const editWords = String.raw`大き(?:い|く)|小さ(?:い|く)|太(?:い|く)|厚(?:い|く)|薄(?:い|く)|幅を|bigger|larger|smaller|thicker|thinner`;
+const limits: [Exclude<keyof FormSpec, 'object'>, number, number][] = [['squareness',0,1],['elongation',.5,2.5],['twist',-1,1],['bend',-1,1],['roughness',0,1],['count',1,8]];
+const matches = (text: string, pattern: string) => Array.from(text.matchAll(new RegExp(pattern, 'gi')));
+const end = (match: RegExpMatchArray) => match.index! + match[0].length;
+
+function boundedPrevious(previous: FormSpec): FormSpec {
+  const form = { ...rules.defaultForm };
+  if (!previous || typeof previous !== 'object' || Array.isArray(previous)) return form;
+  if (rules.objects.some(object => object.id === previous.object)) form.object = previous.object;
+  for (const [key, low, high] of limits) {
+    const number = previous[key];
+    if (typeof number === 'number' && Number.isFinite(number)) form[key] = Math.max(low, Math.min(high, number));
+  }
+  // Python round uses ties-to-even. In normal application state count is integral.
+  const floor = Math.floor(form.count), fraction = form.count - floor;
+  form.count = fraction === .5 ? floor + floor % 2 : Math.round(form.count);
+  return form;
+}
+
+function explicitObject(text: string): ObjectId | undefined {
+  const hits = rules.objects.flatMap(object => object.patterns.flatMap(pattern => matches(text, pattern).map(match => ({ start: match.index!, end: end(match), object: object.id }))));
+  const eligible = hits.filter(hit => !hits.some(other => other.start <= hit.start && other.end >= hit.end && other.end - other.start > hit.end - hit.start))
+    .filter(hit => !new RegExp(`^${negation}`).test(text.slice(hit.end)));
+  eligible.sort((a, b) => b.start - a.start || (b.end - b.start) - (a.end - a.start));
+  return eligible[0]?.object;
+}
+
+function attributes(text: string) {
+  const choices = new Map<Exclude<keyof FormSpec, 'object'>, { start: number; end: number; value: number }>();
+  const spans: [number, number][] = [], changes: Partial<Omit<FormSpec, 'object'>> = {};
+  for (const rule of rules.attributes) for (const match of matches(text, rule.pattern)) {
+    const candidate = { start: match.index!, end: end(match), value: rule.value }, existing = choices.get(rule.key);
+    if (!existing || (candidate.start <= existing.start && candidate.end >= existing.end) || candidate.start >= existing.end) choices.set(rule.key, candidate);
+    spans.push([candidate.start, candidate.end]);
+  }
+  for (const [key, candidate] of choices) changes[key] = candidate.value;
+  for (const match of matches(text, rules.countPattern)) {
+    const number = /^[0-9]+$/.test(match[1]) ? Number(match[1]) : '〇一二三四五六七八九十'.indexOf(match[1]);
+    changes.count = Math.max(1, Math.min(8, number)); spans.push([match.index!, end(match)]);
+  }
+  let ink: string | undefined, inkPosition = -1;
+  for (const rule of rules.colors) for (const match of matches(text, rule.pattern)) {
+    if (match.index! >= inkPosition) { ink = rule.ink; inkPosition = match.index!; }
+    spans.push([match.index!, end(match)]);
+  }
+  for (const match of matches(text, '#[0-9a-f]{6}(?![0-9a-f])')) { ink = match[0]; inkPosition = match.index!; spans.push([match.index!, end(match)]); }
+  const characters = text.split(''); // Regex indices and masking both use UTF-16.
+  for (const [start, finish] of spans) for (let i = start; i < finish; i++) characters[i] = ' ';
+  const residual = characters.join('').replace(/もっと|少し|とても|かなり|この|これ|それ|形|感じ|にして|して|する|ください|くれ|欲しい|ほしい|色|に|を|で|と|の|な|please|make|it|more/g, '')
+    .replace(/[\s。、,.!！?？:：;；「」『』\[\]()（）\-]+/g, '');
+  return { changes, ink, residual };
+}
+
 export function localInterpret(text: string, previous: FormSpec): Interpretation {
-  const found = words.find(([, re]) => re.test(text));
-  const spec = { ...previous, ...(found ? { object: found[0] } : {}) };
-  let modified = false;
-  const set = (key: 'squareness' | 'elongation' | 'twist' | 'bend' | 'roughness', value: number) => { spec[key] = value; modified = true; };
-  if (/四角|角張|角ば|square|angular/i.test(text)) set('squareness', 1);
-  if (/丸み|丸く|round/i.test(text)) set('squareness', 0);
-  if (/細長|長い|長く|long|tall/i.test(text)) set('elongation', 1.8);
-  if (/平た|平べった|flat/i.test(text)) set('elongation', .55);
-  if (/ねじ|捻|twist/i.test(text)) set('twist', .7);
-  if (/曲が|曲げ|bend/i.test(text)) set('bend', .55);
-  if (/ざら|ごつ|凸凹|rough/i.test(text)) set('roughness', .5);
-  if (/元に|普通の|通常の|reset/i.test(text)) { Object.assign(spec, { squareness: 0, elongation: 1, twist: 0, bend: 0, roughness: 0, count: 1 }); modified = true; }
-  const count = text.normalize('NFKC').match(/([1-8])\s*(?:個|本|つ|枚)/); if (count) { spec.count = Number(count[1]); modified = true; }
-  const colors: [RegExp,string][] = [[/赤|red/i,'#ff5e62'],[/青|blue/i,'#65a3ff'],[/黄色|yellow/i,'#ffe88c'],[/緑|green/i,'#80e6ae'],[/紫|purple/i,'#b695ff'],[/白|white/i,'#ffffff']];
-  return { spec, source: found ? 'explicit' : modified ? 'composed' : 'unchanged', candidates: found ? [{ object: found[0], score: 1 }] : [], ink: colors.find(([re]) => re.test(text))?.[1], elapsedMs: 0, note: '明示語による基準。学習モデルの推定ではありません。' };
+  if (typeof text !== 'string' || Array.from(text).length > 4000) throw new Error('text must be a string of at most 4000 characters');
+  const normalized = text.normalize('NFKC').trim().toLowerCase();
+  let spec = boundedPrevious(previous);
+  const { changes, ink, residual } = attributes(normalized), noun = explicitObject(normalized);
+  const candidates: Interpretation['candidates'] = [];
+  let source: Interpretation['source'] = 'unchanged', note: string | undefined;
+  const negatedNoun = rules.objects.some(object => object.patterns.some(pattern => new RegExp(pattern + negation).test(normalized)));
+  const unsupportedEdit = new RegExp(editWords).test(normalized) && !residual.replace(new RegExp(editWords + '|だけ|ちょっと|やや|もの|slightly|abit', 'g'), '');
+  if (noun) {
+    if (noun !== spec.object) spec = { ...rules.defaultForm, object: noun };
+    source = 'explicit'; candidates.push({ object: noun, score: 1 });
+  } else if (negatedNoun || unsupportedEdit) note = '否定または未対応の変形を含むため、現在の形を保ちました。';
+  Object.assign(spec, changes);
+  if (Object.keys(changes).length) source = 'composed';
+  return { spec, source, candidates, objectSelected: Boolean(noun), elapsedMs: 0, ...(ink ? { ink } : {}), ...(note ? { note } : {}) };
 }

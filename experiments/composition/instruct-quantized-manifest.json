@@ -1,0 +1,48 @@
+{
+  "sourceModel": "Qwen/Qwen3-4B-Instruct-2507",
+  "sourceRevision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "conversion": "mlx_lm.convert 0.31.3, affine 4-bit, group size 64, dtype bfloat16, trust_remote_code false",
+  "localBytes": 2274513731,
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 81,
+      "sha256": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6"
+    },
+    {
+      "file": "chat_template.jinja",
+      "bytes": 2630,
+      "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+    },
+    {
+      "file": "config.json",
+      "bytes": 1022,
+      "sha256": "6a60e47e974e14f5175d8485ec6909b8a549175a4acab0c424c8ec8191557d54"
+    },
+    {
+      "file": "generation_config.json",
+      "bytes": 238,
+      "sha256": "835fffe355c9438e7a25be099b3fccaa98350b83451f9fd2d99512e74f1ade48"
+    },
+    {
+      "file": "model.safetensors",
+      "bytes": 2263022417,
+      "sha256": "2a73c6c248601ab904e035548abd8e6abb65ea27dcb5f342fb0a8910eb44173f"
+    },
+    {
+      "file": "model.safetensors.index.json",
+      "bytes": 63964,
+      "sha256": "388d811b8b7c2608dd04cce1bcb04a8bf715d19b42790894e6d3427ff429a777"
+    },
+    {
+      "file": "tokenizer.json",
+      "bytes": 11422650,
+      "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 729,
+      "sha256": "1744cf5a41416aedcaff65a51e7e2d05750ed6fe568918f836fd2e3729834117"
+    }
+  ]
+}

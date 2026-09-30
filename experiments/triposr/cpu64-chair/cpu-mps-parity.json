@@ -1,0 +1,9 @@
+{
+  "comparison": "Same official chair image, same 64^3 extraction and seed, CPU vs MPS",
+  "sameFaces": true,
+  "maxVertexCoordinateDifference": 1.5676021575927734e-05,
+  "maxNearestVertexDistance": 1.5676021575927734e-05,
+  "meanNearestVertexDistance": 1.9115852374656527e-07,
+  "cpuVolume": 0.07224014820290825,
+  "mpsVolume": 0.07224013728088591
+}

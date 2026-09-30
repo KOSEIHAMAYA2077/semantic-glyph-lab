@@ -1,0 +1,111 @@
+{
+  "source": "run-01.jsonl",
+  "sourceSHA256": "c8441cbba36473161f64ab6a7782dfe953a7ee0f0d6ea21078088db75e1bdc96",
+  "tokenizer": "official openai/CLIP, context 77 including start/end, truncate=False; CPU only; no model weights",
+  "cases": [
+    {
+      "id": "vase-handles",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 18,
+      "characters": 69,
+      "words": 15
+    },
+    {
+      "id": "negative-sphere",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 12,
+      "characters": 46,
+      "words": 9
+    },
+    {
+      "id": "sword-rings",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 12,
+      "characters": 49,
+      "words": 9
+    },
+    {
+      "id": "narrative-shell",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 17,
+      "characters": 81,
+      "words": 13
+    },
+    {
+      "id": "heart-chair",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 11,
+      "characters": 36,
+      "words": 6
+    },
+    {
+      "id": "nested-relations",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 21,
+      "characters": 75,
+      "words": 16
+    },
+    {
+      "id": "negative-vase",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 11,
+      "characters": 37,
+      "words": 9
+    },
+    {
+      "id": "floating-island",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 15,
+      "characters": 59,
+      "words": 12
+    },
+    {
+      "id": "square-cloud",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 12,
+      "characters": 54,
+      "words": 8
+    },
+    {
+      "id": "asymmetric-fruit",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 15,
+      "characters": 49,
+      "words": 10
+    },
+    {
+      "id": "emotion-only",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 7,
+      "characters": 28,
+      "words": 5
+    },
+    {
+      "id": "ambiguous-pronoun",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 10,
+      "characters": 49,
+      "words": 8
+    },
+    {
+      "id": "instruction-in-source",
+      "status": 200,
+      "clipAccepted": true,
+      "clipTokens": 5,
+      "characters": 11,
+      "words": 3
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Shap-E HTTP output — a teapot</title>
+<style>body{margin:0;background:#090909;color:#ccc;font:14px monospace}p{position:absolute;z-index:2;margin:16px;bottom:0}canvas{display:block}</style>
+<p>Artificial prompt: a teapot · 32 steps · 128³ · raw output from the local HTTP API</p>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const gltf=await new GLTFLoader().loadAsync('./teapot-v1.glb');
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(1);renderer.setSize(1200,600);renderer.setScissorTest(true);document.body.append(renderer.domElement);
+for(let i=0;i<2;i++){
+ const scene=new THREE.Scene();scene.background=new THREE.Color('#090909');
+ const model=gltf.scene.clone();model.traverse(n=>{if(n.isMesh)n.material=new THREE.MeshStandardMaterial({color:0x9b9fa4,roughness:.65,side:THREE.DoubleSide});});scene.add(model);
+ const bounds=new THREE.Box3().setFromObject(model),center=bounds.getCenter(new THREE.Vector3()),radius=bounds.getSize(new THREE.Vector3()).length()/2;
+ const camera=new THREE.PerspectiveCamera(38,1,.01,100);camera.position.copy(center).add(new THREE.Vector3(i? -2.7:2.7,1.5,i?-4:4).normalize().multiplyScalar(radius*3.25));camera.lookAt(center);
+ scene.add(new THREE.HemisphereLight(0xe6efff,0x48403a,2.5));const light=new THREE.DirectionalLight(0xffffff,3);light.position.set(-2,4,3);scene.add(light);
+ renderer.setViewport(i*600,0,600,600);renderer.setScissor(i*600,0,600,600);renderer.render(scene,camera);
+}
+document.body.dataset.ready='true';
+</script>
