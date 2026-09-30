@@ -1,7 +1,7 @@
 # 現在地
 
 開始: 2026-09-30 13:50 JST / 終了期限: 18:50 JST (09:50 UTC)
-更新: 2026-09-30 15:34 JST。5時間の比較実験を継続中。
+更新: 2026-09-30 15:48 JST。5時間の比較実験を継続中。
 
 ## 保全
 
@@ -22,15 +22,17 @@
 ## 保存済みの版
 
 public repo https://github.com/KOSEIHAMAYA2077/semantic-glyph-lab 、draft PR1。
-prototype-v0.1.0 / f76715c、prototype-v0.2.0 / bc1a8d4 は公開済み。v0.3.0の統合を保存する段階。入力は非永続のまま。日本語→説明→Shap-Eも実UIで完走。
+prototype-v0.1.0 / f76715c、prototype-v0.2.0 / bc1a8d4、prototype-v0.3.0 / bceba9f を公開済み。PR1もv0.3の結果へ更新した。入力は非永続のまま。日本語→説明→Shap-Eも実UIで完走。
 
 ## 所有と次の実験
 
-- root: v0.3の共通描画、4187/4188、6比較形状の選択を統合済み。再起動コマンドで全6サービスを新規起動→Ctrl+Cで所有分だけ停止→再起動を実確認。現在root exec session18841がまとめて稼働。既存4173は200/旧Git clean。
-- semantic_mesh_research: 3人工文×2生成の6メッシュ比較を完了、所有解放。画像経由はじょうろの部位を保ち、Shap-Eは傘の薄い面が良い。6PNGと全文結果はexperiments/end-to-end、選択用manifestはpublic/end-to-end-models。
-- shape_geometry: 新規 experiments/input-routing/**、.local/input-routing*/** だけ所有。『新しい物体 / 現在形の属性編集 / 形は保持』を8Bの制約付きJSONで分ける実験。20〜24人工例を先に固定し、未見名詞を近い既知形へ誤誘導しないか確認。API/画面へはまだ接続しない。既存translation-model/description APIは完了・解放。
-- text3d_research: bodyMotionの低ポリ中心沈み修正と9画面/馬の性能確認完了・解放。TripoSGの公開採用は見送った。詳細・出力は.localだけ、公開は判断READMEのみ。
-- 次の区切り: v0.3をGitHubへ保存し、input-routingの成績から連続入力の試作へ接続する価値を判断する。画面は26ブラウザ最終検証と、生成じょうろの実操作を確認。GPU推論はinput-routing担当に渡し、rootはMLを使わない。
+- root: v0.3.0 / bceba9f を公開し、PR1の本文を更新。全6サービスはroot exec session18841がまとめて稼働。既存4173と旧repoは保全。新IAB tab11に生成済みじょうろと人工文27文字を表示、形の揺らぎ0.6を実操作確認。
+- input-routing v1: 24例を固定して8Bを1回ずつ実測。形式成立3/24、事前の厳格な操作契約0/24、raw action一致10/24。球体1個の例は既定countを省略した形式上の不一致で、意味も全例失敗とは主張しない。未知名詞を花瓶・円錐へ寄せる、禁止と解除を混同する誤りがありUI接続を見送った。全rawは保全。
+- shape_geometry: experiments/input-routing-v2/**、.local/input-routing-v2*/** を所有。カタログを見せずactionだけ判断し、newは既存説明prompt、editは差分だけを別段で抽出する。24例は回帰として再利用、新12例をpromptより先に固定。推奨samplingへも変更するので設計単独の効果とはしない。v1 README結果節だけ確定してfreezeする。
+- semantic_mesh_research: experiments/input-routing-model/**、.local/input-routing-qwen14*/** を所有。公式14Bの約7.85GBを取得・hash/条件確認中。既存8B envはread-onlyで利用し、依存更新なし。比較はv1と同じ24例/prompt/greedyでモデル差だけを見る。GPU推論はまだ許可せず8B-v2の解放後に調整する。
+- text3d_research: src/intent.test.ts と src/continuous.test.ts の2ファイルだけ所有。CPUモックで連続受付・世代競合・失敗保持・上限・再試行を検証。
+- root: src/intent.ts、src/continuous.ts と experiments/continuous-input/PLAN.md を所有。未接続のクライアント契約・直列処理案。文章受理は即時、GPU処理は同時1件、生成中の追記は後で先に解釈し最新属性で採用する。ルータの成績を見て採用判断する。現在のmain/APIにはまだ変更していない。
+- 次の区切り: v2の段階別成績と14B比較を踏まえ、連続入力を試験モードとして接続する価値を判断。未見名詞を似た既知形へ押し込む場合は接続しない。準備したCPUハーネスは不採用でも記録として残す。
 
 ## 運転と継続
 
