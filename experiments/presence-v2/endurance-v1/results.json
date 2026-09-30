@@ -1,0 +1,3728 @@
+{
+  "label": "endurance-v1",
+  "completed": true,
+  "hashes": {
+    "src/presence/main.ts": "ebb0309039c496207365ed47905770cfe0daf7befeeb9d66ec1c8c7531e761e5",
+    "src/presence/layer.ts": "78933fd3bdb4a40b7fcf541a8fc7db386fc80e7b5547a39deb9da31b6218fb2c",
+    "src/scene.ts": "6ebf91257296b613e39e2f7a97f9e1b2da19da00264c4b371257d62c84d5a4f2"
+  },
+  "errors": [],
+  "external": [],
+  "samples": [
+    {
+      "shape": "sphere",
+      "requestedTime": 0,
+      "elapsedWallMs": 3,
+      "simulatedSinceStart": 0,
+      "spec": {
+        "object": "sphere",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 0.128204,
+      "paused": true,
+      "loaded": "",
+      "vertices": 3575,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 10,
+      "renderer": {
+        "frame": 10,
+        "calls": 46,
+        "triangles": 15048,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 21.2123280739941,
+        "glyphSize": 0.11053642372820192,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 0.08865300000000001,
+        "animationTime": 0.128204,
+        "disposed": false,
+        "distanceTraveled": 0,
+        "crossings": 0,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              -0.044874299274698215,
+              1.2980318630782195,
+              0.039934075743799334
+            ],
+            "face": 8,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.04273246299777902,
+              1.2973050351391062,
+              0.07029441410030463
+            ],
+            "face": 24,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.070579561434085,
+              1.2973503310907526,
+              -0.03954235112631681
+            ],
+            "face": 41,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.024839763994846695,
+              1.2972604880356426,
+              -0.0798307174549227
+            ],
+            "face": 57,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.14570712357407511,
+              1.2912291448796185,
+              0.002490993537147286
+            ],
+            "face": 73,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.12159568600698775,
+              1.2910861108812801,
+              0.08296152932966246
+            ],
+            "face": 84,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.0785897875595909,
+              1.2903818912437655,
+              0.13285042910374317
+            ],
+            "face": 95,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.001356951228440482,
+              1.2910136951501543,
+              0.14794411820598072
+            ],
+            "face": 106,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.06850125425572359,
+              1.289382115142211,
+              0.14958449131638918
+            ],
+            "face": 117,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.11987090009886807,
+              1.291122091247267,
+              0.08486578302825783
+            ],
+            "face": 128,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.15667633595140792,
+              1.289809780890366,
+              0.032858449875018333
+            ],
+            "face": 139,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.14467704973698528,
+              1.290468639174658,
+              -0.05124707153971711
+            ],
+            "face": 150,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              -0.044874299274698215,
+              1.2980318630782195,
+              0.039934075743799334
+            ],
+            "face": 8,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.04273246299777902,
+              1.2973050351391062,
+              0.07029441410030463
+            ],
+            "face": 24,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.070579561434085,
+              1.2973503310907526,
+              -0.03954235112631681
+            ],
+            "face": 41,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.024839763994846695,
+              1.2972604880356426,
+              -0.0798307174549227
+            ],
+            "face": 57,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.14570712357407511,
+              1.2912291448796185,
+              0.002490993537147286
+            ],
+            "face": 73,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.12159568600698775,
+              1.2910861108812801,
+              0.08296152932966246
+            ],
+            "face": 84,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.0785897875595909,
+              1.2903818912437655,
+              0.13285042910374317
+            ],
+            "face": 95,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.001356951228440482,
+              1.2910136951501543,
+              0.14794411820598072
+            ],
+            "face": 106,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.06850125425572359,
+              1.289382115142211,
+              0.14958449131638918
+            ],
+            "face": 117,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.11987090009886807,
+              1.291122091247267,
+              0.08486578302825783
+            ],
+            "face": 128,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.15667633595140792,
+              1.289809780890366,
+              0.032858449875018333
+            ],
+            "face": 139,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.14467704973698528,
+              1.290468639174658,
+              -0.05124707153971711
+            ],
+            "face": 150,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 42
+    },
+    {
+      "shape": "sphere",
+      "requestedTime": 30,
+      "elapsedWallMs": 1197,
+      "simulatedSinceStart": 29.99999999999957,
+      "spec": {
+        "object": "sphere",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 30.12820399999957,
+      "paused": true,
+      "loaded": "",
+      "vertices": 3575,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 24,
+      "renderer": {
+        "frame": 1824,
+        "calls": 2,
+        "triangles": 14960,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 21.2123280739941,
+        "glyphSize": 0.11053642372820192,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 22.58865299999925,
+        "animationTime": 30.12820399999957,
+        "disposed": false,
+        "distanceTraveled": 13287.041658018623,
+        "crossings": 317596,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              0.36998106232082034,
+              1.2350877426112636,
+              0.1625967148447809
+            ],
+            "face": 567,
+            "crossings": 87,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.29223193094944805,
+              1.2545978491488727,
+              0.17368372940798033
+            ],
+            "face": 562,
+            "crossings": 73,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.2772705049765001,
+              1.2338903315201544,
+              0.29929490950182863
+            ],
+            "face": 557,
+            "crossings": 50,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.35987944660798504,
+              1.2066115901507315,
+              0.3210580433564754
+            ],
+            "face": 703,
+            "crossings": 69,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.4502676293319759,
+              1.2075491540072745,
+              0.1665943901060759
+            ],
+            "face": 710,
+            "crossings": 91,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.41100733476893087,
+              1.230265778747985,
+              0.08400450759963486
+            ],
+            "face": 714,
+            "crossings": 98,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.36830365784138486,
+              1.2447717800745857,
+              0.053588407368162796
+            ],
+            "face": 573,
+            "crossings": 106,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.30530888633954206,
+              1.2609676547117545,
+              0.07169530105600426
+            ],
+            "face": 427,
+            "crossings": 102,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.2475063493797614,
+              1.2701025407149167,
+              0.11891446773191719
+            ],
+            "face": 420,
+            "crossings": 96,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.2222552955373795,
+              1.2639624092262631,
+              0.20262899283207492
+            ],
+            "face": 415,
+            "crossings": 71,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.2022138726196425,
+              1.2557625140120128,
+              0.2682183920282496
+            ],
+            "face": 411,
+            "crossings": 58,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.228449888640107,
+              1.2416202130698144,
+              0.3068688028822561
+            ],
+            "face": 555,
+            "crossings": 41,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              0.36998106232082034,
+              1.2350877426112636,
+              0.1625967148447809
+            ],
+            "face": 567,
+            "crossings": 87,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.29223193094944805,
+              1.2545978491488727,
+              0.17368372940798033
+            ],
+            "face": 562,
+            "crossings": 73,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.2772705049765001,
+              1.2338903315201544,
+              0.29929490950182863
+            ],
+            "face": 557,
+            "crossings": 50,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.35987944660798504,
+              1.2066115901507315,
+              0.3210580433564754
+            ],
+            "face": 703,
+            "crossings": 69,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.4502676293319759,
+              1.2075491540072745,
+              0.1665943901060759
+            ],
+            "face": 710,
+            "crossings": 91,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.41100733476893087,
+              1.230265778747985,
+              0.08400450759963486
+            ],
+            "face": 714,
+            "crossings": 98,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.36830365784138486,
+              1.2447717800745857,
+              0.053588407368162796
+            ],
+            "face": 573,
+            "crossings": 106,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.30530888633954206,
+              1.2609676547117545,
+              0.07169530105600426
+            ],
+            "face": 427,
+            "crossings": 102,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.2475063493797614,
+              1.2701025407149167,
+              0.11891446773191719
+            ],
+            "face": 420,
+            "crossings": 96,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.2222552955373795,
+              1.2639624092262631,
+              0.20262899283207492
+            ],
+            "face": 415,
+            "crossings": 71,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.2022138726196425,
+              1.2557625140120128,
+              0.2682183920282496
+            ],
+            "face": 411,
+            "crossings": 58,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.228449888640107,
+              1.2416202130698144,
+              0.3068688028822561
+            ],
+            "face": 555,
+            "crossings": 41,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "sphere",
+      "requestedTime": 120,
+      "elapsedWallMs": 4628,
+      "simulatedSinceStart": 119.99999999999446,
+      "spec": {
+        "object": "sphere",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 120.12820399999445,
+      "paused": true,
+      "loaded": "",
+      "vertices": 3575,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 66,
+      "renderer": {
+        "frame": 7266,
+        "calls": 2,
+        "triangles": 14960,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 21.2123280739941,
+        "glyphSize": 0.11053642372820192,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 90.08865300001192,
+        "animationTime": 120.12820399999445,
+        "disposed": false,
+        "distanceTraveled": 53217.89718617266,
+        "crossings": 1274682,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              0.32026461103768145,
+              1.2089921079120824,
+              -0.3520359521741785
+            ],
+            "face": 739,
+            "crossings": 361,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.38321303314646743,
+              1.1597473658327664,
+              -0.44365597947896196
+            ],
+            "face": 1026,
+            "crossings": 343,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.36511095297571255,
+              1.09822940636836,
+              -0.589945903771429
+            ],
+            "face": 1174,
+            "crossings": 313,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.3163308747994661,
+              1.1390931546449647,
+              -0.5390528405098483
+            ],
+            "face": 1030,
+            "crossings": 332,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.2414095793549797,
+              1.2583492444717361,
+              -0.21732525905132818
+            ],
+            "face": 449,
+            "crossings": 366,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.29204715340607196,
+              1.243424193471195,
+              -0.23800624556411015
+            ],
+            "face": 590,
+            "crossings": 378,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.3350569541444014,
+              1.2317167738235792,
+              -0.24529224051138204
+            ],
+            "face": 591,
+            "crossings": 388,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.37424328233762083,
+              1.1999520344570904,
+              -0.3308221537764902
+            ],
+            "face": 880,
+            "crossings": 383,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.4282948617990445,
+              1.1300924927603146,
+              -0.4775248253084596
+            ],
+            "face": 1027,
+            "crossings": 375,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.4229009555208495,
+              1.0940949366726767,
+              -0.5582959195280555
+            ],
+            "face": 1173,
+            "crossings": 339,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.43843948838151797,
+              1.0285038240036648,
+              -0.6622540543535277
+            ],
+            "face": 1462,
+            "crossings": 321,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.41454352088813534,
+              1.0450274897032457,
+              -0.6507616356057982
+            ],
+            "face": 1319,
+            "crossings": 303,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              0.32026461103768145,
+              1.2089921079120824,
+              -0.3520359521741785
+            ],
+            "face": 739,
+            "crossings": 361,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.38321303314646743,
+              1.1597473658327664,
+              -0.44365597947896196
+            ],
+            "face": 1026,
+            "crossings": 343,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.36511095297571255,
+              1.09822940636836,
+              -0.589945903771429
+            ],
+            "face": 1174,
+            "crossings": 313,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.3163308747994661,
+              1.1390931546449647,
+              -0.5390528405098483
+            ],
+            "face": 1030,
+            "crossings": 332,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.2414095793549797,
+              1.2583492444717361,
+              -0.21732525905132818
+            ],
+            "face": 449,
+            "crossings": 366,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.29204715340607196,
+              1.243424193471195,
+              -0.23800624556411015
+            ],
+            "face": 590,
+            "crossings": 378,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.3350569541444014,
+              1.2317167738235792,
+              -0.24529224051138204
+            ],
+            "face": 591,
+            "crossings": 388,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.37424328233762083,
+              1.1999520344570904,
+              -0.3308221537764902
+            ],
+            "face": 880,
+            "crossings": 383,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.4282948617990445,
+              1.1300924927603146,
+              -0.4775248253084596
+            ],
+            "face": 1027,
+            "crossings": 375,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.4229009555208495,
+              1.0940949366726767,
+              -0.5582959195280555
+            ],
+            "face": 1173,
+            "crossings": 339,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.43843948838151797,
+              1.0285038240036648,
+              -0.6622540543535277
+            ],
+            "face": 1462,
+            "crossings": 321,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.41454352088813534,
+              1.0450274897032457,
+              -0.6507616356057982
+            ],
+            "face": 1319,
+            "crossings": 303,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "sphere",
+      "requestedTime": 300,
+      "elapsedWallMs": 11495,
+      "simulatedSinceStart": 300.00000000005576,
+      "spec": {
+        "object": "sphere",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 300.12820400005575,
+      "paused": true,
+      "loaded": "",
+      "vertices": 3575,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 143,
+      "renderer": {
+        "frame": 18143,
+        "calls": 2,
+        "triangles": 14960,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 21.2123280739941,
+        "glyphSize": 0.11053642372820192,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 225.08865299993224,
+        "animationTime": 300.12820400005575,
+        "disposed": false,
+        "distanceTraveled": 133221.39511719727,
+        "crossings": 3195362,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              -0.6109968898473034,
+              0.22864018671555,
+              -1.1226471348707336
+            ],
+            "face": 3070,
+            "crossings": 874,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.3960060090789382,
+              0.13500028317628981,
+              -1.2288584181330229
+            ],
+            "face": 3210,
+            "crossings": 805,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.04157150158010596,
+              -0.02969690585915316,
+              -1.2972127490971386
+            ],
+            "face": 3492,
+            "crossings": 789,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.356589022770944,
+              0.032331127966767424,
+              -1.2482497115618023
+            ],
+            "face": 3355,
+            "crossings": 799,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.6939157927070274,
+              0.43215763662909124,
+              -1.0097624600226462
+            ],
+            "face": 2640,
+            "crossings": 937,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.6524776552667747,
+              0.4143000369175259,
+              -1.043814074760959
+            ],
+            "face": 2784,
+            "crossings": 933,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.6069632832045497,
+              0.2823138284234595,
+              -1.1125660982275638
+            ],
+            "face": 2926,
+            "crossings": 915,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.5469506419021958,
+              0.2225200889919734,
+              -1.1571255866896402
+            ],
+            "face": 3071,
+            "crossings": 850,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -0.06936715346033842,
+              0.01076493996009488,
+              -1.2966189618055863
+            ],
+            "face": 3349,
+            "crossings": 845,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.15628576522130938,
+              -0.06010851857129561,
+              -1.2874114186491286
+            ],
+            "face": 3489,
+            "crossings": 815,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.6310700479892675,
+              -0.08179284255452086,
+              -1.1326715023409077
+            ],
+            "face": 3481,
+            "crossings": 802,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.5050138213216508,
+              -0.08704806720440623,
+              -1.1933616110190193
+            ],
+            "face": 3626,
+            "crossings": 784,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              -0.6109968898473034,
+              0.22864018671555,
+              -1.1226471348707336
+            ],
+            "face": 3070,
+            "crossings": 874,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.3960060090789382,
+              0.13500028317628981,
+              -1.2288584181330229
+            ],
+            "face": 3210,
+            "crossings": 805,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.04157150158010596,
+              -0.02969690585915316,
+              -1.2972127490971386
+            ],
+            "face": 3492,
+            "crossings": 789,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.356589022770944,
+              0.032331127966767424,
+              -1.2482497115618023
+            ],
+            "face": 3355,
+            "crossings": 799,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.6939157927070274,
+              0.43215763662909124,
+              -1.0097624600226462
+            ],
+            "face": 2640,
+            "crossings": 937,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.6524776552667747,
+              0.4143000369175259,
+              -1.043814074760959
+            ],
+            "face": 2784,
+            "crossings": 933,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.6069632832045497,
+              0.2823138284234595,
+              -1.1125660982275638
+            ],
+            "face": 2926,
+            "crossings": 915,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.5469506419021958,
+              0.2225200889919734,
+              -1.1571255866896402
+            ],
+            "face": 3071,
+            "crossings": 850,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -0.06936715346033842,
+              0.01076493996009488,
+              -1.2966189618055863
+            ],
+            "face": 3349,
+            "crossings": 845,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.15628576522130938,
+              -0.06010851857129561,
+              -1.2874114186491286
+            ],
+            "face": 3489,
+            "crossings": 815,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.6310700479892675,
+              -0.08179284255452086,
+              -1.1326715023409077
+            ],
+            "face": 3481,
+            "crossings": 802,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.5050138213216508,
+              -0.08704806720440623,
+              -1.1933616110190193
+            ],
+            "face": 3626,
+            "crossings": 784,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "vase",
+      "requestedTime": 0,
+      "elapsedWallMs": 4,
+      "simulatedSinceStart": 0,
+      "spec": {
+        "object": "vase",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 300.12820400005575,
+      "paused": true,
+      "loaded": "",
+      "vertices": 13140,
+      "bounds": {
+        "min": [
+          -0.9519685506820679,
+          -1.2999999523162842,
+          -0.9519685506820679
+        ],
+        "max": [
+          0.9519685506820679,
+          1.2999999523162842,
+          0.9519685506820679
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 150,
+      "renderer": {
+        "frame": 18150,
+        "calls": 2,
+        "triangles": 33824,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 24.403948542310403,
+        "glyphSize": 0.11856084665845969,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 225.08865299993224,
+        "animationTime": 300.12820400005575,
+        "disposed": false,
+        "distanceTraveled": 0,
+        "crossings": 0,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              0.011887720784643676,
+              -1.2999999523162842,
+              0.26579191973868316
+            ],
+            "face": 12,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.0113424462162786,
+              -1.2999999523162842,
+              0.47085212584998876
+            ],
+            "face": 22,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.0389527015681717,
+              -1.2576551956984106,
+              0.5687416683308334
+            ],
+            "face": 28,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.00535000140726992,
+              -1.18935904691516,
+              0.6647724867146604
+            ],
+            "face": 34,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.005373799276572686,
+              -1.108342562376717,
+              0.7269524809570961
+            ],
+            "face": 39,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.05507353993852138,
+              -1.0373063447291508,
+              0.7625205335406017
+            ],
+            "face": 44,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.0014119899412312377,
+              -0.9442072931063884,
+              0.8143223672514142
+            ],
+            "face": 49,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.07028913552320669,
+              -0.8732697821043786,
+              0.8490006300483453
+            ],
+            "face": 54,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.032758833674851974,
+              -0.8096548548593976,
+              0.8739312046296958
+            ],
+            "face": 58,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.0773111679439474,
+              -0.7317055975631789,
+              0.8858436418718458
+            ],
+            "face": 62,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.021182302335551892,
+              -0.6475569499974542,
+              0.9032540269261577
+            ],
+            "face": 66,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.07095041991659098,
+              -0.5722170406317815,
+              0.914474866820278
+            ],
+            "face": 70,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              0.011887720784643676,
+              -1.2999999523162842,
+              0.26579191973868316
+            ],
+            "face": 12,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.0113424462162786,
+              -1.2999999523162842,
+              0.47085212584998876
+            ],
+            "face": 22,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.0389527015681717,
+              -1.2576551956984106,
+              0.5687416683308334
+            ],
+            "face": 28,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.00535000140726992,
+              -1.18935904691516,
+              0.6647724867146604
+            ],
+            "face": 34,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.005373799276572686,
+              -1.108342562376717,
+              0.7269524809570961
+            ],
+            "face": 39,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.05507353993852138,
+              -1.0373063447291508,
+              0.7625205335406017
+            ],
+            "face": 44,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.0014119899412312377,
+              -0.9442072931063884,
+              0.8143223672514142
+            ],
+            "face": 49,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.07028913552320669,
+              -0.8732697821043786,
+              0.8490006300483453
+            ],
+            "face": 54,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.032758833674851974,
+              -0.8096548548593976,
+              0.8739312046296958
+            ],
+            "face": 58,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.0773111679439474,
+              -0.7317055975631789,
+              0.8858436418718458
+            ],
+            "face": 62,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.021182302335551892,
+              -0.6475569499974542,
+              0.9032540269261577
+            ],
+            "face": 66,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.07095041991659098,
+              -0.5722170406317815,
+              0.914474866820278
+            ],
+            "face": 70,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "vase",
+      "requestedTime": 30,
+      "elapsedWallMs": 1546,
+      "simulatedSinceStart": 29.999999999972715,
+      "spec": {
+        "object": "vase",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 330.12820400002846,
+      "paused": true,
+      "loaded": "",
+      "vertices": 13140,
+      "bounds": {
+        "min": [
+          -0.9519685506820679,
+          -1.2999999523162842,
+          -0.9519685506820679
+        ],
+        "max": [
+          0.9519685506820679,
+          1.2999999523162842,
+          0.9519685506820679
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 165,
+      "renderer": {
+        "frame": 19965,
+        "calls": 2,
+        "triangles": 33824,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 24.403948542310403,
+        "glyphSize": 0.11856084665845969,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 247.58865299991177,
+        "animationTime": 330.12820400002846,
+        "disposed": false,
+        "distanceTraveled": 14174.277598646355,
+        "crossings": 570514,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              -0.10286377724929414,
+              -1.297133767863583,
+              0.5049953053181465
+            ],
+            "face": 24589,
+            "crossings": 33,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.6883583564538462,
+              -1.1703478982219597,
+              0.06283763582718599
+            ],
+            "face": 19615,
+            "crossings": 47,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.47840216068545877,
+              -1.2236291064899998,
+              -0.3900140791205167
+            ],
+            "face": 16407,
+            "crossings": 61,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.32164224803809616,
+              -1.2999999523162842,
+              -0.2630962272776624
+            ],
+            "face": 16395,
+            "crossings": 73,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.12958665115070475,
+              -1.2999999523162842,
+              -0.4563688227337555
+            ],
+            "face": 13907,
+            "crossings": 84,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.2891670172752477,
+              -1.2766245268636616,
+              -0.4603910193329885
+            ],
+            "face": 10351,
+            "crossings": 105,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.3365133563089599,
+              -1.1988075366548068,
+              -0.5578603124556581
+            ],
+            "face": 10358,
+            "crossings": 103,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.3013383507542965,
+              -1.0905751464703306,
+              -0.6717409913843668
+            ],
+            "face": 11077,
+            "crossings": 99,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.4093820136580098,
+              -1.0619904528409057,
+              -0.6297613329010583
+            ],
+            "face": 10367,
+            "crossings": 103,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.45746050396302873,
+              -0.9924316213228537,
+              -0.642248220802994
+            ],
+            "face": 10016,
+            "crossings": 106,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.5187173355363234,
+              -0.9315205492558961,
+              -0.6359930111593829
+            ],
+            "face": 10019,
+            "crossings": 107,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.5538447702256378,
+              -0.8415861263118464,
+              -0.6692038969736855
+            ],
+            "face": 10024,
+            "crossings": 108,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              -0.10286377724929414,
+              -1.297133767863583,
+              0.5049953053181465
+            ],
+            "face": 24589,
+            "crossings": 33,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.6883583564538462,
+              -1.1703478982219597,
+              0.06283763582718599
+            ],
+            "face": 19615,
+            "crossings": 47,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.47840216068545877,
+              -1.2236291064899998,
+              -0.3900140791205167
+            ],
+            "face": 16407,
+            "crossings": 61,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.32164224803809616,
+              -1.2999999523162842,
+              -0.2630962272776624
+            ],
+            "face": 16395,
+            "crossings": 73,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.12958665115070475,
+              -1.2999999523162842,
+              -0.4563688227337555
+            ],
+            "face": 13907,
+            "crossings": 84,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.2891670172752477,
+              -1.2766245268636616,
+              -0.4603910193329885
+            ],
+            "face": 10351,
+            "crossings": 105,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.3365133563089599,
+              -1.1988075366548068,
+              -0.5578603124556581
+            ],
+            "face": 10358,
+            "crossings": 103,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.3013383507542965,
+              -1.0905751464703306,
+              -0.6717409913843668
+            ],
+            "face": 11077,
+            "crossings": 99,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.4093820136580098,
+              -1.0619904528409057,
+              -0.6297613329010583
+            ],
+            "face": 10367,
+            "crossings": 103,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.45746050396302873,
+              -0.9924316213228537,
+              -0.642248220802994
+            ],
+            "face": 10016,
+            "crossings": 106,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.5187173355363234,
+              -0.9315205492558961,
+              -0.6359930111593829
+            ],
+            "face": 10019,
+            "crossings": 107,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.5538447702256378,
+              -0.8415861263118464,
+              -0.6692038969736855
+            ],
+            "face": 10024,
+            "crossings": 108,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "vase",
+      "requestedTime": 120,
+      "elapsedWallMs": 6233,
+      "simulatedSinceStart": 119.99999999989086,
+      "spec": {
+        "object": "vase",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 420.1282039999466,
+      "paused": true,
+      "loaded": "",
+      "vertices": 13140,
+      "bounds": {
+        "min": [
+          -0.9519685506820679,
+          -1.2999999523162842,
+          -0.9519685506820679
+        ],
+        "max": [
+          0.9519685506820679,
+          1.2999999523162842,
+          0.9519685506820679
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 205,
+      "renderer": {
+        "frame": 25405,
+        "calls": 2,
+        "triangles": 33824,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 24.403948542310403,
+        "glyphSize": 0.11856084665845969,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 315.0886529998504,
+        "animationTime": 420.1282039999466,
+        "disposed": false,
+        "distanceTraveled": 56381.03614615958,
+        "crossings": 2250058,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              -0.4237508506127962,
+              -1.299336771505246,
+              0.2882068643316978
+            ],
+            "face": 21385,
+            "crossings": 193,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.9373012531629459,
+              -0.45257274404878817,
+              0.03530512508886706
+            ],
+            "face": 19301,
+            "crossings": 357,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.8844013464743932,
+              -0.6629225249501542,
+              -0.1716494389982461
+            ],
+            "face": 18222,
+            "crossings": 356,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.7918269407826114,
+              -0.6060420709696865,
+              0.45118191873193053
+            ],
+            "face": 21074,
+            "crossings": 348,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.805379593373062,
+              -0.7913968565707313,
+              -0.3493680094868805
+            ],
+            "face": 17503,
+            "crossings": 366,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.4801072875868441,
+              -0.9744409554366141,
+              0.6369062737974446
+            ],
+            "face": 22832,
+            "crossings": 350,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.17146268726415467,
+              -1.0369886602005713,
+              -0.7449117587740519
+            ],
+            "face": 13572,
+            "crossings": 397,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.17375451047606266,
+              -1.2126030186188566,
+              -0.6081163891065138
+            ],
+            "face": 13916,
+            "crossings": 402,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -0.7724690515295627,
+              -1.003045372454709,
+              -0.12656778961983778
+            ],
+            "face": 18559,
+            "crossings": 375,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -0.6613528672551281,
+              -1.1641582900666925,
+              -0.21990821419447104
+            ],
+            "face": 17837,
+            "crossings": 385,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -0.6505435670025772,
+              -1.0447997302500263,
+              -0.39374140604828395
+            ],
+            "face": 16776,
+            "crossings": 396,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -0.4280917822281008,
+              -1.2022903225587585,
+              0.48458124092608956
+            ],
+            "face": 22462,
+            "crossings": 370,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              -0.4237508506127962,
+              -1.299336771505246,
+              0.2882068643316978
+            ],
+            "face": 21385,
+            "crossings": 193,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.9373012531629459,
+              -0.45257274404878817,
+              0.03530512508886706
+            ],
+            "face": 19301,
+            "crossings": 357,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.8844013464743932,
+              -0.6629225249501542,
+              -0.1716494389982461
+            ],
+            "face": 18222,
+            "crossings": 356,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.7918269407826114,
+              -0.6060420709696865,
+              0.45118191873193053
+            ],
+            "face": 21074,
+            "crossings": 348,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.805379593373062,
+              -0.7913968565707313,
+              -0.3493680094868805
+            ],
+            "face": 17503,
+            "crossings": 366,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.4801072875868441,
+              -0.9744409554366141,
+              0.6369062737974446
+            ],
+            "face": 22832,
+            "crossings": 350,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.17146268726415467,
+              -1.0369886602005713,
+              -0.7449117587740519
+            ],
+            "face": 13572,
+            "crossings": 397,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.17375451047606266,
+              -1.2126030186188566,
+              -0.6081163891065138
+            ],
+            "face": 13916,
+            "crossings": 402,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -0.7724690515295627,
+              -1.003045372454709,
+              -0.12656778961983778
+            ],
+            "face": 18559,
+            "crossings": 375,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -0.6613528672551281,
+              -1.1641582900666925,
+              -0.21990821419447104
+            ],
+            "face": 17837,
+            "crossings": 385,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -0.6505435670025772,
+              -1.0447997302500263,
+              -0.39374140604828395
+            ],
+            "face": 16776,
+            "crossings": 396,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -0.4280917822281008,
+              -1.2022903225587585,
+              0.48458124092608956
+            ],
+            "face": 22462,
+            "crossings": 370,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "vase",
+      "requestedTime": 300,
+      "elapsedWallMs": 15940,
+      "simulatedSinceStart": 299.9999999997272,
+      "spec": {
+        "object": "vase",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 600.128203999783,
+      "paused": true,
+      "loaded": "",
+      "vertices": 13140,
+      "bounds": {
+        "min": [
+          -0.9519685506820679,
+          -1.2999999523162842,
+          -0.9519685506820679
+        ],
+        "max": [
+          0.9519685506820679,
+          1.2999999523162842,
+          0.9519685506820679
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 282,
+      "renderer": {
+        "frame": 36282,
+        "calls": 2,
+        "triangles": 33824,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 24.403948542310403,
+        "glyphSize": 0.11856084665845969,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 450.0886529997276,
+        "animationTime": 600.128203999783,
+        "disposed": false,
+        "distanceTraveled": 141066.769670322,
+        "crossings": 5621496,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              -0.6175605585655843,
+              -0.5313141023948755,
+              -0.6873209186800465
+            ],
+            "face": 15737,
+            "crossings": 749,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.5344655615555427,
+              0.5644022157399768,
+              -0.025423469176421302
+            ],
+            "face": 6546,
+            "crossings": 1092,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.6371294383147942,
+              0.46357032827741684,
+              -0.059150847159695076
+            ],
+            "face": 6895,
+            "crossings": 1077,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.05772110750918582,
+              0.4718109750627871,
+              -0.6287172763518669
+            ],
+            "face": 12236,
+            "crossings": 1058,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.6217749577539979,
+              0.24082674889700212,
+              -0.49478879365538936
+            ],
+            "face": 9016,
+            "crossings": 1075,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.5941023977587783,
+              -0.1253460264007205,
+              -0.7056453855664445
+            ],
+            "face": 15757,
+            "crossings": 1033,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.8233501370100279,
+              -0.8755870189395076,
+              -0.21343240307287334
+            ],
+            "face": 7174,
+            "crossings": 1075,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.48398118051510924,
+              -1.136487990764992,
+              -0.5216273518026602
+            ],
+            "face": 9650,
+            "crossings": 1060,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.43543218956487223,
+              0.09231778850813488,
+              -0.7674206122195575
+            ],
+            "face": 10786,
+            "crossings": 1066,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.6449049740723003,
+              -0.20029108954482774,
+              -0.670902066591259
+            ],
+            "face": 9702,
+            "crossings": 1066,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.6381121440532412,
+              -0.06694553476433826,
+              -0.6561160246879418
+            ],
+            "face": 9709,
+            "crossings": 1077,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -0.40951535488014135,
+              -0.14105268560614084,
+              -0.8279014027821259
+            ],
+            "face": 14689,
+            "crossings": 1047,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              -0.6175605585655843,
+              -0.5313141023948755,
+              -0.6873209186800465
+            ],
+            "face": 15737,
+            "crossings": 749,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.5344655615555427,
+              0.5644022157399768,
+              -0.025423469176421302
+            ],
+            "face": 6546,
+            "crossings": 1092,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.6371294383147942,
+              0.46357032827741684,
+              -0.059150847159695076
+            ],
+            "face": 6895,
+            "crossings": 1077,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.05772110750918582,
+              0.4718109750627871,
+              -0.6287172763518669
+            ],
+            "face": 12236,
+            "crossings": 1058,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.6217749577539979,
+              0.24082674889700212,
+              -0.49478879365538936
+            ],
+            "face": 9016,
+            "crossings": 1075,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.5941023977587783,
+              -0.1253460264007205,
+              -0.7056453855664445
+            ],
+            "face": 15757,
+            "crossings": 1033,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.8233501370100279,
+              -0.8755870189395076,
+              -0.21343240307287334
+            ],
+            "face": 7174,
+            "crossings": 1075,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.48398118051510924,
+              -1.136487990764992,
+              -0.5216273518026602
+            ],
+            "face": 9650,
+            "crossings": 1060,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.43543218956487223,
+              0.09231778850813488,
+              -0.7674206122195575
+            ],
+            "face": 10786,
+            "crossings": 1066,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.6449049740723003,
+              -0.20029108954482774,
+              -0.670902066591259
+            ],
+            "face": 9702,
+            "crossings": 1066,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.6381121440532412,
+              -0.06694553476433826,
+              -0.6561160246879418
+            ],
+            "face": 9709,
+            "crossings": 1077,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -0.40951535488014135,
+              -0.14105268560614084,
+              -0.8279014027821259
+            ],
+            "face": 14689,
+            "crossings": 1047,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "cube",
+      "requestedTime": 0,
+      "elapsedWallMs": 3,
+      "simulatedSinceStart": 0,
+      "spec": {
+        "object": "cube",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 600.128203999783,
+      "paused": true,
+      "loaded": "",
+      "vertices": 5046,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 289,
+      "renderer": {
+        "frame": 36289,
+        "calls": 2,
+        "triangles": 17600,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 40.559997024537566,
+        "glyphSize": 0.15284815434323581,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 450.0886529997276,
+        "animationTime": 600.128203999783,
+        "disposed": false,
+        "distanceTraveled": 0,
+        "crossings": 0,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              1.2999999523162842,
+              1.2290294635435348,
+              1.2343400513707385
+            ],
+            "face": 1,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2304524467561317,
+              1.1172343077164442
+            ],
+            "face": 3,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2824442735956998,
+              1.0258883605207825
+            ],
+            "face": 5,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2734995011251244,
+              0.8835206666883328
+            ],
+            "face": 8,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.291975262724323,
+              0.7624889880786707
+            ],
+            "face": 10,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2776160847145464,
+              0.6745863181759785
+            ],
+            "face": 12,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2981206162921453,
+              0.5757662032046525
+            ],
+            "face": 14,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.21282979409381,
+              0.46501403371647265
+            ],
+            "face": 17,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2900811365690419,
+              0.3770389131763082
+            ],
+            "face": 19,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2247938084889631,
+              0.28732683056388436
+            ],
+            "face": 21,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2728446503492945,
+              0.13038534846998312
+            ],
+            "face": 24,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2833845200013503,
+              0.01771005780536608
+            ],
+            "face": 26,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              1.2999999523162842,
+              1.2290294635435348,
+              1.2343400513707385
+            ],
+            "face": 1,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2304524467561317,
+              1.1172343077164442
+            ],
+            "face": 3,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2824442735956998,
+              1.0258883605207825
+            ],
+            "face": 5,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2734995011251244,
+              0.8835206666883328
+            ],
+            "face": 8,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.291975262724323,
+              0.7624889880786707
+            ],
+            "face": 10,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2776160847145464,
+              0.6745863181759785
+            ],
+            "face": 12,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2981206162921453,
+              0.5757662032046525
+            ],
+            "face": 14,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.21282979409381,
+              0.46501403371647265
+            ],
+            "face": 17,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2900811365690419,
+              0.3770389131763082
+            ],
+            "face": 19,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2247938084889631,
+              0.28732683056388436
+            ],
+            "face": 21,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2728446503492945,
+              0.13038534846998312
+            ],
+            "face": 24,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2833845200013503,
+              0.01771005780536608
+            ],
+            "face": 26,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "cube",
+      "requestedTime": 30,
+      "elapsedWallMs": 1330,
+      "simulatedSinceStart": 29.999999999972715,
+      "spec": {
+        "object": "cube",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 630.1282039997557,
+      "paused": true,
+      "loaded": "",
+      "vertices": 5046,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 306,
+      "renderer": {
+        "frame": 38106,
+        "calls": 2,
+        "triangles": 17600,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 40.559997024537566,
+        "glyphSize": 0.15284815434323581,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 472.58865299970716,
+        "animationTime": 630.1282039997557,
+        "disposed": false,
+        "distanceTraveled": 11998.665058816669,
+        "crossings": 272058,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              -0.24194843537518168,
+              1.234502997580422,
+              1.2999999523162842
+            ],
+            "face": 6295,
+            "crossings": 40,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.686546352576868,
+              1.2099789909075471,
+              1.2999999523162842
+            ],
+            "face": 6285,
+            "crossings": 52,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.24263365216773694,
+              1.2201608675981905,
+              1.2999999523162842
+            ],
+            "face": 6295,
+            "crossings": 42,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -1.1786137269021228,
+              1.212482120001196,
+              1.2999999523162842
+            ],
+            "face": 6275,
+            "crossings": 67,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -1.250314144117895,
+              1.2999999523162842,
+              1.0997279197460954
+            ],
+            "face": 4537,
+            "crossings": 80,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -1.011043013205714,
+              1.2999999523162842,
+              1.0694676204774376
+            ],
+            "face": 4542,
+            "crossings": 83,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -1.0283991063169762,
+              1.2999999523162842,
+              1.0063550511132466
+            ],
+            "face": 4485,
+            "crossings": 86,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -1.2015684250485335,
+              1.2999999523162842,
+              0.5397656772006568
+            ],
+            "face": 4202,
+            "crossings": 100,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -1.1501753058601103,
+              1.2999999523162842,
+              0.7415357990031631
+            ],
+            "face": 4315,
+            "crossings": 97,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -1.2833091501799108,
+              1.2999999523162842,
+              0.3940170401966262
+            ],
+            "face": 4144,
+            "crossings": 104,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              1.2936210812635007,
+              0.473668249423217
+            ],
+            "face": 1606,
+            "crossings": 102,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              1.2500771918709885,
+              0.6014428499823778
+            ],
+            "face": 1609,
+            "crossings": 101,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              -0.24194843537518168,
+              1.234502997580422,
+              1.2999999523162842
+            ],
+            "face": 6295,
+            "crossings": 40,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.686546352576868,
+              1.2099789909075471,
+              1.2999999523162842
+            ],
+            "face": 6285,
+            "crossings": 52,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.24263365216773694,
+              1.2201608675981905,
+              1.2999999523162842
+            ],
+            "face": 6295,
+            "crossings": 42,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -1.1786137269021228,
+              1.212482120001196,
+              1.2999999523162842
+            ],
+            "face": 6275,
+            "crossings": 67,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -1.250314144117895,
+              1.2999999523162842,
+              1.0997279197460954
+            ],
+            "face": 4537,
+            "crossings": 80,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -1.011043013205714,
+              1.2999999523162842,
+              1.0694676204774376
+            ],
+            "face": 4542,
+            "crossings": 83,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -1.0283991063169762,
+              1.2999999523162842,
+              1.0063550511132466
+            ],
+            "face": 4485,
+            "crossings": 86,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -1.2015684250485335,
+              1.2999999523162842,
+              0.5397656772006568
+            ],
+            "face": 4202,
+            "crossings": 100,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -1.1501753058601103,
+              1.2999999523162842,
+              0.7415357990031631
+            ],
+            "face": 4315,
+            "crossings": 97,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -1.2833091501799108,
+              1.2999999523162842,
+              0.3940170401966262
+            ],
+            "face": 4144,
+            "crossings": 104,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              1.2936210812635007,
+              0.473668249423217
+            ],
+            "face": 1606,
+            "crossings": 102,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              1.2500771918709885,
+              0.6014428499823778
+            ],
+            "face": 1609,
+            "crossings": 101,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "cube",
+      "requestedTime": 120,
+      "elapsedWallMs": 5217,
+      "simulatedSinceStart": 119.99999999989086,
+      "spec": {
+        "object": "cube",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 720.1282039996738,
+      "paused": true,
+      "loaded": "",
+      "vertices": 5046,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 349,
+      "renderer": {
+        "frame": 43549,
+        "calls": 2,
+        "triangles": 17600,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 40.559997024537566,
+        "glyphSize": 0.15284815434323581,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 540.0886529997736,
+        "animationTime": 720.1282039996738,
+        "disposed": false,
+        "distanceTraveled": 47888.63270294789,
+        "crossings": 1087800,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              1.2965440100251546,
+              1.2999999523162842,
+              0.6552586299012677
+            ],
+            "face": 4367,
+            "crossings": 238,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              0.9867079698923826,
+              1.0682243887424583
+            ],
+            "face": 172,
+            "crossings": 255,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              1.252728250310062,
+              1.2999999523162842,
+              0.9274927422958419
+            ],
+            "face": 4479,
+            "crossings": 242,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              0.9191334834130905,
+              0.35591308767676816
+            ],
+            "face": 244,
+            "crossings": 234,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.9943924509303599,
+              1.2999999523162842,
+              1.0116300706170442
+            ],
+            "face": 4529,
+            "crossings": 263,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              1.1751740652512568,
+              1.0318742731105814,
+              1.2999999523162842
+            ],
+            "face": 6437,
+            "crossings": 275,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              1.0795584754949585,
+              1.1049238073058039,
+              1.2999999523162842
+            ],
+            "face": 6434,
+            "crossings": 280,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              1.1163404362388587,
+              1.2999999523162842,
+              0.6646374884907386
+            ],
+            "face": 4364,
+            "crossings": 261,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.1860057601321552,
+              0.17207226685447674
+            ],
+            "face": 80,
+            "crossings": 259,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              1.134285340338908,
+              1.2769679984388533,
+              1.2999999523162842
+            ],
+            "face": 6324,
+            "crossings": 279,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              1.212909077174908,
+              1.2999999523162842,
+              1.1901825891743363
+            ],
+            "face": 4646,
+            "crossings": 274,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.0059381523393296,
+              1.2174029396318968
+            ],
+            "face": 169,
+            "crossings": 271,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              1.2965440100251546,
+              1.2999999523162842,
+              0.6552586299012677
+            ],
+            "face": 4367,
+            "crossings": 238,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              0.9867079698923826,
+              1.0682243887424583
+            ],
+            "face": 172,
+            "crossings": 255,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              1.252728250310062,
+              1.2999999523162842,
+              0.9274927422958419
+            ],
+            "face": 4479,
+            "crossings": 242,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              0.9191334834130905,
+              0.35591308767676816
+            ],
+            "face": 244,
+            "crossings": 234,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.9943924509303599,
+              1.2999999523162842,
+              1.0116300706170442
+            ],
+            "face": 4529,
+            "crossings": 263,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              1.1751740652512568,
+              1.0318742731105814,
+              1.2999999523162842
+            ],
+            "face": 6437,
+            "crossings": 275,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              1.0795584754949585,
+              1.1049238073058039,
+              1.2999999523162842
+            ],
+            "face": 6434,
+            "crossings": 280,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              1.1163404362388587,
+              1.2999999523162842,
+              0.6646374884907386
+            ],
+            "face": 4364,
+            "crossings": 261,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.1860057601321552,
+              0.17207226685447674
+            ],
+            "face": 80,
+            "crossings": 259,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              1.134285340338908,
+              1.2769679984388533,
+              1.2999999523162842
+            ],
+            "face": 6324,
+            "crossings": 279,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              1.212909077174908,
+              1.2999999523162842,
+              1.1901825891743363
+            ],
+            "face": 4646,
+            "crossings": 274,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.0059381523393296,
+              1.2174029396318968
+            ],
+            "face": 169,
+            "crossings": 271,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "shape": "cube",
+      "requestedTime": 300,
+      "elapsedWallMs": 12721,
+      "simulatedSinceStart": 299.99999999972715,
+      "spec": {
+        "object": "cube",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "count": 44,
+      "time": 900.1282039995101,
+      "paused": true,
+      "loaded": "",
+      "vertices": 5046,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 427,
+      "renderer": {
+        "frame": 54427,
+        "calls": 2,
+        "triangles": 17600,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 40.559997024537566,
+        "glyphSize": 0.15284815434323581,
+        "letterCount": 44,
+        "uniqueCapacity": 4096,
+        "time": 675.0886530002647,
+        "animationTime": 900.1282039995101,
+        "disposed": false,
+        "distanceTraveled": 119834.886069243,
+        "crossings": 2720815,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              -0.8297889847474165,
+              1.2999999523162842,
+              0.9633069204980226
+            ],
+            "face": 4490,
+            "crossings": 602,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.8282779639904081,
+              0.5168122589921904
+            ],
+            "face": 1886,
+            "crossings": 813,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              1.0660343022607366,
+              1.2188559943384984,
+              -1.2999999523162842
+            ],
+            "face": 7845,
+            "crossings": 682,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.8625466053527098,
+              1.0675538739950081
+            ],
+            "face": 1843,
+            "crossings": 793,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              1.0906284730202727,
+              1.0944548255147917
+            ],
+            "face": 1731,
+            "crossings": 607,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.8131491896998327,
+              0.2494286216366514
+            ],
+            "face": 1880,
+            "crossings": 830,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.9201954701698108,
+              0.17953450875551918
+            ],
+            "face": 1823,
+            "crossings": 835,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              1.2681928813569605,
+              1.152674303126052,
+              1.2999999523162842
+            ],
+            "face": 6383,
+            "crossings": 552,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.0187702359250352,
+              0.7572288733576907
+            ],
+            "face": 178,
+            "crossings": 555,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              1.0489197439451226,
+              0.966444537878932
+            ],
+            "face": 1729,
+            "crossings": 612,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -1.1392052560651234,
+              1.2999999523162842,
+              0.90159829654286
+            ],
+            "face": 4427,
+            "crossings": 618,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.803508072571102,
+              0.4030390231339608
+            ],
+            "face": 1884,
+            "crossings": 830,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              -0.8297889847474165,
+              1.2999999523162842,
+              0.9633069204980226
+            ],
+            "face": 4490,
+            "crossings": 602,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.8282779639904081,
+              0.5168122589921904
+            ],
+            "face": 1886,
+            "crossings": 813,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              1.0660343022607366,
+              1.2188559943384984,
+              -1.2999999523162842
+            ],
+            "face": 7845,
+            "crossings": 682,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.8625466053527098,
+              1.0675538739950081
+            ],
+            "face": 1843,
+            "crossings": 793,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              1.0906284730202727,
+              1.0944548255147917
+            ],
+            "face": 1731,
+            "crossings": 607,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.8131491896998327,
+              0.2494286216366514
+            ],
+            "face": 1880,
+            "crossings": 830,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.9201954701698108,
+              0.17953450875551918
+            ],
+            "face": 1823,
+            "crossings": 835,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              1.2681928813569605,
+              1.152674303126052,
+              1.2999999523162842
+            ],
+            "face": 6383,
+            "crossings": 552,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.0187702359250352,
+              0.7572288733576907
+            ],
+            "face": 178,
+            "crossings": 555,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              1.0489197439451226,
+              0.966444537878932
+            ],
+            "face": 1729,
+            "crossings": 612,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -1.1392052560651234,
+              1.2999999523162842,
+              0.90159829654286
+            ],
+            "face": 4427,
+            "crossings": 618,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -1.2999999523162842,
+              0.803508072571102,
+              0.4030390231339608
+            ],
+            "face": 1884,
+            "crossings": 830,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0
+    },
+    {
+      "flowZero": {
+        "positionsKept": true,
+        "newInkSettled": true,
+        "added": true
+      }
+    }
+  ]
+}

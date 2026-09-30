@@ -1,0 +1,5035 @@
+{
+  "label": "check-v3",
+  "completed": true,
+  "checks": {
+    "initialSeed": true,
+    "enterOpens": true,
+    "firstShape": true,
+    "actionsAfterInput": true,
+    "noIntakeLeak": true,
+    "previousTextAndColorsKept": true,
+    "onlyNewBlue": true,
+    "appendDidNotReset": true,
+    "appendedCount": true,
+    "sameShapeKeepsFlow": true,
+    "importRetained": true,
+    "compositionGuard": true,
+    "compositionSentOnce": true,
+    "emptyRetained": true,
+    "pause": true,
+    "resume": true
+  },
+  "errors": [],
+  "external": [],
+  "hashes": {
+    "src/presence/main.ts": "2b7f8f6c14c3b5e07980efb21b92d91367bd486ae43c48d11bd017be226b7720",
+    "src/presence/layer.ts": "78933fd3bdb4a40b7fcf541a8fc7db386fc80e7b5547a39deb9da31b6218fb2c",
+    "src/scene.ts": "8bdf958d5670fcb34cb1fdf6946f5d4b5ac2aa88aa2c9bf13d74f05f3106ac1b"
+  },
+  "snapshots": [
+    {
+      "shape": "sphere",
+      "mode": "presence",
+      "spec": {
+        "object": "sphere",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        }
+      ],
+      "count": 40,
+      "time": 4.033303999999991,
+      "paused": true,
+      "loaded": "",
+      "vertices": 3575,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 23,
+      "renderer": {
+        "frame": 263,
+        "calls": 2,
+        "triangles": 14960,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 21.2123280739941,
+        "glyphSize": 0.11053642372820192,
+        "letterCount": 40,
+        "uniqueCapacity": 4096,
+        "time": 3.0249780000000097,
+        "animationTime": 4.033303999999991,
+        "disposed": false,
+        "distanceTraveled": 0,
+        "crossings": 0,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              -0.044874299274698215,
+              1.2980318630782195,
+              0.039934075743799334
+            ],
+            "face": 8,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.04273246299777902,
+              1.2973050351391062,
+              0.07029441410030463
+            ],
+            "face": 24,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.070579561434085,
+              1.2973503310907526,
+              -0.03954235112631681
+            ],
+            "face": 41,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.024839763994846695,
+              1.2972604880356426,
+              -0.0798307174549227
+            ],
+            "face": 57,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.14570712357407511,
+              1.2912291448796185,
+              0.002490993537147286
+            ],
+            "face": 73,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.12159568600698775,
+              1.2910861108812801,
+              0.08296152932966246
+            ],
+            "face": 84,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.0785897875595909,
+              1.2903818912437655,
+              0.13285042910374317
+            ],
+            "face": 95,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.001356951228440482,
+              1.2910136951501543,
+              0.14794411820598072
+            ],
+            "face": 106,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.06850125425572359,
+              1.289382115142211,
+              0.14958449131638918
+            ],
+            "face": 117,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.11987090009886807,
+              1.291122091247267,
+              0.08486578302825783
+            ],
+            "face": 128,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.15667633595140792,
+              1.289809780890366,
+              0.032858449875018333
+            ],
+            "face": 139,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.14467704973698528,
+              1.290468639174658,
+              -0.05124707153971711
+            ],
+            "face": 150,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              -0.044874299274698215,
+              1.2980318630782195,
+              0.039934075743799334
+            ],
+            "face": 8,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.04273246299777902,
+              1.2973050351391062,
+              0.07029441410030463
+            ],
+            "face": 24,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.070579561434085,
+              1.2973503310907526,
+              -0.03954235112631681
+            ],
+            "face": 41,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.024839763994846695,
+              1.2972604880356426,
+              -0.0798307174549227
+            ],
+            "face": 57,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.14570712357407511,
+              1.2912291448796185,
+              0.002490993537147286
+            ],
+            "face": 73,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.12159568600698775,
+              1.2910861108812801,
+              0.08296152932966246
+            ],
+            "face": 84,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.0785897875595909,
+              1.2903818912437655,
+              0.13285042910374317
+            ],
+            "face": 95,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.001356951228440482,
+              1.2910136951501543,
+              0.14794411820598072
+            ],
+            "face": 106,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.06850125425572359,
+              1.289382115142211,
+              0.14958449131638918
+            ],
+            "face": 117,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.11987090009886807,
+              1.291122091247267,
+              0.08486578302825783
+            ],
+            "face": 128,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.15667633595140792,
+              1.289809780890366,
+              0.032858449875018333
+            ],
+            "face": 139,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.14467704973698528,
+              1.290468639174658,
+              -0.05124707153971711
+            ],
+            "face": 150,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "shape": "sphere",
+      "mode": "advection",
+      "spec": {
+        "object": "sphere",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        }
+      ],
+      "count": 40,
+      "time": 4.033303999999991,
+      "paused": true,
+      "loaded": "",
+      "vertices": 3575,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "advection",
+      "bodyMotion": 0.6,
+      "frames": 28,
+      "renderer": {
+        "frame": 268,
+        "calls": 2,
+        "triangles": 14960,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": null,
+      "awakened": true,
+      "opened": true,
+      "intake": 0,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "shape": "sphere",
+      "mode": "texture",
+      "spec": {
+        "object": "sphere",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        }
+      ],
+      "count": 40,
+      "time": 4.033303999999991,
+      "paused": true,
+      "loaded": "",
+      "vertices": 3575,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "texture",
+      "bodyMotion": 0.6,
+      "frames": 33,
+      "renderer": {
+        "frame": 273,
+        "calls": 2,
+        "triangles": 14960,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": null,
+      "awakened": true,
+      "opened": true,
+      "intake": 0,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "shape": "cube",
+      "mode": "presence",
+      "spec": {
+        "object": "cube",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        }
+      ],
+      "count": 40,
+      "time": 4.033303999999991,
+      "paused": true,
+      "loaded": "",
+      "vertices": 5046,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 44,
+      "renderer": {
+        "frame": 284,
+        "calls": 2,
+        "triangles": 17600,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 40.559997024537566,
+        "glyphSize": 0.15284815434323581,
+        "letterCount": 40,
+        "uniqueCapacity": 4096,
+        "time": 3.0249780000000097,
+        "animationTime": 4.033303999999991,
+        "disposed": false,
+        "distanceTraveled": 0,
+        "crossings": 0,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              1.2999999523162842,
+              1.2290294635435348,
+              1.2343400513707385
+            ],
+            "face": 1,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2304524467561317,
+              1.1172343077164442
+            ],
+            "face": 3,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2824442735956998,
+              1.0258883605207825
+            ],
+            "face": 5,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2734995011251244,
+              0.8835206666883328
+            ],
+            "face": 8,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.291975262724323,
+              0.7624889880786707
+            ],
+            "face": 10,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2776160847145464,
+              0.6745863181759785
+            ],
+            "face": 12,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2981206162921453,
+              0.5757662032046525
+            ],
+            "face": 14,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.21282979409381,
+              0.46501403371647265
+            ],
+            "face": 17,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2900811365690419,
+              0.3770389131763082
+            ],
+            "face": 19,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2247938084889631,
+              0.28732683056388436
+            ],
+            "face": 21,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2728446503492945,
+              0.13038534846998312
+            ],
+            "face": 24,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2833845200013503,
+              0.01771005780536608
+            ],
+            "face": 26,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              1.2999999523162842,
+              1.2290294635435348,
+              1.2343400513707385
+            ],
+            "face": 1,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2304524467561317,
+              1.1172343077164442
+            ],
+            "face": 3,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2824442735956998,
+              1.0258883605207825
+            ],
+            "face": 5,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2734995011251244,
+              0.8835206666883328
+            ],
+            "face": 8,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.291975262724323,
+              0.7624889880786707
+            ],
+            "face": 10,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2776160847145464,
+              0.6745863181759785
+            ],
+            "face": 12,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2981206162921453,
+              0.5757662032046525
+            ],
+            "face": 14,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.21282979409381,
+              0.46501403371647265
+            ],
+            "face": 17,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2900811365690419,
+              0.3770389131763082
+            ],
+            "face": 19,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2247938084889631,
+              0.28732683056388436
+            ],
+            "face": 21,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2728446503492945,
+              0.13038534846998312
+            ],
+            "face": 24,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              1.2999999523162842,
+              1.2833845200013503,
+              0.01771005780536608
+            ],
+            "face": 26,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "shape": "cube",
+      "mode": "advection",
+      "spec": {
+        "object": "cube",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        }
+      ],
+      "count": 40,
+      "time": 4.033303999999991,
+      "paused": true,
+      "loaded": "",
+      "vertices": 5046,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "advection",
+      "bodyMotion": 0.6,
+      "frames": 49,
+      "renderer": {
+        "frame": 289,
+        "calls": 2,
+        "triangles": 17600,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": null,
+      "awakened": true,
+      "opened": true,
+      "intake": 0,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "shape": "cube",
+      "mode": "texture",
+      "spec": {
+        "object": "cube",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        }
+      ],
+      "count": 40,
+      "time": 4.033303999999991,
+      "paused": true,
+      "loaded": "",
+      "vertices": 5046,
+      "bounds": {
+        "min": [
+          -1.2999999523162842,
+          -1.2999999523162842,
+          -1.2999999523162842
+        ],
+        "max": [
+          1.2999999523162842,
+          1.2999999523162842,
+          1.2999999523162842
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "texture",
+      "bodyMotion": 0.6,
+      "frames": 52,
+      "renderer": {
+        "frame": 292,
+        "calls": 2,
+        "triangles": 17600,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": null,
+      "awakened": true,
+      "opened": true,
+      "intake": 0,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "shape": "vase",
+      "mode": "presence",
+      "spec": {
+        "object": "vase",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        }
+      ],
+      "count": 40,
+      "time": 4.033303999999991,
+      "paused": true,
+      "loaded": "",
+      "vertices": 13140,
+      "bounds": {
+        "min": [
+          -0.9519685506820679,
+          -1.2999999523162842,
+          -0.9519685506820679
+        ],
+        "max": [
+          0.9519685506820679,
+          1.2999999523162842,
+          0.9519685506820679
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 63,
+      "renderer": {
+        "frame": 303,
+        "calls": 2,
+        "triangles": 33824,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 24.403948542310403,
+        "glyphSize": 0.11856084665845969,
+        "letterCount": 40,
+        "uniqueCapacity": 4096,
+        "time": 3.0249780000000097,
+        "animationTime": 4.033303999999991,
+        "disposed": false,
+        "distanceTraveled": 0,
+        "crossings": 0,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              0.011887720784643676,
+              -1.2999999523162842,
+              0.26579191973868316
+            ],
+            "face": 12,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.0113424462162786,
+              -1.2999999523162842,
+              0.47085212584998876
+            ],
+            "face": 22,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.0389527015681717,
+              -1.2576551956984106,
+              0.5687416683308334
+            ],
+            "face": 28,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.00535000140726992,
+              -1.18935904691516,
+              0.6647724867146604
+            ],
+            "face": 34,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.005373799276572686,
+              -1.108342562376717,
+              0.7269524809570961
+            ],
+            "face": 39,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.05507353993852138,
+              -1.0373063447291508,
+              0.7625205335406017
+            ],
+            "face": 44,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.0014119899412312377,
+              -0.9442072931063884,
+              0.8143223672514142
+            ],
+            "face": 49,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.07028913552320669,
+              -0.8732697821043786,
+              0.8490006300483453
+            ],
+            "face": 54,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.032758833674851974,
+              -0.8096548548593976,
+              0.8739312046296958
+            ],
+            "face": 58,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.0773111679439474,
+              -0.7317055975631789,
+              0.8858436418718458
+            ],
+            "face": 62,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.021182302335551892,
+              -0.6475569499974542,
+              0.9032540269261577
+            ],
+            "face": 66,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.07095041991659098,
+              -0.5722170406317815,
+              0.914474866820278
+            ],
+            "face": 70,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              0.011887720784643676,
+              -1.2999999523162842,
+              0.26579191973868316
+            ],
+            "face": 12,
+            "crossings": 0,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.0113424462162786,
+              -1.2999999523162842,
+              0.47085212584998876
+            ],
+            "face": 22,
+            "crossings": 0,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              0.0389527015681717,
+              -1.2576551956984106,
+              0.5687416683308334
+            ],
+            "face": 28,
+            "crossings": 0,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              0.00535000140726992,
+              -1.18935904691516,
+              0.6647724867146604
+            ],
+            "face": 34,
+            "crossings": 0,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              0.005373799276572686,
+              -1.108342562376717,
+              0.7269524809570961
+            ],
+            "face": 39,
+            "crossings": 0,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              0.05507353993852138,
+              -1.0373063447291508,
+              0.7625205335406017
+            ],
+            "face": 44,
+            "crossings": 0,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              0.0014119899412312377,
+              -0.9442072931063884,
+              0.8143223672514142
+            ],
+            "face": 49,
+            "crossings": 0,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              0.07028913552320669,
+              -0.8732697821043786,
+              0.8490006300483453
+            ],
+            "face": 54,
+            "crossings": 0,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              0.032758833674851974,
+              -0.8096548548593976,
+              0.8739312046296958
+            ],
+            "face": 58,
+            "crossings": 0,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              0.0773111679439474,
+              -0.7317055975631789,
+              0.8858436418718458
+            ],
+            "face": 62,
+            "crossings": 0,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              0.021182302335551892,
+              -0.6475569499974542,
+              0.9032540269261577
+            ],
+            "face": 66,
+            "crossings": 0,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              0.07095041991659098,
+              -0.5722170406317815,
+              0.914474866820278
+            ],
+            "face": 70,
+            "crossings": 0,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 0,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "shape": "vase",
+      "mode": "advection",
+      "spec": {
+        "object": "vase",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        }
+      ],
+      "count": 40,
+      "time": 4.033303999999991,
+      "paused": true,
+      "loaded": "",
+      "vertices": 13140,
+      "bounds": {
+        "min": [
+          -0.9519685506820679,
+          -1.2999999523162842,
+          -0.9519685506820679
+        ],
+        "max": [
+          0.9519685506820679,
+          1.2999999523162842,
+          0.9519685506820679
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "advection",
+      "bodyMotion": 0.6,
+      "frames": 68,
+      "renderer": {
+        "frame": 308,
+        "calls": 2,
+        "triangles": 33824,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": null,
+      "awakened": true,
+      "opened": true,
+      "intake": 0,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "shape": "vase",
+      "mode": "texture",
+      "spec": {
+        "object": "vase",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        }
+      ],
+      "count": 40,
+      "time": 4.033303999999991,
+      "paused": true,
+      "loaded": "",
+      "vertices": 13140,
+      "bounds": {
+        "min": [
+          -0.9519685506820679,
+          -1.2999999523162842,
+          -0.9519685506820679
+        ],
+        "max": [
+          0.9519685506820679,
+          1.2999999523162842,
+          0.9519685506820679
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "texture",
+      "bodyMotion": 0.6,
+      "frames": 72,
+      "renderer": {
+        "frame": 312,
+        "calls": 2,
+        "triangles": 33824,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": null,
+      "awakened": true,
+      "opened": true,
+      "intake": 0,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "shape": "generated-can",
+      "spec": {
+        "object": "sphere",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "青",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "記",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "憶",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "新",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "文",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "字",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "が",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "ら",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "加",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "わ",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "る",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "青",
+          "ink": "#79a7ff",
+          "at": 8.033303999999978,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#79a7ff",
+          "at": 8.033303999999978,
+          "auto": false
+        },
+        {
+          "text": "花",
+          "ink": "#79a7ff",
+          "at": 8.033303999999978,
+          "auto": false
+        },
+        {
+          "text": "瓶",
+          "ink": "#79a7ff",
+          "at": 8.033303999999978,
+          "auto": false
+        }
+      ],
+      "count": 63,
+      "time": 11.033304000000127,
+      "paused": true,
+      "loaded": "/end-to-end-models/paired-v1/watering-can-image-triposr.glb",
+      "vertices": 52248,
+      "bounds": {
+        "min": [
+          -0.7099458575248718,
+          -0.9813886284828186,
+          -1.3000000715255737
+        ],
+        "max": [
+          0.7099458575248718,
+          0.9813886284828186,
+          1.3000000715255737
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 100,
+      "renderer": {
+        "frame": 760,
+        "calls": 3,
+        "triangles": 25610,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 8.40644364343342,
+        "glyphSize": 0.06958528248572142,
+        "letterCount": 63,
+        "uniqueCapacity": 4096,
+        "time": 8.274978000000065,
+        "animationTime": 11.033304000000127,
+        "disposed": false,
+        "distanceTraveled": 1367.484824211734,
+        "crossings": 101388,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              -0.6723660580070858,
+              -0.788032416315415,
+              -0.47757525941712653
+            ],
+            "face": 117,
+            "crossings": 19,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.6523163671401578,
+              -0.8276100058144932,
+              -0.41570827782272435
+            ],
+            "face": 99,
+            "crossings": 12,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.6610813198161671,
+              -0.7633785343271089,
+              -0.502933171668052
+            ],
+            "face": 124,
+            "crossings": 17,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.6434906061401516,
+              -0.7996408883239824,
+              -0.5536655621979655
+            ],
+            "face": 252,
+            "crossings": 22,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.6400124431566435,
+              -0.7735552376875872,
+              -0.5461332356133508
+            ],
+            "face": 251,
+            "crossings": 20,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.6253004296085463,
+              -0.8272404280629602,
+              -0.5271471901400182
+            ],
+            "face": 241,
+            "crossings": 16,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.6325970865559075,
+              -0.8282700538571879,
+              -0.5114773426168917
+            ],
+            "face": 242,
+            "crossings": 14,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.6107263577444006,
+              -0.7843007521684209,
+              -0.6082188216361054
+            ],
+            "face": 258,
+            "crossings": 21,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -0.5987341703274159,
+              -0.8171264439613527,
+              -0.6247540806271847
+            ],
+            "face": 445,
+            "crossings": 22,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -0.5733757384903785,
+              -0.8219546585640443,
+              -0.6579404975232094
+            ],
+            "face": 668,
+            "crossings": 21,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -0.5796139570032572,
+              -0.8078407282590773,
+              -0.667027645302649
+            ],
+            "face": 452,
+            "crossings": 20,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -0.6934913370451486,
+              -0.7873512027829948,
+              -0.3731968553738424
+            ],
+            "face": 34,
+            "crossings": 21,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              -0.6723660580070858,
+              -0.788032416315415,
+              -0.47757525941712653
+            ],
+            "face": 117,
+            "crossings": 19,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              -0.6523163671401578,
+              -0.8276100058144932,
+              -0.41570827782272435
+            ],
+            "face": 99,
+            "crossings": 12,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.6610813198161671,
+              -0.7633785343271089,
+              -0.502933171668052
+            ],
+            "face": 124,
+            "crossings": 17,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.6434906061401516,
+              -0.7996408883239824,
+              -0.5536655621979655
+            ],
+            "face": 252,
+            "crossings": 22,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.6400124431566435,
+              -0.7735552376875872,
+              -0.5461332356133508
+            ],
+            "face": 251,
+            "crossings": 20,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.6253004296085463,
+              -0.8272404280629602,
+              -0.5271471901400182
+            ],
+            "face": 241,
+            "crossings": 16,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.6325970865559075,
+              -0.8282700538571879,
+              -0.5114773426168917
+            ],
+            "face": 242,
+            "crossings": 14,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.6107263577444006,
+              -0.7843007521684209,
+              -0.6082188216361054
+            ],
+            "face": 258,
+            "crossings": 21,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -0.5987341703274159,
+              -0.8171264439613527,
+              -0.6247540806271847
+            ],
+            "face": 445,
+            "crossings": 22,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -0.5733757384903785,
+              -0.8219546585640443,
+              -0.6579404975232094
+            ],
+            "face": 668,
+            "crossings": 21,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -0.5796139570032572,
+              -0.8078407282590773,
+              -0.667027645302649
+            ],
+            "face": 452,
+            "crossings": 20,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -0.6934913370451486,
+              -0.7873512027829948,
+              -0.3731968553738424
+            ],
+            "face": 34,
+            "crossings": 21,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 1,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999
+      ]
+    },
+    {
+      "timing": true,
+      "spec": {
+        "object": "vase",
+        "squareness": 0,
+        "elongation": 1,
+        "twist": 0,
+        "bend": 0,
+        "roughness": 0,
+        "count": 1
+      },
+      "letters": [
+        {
+          "text": "@",
+          "ink": "#ffffff",
+          "at": -100,
+          "auto": false
+        },
+        {
+          "text": "白",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "球",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "体",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "あ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "う",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "え",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "お",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "き",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "く",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "け",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "さ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "す",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "せ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "そ",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "a",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "b",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "c",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "d",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "e",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "f",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "0",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "1",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "2",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "3",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "4",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "5",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "6",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "7",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "8",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "9",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "@",
+          "ink": "#eeeae2",
+          "at": 0.016604,
+          "auto": false
+        },
+        {
+          "text": "青",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "記",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "憶",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "、",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "新",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "し",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "文",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "字",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "が",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "こ",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "か",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "ら",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "加",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "わ",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "る",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "。",
+          "ink": "#79a7ff",
+          "at": 4.033303999999991,
+          "auto": false
+        },
+        {
+          "text": "青",
+          "ink": "#79a7ff",
+          "at": 8.033303999999978,
+          "auto": false
+        },
+        {
+          "text": "い",
+          "ink": "#79a7ff",
+          "at": 8.033303999999978,
+          "auto": false
+        },
+        {
+          "text": "花",
+          "ink": "#79a7ff",
+          "at": 8.033303999999978,
+          "auto": false
+        },
+        {
+          "text": "瓶",
+          "ink": "#79a7ff",
+          "at": 8.033303999999978,
+          "auto": false
+        },
+        {
+          "text": "四",
+          "ink": "#ffffff",
+          "at": 11.033304000000127,
+          "auto": true
+        },
+        {
+          "text": "角",
+          "ink": "#ffffff",
+          "at": 11.033304000000127,
+          "auto": true
+        },
+        {
+          "text": "く",
+          "ink": "#ffffff",
+          "at": 11.033304000000127,
+          "auto": true
+        },
+        {
+          "text": "ね",
+          "ink": "#ffffff",
+          "at": 11.033304000000127,
+          "auto": true
+        },
+        {
+          "text": "じ",
+          "ink": "#ffffff",
+          "at": 11.033304000000127,
+          "auto": true
+        },
+        {
+          "text": "れ",
+          "ink": "#ffffff",
+          "at": 11.033304000000127,
+          "auto": true
+        },
+        {
+          "text": "た",
+          "ink": "#ffffff",
+          "at": 11.033304000000127,
+          "auto": true
+        },
+        {
+          "text": "花",
+          "ink": "#ffffff",
+          "at": 14.095004000000277,
+          "auto": true
+        },
+        {
+          "text": "瓶",
+          "ink": "#ffffff",
+          "at": 14.095004000000277,
+          "auto": true
+        }
+      ],
+      "count": 72,
+      "time": 16.273204000000277,
+      "paused": true,
+      "loaded": "",
+      "vertices": 13140,
+      "bounds": {
+        "min": [
+          -0.9519685506820679,
+          -1.2999999523162842,
+          -0.9519685506820679
+        ],
+        "max": [
+          0.9519685506820679,
+          1.2999999523162842,
+          0.9519685506820679
+        ]
+      },
+      "flow": 0.75,
+      "renderMode": "presence",
+      "bodyMotion": 0.6,
+      "frames": 260,
+      "renderer": {
+        "frame": 1100,
+        "calls": 4,
+        "triangles": 33828,
+        "points": 0,
+        "lines": 0
+      },
+      "fluid": null,
+      "gpuError": 0,
+      "presence": {
+        "count": 4096,
+        "area": 24.403948542310403,
+        "glyphSize": 0.11856084665845969,
+        "letterCount": 72,
+        "uniqueCapacity": 4096,
+        "time": 12.189902999999918,
+        "animationTime": 16.273204000000277,
+        "disposed": false,
+        "distanceTraveled": 1031.9333261107902,
+        "crossings": 41985,
+        "boundaryStops": 0,
+        "iterationStops": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "activePendingReassign": 0,
+        "samples": [
+          {
+            "position": [
+              0.012459021158215174,
+              -1.2999999523162842,
+              0.31924745641942387
+            ],
+            "face": 15,
+            "crossings": 3,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.012334203546924207,
+              -1.2999999523162842,
+              0.5110555506140322
+            ],
+            "face": 24,
+            "crossings": 2,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.1358167771017256,
+              -1.236132355120043,
+              0.5841216369584835
+            ],
+            "face": 24594,
+            "crossings": 6,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.17062811491520458,
+              -1.1692622471893697,
+              0.6711513701265605
+            ],
+            "face": 24600,
+            "crossings": 6,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.2499876676450417,
+              -1.075336124289105,
+              0.7012984481011214
+            ],
+            "face": 24249,
+            "crossings": 8,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.20428035925302981,
+              -1.0034034400081278,
+              0.7557405299213737
+            ],
+            "face": 24254,
+            "crossings": 8,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.2548207979550755,
+              -0.907371150164947,
+              0.7932472755892884
+            ],
+            "face": 24260,
+            "crossings": 7,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.19129372588861993,
+              -0.835606872512744,
+              0.8486314210765323
+            ],
+            "face": 24621,
+            "crossings": 7,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -0.25063151676628337,
+              -0.7645823314304926,
+              0.8463383369236466
+            ],
+            "face": 24268,
+            "crossings": 8,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -0.20977528012725155,
+              -0.682932356371847,
+              0.8723088066279109
+            ],
+            "face": 24629,
+            "crossings": 7,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -0.261657600325757,
+              -0.5947640994249188,
+              0.8744866721784879
+            ],
+            "face": 24278,
+            "crossings": 8,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -0.21551142377602628,
+              -0.5167161781973799,
+              0.901275352786486
+            ],
+            "face": 24637,
+            "crossings": 7,
+            "glyphIndex": 11
+          }
+        ],
+        "sample": [
+          {
+            "position": [
+              0.012459021158215174,
+              -1.2999999523162842,
+              0.31924745641942387
+            ],
+            "face": 15,
+            "crossings": 3,
+            "glyphIndex": 0
+          },
+          {
+            "position": [
+              0.012334203546924207,
+              -1.2999999523162842,
+              0.5110555506140322
+            ],
+            "face": 24,
+            "crossings": 2,
+            "glyphIndex": 1
+          },
+          {
+            "position": [
+              -0.1358167771017256,
+              -1.236132355120043,
+              0.5841216369584835
+            ],
+            "face": 24594,
+            "crossings": 6,
+            "glyphIndex": 2
+          },
+          {
+            "position": [
+              -0.17062811491520458,
+              -1.1692622471893697,
+              0.6711513701265605
+            ],
+            "face": 24600,
+            "crossings": 6,
+            "glyphIndex": 3
+          },
+          {
+            "position": [
+              -0.2499876676450417,
+              -1.075336124289105,
+              0.7012984481011214
+            ],
+            "face": 24249,
+            "crossings": 8,
+            "glyphIndex": 4
+          },
+          {
+            "position": [
+              -0.20428035925302981,
+              -1.0034034400081278,
+              0.7557405299213737
+            ],
+            "face": 24254,
+            "crossings": 8,
+            "glyphIndex": 5
+          },
+          {
+            "position": [
+              -0.2548207979550755,
+              -0.907371150164947,
+              0.7932472755892884
+            ],
+            "face": 24260,
+            "crossings": 7,
+            "glyphIndex": 6
+          },
+          {
+            "position": [
+              -0.19129372588861993,
+              -0.835606872512744,
+              0.8486314210765323
+            ],
+            "face": 24621,
+            "crossings": 7,
+            "glyphIndex": 7
+          },
+          {
+            "position": [
+              -0.25063151676628337,
+              -0.7645823314304926,
+              0.8463383369236466
+            ],
+            "face": 24268,
+            "crossings": 8,
+            "glyphIndex": 8
+          },
+          {
+            "position": [
+              -0.20977528012725155,
+              -0.682932356371847,
+              0.8723088066279109
+            ],
+            "face": 24629,
+            "crossings": 7,
+            "glyphIndex": 9
+          },
+          {
+            "position": [
+              -0.261657600325757,
+              -0.5947640994249188,
+              0.8744866721784879
+            ],
+            "face": 24278,
+            "crossings": 8,
+            "glyphIndex": 10
+          },
+          {
+            "position": [
+              -0.21551142377602628,
+              -0.5167161781973799,
+              0.901275352786486
+            ],
+            "face": 24637,
+            "crossings": 7,
+            "glyphIndex": 11
+          }
+        ]
+      },
+      "awakened": true,
+      "opened": true,
+      "intake": 2,
+      "frameTimes": [
+        0,
+        0,
+        16.604,
+        16.69999999999999,
+        16.700000000000273,
+        116.59999999999991,
+        16.59999999999991,
+        166.70000000000027,
+        16.699999999999818,
+        16.699999999999818,
+        16.699999999999818,
+        16.59999999999991,
+        16.700000000000273,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.59999999999991,
+        16.700000000000273,
+        16.699999999999818,
+        16.59999999999991,
+        16.700000000000273,
+        16.59999999999991,
+        16.799999999999727,
+        16.600000000000364,
+        16.59999999999991,
+        16.699999999999818,
+        16.700000000000273,
+        16.59999999999991,
+        16.799999999999727,
+        16.600000000000364,
+        16.59999999999991,
+        16.799999999999727,
+        16.600000000000364,
+        16.699999999999818,
+        16.59999999999991,
+        16.700000000000273,
+        16.59999999999991,
+        16.699999999999818,
+        16.700000000000273,
+        16.59999999999991,
+        16.699999999999818,
+        16.700000000000273,
+        16.599999999999454,
+        16.700000000000728,
+        16.599999999999454,
+        16.800000000000182,
+        16.600000000000364,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.599999999999454,
+        16.800000000000182,
+        16.600000000000364,
+        16.599999999999454,
+        16.800000000000182,
+        16.600000000000364,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.599999999999454,
+        16.699999999999818,
+        16.700000000000728,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.599999999999454,
+        16.699999999999818,
+        16.600000000000364,
+        16.800000000000182,
+        16.599999999999454,
+        16.700000000000728,
+        16.699999999999818,
+        16.699999999999818,
+        16.5,
+        16.699999999999818,
+        16.699999999999818,
+        16.700000000000728,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.599999999999454,
+        16.699999999999818,
+        16.700000000000728,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.699999999999818,
+        16.699999999999818,
+        16.5,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.700000000000728,
+        16.699999999999818,
+        16.599999999999454,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.700000000000728,
+        16.599999999999454,
+        16.699999999999818,
+        16.600000000000364,
+        16.800000000000182,
+        16.599999999999454,
+        16.600000000000364,
+        16.699999999999818,
+        16.600000000000364,
+        16.800000000000182,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.599999999999454,
+        16.600000000000364,
+        16.699999999999818
+      ]
+    }
+  ]
+}

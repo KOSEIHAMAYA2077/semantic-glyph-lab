@@ -6,6 +6,8 @@
 
 **応用時の目標:** [研究成果を一般的なPCで動かす方針](research/consumer-pc-20260930.md)。現在の研究条件は維持し、応用段階で事前計算・近似・軽量化を検討します。
 
+**追加の試遊版: [文字の面 v0.6](experiments/presence-v2/README.md)**。近い@から入力でき、一字ずつ面上を流します。`node experiments/presence-v2/serve.mjs` → http://127.0.0.1:4193/src/presence/index.html 。旧版と研究用の固定文字比較は残しています。
+
 **[今回の結果と採用した構成](research/RESULTS-20260930.md)**。保存版は `prototype-v0.5.0`。任意の文章を常に正しい形へ変換する完成品ではなく、複数の方法を実際に比較できる試作です。
 
 ![生成したじょうろの表面を文字で覆う](experiments/surface-03/paired-watering-can-v1.png)
