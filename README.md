@@ -2,6 +2,8 @@
 
 文章から関連する立体を選ぶ・作ることで、蓄積した言葉をその表面に流す研究試作。[文字のかたち](https://github.com/KOSEIHAMAYA2077/ai-game-lab)から独立した別版です。
 
+**次の研究方針（2026-09-30）:** [先行研究6件と制作例1件](research/prior-art-20260930.md)を整理し、[表面の長時間安定性 → 条件付きのCube比較 → 部分編集](research/roadmap-20260930.md)の順に進めます。[比較・採用基準](research/evaluation-plan-20260930.md)も記録しました。この追加は調査と設計で、新しいモデルの実行や試作の変更はまだ行っていません。
+
 **[今回の結果と採用した構成](research/RESULTS-20260930.md)**。保存版は `prototype-v0.5.0`。任意の文章を常に正しい形へ変換する完成品ではなく、複数の方法を実際に比較できる試作です。
 
 ![生成したじょうろの表面を文字で覆う](experiments/surface-03/paired-watering-can-v1.png)
