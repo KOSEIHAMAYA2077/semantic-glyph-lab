@@ -35,10 +35,14 @@ Enterで入力を開き、文章を入れてEnter。ドラッグで回転、ス�
 
 ## 記録
 
+以下の視覚・語義の判定は、担当エージェントによる画面確認と原出力の読解です。ユーザーテストや人間の参加者による評価は行っていません。
+
 - [目的と制約](BRIEF.md) / [進捗](STATUS.md)
 - [共通の文字表面表示 v0.1](experiments/surface-01/RESULTS.md) / [v0.2と修正](experiments/surface-02/RESULTS.md) / [v0.3の統合](experiments/surface-03/RESULTS.md)
 - [今回の実装方針と次の学習実験](research/implementation-options.md)
 - [同じ日本語から2方式で作った6形状](experiments/end-to-end/RESULTS.md)
+- [自動振り分けの初回失敗](experiments/input-routing/README.md) / [二段階での比較](experiments/input-routing-v2/README.md) / [14Bの比較](experiments/input-routing-model/RESULTS.md)
+- [連続入力のCPUハーネス・UI未接続](experiments/continuous-input/RESULTS.md)
 - [関連研究9件と実装方針](research/language-to-shape.md)
 - [LLM部品合成の7条件比較](experiments/composition/README.md)
 - [TripoSR画像からの復元](experiments/triposr/RESULTS.md)

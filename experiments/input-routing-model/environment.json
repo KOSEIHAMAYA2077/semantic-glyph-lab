@@ -1,0 +1,29 @@
+{
+  "recordedUTC": "2026-09-30T06:51:42.330976+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "environmentRelativePath": ".local/translation-model-qwen8-venv",
+  "readOnlyReuse": true,
+  "packages": {
+    "mlx": "0.32.3",
+    "mlx-lm": "0.31.3",
+    "mlx-metal": "0.32.3",
+    "transformers": "5.17.0",
+    "tokenizers": "0.23.2",
+    "huggingface-hub": "1.33.0",
+    "safetensors": "0.8.0",
+    "jinja2": "3.1.6"
+  },
+  "codeFiles": [
+    {
+      "pathInSitePackages": "mlx_lm/models/qwen3.py",
+      "bytes": 7364,
+      "sha256": "2284df96ecb669109b281df4534470b18f285aa9a5e41735ad682f601f93c639"
+    },
+    {
+      "pathInSitePackages": "mlx_lm/utils.py",
+      "bytes": 32417,
+      "sha256": "ba0371e9c88d52b34d71271945c2394005fbcb2bfb2ee9f6f82d627a33b72422"
+    }
+  ]
+}

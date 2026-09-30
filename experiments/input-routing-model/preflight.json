@@ -1,0 +1,14 @@
+{
+  "verifiedUTC": "2026-09-30T06:54:23.589678+00:00",
+  "officialRevision": "ba63a5141812f9870287df53341123a71ba41433",
+  "officialWeightHashesMatch": true,
+  "allTenFilesSHA256AndSizeVerified": true,
+  "configAutoMapAbsent": true,
+  "modelPythonFilesAcquired": false,
+  "safetensorsHeaderAndIndexValidated": true,
+  "modelInferenceStarted": false,
+  "tokenizerFourFilesIdenticalTo8B": true,
+  "protocolFrozen": true,
+  "addedBytes": 7862396465,
+  "newDependenciesInstalled": false
+}

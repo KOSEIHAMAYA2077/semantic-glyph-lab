@@ -1,0 +1,44 @@
+{
+  "startedUTC": "2026-09-30T06:54:42.030963+00:00",
+  "model": "Qwen/Qwen3-14B-MLX-4bit",
+  "revision": "ba63a5141812f9870287df53341123a71ba41433",
+  "weightSHA256": {
+    "model-00001-of-00002.safetensors": "f2f502ca7604ad6789b124bf9cd7a192fda5a60e6f52b1fe521c3aa4dad598ce",
+    "model-00002-of-00002.safetensors": "d3758e05e08bcfb5fcd1b76d74758366355c80464398702051ce0388045e898e"
+  },
+  "protocol": {
+    "frozenUTC": "2026-09-30T06:53:05.839028+00:00",
+    "cases": 24,
+    "baselineModel": "Qwen/Qwen3-8B-MLX-4bit",
+    "model": "Qwen/Qwen3-14B-MLX-4bit",
+    "revision": "ba63a5141812f9870287df53341123a71ba41433",
+    "temperature": 0,
+    "thinking": false,
+    "maxTokens": 384,
+    "seed": 17,
+    "attemptsPerCase": 1,
+    "policy": "Model comparison on reused v1 examples, not new held-out evaluation. Same prompts, context, scoring, greedy decoding, no retries or example-specific repairs. Unknown English targets require human assessment.",
+    "sha256": {
+      "evaluation-plan.json": "144a6912b0ddb4556dd49d6502f3fdfd45ad50ccb19d927b3e66ade4fbadbefd",
+      "prompt-v1.txt": "691dc7e3b6dc0e1adc13902de30b45f9c3932da68ebdcd786f4e3af1acda23a8",
+      "schema.py": "91f969401d32eebcae3f74042d32d115c9376114f14d31879c848d4b41ac3758",
+      "evaluate.py": "d56910dc212bac60c27742bbfbb09d7aef151bccbe5e2eb7a0d406a4889f27a1",
+      "v1-evaluate-reference.py": "05bcaf67c6e505037bfabc020178366d0499e43d7b8f172ef6a296ebc7aea10f",
+      "v1-protocol-reference.json": "20b6cf61c199c975debd1294d458cdd9739b419f3dd96a8e71053011ef669dd0",
+      "environment.json": "acde4c43b57dc3675f20874e63e110c9c180f3d8f572c2e88bd05d6697435c3f"
+    }
+  },
+  "temperature": 0,
+  "thinking": false,
+  "maxTokens": 384,
+  "attemptsPerCase": 1,
+  "loadMs": 1801,
+  "scope": "Artificial examples reused from v1. Model comparison, not fresh held-out evaluation. No API or existing source modified.",
+  "baselineRuntime": "../input-routing/run-01-runtime.json",
+  "seed": 17,
+  "recommendationDifference": "Official Qwen non-thinking guidance recommends temperature0.7; this controlled experiment uses greedy.",
+  "completedUTC": "2026-09-30T06:56:19.223358+00:00",
+  "mlxPeakBytes": 8613906672,
+  "maxRSSBytesDarwin": 2495725568,
+  "blockedIPAttempts": 0
+}

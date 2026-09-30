@@ -1,0 +1,84 @@
+{
+  "cases": 24,
+  "jsonSyntaxValid": 24,
+  "schemaValid": 23,
+  "strictPredeclaredContractPass": 16,
+  "rawActionMatches": 18,
+  "unknownTargetCases": [
+    "multiple-related",
+    "unknown-umbrella",
+    "unknown-funnel",
+    "unknown-watering-can",
+    "unknown-teapot",
+    "linked-identical-parts",
+    "negated-unknown"
+  ],
+  "unknownReturnedAsNonemptyEnglish": 4,
+  "unknownRawDiagnostics": [
+    {
+      "id": "multiple-related",
+      "rawAction": "new",
+      "rawTarget": {
+        "form": null,
+        "object_en": "a bird sitting on a chair"
+      },
+      "schemaValid": true
+    },
+    {
+      "id": "unknown-umbrella",
+      "rawAction": "new",
+      "rawTarget": {
+        "form": null,
+        "object_en": "open umbrella"
+      },
+      "schemaValid": true
+    },
+    {
+      "id": "unknown-funnel",
+      "rawAction": "edit",
+      "rawTarget": null,
+      "schemaValid": true
+    },
+    {
+      "id": "unknown-watering-can",
+      "rawAction": "edit",
+      "rawTarget": null,
+      "schemaValid": true
+    },
+    {
+      "id": "unknown-teapot",
+      "rawAction": "new",
+      "rawTarget": {
+        "form": null,
+        "object_en": "kamaboko"
+      },
+      "schemaValid": true
+    },
+    {
+      "id": "linked-identical-parts",
+      "rawAction": "edit",
+      "rawTarget": null,
+      "schemaValid": true
+    },
+    {
+      "id": "negated-unknown",
+      "rawAction": "new",
+      "rawTarget": {
+        "form": null,
+        "object_en": "water pitcher"
+      },
+      "schemaValid": true
+    }
+  ],
+  "firstSchemaErrors": {
+    "Unknown attributes": 1
+  },
+  "latencyMs": {
+    "median": 3955.0,
+    "min": 3616,
+    "max": 4818,
+    "total": 97145
+  },
+  "scoringCaveat": "The frozen contract is unchanged. new-sphere requires explicit count=1 even though the default would give the intended final shape. Raw diagnostics do not imply accepted execution or semantic correctness.",
+  "evaluationReuse": "The same 24 v1 artificial cases were reused. This is a controlled model comparison, not fresh held-out evaluation."
+}

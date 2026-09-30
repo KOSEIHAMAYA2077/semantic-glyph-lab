@@ -1,0 +1,59 @@
+{
+  "cases": 24,
+  "jsonSyntaxValid": 23,
+  "schemaValid": 0,
+  "strictPredeclaredContractPass": 0,
+  "rawValidJSONActionMatches": 13,
+  "rawActionDenominator": 24,
+  "unknownTargetCases": 7,
+  "unknownReturnedSeparatelyAsEnglish": 0,
+  "firstSchemaErrors": {
+    "edit and keep must preserve target": 19,
+    "Known form must be exact, with object_en null": 4,
+    "Invalid strict JSON": 1
+  },
+  "latencyMs": {
+    "median": 1613.5,
+    "min": 1287,
+    "max": 2444,
+    "total": 40239
+  },
+  "interpretation": "Zero accepted schema outputs does not mean zero useful semantic fragments. No raw output was repaired or executed.",
+  "humanUnknownReview": [
+    {
+      "id": "multiple-related",
+      "rawEnglishMeaning": "chair with a bird on it retains the two objects and the on relation",
+      "contradiction": "edit and form=chair instead of a new composite target"
+    },
+    {
+      "id": "unknown-umbrella",
+      "rawEnglishMeaning": "opened umbrella retains the noun and state",
+      "contradiction": "form=shell invents an incorrect catalog match"
+    },
+    {
+      "id": "unknown-funnel",
+      "rawEnglishMeaning": "literal string null does not describe a funnel",
+      "contradiction": "edit of cone with elongation1.8"
+    },
+    {
+      "id": "unknown-watering-can",
+      "rawEnglishMeaning": "long vase with a spout replaces watering can with vase",
+      "contradiction": "edit of vase with elongation1.8"
+    },
+    {
+      "id": "unknown-teapot",
+      "rawEnglishMeaning": "Japanese source word is copied instead of an English description",
+      "contradiction": "form=mug plus object_en Japanese; unwanted default attributes"
+    },
+    {
+      "id": "linked-identical-parts",
+      "rawEnglishMeaning": "three rings linked in a chain retains count and connectivity",
+      "contradiction": "edit and form=ring,count3 do not preserve the composite target"
+    },
+    {
+      "id": "negated-unknown",
+      "rawEnglishMeaning": "water pitcher retains intended object",
+      "contradiction": "form=mug makes an incorrect catalog match"
+    }
+  ]
+}
