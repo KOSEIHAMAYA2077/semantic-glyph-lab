@@ -9,6 +9,7 @@ import { createForm } from './geometry';
 import { compositionGroup, type Composition } from './composition';
 import { deformImport } from './deform-import';
 import { AdvectionLayer } from './advection/layer';
+import { PresenceLayer } from './presence/layer';
 import { MAX_BODY_DISPLACEMENT } from './body-motion';
 import { FluidField } from './fluid/field';
 import { fluidMaterial } from './fluid/material';
@@ -28,11 +29,11 @@ export class SurfaceScene {
   private transition?: { from: Float32Array; to: Float32Array; normalsFrom: Float32Array; normalsTo: Float32Array; elapsed: number };
   private loadingToken = 0;
   private importedBase?: THREE.BufferGeometry;
-  renderMode: 'texture' | 'advection' | 'fluid' = 'texture';
+  renderMode: 'texture' | 'advection' | 'fluid' | 'presence' = 'texture';
   private fluid?: FluidField;
   private fluidSurface?: THREE.ShaderMaterial;
   private fluidAccumulator=0;
-  private advection?: AdvectionLayer;
+  private advection?: AdvectionLayer | PresenceLayer;
   private advectionCopies: THREE.InstancedMesh[] = [];
   private flowTime = 0;
   invalidateLoads() { this.loadingToken++; }
@@ -57,6 +58,7 @@ export class SurfaceScene {
     this.group.clear();
     const count = this.spec.count;
     if(this.renderMode === 'advection') this.advection=new AdvectionLayer(this.geometry,this.field,4096);
+    if(this.renderMode === 'presence') this.advection=new PresenceLayer(this.geometry,this.field,4096);
     for (let i = 0; i < count; i++) {
       let mesh: THREE.Object3D = new THREE.Mesh(this.geometry, this.renderMode==='fluid'?this.fluidSurface!:this.material);
       if(this.advection) {
@@ -75,7 +77,7 @@ export class SurfaceScene {
       this.group.add(mesh);
     }
   }
-  setRenderMode(mode: 'texture' | 'advection' | 'fluid') {
+  setRenderMode(mode: 'texture' | 'advection' | 'fluid' | 'presence') {
     if(mode===this.renderMode)return;
     if(mode==='fluid'&&!this.fluid){
       this.fluid=new FluidField(this.renderer);
@@ -121,6 +123,18 @@ export class SurfaceScene {
     const offset=this.camera.position.clone().sub(this.controls.target);
     if(offset.length()<required || offset.length()>required*1.65) this.camera.position.copy(this.controls.target).add(offset.setLength(Math.max(6.2,required)));
     this.controls.maxDistance=Math.max(14,required*1.5);
+  }
+  /** A close fit for the optional art entry, including all future view rotations. */
+  fitToView() {
+    this.geometry.computeBoundingSphere();
+    const count=this.spec.count, scale=count>1?(count<4?.52:.36):1;
+    const radius=(this.geometry.boundingSphere!.radius+MAX_BODY_DISPLACEMENT*this.material.uniforms.bodyMotion.value)*scale+(count>1?1.5:0);
+    const height=this.renderer.getSize(new THREE.Vector2()).y;
+    const vertical=Math.atan(Math.tan(THREE.MathUtils.degToRad(this.camera.fov*.5))*Math.max(.5,(height-120)/height));
+    const horizontal=Math.atan(Math.tan(THREE.MathUtils.degToRad(this.camera.fov*.5))*this.camera.aspect*.94);
+    const desired=radius/Math.sin(Math.min(vertical,horizontal))*1.015;
+    const offset=this.camera.position.clone().sub(this.controls.target).setLength(desired);
+    this.camera.position.copy(this.controls.target).add(offset);this.controls.maxDistance=Math.max(14,desired*2);
   }
   async loadGLB(url: string) {
     const token = ++this.loadingToken;
@@ -194,7 +208,7 @@ export class SurfaceScene {
       this.advection.setBodyMotion(this.time,this.material.uniforms.bodyMotion.value);
       // Substeps preserve the speed control even though the walker caps dt.
       const steps=Math.max(1,Math.ceil(flowStep/.035));
-      for(let i=0;i<steps;i++) this.advection.update(flowStep/steps,this.flowTime,1.4/this.material.uniforms.density.value);
+      for(let i=0;i<steps;i++) this.advection.update(flowStep/steps,this.flowTime,(this.renderMode==='presence'?15:1.4)/this.material.uniforms.density.value);
     }
     if(this.renderMode==='fluid'&&this.fluid&&this.fluidSurface){
       // At most six steps per frame. A hidden tab never accumulates catch-up work.
@@ -208,12 +222,13 @@ export class SurfaceScene {
   inspect() {
     this.geometry.computeBoundingBox();
     return { spec: { ...this.spec }, letters: this.field.letters.map(l => ({ ...l })), count: this.field.letters.length,
-      time: this.time, paused: this.paused, loaded: this.loaded, vertices: this.geometry.getAttribute('position').count,
+      time: this.time, camera: this.camera.position.toArray(), paused: this.paused, loaded: this.loaded, vertices: this.geometry.getAttribute('position').count,
       bounds: { min: this.geometry.boundingBox!.min.toArray(), max: this.geometry.boundingBox!.max.toArray() },
       flow: this.material.uniforms.flow.value, renderMode:this.renderMode, bodyMotion:this.material.uniforms.bodyMotion.value, frames: this.frames, renderer: this.renderer.info.render,
       fluid:this.fluid?{steps:this.fluid.steps,time:this.fluid.time}:null,
       gpuError:this.renderer.getContext().getError() };
   }
+  inspectPresence(){return this.advection instanceof PresenceLayer ? this.advection.inspect() : null;}
   inspectFluid(){return this.fluid?.inspect();}
   resetFluid(){
     this.fluid?.reset();this.fluidAccumulator=0;
