@@ -1,9 +1,9 @@
 // Experimental scheduler. A renderer can accept writing immediately while the
-// local inference stages run one at a time. No UI mode uses this draft yet.
+// local inference stages run one at a time. Used by the separate writing preview.
 import { applyIntent, type ShapeContext, type ShapeIntent } from './intent';
 
 export interface AcceptedWriting { id:number; raw:string; state:'queued'|'interpreting'|'applied'|'failed'|'cancelled' }
-export interface ContinuousState { pending:number; phase:'idle'|'interpreting'|'generating'|'installing'; error:string; canRetry:boolean }
+export interface ContinuousState { pending:number; phase:'idle'|'interpreting'|'generating'|'installing'; error:string; canRetry:boolean; canRetryGeneration:boolean }
 interface Hooks<T> {
   accepted(writing:AcceptedWriting):void;
   route(text:string,current:ShapeContext,writing:Readonly<AcceptedWriting>):Promise<ShapeIntent>;
@@ -29,6 +29,7 @@ export class ContinuousInput<T> {
   private wanted?:Job;
   private ready?:{job:Job;payload:T};
   private failure?:Failure;
+  private generationFailure?:{job:Job;error:string};
   private error='';
   private phase:ContinuousState['phase']='idle';
   private worker?:Promise<void>;
@@ -39,7 +40,10 @@ export class ContinuousInput<T> {
   get current() { return structuredClone(this.context); }
   get state():ContinuousState {
     const valid=this.failure?.kind==='route'?this.failure.epoch===this.epoch&&this.failure.revision===this.revision:this.failure?.kind==='generation'&&this.matches(this.failure.job);
-    return {pending:this.queue.length,phase:this.phase,error:this.error,canRetry:Boolean(valid)};
+    const generationValid=Boolean(this.generationFailure&&this.matches(this.generationFailure.job));
+    const generationError=generationValid?this.generationFailure!.error:'';
+    const error=[...new Set([this.error,generationError].filter(Boolean))].join('\n');
+    return {pending:this.queue.length,phase:this.phase,error,canRetry:Boolean(valid),canRetryGeneration:generationValid&&this.failure?.kind!=='generation'};
   }
   submit(raw:string):boolean {
     if(!raw.trim()||this.queue.length>=this.limit)return false;
@@ -52,17 +56,28 @@ export class ContinuousInput<T> {
     this.epoch++;this.revision++;this.shownRevision=this.revision;
     for(const entry of this.queue)entry.state='cancelled';
     this.queue=[];this.context=structuredClone(current);this.wanted=undefined;
-    this.discardReady();this.failure=undefined;this.error='';this.hooks.invalidate();this.emit();
+    this.discardReady();this.failure=undefined;this.generationFailure=undefined;this.error='';this.hooks.invalidate();this.emit();
   }
   retry():boolean {
     if(!this.state.canRetry||this.queue.length>=this.limit)return false;
     const failure=this.failure!;this.failure=undefined;this.error='';
     if(failure.kind==='route'){failure.entry.state='queued';this.queue.push(failure.entry);}
-    else this.wanted={...failure.job};
+    else {this.wanted={...failure.job};this.generationFailure=undefined;}
+    this.emit();this.start();return true;
+  }
+  retryGeneration():boolean {
+    if(!this.state.canRetryGeneration)return false;
+    this.wanted={...this.generationFailure!.job};this.generationFailure=undefined;
     this.emit();this.start();return true;
   }
   async whenIdle() { while(this.worker)await this.worker; }
   private matches(job:Job) { return job.epoch===this.epoch&&job.revision===this.revision; }
+  private failedGeneration(job:Job,error:unknown) {
+    const message=String(error instanceof Error?error.message:error);
+    this.generationFailure={job,error:message};
+    // A later command may have its own failure. Keep both retry paths available.
+    if(this.failure?.kind!=='route'){this.failure={kind:'generation',job};this.error=message;}
+  }
   private emit() { this.hooks.changed(this.state); }
   private discardReady() { if(this.ready)this.hooks.release?.(this.ready.payload);this.ready=undefined; }
   private start() {
@@ -86,7 +101,7 @@ export class ContinuousInput<T> {
           if(epoch!==this.epoch){entry.state='cancelled';continue;}
           this.context=applyIntent(this.context,intent);
           if(intent.action==='new') {
-            this.revision++;this.hooks.invalidate();this.discardReady();this.failure=undefined;this.error='';
+            this.revision++;this.hooks.invalidate();this.discardReady();this.failure=undefined;this.generationFailure=undefined;this.error='';
             if(this.context.target.form) {
               this.wanted=undefined;this.hooks.known(this.current);this.shownRevision=this.revision;
             } else this.wanted={epoch,revision:this.revision,description:this.context.target.object_en};
@@ -104,9 +119,9 @@ export class ContinuousInput<T> {
           this.phase='installing';this.emit();
           try {
             const applied=await this.hooks.install(candidate.payload,this.current,()=>this.matches(candidate.job));
-            if(applied&&this.matches(candidate.job))this.shownRevision=this.revision;
+            if(applied&&this.matches(candidate.job)){this.shownRevision=this.revision;this.generationFailure=undefined;}
           } catch(error) {
-            if(this.matches(candidate.job)) { this.failure={kind:'generation',job:candidate.job};this.error=String(error instanceof Error?error.message:error); }
+            if(this.matches(candidate.job))this.failedGeneration(candidate.job,error);
           }
         }
         this.hooks.release?.(candidate.payload);this.emit();continue;
@@ -118,7 +133,7 @@ export class ContinuousInput<T> {
           if(this.matches(job))this.ready={job,payload};
           else this.hooks.release?.(payload);
         } catch(error) {
-          if(this.matches(job)){this.failure={kind:'generation',job};this.error=String(error instanceof Error?error.message:error);}
+          if(this.matches(job))this.failedGeneration(job,error);
         }
         this.emit();
       }

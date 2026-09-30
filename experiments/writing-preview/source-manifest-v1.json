@@ -1,0 +1,31 @@
+{
+  "at": "2026-09-30T07:49:04.840Z",
+  "scope": "Writing preview only; shared harness is owned and versioned by root",
+  "files": [
+    {
+      "path": "src/writing-preview/index.html",
+      "bytes": 1993,
+      "sha256": "fff83addf4069bd110324dbc0e8a777151e8c621ae36498cc14dfe886cf7b395"
+    },
+    {
+      "path": "src/writing-preview/main.ts",
+      "bytes": 8857,
+      "sha256": "20f46f4501b82a7ff888762bac5f091c32349fbfd7ef8a4303371822a5a54892"
+    },
+    {
+      "path": "src/writing-preview/style.css",
+      "bytes": 1889,
+      "sha256": "5cda29287305f48cc1ce50de29fe6ceb9238f6e3110f1247f571acaef63a6620"
+    },
+    {
+      "path": "experiments/writing-preview/mock-browser.mjs",
+      "bytes": 17806,
+      "sha256": "2e8c02be9c2a01fb3efa1dc696167c577c8ac17d2a3fe8ae9bd1690eac93616e"
+    },
+    {
+      "path": "experiments/writing-preview/real-browser.mjs",
+      "bytes": 5882,
+      "sha256": "13f1d2eee8b42b5f667628fd62d29f35f7e194189487352d1b7118d856ec9804"
+    }
+  ]
+}

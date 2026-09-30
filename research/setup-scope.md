@@ -30,7 +30,7 @@ python3 tools/run-lab.py
 - 配布条件を確認して公開した素材と、人工例から生成した比較用のGLB。取得済みのPoly Haven 3素材も含まれます。
 - 学習済み重み、専用Python環境、上流コードのローカルcheckout、キャッシュは含まれません。これらの保存先 `.local/` はGitの対象外です。`node_modules/` も含まれません。
 
-公開リポジトリのコードを使う場合は、試作コードを含むタグまたは `feat/semantic-surface-prototypes` ブランチを選びます。初期の `main` には説明文しかないため、READMEとソースがあることを確認してください。版の入口は[ルートREADME](../README.md)と[STATUS](../STATUS.md)を参照してください。
+同じ保存版を使う場合は `prototype-v0.5.0` タグを選びます。初期コミット `a23b559` は説明文だけなので、READMEとソースがあることを確認してください。版の入口は[ルートREADME](../README.md)と[STATUS](../STATUS.md)を参照してください。
 
 ## 新しい環境での最小構成
 
@@ -83,6 +83,6 @@ npm run dev
 
 ## 費用・ライセンス・保存の範囲
 
-今回の取得と端末内推論に有料APIは使っていません。ただし「無料で取得できる」と「用途を問わず無条件に再配布できる」は別です。モデルや素材の条件は各READMEとmanifestを参照してください。特にSDXL Turboは[固定revisionのライセンス全文](../experiments/text-image/SDXL_TURBO_LICENSE.md)と[NOTICE](../experiments/text-image/NOTICE)を伴う研究・非商用評価であり、コードのMITライセンスを重みへ適用していません。**Powered by Stability AI**。Poly Havenの取得済み3素材はCC0ですが、サイト本文や元APIカタログまでCC0として公開していません。
+今回の取得と端末内推論に有料APIは使っていません。ただし「無料で取得できる」と「用途を問わず無条件に再配布できる」は別です。モデルや素材の条件は各READMEとmanifestを参照してください。特にSDXL Turboは[固定revisionのライセンス全文](../experiments/text-image/SDXL_TURBO_LICENSE.md)と[NOTICE](../experiments/text-image/NOTICE)を伴う研究・非商用評価であり、上流の一部コードのMIT表記を、重みや生成物の条件へ読み替えていません。本試作全体に共通の利用許諾を宣言したものでもありません。**Powered by Stability AI**。Poly Havenの取得済み3素材はCC0ですが、サイト本文や元APIカタログまでCC0として公開していません。
 
 モデル取得時は配布元へのネットワーク接続が必要です。取得後の通常の推論APIは端末内で動き、入力本文・生成画像・生成GLBを自動保存しません。画面の明示的な画像保存操作と、人工例を保存する研究用スクリプトは別です。通常画面の入力履歴はメモリ内にあり、再読み込みすると消えます。

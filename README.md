@@ -2,6 +2,8 @@
 
 文章から関連する立体を選ぶ・作ることで、蓄積した言葉をその表面に流す研究試作。[文字のかたち](https://github.com/KOSEIHAMAYA2077/ai-game-lab)から独立した別版です。
 
+**[今回の結果と採用した構成](research/RESULTS-20260930.md)**。保存版は `prototype-v0.5.0`。任意の文章を常に正しい形へ変換する完成品ではなく、複数の方法を実際に比較できる試作です。
+
 ![生成したじょうろの表面を文字で覆う](experiments/surface-03/paired-watering-can-v1.png)
 
 ## 試す
@@ -11,6 +13,8 @@ Node.jsを用意し、`npm ci --ignore-scripts`、`npm run dev`。ブラウザ�
 このMacの取得済み環境を再開する場合は `python3 tools/run-lab.py`。使用中のポートは確認して再利用し、既存のサービスは終了させません。環境の自動インストールは行いません。状態だけなら `python3 tools/run-lab.py --check`。[このMacの再開と新規導入の範囲](research/setup-scope.md)を分けて記録しています。
 
 Enterで入力を開き、文章を入れてEnter。ドラッグで回転、スクロールで距離。比較から生成した形・無料素材・密度・流れ・形の揺らぎを選べます。
+
+**続けて文章を入力する別入口:** http://127.0.0.1:4183/src/writing-preview/index.html 。通常画面の「比較」からも開けます。最初は「文字だけ加える」。新しい物体を作るときは「文章から形を作る」、`四角く`などの追記は「今の形を変える」を選びます。生成中も次の文章を送れます。[動作・待機・原文の保存範囲](experiments/writing-preview/README.md)。両入口を `npm run build` の対象にしています。
 
 - `花瓶` → `四角くねじれた`：花瓶を維持し、属性を変える。
 - `腰を下ろして休めるもの`：ローカル意味モデルが椅子を選ぶ。
@@ -46,7 +50,7 @@ Enterで入力を開き、文章を入れてEnter。ドラッグで回転、ス�
 - [4B Instructの振り分け比較](experiments/input-routing-instruct/README.md)
 - [素材検索・521件の比較と3メッシュ](experiments/asset-retrieval/RESULTS.md) / [対話画面の3候補](experiments/asset-retrieval/ui-v1/README.md)
 - [流体の表面投影と長時間の制限](experiments/fluid-surface/README.md)
-- [連続入力のCPUハーネス・UI未接続](experiments/continuous-input/RESULTS.md)
+- [連続入力のCPUハーネス](experiments/continuous-input/RESULTS.md) / [操作を選べる独立画面 v0.5](experiments/writing-preview/README.md)
 - [関連研究9件と実装方針](research/language-to-shape.md)
 - [LLM部品合成の7条件比較](experiments/composition/README.md)
 - [TripoSR画像からの復元](experiments/triposr/RESULTS.md)
