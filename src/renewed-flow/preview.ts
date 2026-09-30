@@ -57,5 +57,5 @@ function resize(){renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWi
 addEventListener('resize',resize);resize();setMode(mode);pause(paused);
 document.querySelector('#pause')!.addEventListener('click',()=>pause(!paused));document.querySelector('#reset')!.addEventListener('click',reset);
 document.querySelector('#shape')!.addEventListener('change',event=>void choose((event.target as HTMLSelectElement).value));document.querySelector('#mode')!.addEventListener('change',event=>setMode((event.target as HTMLSelectElement).value));
-Object.assign(window,{__renew:{inspect,choose,mode:setMode,pause,reset,advance,probe:()=>solver.projectionProbe(),sample:()=>solver.sample(),camera:(x:number,y:number,z:number)=>{camera.position.set(x,y,z);controls.update();render();}}});
+Object.assign(window,{__renew:{inspect,choose,mode:setMode,pause,reset,advance,probe:()=>{const result=solver.projectionProbe();reset();return result;},sample:()=>solver.sample(),camera:(x:number,y:number,z:number)=>{camera.position.set(x,y,z);controls.update();render();}}});
 choose(params.get('shape')??'sphere').catch(error=>{document.querySelector('#error')!.textContent=String(error);});requestAnimationFrame(frame);

@@ -1,0 +1,378 @@
+{
+  "completed": true,
+  "sourceSha256": {
+    "field.ts": "b39f827845d3e25b9703c0ad655cc57593750a00008bdea2c00ab2208a0a3a6b",
+    "material.ts": "45f69aa30932c7781ef2878fdd80597351b6c252ca939c7619c794e86b811721",
+    "preview.ts": "63b0e7436b4941c525c20df122cb2c621ab68a624b422838c63aba4267538db0"
+  },
+  "scope": "Each video begins with a fixed-step jump from 0 to 45 seconds, followed by approximately 18 seconds of real-time motion. Not a 30-minute test. Recording overhead is present.",
+  "records": [
+    {
+      "mode": "renew",
+      "video": "page@ccbd5b3e6be5052ee61a083349a843ea.webm",
+      "start": {
+        "shape": "sphere",
+        "mode": "renew",
+        "paused": true,
+        "steps": 2700,
+        "time": 45,
+        "letters": 44,
+        "grid": 8,
+        "triangles": 6768,
+        "graphics": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "cpuMsMedian": 0,
+        "cpuMsP95": 0,
+        "frameMsMedian": 0,
+        "frameMsP95": 0,
+        "simulation": {
+          "size": 128,
+          "seed": 20260930,
+          "steps": 2700,
+          "time": 45,
+          "fixedDt": 0.016666666666666666,
+          "pressureIterations": 40,
+          "transport": "first-order",
+          "forceScale": 0.4,
+          "interpolation": "manual",
+          "finite": true,
+          "divergenceBeforeRms": 0.0000018444784337893293,
+          "divergenceAfterRms": 9.986661853494538e-9,
+          "divergenceRatio": 0.005414355446259006,
+          "maxSpeedUVPerSecond": 0.001366103736487245,
+          "maxDisplacementUV": 0.043722544462345525,
+          "mapJacobian": {
+            "min": 0.9843114758289033,
+            "max": 1.0092030193957982,
+            "mean": 0.9999999999999983,
+            "nonPositive": 0
+          },
+          "gpuError": 0
+        },
+        "renewal": {
+          "periodSteps": 3600,
+          "periodSeconds": 60,
+          "phase": {
+            "tick": 2700,
+            "weightA": 0.5000000000000001,
+            "reset": -1
+          },
+          "resets": [
+            0,
+            1
+          ],
+          "baseline": {
+            "finite": true,
+            "minDet": 0.9843114758289033,
+            "maxDet": 1.0092030193957982,
+            "nonPositive": 0,
+            "symmetricStretchP95": 1.297662825489273,
+            "symmetricStretchMax": 1.4008009322644925,
+            "anisotropyP95": 1.6798478935895087,
+            "anisotropyMax": 1.9582209311376246
+          },
+          "maps": [
+            {
+              "finite": true,
+              "minDet": 0.9843114758289033,
+              "maxDet": 1.0092030193957982,
+              "nonPositive": 0,
+              "symmetricStretchP95": 1.297662825489273,
+              "symmetricStretchMax": 1.4008009322644925,
+              "anisotropyP95": 1.6798478935895087,
+              "anisotropyMax": 1.9582209311376246
+            },
+            {
+              "finite": true,
+              "minDet": 0.9969341506908953,
+              "maxDet": 1.0022064988156387,
+              "nonPositive": 0,
+              "symmetricStretchP95": 1.1207748740623993,
+              "symmetricStretchMax": 1.1562080999508009,
+              "anisotropyP95": 1.2556271057314832,
+              "anisotropyMax": 1.3367731972761627
+            }
+          ]
+        },
+        "memory": {
+          "geometries": 2,
+          "textures": 13
+        },
+        "gpuError": 0
+      },
+      "end": {
+        "shape": "sphere",
+        "mode": "renew",
+        "paused": true,
+        "steps": 3780,
+        "time": 63,
+        "letters": 44,
+        "grid": 8,
+        "triangles": 6768,
+        "graphics": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "cpuMsMedian": 0.10000002384185791,
+        "cpuMsP95": 0.20000004768371582,
+        "frameMsMedian": 16.69999999999891,
+        "frameMsP95": 16.799999999999272,
+        "simulation": {
+          "size": 128,
+          "seed": 20260930,
+          "steps": 3780,
+          "time": 63,
+          "fixedDt": 0.016666666666666666,
+          "pressureIterations": 40,
+          "transport": "first-order",
+          "forceScale": 0.4,
+          "interpolation": "manual",
+          "finite": true,
+          "divergenceBeforeRms": 0.0000019172844533379527,
+          "divergenceAfterRms": 2.3223612939440472e-8,
+          "divergenceRatio": 0.012112763392520416,
+          "maxSpeedUVPerSecond": 0.0014139379588372308,
+          "maxDisplacementUV": 0.06715278183356056,
+          "mapJacobian": {
+            "min": 0.9616255015002082,
+            "max": 1.0247970728045175,
+            "mean": 0.9999999999999997,
+            "nonPositive": 0
+          },
+          "gpuError": 0
+        },
+        "renewal": {
+          "periodSteps": 3600,
+          "periodSeconds": 60,
+          "phase": {
+            "tick": 180,
+            "weightA": 0.024471741852423234,
+            "reset": -1
+          },
+          "resets": [
+            1,
+            1
+          ],
+          "baseline": {
+            "finite": true,
+            "minDet": 0.9616255015002082,
+            "maxDet": 1.0247970728045175,
+            "nonPositive": 0,
+            "symmetricStretchP95": 1.459353225978581,
+            "symmetricStretchMax": 1.650902948590271,
+            "anisotropyP95": 2.120243944369927,
+            "anisotropyMax": 2.723960707707247
+          },
+          "maps": [
+            {
+              "finite": true,
+              "minDet": 0.9998714552765675,
+              "maxDet": 1.0001296456456128,
+              "nonPositive": 0,
+              "symmetricStretchP95": 1.0247454472476303,
+              "symmetricStretchMax": 1.0334431564215283,
+              "anisotropyP95": 1.0500567725909329,
+              "anisotropyMax": 1.0679075177142334
+            },
+            {
+              "finite": true,
+              "minDet": 0.985022156634308,
+              "maxDet": 1.012538596521701,
+              "nonPositive": 0,
+              "symmetricStretchP95": 1.2756626691081057,
+              "symmetricStretchMax": 1.371493489698607,
+              "anisotropyP95": 1.6242614497775976,
+              "anisotropyMax": 1.8791645162048354
+            }
+          ]
+        },
+        "memory": {
+          "geometries": 2,
+          "textures": 13
+        },
+        "gpuError": 0
+      },
+      "wallMs": 18030
+    },
+    {
+      "mode": "coordinates",
+      "video": "page@c75f50bd60dc8266a8aa26869416dc82.webm",
+      "start": {
+        "shape": "sphere",
+        "mode": "coordinates",
+        "paused": true,
+        "steps": 2700,
+        "time": 45,
+        "letters": 44,
+        "grid": 8,
+        "triangles": 6768,
+        "graphics": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "cpuMsMedian": 0,
+        "cpuMsP95": 0,
+        "frameMsMedian": 0,
+        "frameMsP95": 0,
+        "simulation": {
+          "size": 128,
+          "seed": 20260930,
+          "steps": 2700,
+          "time": 45,
+          "fixedDt": 0.016666666666666666,
+          "pressureIterations": 40,
+          "transport": "first-order",
+          "forceScale": 0.4,
+          "interpolation": "manual",
+          "finite": true,
+          "divergenceBeforeRms": 0.0000018444784337893293,
+          "divergenceAfterRms": 9.986661853494538e-9,
+          "divergenceRatio": 0.005414355446259006,
+          "maxSpeedUVPerSecond": 0.001366103736487245,
+          "maxDisplacementUV": 0.043722544462345525,
+          "mapJacobian": {
+            "min": 0.9843114758289033,
+            "max": 1.0092030193957982,
+            "mean": 0.9999999999999983,
+            "nonPositive": 0
+          },
+          "gpuError": 0
+        },
+        "renewal": {
+          "periodSteps": 3600,
+          "periodSeconds": 60,
+          "phase": {
+            "tick": 2700,
+            "weightA": 0.5000000000000001,
+            "reset": -1
+          },
+          "resets": [
+            0,
+            1
+          ],
+          "baseline": {
+            "finite": true,
+            "minDet": 0.9843114758289033,
+            "maxDet": 1.0092030193957982,
+            "nonPositive": 0,
+            "symmetricStretchP95": 1.297662825489273,
+            "symmetricStretchMax": 1.4008009322644925,
+            "anisotropyP95": 1.6798478935895087,
+            "anisotropyMax": 1.9582209311376246
+          },
+          "maps": [
+            {
+              "finite": true,
+              "minDet": 0.9843114758289033,
+              "maxDet": 1.0092030193957982,
+              "nonPositive": 0,
+              "symmetricStretchP95": 1.297662825489273,
+              "symmetricStretchMax": 1.4008009322644925,
+              "anisotropyP95": 1.6798478935895087,
+              "anisotropyMax": 1.9582209311376246
+            },
+            {
+              "finite": true,
+              "minDet": 0.9969341506908953,
+              "maxDet": 1.0022064988156387,
+              "nonPositive": 0,
+              "symmetricStretchP95": 1.1207748740623993,
+              "symmetricStretchMax": 1.1562080999508009,
+              "anisotropyP95": 1.2556271057314832,
+              "anisotropyMax": 1.3367731972761627
+            }
+          ]
+        },
+        "memory": {
+          "geometries": 2,
+          "textures": 13
+        },
+        "gpuError": 0
+      },
+      "end": {
+        "shape": "sphere",
+        "mode": "coordinates",
+        "paused": true,
+        "steps": 3780,
+        "time": 63,
+        "letters": 44,
+        "grid": 8,
+        "triangles": 6768,
+        "graphics": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "cpuMsMedian": 0.10000002384185791,
+        "cpuMsP95": 0.20000004768371582,
+        "frameMsMedian": 16.69999999999891,
+        "frameMsP95": 16.700000000000728,
+        "simulation": {
+          "size": 128,
+          "seed": 20260930,
+          "steps": 3780,
+          "time": 63,
+          "fixedDt": 0.016666666666666666,
+          "pressureIterations": 40,
+          "transport": "first-order",
+          "forceScale": 0.4,
+          "interpolation": "manual",
+          "finite": true,
+          "divergenceBeforeRms": 0.0000019172844533379527,
+          "divergenceAfterRms": 2.3223612939440472e-8,
+          "divergenceRatio": 0.012112763392520416,
+          "maxSpeedUVPerSecond": 0.0014139379588372308,
+          "maxDisplacementUV": 0.06715278183356056,
+          "mapJacobian": {
+            "min": 0.9616255015002082,
+            "max": 1.0247970728045175,
+            "mean": 0.9999999999999997,
+            "nonPositive": 0
+          },
+          "gpuError": 0
+        },
+        "renewal": {
+          "periodSteps": 3600,
+          "periodSeconds": 60,
+          "phase": {
+            "tick": 180,
+            "weightA": 0.024471741852423234,
+            "reset": -1
+          },
+          "resets": [
+            1,
+            1
+          ],
+          "baseline": {
+            "finite": true,
+            "minDet": 0.9616255015002082,
+            "maxDet": 1.0247970728045175,
+            "nonPositive": 0,
+            "symmetricStretchP95": 1.459353225978581,
+            "symmetricStretchMax": 1.650902948590271,
+            "anisotropyP95": 2.120243944369927,
+            "anisotropyMax": 2.723960707707247
+          },
+          "maps": [
+            {
+              "finite": true,
+              "minDet": 0.9998714552765675,
+              "maxDet": 1.0001296456456128,
+              "nonPositive": 0,
+              "symmetricStretchP95": 1.0247454472476303,
+              "symmetricStretchMax": 1.0334431564215283,
+              "anisotropyP95": 1.0500567725909329,
+              "anisotropyMax": 1.0679075177142334
+            },
+            {
+              "finite": true,
+              "minDet": 0.985022156634308,
+              "maxDet": 1.012538596521701,
+              "nonPositive": 0,
+              "symmetricStretchP95": 1.2756626691081057,
+              "symmetricStretchMax": 1.371493489698607,
+              "anisotropyP95": 1.6242614497775976,
+              "anisotropyMax": 1.8791645162048354
+            }
+          ]
+        },
+        "memory": {
+          "geometries": 2,
+          "textures": 13
+        },
+        "gpuError": 0
+      },
+      "wallMs": 18028
+    }
+  ],
+  "errors": []
+}

@@ -13,9 +13,9 @@ try{
  await page.goto(base+'/src/renewed-flow/preview.html?paused=1');await page.waitForFunction(()=>document.body.dataset.ready==='true');
  await page.evaluate(()=>window.__renew.advance(1));const first=await page.evaluate(()=>window.__renew.sample());
  await page.evaluate(()=>window.__renew.reset());await page.evaluate(()=>window.__renew.advance(1));
- checks.determinism=JSON.stringify(first)===JSON.stringify(await page.evaluate(()=>window.__renew.sample()));
+ checks.deterministicSample=JSON.stringify(first)===JSON.stringify(await page.evaluate(()=>window.__renew.sample()));
  const old=await context.newPage();await old.goto(base+'/src/fluid/preview.html?paused=1');await old.waitForFunction(()=>document.body.dataset.ready==='true');
- await old.evaluate(()=>window.__fluid.advance(1));checks.originalVelocityAndBaselineUnchanged=JSON.stringify(first)===JSON.stringify(await old.evaluate(()=>window.__fluid.sample()));
+ await old.evaluate(()=>window.__fluid.advance(1));checks.originalVelocityAndBaselineSampleUnchanged=JSON.stringify(first)===JSON.stringify(await old.evaluate(()=>window.__fluid.sample()));
  await old.close();
  await page.locator('#pause').click();await page.waitForTimeout(300);await page.locator('#pause').click();
  checks.pauseResume=(await page.evaluate(()=>window.__renew.inspect())).steps>60;

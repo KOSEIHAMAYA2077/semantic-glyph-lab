@@ -74,7 +74,9 @@ export class RenewedFluidField {
     const baseline=this.maps;
     for(let i=0;i<2;i++){
       this.maps=this.renewalMaps[i];
-      this.pass('transport',this.maps[1]);this.maps.reverse();
+      if(this.corrected){this.pass('transport',this.forwardMap);this.pass('correctTransport',this.maps[1]);}
+      else this.pass('transport',this.maps[1]);
+      this.maps.reverse();
       if(this.phase.reset===i){for(const target of this.maps)this.pass('zero',target);this.resets[i]++;}
     }
     this.maps=baseline;
